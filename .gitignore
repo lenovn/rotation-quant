@@ -1,0 +1,32 @@
+# Local agent/editor state
+.agents/
+.codex/
+
+# Downloaded data, model weights, checkpoints, and experiment outputs
+cache/
+runs/
+delete/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.onnx
+*.log
+
+# Nested repository/worktree metadata
+**/.git
+**/.git/
+**/.git/**
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
