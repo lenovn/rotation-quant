@@ -1,0 +1,200 @@
+{
+  "backup_commit": "f0216811dc51ee1421b8d02d7bf10642ac9dbb37",
+  "scope": "Only 12 completed Phase5 QAT resume.pt files; all static exports, Phase3 files, caches and Phase6 preserved",
+  "started_at": "2026-09-20T20:08:08.116152+00:00",
+  "disk_before": [
+    {
+      "path": "/mnt/home1",
+      "available_bytes": 43814064128,
+      "headroom_bytes": 0
+    },
+    {
+      "path": "/mnt/home2",
+      "available_bytes": 1151411916800,
+      "headroom_bytes": 1044037734400
+    }
+  ],
+  "deleted": [
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/initial-sp2-qat400-s42-r25/resume.pt",
+      "size": 11681920449,
+      "allocated": 11681935360,
+      "mtime_ns": 1789674640024505905,
+      "inode": 10984473470483737998,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/initial-sp2-qat400-s42-r25/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2064318486,
+      "final_mtime_ns": 1789674666348537625,
+      "final_inode": 5885914701642238453
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-qat400-s43/resume.pt",
+      "size": 11681920321,
+      "allocated": 11681935360,
+      "mtime_ns": 1789710358616622407,
+      "inode": 8588306970896193909,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-qat400-s43/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2064318486,
+      "final_mtime_ns": 1789710371804684411,
+      "final_inode": 8872647088322144269
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-qat400-s44/resume.pt",
+      "size": 11681920385,
+      "allocated": 11681935360,
+      "mtime_ns": 1789711348711561723,
+      "inode": 13104365306280858406,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-qat400-s44/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2064318486,
+      "final_mtime_ns": 1789711363471591477,
+      "final_inode": 9900663769791231010
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s42/resume.pt",
+      "size": 11681920385,
+      "allocated": 11681935360,
+      "mtime_ns": 1789677926025360292,
+      "inode": 7801065943857550112,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s42/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2064322550,
+      "final_mtime_ns": 1789677947901336092,
+      "final_inode": 12070579656516111462
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s43/resume.pt",
+      "size": 11681920321,
+      "allocated": 11681931264,
+      "mtime_ns": 1789709655077261638,
+      "inode": 4698541515009412612,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s43/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2064322550,
+      "final_mtime_ns": 1789709670013265955,
+      "final_inode": 9283679413928213089
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s44/resume.pt",
+      "size": 11681920385,
+      "allocated": 11681935360,
+      "mtime_ns": 1789711364995594538,
+      "inode": 10610716520761833175,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s44/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2064322550,
+      "final_mtime_ns": 1789711388715641928,
+      "final_inode": 1720121306130794825
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/resume.pt",
+      "size": 16919119862,
+      "allocated": 16919134208,
+      "mtime_ns": 1789691667378247348,
+      "inode": 8007839239275154050,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2574402262,
+      "final_mtime_ns": 1789691694278275695,
+      "final_inode": 3681360695167115913
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s43/resume.pt",
+      "size": 16919119734,
+      "allocated": 16919138304,
+      "mtime_ns": 1789719172991549452,
+      "inode": 12384523301772367569,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s43/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2574402262,
+      "final_mtime_ns": 1789719201019565018,
+      "final_inode": 1566276271035568374
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s44/resume.pt",
+      "size": 16919119798,
+      "allocated": 16919138304,
+      "mtime_ns": 1789718139994815759,
+      "inode": 16465916402976299817,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s44/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2574402262,
+      "final_mtime_ns": 1789718164334839917,
+      "final_inode": 6562882392930674640
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s42/resume.pt",
+      "size": 16919119862,
+      "allocated": 16919134208,
+      "mtime_ns": 1789692220350893494,
+      "inode": 4413588121702065818,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s42/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2574409358,
+      "final_mtime_ns": 1789692242346921136,
+      "final_inode": 4209528260165647369
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s43/resume.pt",
+      "size": 16919119798,
+      "allocated": 16919138304,
+      "mtime_ns": 1789724451391347424,
+      "inode": 12725741743183550289,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s43/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2574409358,
+      "final_mtime_ns": 1789724475159292258,
+      "final_inode": 13745987921787497355
+    },
+    {
+      "group": "phase5_distillation",
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s44/resume.pt",
+      "size": 16919119798,
+      "allocated": 16919138304,
+      "mtime_ns": 1789718315174977892,
+      "inode": 3352163982178096369,
+      "links": 1,
+      "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s44/checkpoint-0400/static_w4a8.pt",
+      "final_size": 2574409358,
+      "final_mtime_ns": 1789718338290997467,
+      "final_inode": 7015718815910783993
+    }
+  ],
+  "phase6_pids_before": [
+    872673,
+    885853
+  ],
+  "completed_at": "2026-09-20T20:08:14.066190+00:00",
+  "disk_after": [
+    {
+      "path": "/mnt/home1",
+      "available_bytes": 43814031360,
+      "headroom_bytes": 0
+    },
+    {
+      "path": "/mnt/home2",
+      "available_bytes": 1322953314304,
+      "headroom_bytes": 1215579131904
+    }
+  ],
+  "deleted_count": 12,
+  "released_allocated_bytes": 171606429696,
+  "retained_final_packages_verified": 12,
+  "phase6_pids_after": [
+    872673,
+    885853
+  ],
+  "phase6_original_pids_still_running": true
+}
