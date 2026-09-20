@@ -1,0 +1,75 @@
+{
+  "stage": "completed",
+  "pid": 2544763,
+  "time": 1789353043.5182931,
+  "cuda_visible_devices": "1",
+  "allocated_gib": 0.7482523918151855,
+  "reserved_gib": 2.357421875,
+  "peak_allocated_gib": 2.8672633171081543,
+  "gpu_time_budget": null,
+  "elapsed_seconds": 7.501845739025157,
+  "result": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+    "parent_metadata": {
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-rounded-sp2-contract-20260914a/static_w4a8.pt",
+      "mode": "sequential-round",
+      "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+      "parent_metadata": {
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-down-round-20260914b/static_w4a8.pt",
+        "mode": "sequential-sp2",
+        "reference_state": "None",
+        "parent_metadata": {
+          "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+          "mode": "sequential-round",
+          "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+          "parent_metadata": {
+            "route": "B",
+            "step": 100,
+            "initial": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt"
+          },
+          "offline_only": true
+        },
+        "offline_only": true
+      },
+      "offline_only": true
+    },
+    "mode": "sp2",
+    "initial_train_nll": 2.6472935144882825,
+    "selected_train_nll": 2.6472935144882825,
+    "completed_targets": [
+      "model.layers.15.mlp.down_proj"
+    ],
+    "new_module_results": [
+      {
+        "module": "model.layers.15.mlp.down_proj",
+        "selected_factor": 1.0,
+        "previous_train_nll": 2.6472935144882825,
+        "selected_train_nll": 2.6472935144882825,
+        "trials": [
+          {
+            "factor": 1.0,
+            "alpha": 30.18589210510254,
+            "train_nll": 2.6472935144882825,
+            "reused_prefix": true
+          },
+          {
+            "factor": 0.5,
+            "alpha": 15.09294605255127,
+            "train_nll": 2.6483273365628324
+          },
+          {
+            "factor": 0.25,
+            "alpha": 7.546473026275635,
+            "train_nll": 2.6488520767021666
+          },
+          {
+            "factor": 0.125,
+            "alpha": 3.7732365131378174,
+            "train_nll": 2.654861281270399
+          }
+        ]
+      }
+    ],
+    "validation_status": "NOT TESTED: no improvement over initial train selection NLL"
+  }
+}

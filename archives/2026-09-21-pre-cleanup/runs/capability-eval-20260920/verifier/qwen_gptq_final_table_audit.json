@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "eight_rows": true,
+    "four_metric_columns": true,
+    "all_filled": true,
+    "no_missing": true,
+    "72_detail_rows": true,
+    "no_ablation_labels": true,
+    "appendix_boolq": true,
+    "appendix_piqa": true,
+    "appendix_social_iqa": true,
+    "appendix_hellaswag": true,
+    "appendix_winogrande": true,
+    "appendix_arc_easy": true,
+    "appendix_arc_challenge": true,
+    "appendix_openbookqa": true,
+    "new_zero_mean": true,
+    "WikiText-2": true,
+    "C4-subset": true,
+    "MMLU": true,
+    "all_deltas": true,
+    "latex_rows_match": true,
+    "all_source_snapshots_match": true,
+    "new_detail_sources": true
+  },
+  "pass": true,
+  "new_row": {
+    "Model": "Qwen3-1.7B",
+    "Method": "GPTQ (original BF16)",
+    "W\u2013A format": "W4A16",
+    "WikiText-2": "24.83100895245416",
+    "C4-subset": "34.65030837772175",
+    "Zero-shot Avg. (8)": "51.50238030780219",
+    "MMLU": "47.813701751887194"
+  }
+}

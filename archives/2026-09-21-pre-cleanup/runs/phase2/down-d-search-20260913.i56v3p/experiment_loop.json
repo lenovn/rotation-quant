@@ -1,0 +1,53 @@
+{
+  "status": "blocked_pending_scope_confirmation",
+  "active_run": null,
+  "best_strict": {
+    "run": "runs/phase2/down-d-search-20260913.7U1l7n",
+    "artifact": "runs/phase2/down-d-search-20260913.7U1l7n/selected_d/packed_model.pt",
+    "ppl": 16.05715342622255,
+    "nll": 2.7761544466207675,
+    "verification": "independent PASS",
+    "format": "packed_model weights26 plus D; up/down SW transformed; parent alpha"
+  },
+  "best_mixed": {
+    "ppl": 16.432517447910815,
+    "run": "runs/phase2/down-d-search-20260913.i56v3p/layer1_down_w16a16"
+  },
+  "target_ppl": 14.634657725643203,
+  "gpu_time_budget": null,
+  "next": "Proposed R-only forward-mismatch paired test needs explicit relaxation of no-gradient/frozen-C-R constraints",
+  "target_gap_ppl": 1.4224957005793453,
+  "external_c4": {
+    "ppl": 27.062581939332095,
+    "nll": 3.2981520335394494,
+    "run": "runs/phase2/down-d-search-20260913.EH3Kju",
+    "verification": "independent PASS"
+  },
+  "next_config": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/non-down-second-batch-20260913.99l3b8_l",
+  "latest_diagnostics": "runs/phase2/down-d-search-20260913.EZPTam",
+  "c_integrity": {
+    "run": "runs/phase2/down-d-search-20260913.Ie8eEI",
+    "ppl": 13.647488162677584,
+    "nll": 2.6135554873114346,
+    "delta_original_bf16_ppl": 0.012830437034381248,
+    "verification": "independent PASS"
+  },
+  "last_sw_test": {
+    "run": "runs/phase2/down-d-search-20260913.cohqXT",
+    "selected_strength": 0,
+    "verification": "independent PASS",
+    "new_full_validation": 0
+  },
+  "r_only_proposal": "runs/phase2/down-d-search-20260913.i56v3p/r_only_pair_proposal.json",
+  "r_only_readiness": "source audit complete; needs new frozen-scale mode; awaiting explicit scope confirmation",
+  "blocker": "R-only forward-mismatch experiment requires explicit relaxation of no-gradient training and frozen C-R; no affirmative response received.",
+  "blocked_audit": {
+    "consecutive_goal_turns": 3,
+    "turns": [
+      "Fixed-code SW experiment completed; R-only scope change requested",
+      "Independent source feasibility audit and concrete paired proposal completed; scope change still pending",
+      "Live artifact/process check: no running experiment, no new authorization; preparation complete"
+    ],
+    "goal_complete": false
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "pid": 314159,
+  "gpu": 7,
+  "started": 1789325612.143474,
+  "command": [
+    "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_tmux_launch_explicit_chil2/project root 'quoted';$literal/worktrees/SpinQuant-phase3-joint/experiments/phase3/postprocess.py",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_tmux_launch_explicit_chil2/project root 'quoted';$literal/runs/phase3/tmux.cpu 'quoted';$literal",
+    "--parent",
+    "checkpoint with 'quotes';$(not-executed) $HOME.pt",
+    "--reference-state",
+    "checkpoint with 'quotes';$(not-executed) $HOME.pt",
+    "--mode",
+    "sp2"
+  ],
+  "backend": "tmux",
+  "tmux_socket": "rotation-quant-phase3",
+  "tmux_session": "phase3-tmux_cpu 'quoted';$literal",
+  "attach_command": "tmux -L rotation-quant-phase3 attach -t 'phase3-tmux_cpu '\"'\"'quoted'\"'\"';$literal'",
+  "child_environment": {
+    "CUDA_VISIBLE_DEVICES": "7",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "HF_HUB_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "HF_HOME": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_tmux_launch_explicit_chil2/project root 'quoted';$literal/cache/huggingface",
+    "GIT_OPTIONAL_LOCKS": "0",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4"
+  },
+  "shell_command": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u '/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_tmux_launch_explicit_chil2/project root '\"'\"'quoted'\"'\"';$literal/worktrees/SpinQuant-phase3-joint/experiments/phase3/postprocess.py' --output '/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_tmux_launch_explicit_chil2/project root '\"'\"'quoted'\"'\"';$literal/runs/phase3/tmux.cpu '\"'\"'quoted'\"'\"';$literal' --parent 'checkpoint with '\"'\"'quotes'\"'\"';$(not-executed) $HOME.pt' --reference-state 'checkpoint with '\"'\"'quotes'\"'\"';$(not-executed) $HOME.pt' --mode sp2",
+  "selected_gpu": {
+    "index": 7,
+    "uuid": "GPU-selected",
+    "memory_used_mib": 512,
+    "memory_total_mib": 24576,
+    "utilization": 5
+  },
+  "gpu_snapshot": [
+    {
+      "index": 1,
+      "uuid": "GPU-first",
+      "memory_used_mib": 4096,
+      "memory_total_mib": 24576,
+      "utilization": 80
+    },
+    {
+      "index": 7,
+      "uuid": "GPU-selected",
+      "memory_used_mib": 512,
+      "memory_total_mib": 24576,
+      "utilization": 5
+    }
+  ],
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_tmux_launch_explicit_chil2/project root 'quoted';$literal/runs/phase3/tmux.cpu 'quoted';$literal",
+  "log": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_tmux_launch_explicit_chil2/project root 'quoted';$literal/runs/phase3/tmux.cpu 'quoted';$literal.log",
+  "policy": "latest user authorization: actual headroom, parallel independent jobs, no hard ratio/memory/time cap, never terminate others"
+}

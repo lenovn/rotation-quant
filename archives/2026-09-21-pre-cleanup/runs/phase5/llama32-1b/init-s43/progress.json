@@ -1,0 +1,12 @@
+{
+  "stage": "completed",
+  "pid": 3071859,
+  "time": 1789693154.9573214,
+  "cuda_visible_devices": "0",
+  "allocated_gib": 5.614737510681152,
+  "reserved_gib": 7.58984375,
+  "peak_allocated_gib": 6.766555309295654,
+  "gpu_time_budget": null,
+  "initial": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/init-s43/initial.pt",
+  "static_probe": 3.7589799761772156
+}

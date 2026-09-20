@@ -1,0 +1,37 @@
+{
+  "parent": {
+    "fit_mse": 0.00011713231651810929,
+    "heldout_mse": 0.00014129727787803859,
+    "weighted_fit_mse": 0.00011787286348408088,
+    "weighted_heldout_mse": 0.0001277691189898178
+  },
+  "initial_train_nll": 2.6472935144882825,
+  "selected_train_nll": 2.649110330984922,
+  "train_accepted": false,
+  "selected_cycle": 1,
+  "optimization_seconds": 22.267654179944657,
+  "trials": [
+    {
+      "cycle": 1,
+      "scale_fit": null,
+      "coordinates": 2048,
+      "fit_mse": 0.00010071827273350209,
+      "heldout_mse": 0.00012653321027755737,
+      "changed_codes": 774440,
+      "uniform_fit_mse": 0.0001134563353843987,
+      "uniform_heldout_mse": 0.00014424418623093516,
+      "train_nll": 2.649110330984922
+    },
+    {
+      "cycle": 2,
+      "scale_fit": null,
+      "coordinates": 2048,
+      "fit_mse": 9.407702600583434e-05,
+      "heldout_mse": 0.00012512570538092405,
+      "changed_codes": 433650,
+      "uniform_fit_mse": 0.00010987016139551997,
+      "uniform_heldout_mse": 0.0001433001016266644,
+      "train_nll": 2.6491947600700367
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "model.layers.1.mlp.down_proj",
+  "factor": 2.0,
+  "channels": [
+    1417
+  ],
+  "alpha": 564.63525390625,
+  "range_exponent": -1,
+  "fit_mse": 0.03864921256899834,
+  "heldout_mse": 0.029458677396178246
+}

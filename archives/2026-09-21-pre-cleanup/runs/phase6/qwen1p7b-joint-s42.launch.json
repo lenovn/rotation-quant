@@ -1,0 +1,35 @@
+{
+  "pid": 852493,
+  "session": "phase6-qwen1p7b-joint-s42",
+  "socket": "rotation-quant-phase6",
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/phase6/joint.py",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase6/qwen1p7b-joint-s42",
+    "--steps",
+    "128",
+    "--arm",
+    "joint"
+  ],
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "1",
+    "PHASE5_MODEL_PATH": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+    "PHASE5_SEED": "42",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4",
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+    "HF_HOME": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface",
+    "PHASE6_MEMORY_FRACTION": "0.85"
+  },
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase6/qwen1p7b-joint-s42",
+  "log": "/home/dongpeiyan/projects/rotation-quant/runs/phase6/qwen1p7b-joint-s42.log",
+  "gpu_at_launch": {
+    "total_mib": 24564,
+    "used_mib": 621,
+    "utilization": 0
+  }
+}

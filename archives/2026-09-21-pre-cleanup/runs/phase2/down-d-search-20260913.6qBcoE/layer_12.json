@@ -1,0 +1,30 @@
+{
+  "layer": 12,
+  "selected_step": 512,
+  "trials": [
+    {
+      "step": 0,
+      "fit_mse": 0.00043145561357960105,
+      "heldout_mse": 0.0004314574762247503,
+      "changed_codes": 0
+    },
+    {
+      "step": 32,
+      "fit_mse": 0.0003603074001148343,
+      "heldout_mse": 0.00036406394792720675,
+      "changed_codes": 18582
+    },
+    {
+      "step": 128,
+      "fit_mse": 0.0003203537780791521,
+      "heldout_mse": 0.0003427799674682319,
+      "changed_codes": 75565
+    },
+    {
+      "step": 512,
+      "fit_mse": 0.00025209138402715325,
+      "heldout_mse": 0.0003280510427430272,
+      "changed_codes": 308990
+    }
+  ]
+}

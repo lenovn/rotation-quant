@@ -1,0 +1,50 @@
+[
+  {
+    "name": "model.layers.14.mlp.down_proj",
+    "row": 1201,
+    "T": 2.8646504878997803,
+    "selection": "maximum T in family"
+  },
+  {
+    "name": "model.layers.1.mlp.gate_proj",
+    "row": 4654,
+    "T": 2.213162422180176,
+    "selection": "maximum T in family"
+  },
+  {
+    "name": "model.layers.9.self_attn.k_proj",
+    "row": 480,
+    "T": 2.0451128482818604,
+    "selection": "maximum T in family"
+  },
+  {
+    "name": "model.layers.6.self_attn.o_proj",
+    "row": 1949,
+    "T": 2.8390090465545654,
+    "selection": "maximum T in family"
+  },
+  {
+    "name": "model.layers.14.self_attn.q_proj",
+    "row": 1085,
+    "T": 2.276923179626465,
+    "selection": "maximum T in family"
+  },
+  {
+    "name": "model.layers.4.mlp.up_proj",
+    "row": 840,
+    "T": 2.5405404567718506,
+    "selection": "maximum T in family"
+  },
+  {
+    "name": "model.layers.3.self_attn.v_proj",
+    "row": 433,
+    "T": 2.070796489715576,
+    "selection": "maximum T in family"
+  },
+  {
+    "name": "model.layers.1.mlp.down_proj",
+    "row": 92,
+    "T": 1.5402299165725708,
+    "selection": "median T in layer1 down"
+  }
+]

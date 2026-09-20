@@ -1,0 +1,43 @@
+{
+  "hypothesis": "Disentangle layer1 weight and activation sensitivity",
+  "cases": [
+    [
+      "layer1_w16",
+      [
+        "model.layers.1.self_attn.q_proj",
+        "model.layers.1.self_attn.k_proj",
+        "model.layers.1.self_attn.v_proj",
+        "model.layers.1.self_attn.o_proj",
+        "model.layers.1.mlp.gate_proj",
+        "model.layers.1.mlp.up_proj",
+        "model.layers.1.mlp.down_proj"
+      ],
+      []
+    ],
+    [
+      "layer1_a16",
+      [],
+      [
+        "model.layers.1.self_attn.q_proj",
+        "model.layers.1.self_attn.k_proj",
+        "model.layers.1.self_attn.v_proj",
+        "model.layers.1.self_attn.o_proj",
+        "model.layers.1.mlp.gate_proj",
+        "model.layers.1.mlp.up_proj",
+        "model.layers.1.mlp.down_proj"
+      ]
+    ],
+    [
+      "layer1_down_w16a16",
+      [
+        "model.layers.1.mlp.down_proj"
+      ],
+      [
+        "model.layers.1.mlp.down_proj"
+      ]
+    ]
+  ],
+  "base": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rtn/w4_rtn_model.pt",
+  "alphas": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/down-codebooks-c-20260909.6YRIty/results/down_scales.json",
+  "recalibration": false
+}

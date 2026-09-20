@@ -1,0 +1,34 @@
+{
+  "name": "model.layers.11.mlp.gate_proj",
+  "selected_step": 512,
+  "trials": [
+    {
+      "step": 0,
+      "fit_mse": 0.0042905742302536964,
+      "heldout_mse": 0.004294140264391899,
+      "changed_codes": 0,
+      "train_nll": 2.727271304469372
+    },
+    {
+      "step": 512,
+      "fit_mse": 0.002144890371710062,
+      "heldout_mse": 0.002451421692967415,
+      "changed_codes": 847531,
+      "train_nll": 2.726639754704979
+    },
+    {
+      "step": 2048,
+      "fit_mse": 0.0018016095273196697,
+      "heldout_mse": 0.002151921857148409,
+      "changed_codes": 1187702,
+      "train_nll": 2.7281728003832857
+    },
+    {
+      "step": 8192,
+      "fit_mse": 0.001596452435478568,
+      "heldout_mse": 0.001963690621778369,
+      "changed_codes": 1402405,
+      "train_nll": 2.7268529777613457
+    }
+  ]
+}

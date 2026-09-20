@@ -1,0 +1,15 @@
+{
+  "nll": 4.0,
+  "ppl": 54.598150033144236,
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-sequential-second-20260914/test_sequential_driver_prefix_0/parent.pt",
+  "parent_metadata": {
+    "method": "joint R/SW/SA PTQ",
+    "source_run": "retained-parent",
+    "step": 100,
+    "original_backbone_trained": false
+  },
+  "method": "sequential frozen-package postprocessing; no gradient training in this stage",
+  "format": "112 W4 /96 static INT8 /16 static SP2; BF16 KV16 prefill"
+}

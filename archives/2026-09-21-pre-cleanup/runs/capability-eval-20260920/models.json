@@ -1,0 +1,50 @@
+{
+  "qwen": {
+    "bf16": {
+      "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+      "package": null,
+      "seed": null
+    },
+    "firon": {
+      "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/static_w4a8.pt",
+      "seed": 42
+    },
+    "parent": {
+      "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/static_w4a8.pt",
+      "seed": 42
+    },
+    "w4a16": {
+      "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/gptq_w4a16_package/w4_gptq_model.pt",
+      "seed": 42,
+      "method_label": "GPTQ (original BF16)",
+      "activation_bits": 16,
+      "note": "Independent original BF16 -> GPTQ; train-only calibration 128x2048 seed42; symmetric per-output-channel W4 groupsize=-1; no rotation or distillation."
+    }
+  },
+  "llama": {
+    "bf16": {
+      "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+      "package": null,
+      "seed": null
+    },
+    "firon": {
+      "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/distill-b100-refined-ref-adam1e5-400-20260914a/checkpoint-0400/static_w4a8.pt",
+      "seed": 42
+    },
+    "parent": {
+      "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+      "seed": 42
+    },
+    "w4a16": {
+      "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/w4_gptq_model.pt",
+      "seed": 42,
+      "note": "Historical Phase2 learned-SW-C GPTQ W4A16; distinct recipe, not same-final-weight activation ablation"
+    }
+  }
+}

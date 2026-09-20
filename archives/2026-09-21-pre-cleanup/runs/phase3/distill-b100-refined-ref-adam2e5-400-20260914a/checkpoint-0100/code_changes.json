@@ -1,0 +1,450 @@
+{
+  "model.layers.0.self_attn.q_proj": {
+    "changed_codes": 190883,
+    "total_codes": 4194304
+  },
+  "model.layers.0.self_attn.k_proj": {
+    "changed_codes": 39904,
+    "total_codes": 1048576
+  },
+  "model.layers.0.self_attn.v_proj": {
+    "changed_codes": 148008,
+    "total_codes": 1048576
+  },
+  "model.layers.0.self_attn.o_proj": {
+    "changed_codes": 98617,
+    "total_codes": 4194304
+  },
+  "model.layers.0.mlp.gate_proj": {
+    "changed_codes": 1305862,
+    "total_codes": 16777216
+  },
+  "model.layers.0.mlp.up_proj": {
+    "changed_codes": 1419385,
+    "total_codes": 16777216
+  },
+  "model.layers.0.mlp.down_proj": {
+    "changed_codes": 381639,
+    "total_codes": 16777216
+  },
+  "model.layers.1.self_attn.q_proj": {
+    "changed_codes": 187786,
+    "total_codes": 4194304
+  },
+  "model.layers.1.self_attn.k_proj": {
+    "changed_codes": 28730,
+    "total_codes": 1048576
+  },
+  "model.layers.1.self_attn.v_proj": {
+    "changed_codes": 49541,
+    "total_codes": 1048576
+  },
+  "model.layers.1.self_attn.o_proj": {
+    "changed_codes": 99464,
+    "total_codes": 4194304
+  },
+  "model.layers.1.mlp.gate_proj": {
+    "changed_codes": 1047135,
+    "total_codes": 16777216
+  },
+  "model.layers.1.mlp.up_proj": {
+    "changed_codes": 1147240,
+    "total_codes": 16777216
+  },
+  "model.layers.1.mlp.down_proj": {
+    "changed_codes": 1151354,
+    "total_codes": 16777216
+  },
+  "model.layers.2.self_attn.q_proj": {
+    "changed_codes": 162863,
+    "total_codes": 4194304
+  },
+  "model.layers.2.self_attn.k_proj": {
+    "changed_codes": 23903,
+    "total_codes": 1048576
+  },
+  "model.layers.2.self_attn.v_proj": {
+    "changed_codes": 28327,
+    "total_codes": 1048576
+  },
+  "model.layers.2.self_attn.o_proj": {
+    "changed_codes": 86730,
+    "total_codes": 4194304
+  },
+  "model.layers.2.mlp.gate_proj": {
+    "changed_codes": 878918,
+    "total_codes": 16777216
+  },
+  "model.layers.2.mlp.up_proj": {
+    "changed_codes": 962278,
+    "total_codes": 16777216
+  },
+  "model.layers.2.mlp.down_proj": {
+    "changed_codes": 400781,
+    "total_codes": 16777216
+  },
+  "model.layers.3.self_attn.q_proj": {
+    "changed_codes": 150374,
+    "total_codes": 4194304
+  },
+  "model.layers.3.self_attn.k_proj": {
+    "changed_codes": 26308,
+    "total_codes": 1048576
+  },
+  "model.layers.3.self_attn.v_proj": {
+    "changed_codes": 29499,
+    "total_codes": 1048576
+  },
+  "model.layers.3.self_attn.o_proj": {
+    "changed_codes": 79684,
+    "total_codes": 4194304
+  },
+  "model.layers.3.mlp.gate_proj": {
+    "changed_codes": 806755,
+    "total_codes": 16777216
+  },
+  "model.layers.3.mlp.up_proj": {
+    "changed_codes": 925923,
+    "total_codes": 16777216
+  },
+  "model.layers.3.mlp.down_proj": {
+    "changed_codes": 1044758,
+    "total_codes": 16777216
+  },
+  "model.layers.4.self_attn.q_proj": {
+    "changed_codes": 154115,
+    "total_codes": 4194304
+  },
+  "model.layers.4.self_attn.k_proj": {
+    "changed_codes": 23473,
+    "total_codes": 1048576
+  },
+  "model.layers.4.self_attn.v_proj": {
+    "changed_codes": 33360,
+    "total_codes": 1048576
+  },
+  "model.layers.4.self_attn.o_proj": {
+    "changed_codes": 79626,
+    "total_codes": 4194304
+  },
+  "model.layers.4.mlp.gate_proj": {
+    "changed_codes": 760783,
+    "total_codes": 16777216
+  },
+  "model.layers.4.mlp.up_proj": {
+    "changed_codes": 885846,
+    "total_codes": 16777216
+  },
+  "model.layers.4.mlp.down_proj": {
+    "changed_codes": 406519,
+    "total_codes": 16777216
+  },
+  "model.layers.5.self_attn.q_proj": {
+    "changed_codes": 153404,
+    "total_codes": 4194304
+  },
+  "model.layers.5.self_attn.k_proj": {
+    "changed_codes": 25516,
+    "total_codes": 1048576
+  },
+  "model.layers.5.self_attn.v_proj": {
+    "changed_codes": 35849,
+    "total_codes": 1048576
+  },
+  "model.layers.5.self_attn.o_proj": {
+    "changed_codes": 81650,
+    "total_codes": 4194304
+  },
+  "model.layers.5.mlp.gate_proj": {
+    "changed_codes": 756901,
+    "total_codes": 16777216
+  },
+  "model.layers.5.mlp.up_proj": {
+    "changed_codes": 829929,
+    "total_codes": 16777216
+  },
+  "model.layers.5.mlp.down_proj": {
+    "changed_codes": 376071,
+    "total_codes": 16777216
+  },
+  "model.layers.6.self_attn.q_proj": {
+    "changed_codes": 141385,
+    "total_codes": 4194304
+  },
+  "model.layers.6.self_attn.k_proj": {
+    "changed_codes": 26753,
+    "total_codes": 1048576
+  },
+  "model.layers.6.self_attn.v_proj": {
+    "changed_codes": 34440,
+    "total_codes": 1048576
+  },
+  "model.layers.6.self_attn.o_proj": {
+    "changed_codes": 83063,
+    "total_codes": 4194304
+  },
+  "model.layers.6.mlp.gate_proj": {
+    "changed_codes": 757038,
+    "total_codes": 16777216
+  },
+  "model.layers.6.mlp.up_proj": {
+    "changed_codes": 821777,
+    "total_codes": 16777216
+  },
+  "model.layers.6.mlp.down_proj": {
+    "changed_codes": 367648,
+    "total_codes": 16777216
+  },
+  "model.layers.7.self_attn.q_proj": {
+    "changed_codes": 140040,
+    "total_codes": 4194304
+  },
+  "model.layers.7.self_attn.k_proj": {
+    "changed_codes": 25669,
+    "total_codes": 1048576
+  },
+  "model.layers.7.self_attn.v_proj": {
+    "changed_codes": 32299,
+    "total_codes": 1048576
+  },
+  "model.layers.7.self_attn.o_proj": {
+    "changed_codes": 78528,
+    "total_codes": 4194304
+  },
+  "model.layers.7.mlp.gate_proj": {
+    "changed_codes": 785884,
+    "total_codes": 16777216
+  },
+  "model.layers.7.mlp.up_proj": {
+    "changed_codes": 798064,
+    "total_codes": 16777216
+  },
+  "model.layers.7.mlp.down_proj": {
+    "changed_codes": 361179,
+    "total_codes": 16777216
+  },
+  "model.layers.8.self_attn.q_proj": {
+    "changed_codes": 134567,
+    "total_codes": 4194304
+  },
+  "model.layers.8.self_attn.k_proj": {
+    "changed_codes": 23651,
+    "total_codes": 1048576
+  },
+  "model.layers.8.self_attn.v_proj": {
+    "changed_codes": 31878,
+    "total_codes": 1048576
+  },
+  "model.layers.8.self_attn.o_proj": {
+    "changed_codes": 82471,
+    "total_codes": 4194304
+  },
+  "model.layers.8.mlp.gate_proj": {
+    "changed_codes": 737461,
+    "total_codes": 16777216
+  },
+  "model.layers.8.mlp.up_proj": {
+    "changed_codes": 738601,
+    "total_codes": 16777216
+  },
+  "model.layers.8.mlp.down_proj": {
+    "changed_codes": 884747,
+    "total_codes": 16777216
+  },
+  "model.layers.9.self_attn.q_proj": {
+    "changed_codes": 144615,
+    "total_codes": 4194304
+  },
+  "model.layers.9.self_attn.k_proj": {
+    "changed_codes": 26520,
+    "total_codes": 1048576
+  },
+  "model.layers.9.self_attn.v_proj": {
+    "changed_codes": 31476,
+    "total_codes": 1048576
+  },
+  "model.layers.9.self_attn.o_proj": {
+    "changed_codes": 82321,
+    "total_codes": 4194304
+  },
+  "model.layers.9.mlp.gate_proj": {
+    "changed_codes": 729621,
+    "total_codes": 16777216
+  },
+  "model.layers.9.mlp.up_proj": {
+    "changed_codes": 747564,
+    "total_codes": 16777216
+  },
+  "model.layers.9.mlp.down_proj": {
+    "changed_codes": 1237518,
+    "total_codes": 16777216
+  },
+  "model.layers.10.self_attn.q_proj": {
+    "changed_codes": 143445,
+    "total_codes": 4194304
+  },
+  "model.layers.10.self_attn.k_proj": {
+    "changed_codes": 24468,
+    "total_codes": 1048576
+  },
+  "model.layers.10.self_attn.v_proj": {
+    "changed_codes": 26904,
+    "total_codes": 1048576
+  },
+  "model.layers.10.self_attn.o_proj": {
+    "changed_codes": 83054,
+    "total_codes": 4194304
+  },
+  "model.layers.10.mlp.gate_proj": {
+    "changed_codes": 697039,
+    "total_codes": 16777216
+  },
+  "model.layers.10.mlp.up_proj": {
+    "changed_codes": 704161,
+    "total_codes": 16777216
+  },
+  "model.layers.10.mlp.down_proj": {
+    "changed_codes": 559110,
+    "total_codes": 16777216
+  },
+  "model.layers.11.self_attn.q_proj": {
+    "changed_codes": 119451,
+    "total_codes": 4194304
+  },
+  "model.layers.11.self_attn.k_proj": {
+    "changed_codes": 24571,
+    "total_codes": 1048576
+  },
+  "model.layers.11.self_attn.v_proj": {
+    "changed_codes": 22970,
+    "total_codes": 1048576
+  },
+  "model.layers.11.self_attn.o_proj": {
+    "changed_codes": 79309,
+    "total_codes": 4194304
+  },
+  "model.layers.11.mlp.gate_proj": {
+    "changed_codes": 659608,
+    "total_codes": 16777216
+  },
+  "model.layers.11.mlp.up_proj": {
+    "changed_codes": 670213,
+    "total_codes": 16777216
+  },
+  "model.layers.11.mlp.down_proj": {
+    "changed_codes": 756573,
+    "total_codes": 16777216
+  },
+  "model.layers.12.self_attn.q_proj": {
+    "changed_codes": 131298,
+    "total_codes": 4194304
+  },
+  "model.layers.12.self_attn.k_proj": {
+    "changed_codes": 21459,
+    "total_codes": 1048576
+  },
+  "model.layers.12.self_attn.v_proj": {
+    "changed_codes": 24373,
+    "total_codes": 1048576
+  },
+  "model.layers.12.self_attn.o_proj": {
+    "changed_codes": 69951,
+    "total_codes": 4194304
+  },
+  "model.layers.12.mlp.gate_proj": {
+    "changed_codes": 631462,
+    "total_codes": 16777216
+  },
+  "model.layers.12.mlp.up_proj": {
+    "changed_codes": 657277,
+    "total_codes": 16777216
+  },
+  "model.layers.12.mlp.down_proj": {
+    "changed_codes": 508441,
+    "total_codes": 16777216
+  },
+  "model.layers.13.self_attn.q_proj": {
+    "changed_codes": 123092,
+    "total_codes": 4194304
+  },
+  "model.layers.13.self_attn.k_proj": {
+    "changed_codes": 19903,
+    "total_codes": 1048576
+  },
+  "model.layers.13.self_attn.v_proj": {
+    "changed_codes": 17555,
+    "total_codes": 1048576
+  },
+  "model.layers.13.self_attn.o_proj": {
+    "changed_codes": 67909,
+    "total_codes": 4194304
+  },
+  "model.layers.13.mlp.gate_proj": {
+    "changed_codes": 631925,
+    "total_codes": 16777216
+  },
+  "model.layers.13.mlp.up_proj": {
+    "changed_codes": 644461,
+    "total_codes": 16777216
+  },
+  "model.layers.13.mlp.down_proj": {
+    "changed_codes": 475067,
+    "total_codes": 16777216
+  },
+  "model.layers.14.self_attn.q_proj": {
+    "changed_codes": 151312,
+    "total_codes": 4194304
+  },
+  "model.layers.14.self_attn.k_proj": {
+    "changed_codes": 26715,
+    "total_codes": 1048576
+  },
+  "model.layers.14.self_attn.v_proj": {
+    "changed_codes": 20371,
+    "total_codes": 1048576
+  },
+  "model.layers.14.self_attn.o_proj": {
+    "changed_codes": 67244,
+    "total_codes": 4194304
+  },
+  "model.layers.14.mlp.gate_proj": {
+    "changed_codes": 603570,
+    "total_codes": 16777216
+  },
+  "model.layers.14.mlp.up_proj": {
+    "changed_codes": 613998,
+    "total_codes": 16777216
+  },
+  "model.layers.14.mlp.down_proj": {
+    "changed_codes": 444250,
+    "total_codes": 16777216
+  },
+  "model.layers.15.self_attn.q_proj": {
+    "changed_codes": 161429,
+    "total_codes": 4194304
+  },
+  "model.layers.15.self_attn.k_proj": {
+    "changed_codes": 25919,
+    "total_codes": 1048576
+  },
+  "model.layers.15.self_attn.v_proj": {
+    "changed_codes": 22192,
+    "total_codes": 1048576
+  },
+  "model.layers.15.self_attn.o_proj": {
+    "changed_codes": 80088,
+    "total_codes": 4194304
+  },
+  "model.layers.15.mlp.gate_proj": {
+    "changed_codes": 567543,
+    "total_codes": 16777216
+  },
+  "model.layers.15.mlp.up_proj": {
+    "changed_codes": 579576,
+    "total_codes": 16777216
+  },
+  "model.layers.15.mlp.down_proj": {
+    "changed_codes": 434780,
+    "total_codes": 16777216
+  }
+}

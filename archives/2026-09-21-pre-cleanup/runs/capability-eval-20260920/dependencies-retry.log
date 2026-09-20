@@ -1,0 +1,116 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple
+Collecting evaluate==0.4.3
+  Downloading https://mirrors.aliyun.com/pypi/packages/a2/e7/cbca9e2d2590eb9b5aa8f7ebabe1beb1498f9462d2ecede5c9fd9735faaf/evaluate-0.4.3-py3-none-any.whl (84 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.0/84.0 kB 6.7 MB/s eta 0:00:00
+Collecting jsonlines
+  Downloading https://mirrors.aliyun.com/pypi/packages/f8/62/d9ba6323b9202dd2fe166beab8a86d29465c41a0288cbe229fac60c1ab8d/jsonlines-4.0.0-py3-none-any.whl (8.7 kB)
+Collecting numexpr
+  Downloading https://mirrors.aliyun.com/pypi/packages/ed/f2/009d9dd8cd22f253fd6ead4165f81fafbe22489c1cfea612e18aa3dcb0fa/numexpr-2.10.2-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (396 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 396.7/396.7 kB 760.1 kB/s eta 0:00:00
+Collecting peft==0.15.2
+  Downloading https://mirrors.aliyun.com/pypi/packages/68/85/8e6ea3d1089f2b6de3c1cd34bbbd7560912af9d34b057be3b8b8fefe1da3/peft-0.15.2-py3-none-any.whl (411 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 411.1/411.1 kB 950.0 kB/s eta 0:00:00
+Collecting pybind11
+  Downloading https://mirrors.aliyun.com/pypi/packages/33/fd/8762f7ee3e4e4be6d1d846cffb4916dd9bb02b2f800d3603718a0efe494c/pybind11-3.1.0-py3-none-any.whl (319 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 319.4/319.4 kB 751.5 kB/s eta 0:00:00
+Collecting pytablewriter
+  Downloading https://mirrors.aliyun.com/pypi/packages/21/4c/c199512f01c845dfe5a7840ab3aae6c60463b5dc2a775be72502dfd9170a/pytablewriter-1.2.1-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 5.8 MB/s eta 0:00:00
+Collecting rouge-score
+  Downloading https://mirrors.aliyun.com/pypi/packages/e2/c5/9136736c37022a6ad27fea38f3111eb8f02fe75d067f9a985cc358653102/rouge_score-0.1.2.tar.gz (17 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting sacrebleu
+  Downloading https://mirrors.aliyun.com/pypi/packages/06/f2/6c90ccf3ad1d09a7d662a405b274f3c93b92df59c8d6a025d26aaf34d302/sacrebleu-2.6.0-py3-none-any.whl (100 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 kB 6.6 MB/s eta 0:00:00
+Collecting scikit-learn
+  Downloading https://mirrors.aliyun.com/pypi/packages/79/35/b1d2188967c3204c78fa79c9263668cf1b98060e8e58d1a730fe5b2317bb/scikit_learn-1.6.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.5/13.5 MB 714.2 kB/s eta 0:00:00
+Collecting sqlitedict
+  Downloading https://mirrors.aliyun.com/pypi/packages/12/9a/7620d1e9dcb02839ed6d4b14064e609cdd7a8ae1e47289aa0456796dd9ca/sqlitedict-2.1.0.tar.gz (21 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting tqdm-multiprocess
+  Downloading https://mirrors.aliyun.com/pypi/packages/25/7e/0d889fc6c84e3df6b69aaafe893fc77f69b3d968ac9ce574d1c62c688050/tqdm_multiprocess-0.0.11-py3-none-any.whl (9.8 kB)
+Collecting zstandard
+  Downloading https://mirrors.aliyun.com/pypi/packages/86/b2/fc50c58271a1ead0e5a0a0e6311f4b221f35954dce438ce62751b3af9b68/zstandard-0.25.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 761.9 kB/s eta 0:00:00
+Collecting word2number
+  Downloading https://mirrors.aliyun.com/pypi/packages/4a/29/a31940c848521f0725f0df6b25dca8917f13a2025b0e8fcbe5d0457e45e6/word2number-1.1.zip (9.7 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting more_itertools
+  Downloading https://mirrors.aliyun.com/pypi/packages/a4/8e/469e5a4a2f5855992e425f3cb33804cc07bf18d48f2db061aec61ce50270/more_itertools-10.8.0-py3-none-any.whl (69 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 6.3 MB/s eta 0:00:00
+Collecting langdetect
+  Downloading https://mirrors.aliyun.com/pypi/packages/0e/72/a3add0e4eec4eb9e2569554f7c70f4a3c27712f40e3284d483e88094cc0e/langdetect-1.0.9.tar.gz (981 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 981.5/981.5 kB 680.6 kB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting immutabledict
+  Downloading https://mirrors.aliyun.com/pypi/packages/a3/ce/f9018bf69ae91b273b6391a095e7c93fa5e1617f25b6ba81ad4b20c9df10/immutabledict-4.3.1-py3-none-any.whl (5.0 kB)
+Collecting nltk==3.9.1
+  Downloading https://mirrors.aliyun.com/pypi/packages/4d/66/7d9e26593edda06e8cb531874633f7c2372279c3b0f46235539fe546df8b/nltk-3.9.1-py3-none-any.whl (1.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 617.7 kB/s eta 0:00:00
+Collecting scipy
+  Downloading https://mirrors.aliyun.com/pypi/packages/35/f5/d0ad1a96f80962ba65e2ce1de6a1e59edecd1f0a7b55990ed208848012e0/scipy-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.6/38.6 MB 767.0 kB/s eta 0:00:00
+Collecting absl-py
+  Downloading https://mirrors.aliyun.com/pypi/packages/8f/aa/ba0014cc4659328dc818a28827be78e6d97312ab0cb98105a770924dc11e/absl_py-2.3.1-py3-none-any.whl (135 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.8/135.8 kB 3.9 MB/s eta 0:00:00
+Collecting joblib
+  Downloading https://mirrors.aliyun.com/pypi/packages/7b/91/984aca2ec129e2757d1e4e3c81c3fcda9d0f85b74670a094cc443d9ee949/joblib-1.5.3-py3-none-any.whl (309 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 309.1/309.1 kB 1.4 MB/s eta 0:00:00
+Collecting portalocker
+  Downloading https://mirrors.aliyun.com/pypi/packages/4b/a6/38c8e2f318bf67d338f4d629e93b0b4b9af331f455f0390ea8ce4a099b26/portalocker-3.2.0-py3-none-any.whl (22 kB)
+Collecting tabulate
+  Downloading https://mirrors.aliyun.com/pypi/packages/40/44/4a5f08c96eb108af5cb50b41f76142f0afa346dfa99d5296fe7202a11854/tabulate-0.9.0-py3-none-any.whl (35 kB)
+Collecting colorama
+  Downloading https://mirrors.aliyun.com/pypi/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting mbstrdecoder
+  Downloading https://mirrors.aliyun.com/pypi/packages/30/ac/5ce64a1d4cce00390beab88622a290420401f1cabf05caf2fc0995157c21/mbstrdecoder-1.1.4-py3-none-any.whl (7.9 kB)
+Collecting pathvalidate
+  Downloading https://mirrors.aliyun.com/pypi/packages/9a/70/875f4a23bfc4731703a5835487d0d2fb999031bd415e7d17c0ae615c18b7/pathvalidate-3.3.1-py3-none-any.whl (24 kB)
+Collecting tabledata
+  Downloading https://mirrors.aliyun.com/pypi/packages/08/64/fa4160151976ee4b2cf0c1217a99443ffaeb991956feddfeac9eee9952f8/tabledata-1.3.4-py3-none-any.whl (11 kB)
+Collecting tcolorpy
+  Downloading https://mirrors.aliyun.com/pypi/packages/05/a2/ed023f2edd1e011b4d99b6727bce8253842d66c3fbf9ed0a26fc09a92571/tcolorpy-0.1.7-py3-none-any.whl (8.1 kB)
+Collecting typepy
+  Downloading https://mirrors.aliyun.com/pypi/packages/80/86/02e36d19ad12e27af63b99062f552c6a1eae030753926223c9575c8f5458/typepy-2.0.0-py3-none-any.whl (31 kB)
+Collecting humanfriendly
+  Downloading https://mirrors.aliyun.com/pypi/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 6.4 MB/s eta 0:00:00
+Collecting chardet
+  Downloading https://mirrors.aliyun.com/pypi/packages/38/6f/f5fbc992a329ee4e0f288c1fe0e2ad9485ed064cac731ed2fe47dcc38cbf/chardet-5.2.0-py3-none-any.whl (199 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.4/199.4 kB 10.9 MB/s eta 0:00:00
+Collecting threadpoolctl
+  Downloading https://mirrors.aliyun.com/pypi/packages/43/3f/f88a53f60a472b46f4023f56d204dd7de33d34c5d2acbfa0d70a674e639e/threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+Collecting DataProperty
+  Downloading https://mirrors.aliyun.com/pypi/packages/03/41/eab7fe313820578b341a2a1d6aeeedd2c38ec1e3f3d51e57e2735b5beac0/dataproperty-1.1.1-py3-none-any.whl (27 kB)
+Collecting click
+  Downloading https://mirrors.aliyun.com/pypi/packages/7e/d4/7ebdbd03970677812aac39c869717059dbb71a4cfc033ca6e5221787892c/click-8.1.8-py3-none-any.whl (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 11.4 MB/s eta 0:00:00
+Building wheels for collected packages: rouge-score, sqlitedict, word2number, langdetect
+  Building wheel for rouge-score (setup.py): started
+  Building wheel for rouge-score (setup.py): finished with status 'done'
+  Created wheel for rouge-score: filename=rouge_score-0.1.2-py3-none-any.whl size=24951 sha256=ec052c0f30d8bf8961d205a55179adcda6da11c15181dd86b1465fb76b2fbfdb
+  Stored in directory: /home/dongpeiyan/.cache/pip/wheels/b3/3b/66/9d8c44482ce96edc3148d6bb6a97022ae994bd29ad24634027
+  Building wheel for sqlitedict (setup.py): started
+  Building wheel for sqlitedict (setup.py): finished with status 'done'
+  Created wheel for sqlitedict: filename=sqlitedict-2.1.0-py3-none-any.whl size=16869 sha256=4b706ffbf05e8f35641649603e73d51101f9c954fd962eacec73eb6fa3f3a35d
+  Stored in directory: /home/dongpeiyan/.cache/pip/wheels/89/9e/16/76a45d42b6824958bbfe173fb197d9196da2805c485f3b525c
+  Building wheel for word2number (setup.py): started
+  Building wheel for word2number (setup.py): finished with status 'done'
+  Created wheel for word2number: filename=word2number-1.1-py3-none-any.whl size=5581 sha256=0353e0d8441577ad89cf89c20fb4fb54702df1b63862ecbe7b7305cbcfe65b8b
+  Stored in directory: /home/dongpeiyan/.cache/pip/wheels/a7/7c/f5/ea8a175ed44be3481954fbb1a934f90a1c509a276b7720d4d5
+  Building wheel for langdetect (setup.py): started
+  Building wheel for langdetect (setup.py): finished with status 'done'
+  Created wheel for langdetect: filename=langdetect-1.0.9-py3-none-any.whl size=993241 sha256=3234a56f449c1d46461f0e78157b8188e89cdaa50f496c929604efe9ed72358d
+  Stored in directory: /home/dongpeiyan/.cache/pip/wheels/56/a6/9f/c3628f9a636d3a736f4865d0e286afedb5e3dfce492a235a56
+Successfully built rouge-score sqlitedict word2number langdetect
+Installing collected packages: word2number, sqlitedict, langdetect, zstandard, typepy, tqdm-multiprocess, threadpoolctl, tcolorpy, tabulate, tabledata, scipy, scikit-learn, sacrebleu, rouge-score, pytablewriter, pybind11, portalocker, peft, pathvalidate, numexpr, nltk, more_itertools, mbstrdecoder, jsonlines, joblib, immutabledict, humanfriendly, evaluate, DataProperty, colorama, click, chardet, absl-py
+Successfully installed DataProperty-1.1.1 absl-py-2.3.1 chardet-5.2.0 click-8.1.8 colorama-0.4.6 evaluate-0.4.3 humanfriendly-10.0 immutabledict-4.3.1 joblib-1.5.3 jsonlines-4.0.0 langdetect-1.0.9 mbstrdecoder-1.1.4 more_itertools-10.8.0 nltk-3.9.1 numexpr-2.10.2 pathvalidate-3.3.1 peft-0.15.2 portalocker-3.2.0 pybind11-3.1.0 pytablewriter-1.2.1 rouge-score-0.1.2 sacrebleu-2.6.0 scikit-learn-1.6.1 scipy-1.13.1 sqlitedict-2.1.0 tabledata-1.3.4 tabulate-0.9.0 tcolorpy-0.1.7 threadpoolctl-3.7.0 tqdm-multiprocess-0.0.11 typepy-2.0.0 word2number-1.1 zstandard-0.25.0
+WARNING: Target directory /home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/bin already exists. Specify --upgrade to force replacement.
+
+[notice] A new release of pip is available: 23.0.1 -> 26.0.1
+[notice] To update, run: /home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python -m pip install --upgrade pip

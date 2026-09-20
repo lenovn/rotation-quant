@@ -1,0 +1,17 @@
+{
+  "layer": 0,
+  "channel": 2,
+  "ranking": "actual pre-SP2 RMS / current-R original FP down column absmax; first24 full train windows",
+  "activation_rms": [
+    1.0,
+    1.0,
+    8.0,
+    1.0
+  ],
+  "direction": [
+    -0.3465735912322998,
+    -0.3465735912322998,
+    1.0397207736968994,
+    -0.3465735912322998
+  ]
+}

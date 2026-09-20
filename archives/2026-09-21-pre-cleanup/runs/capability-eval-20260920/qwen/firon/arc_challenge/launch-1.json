@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py",
+    "--model",
+    "qwen",
+    "--method",
+    "firon",
+    "--task",
+    "arc_challenge",
+    "--batch-size",
+    "4",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/firon/arc_challenge"
+  ],
+  "pid": 3858539,
+  "gpu": "2",
+  "started": 1789838036.193344,
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/firon/arc_challenge"
+}

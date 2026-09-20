@@ -1,0 +1,70 @@
+{
+  "token_count": 289076,
+  "predicted_tokens": 288934,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 13.114706993103027,
+      "nll": 2.5737342717122713
+    },
+    {
+      "start_token": 262144,
+      "seqlen": 2048,
+      "windows": 13,
+      "predicted_tokens": 26611,
+      "ppl": 13.580998420715332,
+      "nll": 2.6086716408355928
+    },
+    {
+      "start_token": 288768,
+      "seqlen": 308,
+      "windows": 1,
+      "predicted_tokens": 307,
+      "ppl": 19.680500030517578,
+      "nll": 2.979628299356083
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.5773832981204734,
+  "ppl": 13.162650325300651,
+  "dataset": "Salesforce/wikitext",
+  "subset": "wikitext-2-raw-v1",
+  "split": "test",
+  "mode": "bf16",
+  "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/wiki2-test-bf16-fixed-20260917a/input_tokens.pt",
+  "input_metadata": {
+    "dataset": "Salesforce/wikitext",
+    "subset": "wikitext-2-raw-v1",
+    "split": "test",
+    "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-test.arrow",
+    "rows": 4358,
+    "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "add_bos_token": false,
+    "add_eos_token": false,
+    "text_join": "double-newline",
+    "token_count": 289076,
+    "window_length": 2048,
+    "full_windows": 141,
+    "tail_tokens": 308,
+    "windows": 142,
+    "predicted_tokens": 288934,
+    "unscored_tail_tokens": 0,
+    "protocol": "all test rows in original order; disjoint 2048-token windows including partial tail"
+  },
+  "reused_tokens": false,
+  "package": null,
+  "chunk_windows": 128,
+  "calibration": false,
+  "training": false,
+  "candidate_selection": false,
+  "activation_scales_unchanged": true,
+  "elapsed_seconds": 34.221412922022864,
+  "peak_allocated_gib": 4.414333820343018,
+  "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL",
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+  "scope": "complete WikiText-2 test, including partial tail; frozen model; not native kernels or decode"
+}

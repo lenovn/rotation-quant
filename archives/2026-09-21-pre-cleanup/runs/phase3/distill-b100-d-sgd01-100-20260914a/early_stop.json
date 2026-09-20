@@ -1,0 +1,12 @@
+{
+  "status": "stopped_by_main_executor_for_measured_deterioration",
+  "pid": 977986,
+  "completed_training_updates": 25,
+  "initial_fixed_probe_nll": 2.954445779323578,
+  "step10_fixed_probe_nll": 9.804297924041748,
+  "last_minibatch_ce": 8.566487848758698,
+  "last_minibatch_kl": 6.027353823184967,
+  "signal": "SIGINT to exact argv and UID matched owned process only",
+  "full_validation": "step25 was interrupted; do not count partial evaluation as a complete result",
+  "next_experiment": "restart from unchanged parent with weight_lr=0.001; do not resume degraded optimizer or weights"
+}

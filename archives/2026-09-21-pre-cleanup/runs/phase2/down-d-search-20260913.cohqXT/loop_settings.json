@@ -1,0 +1,155 @@
+{
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/down-d-search-20260913.7U1l7n",
+  "hypothesis": "Expand SW at fixed optimized integer codes",
+  "strengths": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "ratio_bounds": [
+    1,
+    1.125
+  ],
+  "targets": [
+    "model.layers.0.mlp.down_proj",
+    "model.layers.1.mlp.down_proj",
+    "model.layers.2.mlp.down_proj",
+    "model.layers.3.mlp.down_proj",
+    "model.layers.4.mlp.down_proj",
+    "model.layers.5.mlp.down_proj",
+    "model.layers.6.mlp.down_proj",
+    "model.layers.7.mlp.down_proj",
+    "model.layers.8.mlp.down_proj",
+    "model.layers.9.mlp.down_proj",
+    "model.layers.10.mlp.down_proj",
+    "model.layers.11.mlp.down_proj",
+    "model.layers.12.mlp.down_proj",
+    "model.layers.13.mlp.down_proj",
+    "model.layers.14.mlp.down_proj",
+    "model.layers.15.mlp.down_proj"
+  ],
+  "fit_rows": 49152,
+  "heldout_rows": 16384,
+  "calibration_window_indices": [
+    205,
+    888,
+    943,
+    849,
+    895,
+    1068,
+    67,
+    69,
+    282,
+    382,
+    1058,
+    957,
+    4,
+    31,
+    195,
+    253,
+    1023,
+    680,
+    693,
+    545,
+    637,
+    649,
+    893,
+    458,
+    1153,
+    182,
+    1020,
+    560,
+    758,
+    1048,
+    22,
+    889
+  ],
+  "reference": "D-fused FP down on identical actual parent SP2 input",
+  "fitting_path": "One frozen parent pass; each full candidate NLL uses its actual forward",
+  "frozen": "R/D/all integer codes/96 SA/16 alpha/non-down SW",
+  "gradients": false,
+  "fit_stats": {
+    "model.layers.0.mlp.down_proj": {
+      "expanded_rows": 9,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0024795532226562
+    },
+    "model.layers.1.mlp.down_proj": {
+      "expanded_rows": 493,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0066189765930176
+    },
+    "model.layers.2.mlp.down_proj": {
+      "expanded_rows": 151,
+      "ratio_min": 1.0,
+      "ratio_max": 1.078420877456665
+    },
+    "model.layers.3.mlp.down_proj": {
+      "expanded_rows": 0,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0
+    },
+    "model.layers.4.mlp.down_proj": {
+      "expanded_rows": 0,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0
+    },
+    "model.layers.5.mlp.down_proj": {
+      "expanded_rows": 102,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0468133687973022
+    },
+    "model.layers.6.mlp.down_proj": {
+      "expanded_rows": 116,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0601086616516113
+    },
+    "model.layers.7.mlp.down_proj": {
+      "expanded_rows": 113,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0470067262649536
+    },
+    "model.layers.8.mlp.down_proj": {
+      "expanded_rows": 2,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0003221035003662
+    },
+    "model.layers.9.mlp.down_proj": {
+      "expanded_rows": 0,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0
+    },
+    "model.layers.10.mlp.down_proj": {
+      "expanded_rows": 0,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0
+    },
+    "model.layers.11.mlp.down_proj": {
+      "expanded_rows": 0,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0
+    },
+    "model.layers.12.mlp.down_proj": {
+      "expanded_rows": 0,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0
+    },
+    "model.layers.13.mlp.down_proj": {
+      "expanded_rows": 189,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0983052253723145
+    },
+    "model.layers.14.mlp.down_proj": {
+      "expanded_rows": 87,
+      "ratio_min": 1.0,
+      "ratio_max": 1.0164260864257812
+    },
+    "model.layers.15.mlp.down_proj": {
+      "expanded_rows": 638,
+      "ratio_min": 1.0,
+      "ratio_max": 1.125
+    }
+  }
+}

@@ -1,0 +1,46 @@
+...F...                                                                  [100%]
+=================================== FAILURES ===================================
+____ test_sequential_round_nll_prefilter_parent_reuse_and_accepted_capture _____
+
+postprocess_toy = (Module(
+  (model): Module(
+    (layers): ModuleList(
+      (0): Module(
+        (mlp): Module(
+          (up_proj): A...ype=torch.uint8), 'scale': tensor([[0.1250],
+        [0.1250],
+        [0.1250],
+        [0.1250]]), 'shape': (4, 2)}})
+sequential_cpu = None
+tmp_path = PosixPath('/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-sequential-first-20260914/test_sequential_round_nll_pref0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7ff7f8a13b20>
+
+    def test_sequential_round_nll_prefilter_parent_reuse_and_accepted_capture(postprocess_toy, sequential_cpu, tmp_path, monkeypatch):
+        from experiments.phase3 import sequential_postprocess as sequential
+        from experiments.phase3.postprocess import dequant_record
+    
+        model, records = postprocess_toy
+        first, second = "model.layers.0.mlp.up_proj", "model.layers.0.mlp.down_proj"
+        selection, calibration = object(), object()
+        args = SimpleNamespace(output=tmp_path, milestones=[512, 2048, 8192])
+        calls, captured, coordinates = [], [], []
+        actual_helper = sequential.rounding_helper()
+>       assert Path(actual_helper.__globals__["__file__"]).resolve() == common.PROJECT_ROOT / "scripts/phase2/fixed_grid_rounding.py"
+E       AssertionError: assert PosixPath('/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py') == (PosixPath('/home/dongpeiyan/projects/rotation-quant') / 'scripts/phase2/fixed_grid_rounding.py')
+E        +  where PosixPath('/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py') = resolve()
+E        +    where resolve = PosixPath('/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py').resolve
+E        +      where PosixPath('/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py') = Path('/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py')
+E        +  and   PosixPath('/home/dongpeiyan/projects/rotation-quant') = common.PROJECT_ROOT
+
+tests/test_phase3_joint.py:2204: AssertionError
+=============================== warnings summary ===============================
+tests/test_phase3_joint.py::test_sequential_driver_prefix_resume_data_cold_validation_and_provenance[round]
+tests/test_phase3_joint.py::test_sequential_driver_prefix_resume_data_cold_validation_and_provenance[sp2]
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/cpu-sequential-first-20260914.xml -
+=========================== short test summary info ============================
+FAILED tests/test_phase3_joint.py::test_sequential_round_nll_prefilter_parent_reuse_and_accepted_capture
+1 failed, 6 passed, 88 deselected, 2 warnings in 12.90s

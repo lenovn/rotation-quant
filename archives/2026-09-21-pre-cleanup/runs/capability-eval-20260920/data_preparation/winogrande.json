@@ -1,0 +1,11 @@
+{
+  "task": "winogrande",
+  "path": "winogrande",
+  "name": "winogrande_xl",
+  "splits": {
+    "train": 40398,
+    "test": 1767,
+    "validation": 1267
+  },
+  "status": "ready"
+}

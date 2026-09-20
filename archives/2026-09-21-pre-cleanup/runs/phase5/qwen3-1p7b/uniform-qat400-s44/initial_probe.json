@@ -1,0 +1,32 @@
+{
+  "nll": 2.8347496390342712,
+  "ppl": 17.026137086623663,
+  "predicted_tokens": 8188,
+  "token_count": 8192,
+  "windows": [
+    {
+      "window": 0,
+      "tokens": 2048,
+      "predicted_tokens": 2047,
+      "nll": 3.0958969593048096
+    },
+    {
+      "window": 1,
+      "tokens": 2048,
+      "predicted_tokens": 2047,
+      "nll": 3.0012805461883545
+    },
+    {
+      "window": 2,
+      "tokens": 2048,
+      "predicted_tokens": 2047,
+      "nll": 2.658128499984741
+    },
+    {
+      "window": 3,
+      "tokens": 2048,
+      "predicted_tokens": 2047,
+      "nll": 2.5836925506591797
+    }
+  ]
+}

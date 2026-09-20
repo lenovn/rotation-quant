@@ -1,0 +1,75 @@
+{
+  "parent": {
+    "fit_mse": 0.00011713231651810929,
+    "heldout_mse": 0.00014129727787803859
+  },
+  "A1": {
+    "trials": [
+      {
+        "cycle": 1,
+        "scale_fit": null,
+        "coordinates": 2048,
+        "fit_mse": 0.00010638852836564183,
+        "heldout_mse": 0.00013717703404836357,
+        "changed_codes": 575745
+      },
+      {
+        "cycle": 2,
+        "scale_fit": null,
+        "coordinates": 2048,
+        "fit_mse": 0.00010111045412486419,
+        "heldout_mse": 0.00013409386156126857,
+        "changed_codes": 348988
+      }
+    ],
+    "optimization_seconds": 22.268508441979066,
+    "scale_only": null
+  },
+  "A2": {
+    "trials": [
+      {
+        "cycle": 1,
+        "scale_fit": {
+          "accepted_rows": 2047,
+          "total_rows": 2048,
+          "relative_change_max": 0.042257606983184814,
+          "ideal_scale_relative_change_median": 0.01757866144180298,
+          "fit_mse_before": 0.00011714235733961686,
+          "fit_mse_after": 0.0001149279996752739
+        },
+        "coordinates": 2048,
+        "fit_mse": 0.00010363502951804549,
+        "heldout_mse": 0.00013352421228773892,
+        "changed_codes": 599149
+      },
+      {
+        "cycle": 2,
+        "scale_fit": {
+          "accepted_rows": 2019,
+          "total_rows": 2048,
+          "relative_change_max": 0.01687800884246826,
+          "ideal_scale_relative_change_median": 0.007163345813751221,
+          "fit_mse_before": 0.00010364627814851701,
+          "fit_mse_after": 0.00010328968346584588
+        },
+        "coordinates": 2048,
+        "fit_mse": 9.766621224116534e-05,
+        "heldout_mse": 0.00012945299386046827,
+        "changed_codes": 372766
+      }
+    ],
+    "optimization_seconds": 22.684469962026924,
+    "scale_only": {
+      "fit_mse": 0.00011491822078824043,
+      "heldout_mse": 0.00013813821715302765,
+      "scale_fit": {
+        "accepted_rows": 2047,
+        "total_rows": 2048,
+        "relative_change_max": 0.042257606983184814,
+        "ideal_scale_relative_change_median": 0.01757866144180298,
+        "fit_mse_before": 0.00011714235733961686,
+        "fit_mse_after": 0.0001149279996752739
+      }
+    }
+  }
+}

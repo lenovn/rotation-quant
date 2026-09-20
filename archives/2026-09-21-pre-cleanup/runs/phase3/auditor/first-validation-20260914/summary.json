@@ -1,0 +1,93 @@
+{
+  "completed_at": 1789325650.9969058,
+  "role": "independent experimental auditor; not implementation verifier",
+  "formal_checkpoint10_evidence": {
+    "route-a-adam-100-20260914a": "PASS",
+    "route-b-adam-100-20260914a": "PASS",
+    "route-c-adam-100-20260914a": "PASS",
+    "route-c-sgd-10-20260914a": "PASS"
+  },
+  "gpu_reproducibility": {
+    "bf16": {
+      "status": "PASS",
+      "checks": {
+        "token_count": true,
+        "predicted_tokens": true,
+        "unscored_tail_tokens": true,
+        "nll": true,
+        "ppl": true,
+        "segment_values_exact": true,
+        "exit_zero": true
+      },
+      "ppl": 13.634657725643203,
+      "nll": 2.612614913352714,
+      "reference_ppl": 13.634657725643203,
+      "delta_ppl": 0.0,
+      "delta_nll": 0.0,
+      "gpu": 1,
+      "pid": 25317,
+      "evaluation_seconds": 38.4223059520009,
+      "peak_allocated_gib": 4.336132526397705
+    },
+    "c-adam10": {
+      "status": "PASS",
+      "checks": {
+        "token_count": true,
+        "predicted_tokens": true,
+        "unscored_tail_tokens": true,
+        "nll": true,
+        "ppl": true,
+        "segment_values_exact": true,
+        "exit_zero": true
+      },
+      "ppl": 22.08612814729231,
+      "nll": 3.0949497258037195,
+      "reference_ppl": 22.08612814729231,
+      "delta_ppl": 0.0,
+      "delta_nll": 0.0,
+      "gpu": 1,
+      "pid": 59541,
+      "evaluation_seconds": 73.65301860199543,
+      "peak_allocated_gib": 4.6500020027160645
+    }
+  },
+  "target_acceptance": {
+    "status": "FAIL",
+    "scope": "checkpoint10 only; not final Phase3",
+    "baseline": 13.634657725643203,
+    "target_ppl": 14.634657725643203,
+    "candidate_ppl": 22.08612814729231,
+    "delta_ppl": 8.451470421649107,
+    "delta_nll": 0.4823348124510054,
+    "gap_above_target": 7.451470421649107
+  },
+  "not_tested": [
+    "independent GPU A10/B10/C-SGD10 reruns",
+    "100-step final ranking",
+    "GPU uninterrupted versus resumed training bitwise equivalence",
+    "scale initialization final benefit",
+    "postprocess.py and postprocessing",
+    "FT/distillation",
+    "KV8/decode/native phone NPU"
+  ],
+  "scope": {
+    "training_updates": 0,
+    "recalibrations": 0,
+    "candidate_set": [
+      "original BF16",
+      "saved C-Adam10"
+    ],
+    "valid_complete_evaluations": 2,
+    "invalid_complete_evaluations": 1,
+    "failed_attempts_before_evaluator": 2,
+    "total_complete_evaluator_passes": 3,
+    "invalid_reason": "auditor cold-construction RoPE dtype error, retained and excluded; corrected same-candidate evaluation matches exactly",
+    "new_algorithm_results": 0
+  },
+  "handoff": {
+    "state": "PAUSED after first complete-validation audit",
+    "next_regular_audit": "after all three 100-step routes complete",
+    "subsequent_audits": "stage-final candidate, final winner, or conclusion-affecting anomaly only",
+    "do_not": "continuously monitor or rerun intermediate checkpoints"
+  }
+}

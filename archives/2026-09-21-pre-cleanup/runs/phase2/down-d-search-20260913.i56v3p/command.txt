@@ -1,0 +1,1 @@
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u /home/dongpeiyan/projects/rotation-quant/scripts/phase2/down_d_search.py --output /home/dongpeiyan/projects/rotation-quant/runs/phase2/down-d-search-20260913.i56v3p --prior-gpu-seconds 0 --precision-loop attribution 

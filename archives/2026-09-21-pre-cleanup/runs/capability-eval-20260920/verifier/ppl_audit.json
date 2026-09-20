@@ -1,0 +1,230 @@
+[
+  {
+    "model": "qwen",
+    "method": "bf16",
+    "dataset": "Salesforce/wikitext",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/bf16-test-s42/result.json"
+  },
+  {
+    "model": "qwen",
+    "method": "bf16",
+    "dataset": "allenai/c4",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/bf16-c4-s42/result.json"
+  },
+  {
+    "model": "qwen",
+    "method": "firon",
+    "dataset": "Salesforce/wikitext",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-test-s42/result.json"
+  },
+  {
+    "model": "qwen",
+    "method": "firon",
+    "dataset": "allenai/c4",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-c4-s42/result.json"
+  },
+  {
+    "model": "qwen",
+    "method": "parent",
+    "dataset": "Salesforce/wikitext",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-ptq-test-s42/result.json"
+  },
+  {
+    "model": "qwen",
+    "method": "parent",
+    "dataset": "allenai/c4",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-ptq-c4-s42/result.json"
+  },
+  {
+    "model": "llama",
+    "method": "bf16",
+    "dataset": "Salesforce/wikitext",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/wiki2-test-bf16-fixed-20260917a/result.json"
+  },
+  {
+    "model": "llama",
+    "method": "bf16",
+    "dataset": "allenai/c4",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-bf16-fixed-20260915a/result.json"
+  },
+  {
+    "model": "llama",
+    "method": "firon",
+    "dataset": "Salesforce/wikitext",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/wiki2-test-best-fixed-20260917a/result.json"
+  },
+  {
+    "model": "llama",
+    "method": "firon",
+    "dataset": "allenai/c4",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-best-fixed-20260915a/result.json"
+  },
+  {
+    "model": "llama",
+    "method": "parent",
+    "dataset": "allenai/c4",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-ptq-parent-fixed-20260918a/result.json"
+  },
+  {
+    "model": "llama",
+    "method": "parent",
+    "dataset": "Salesforce/wikitext",
+    "checks": {
+      "ppl": true,
+      "nll": true,
+      "targets": true,
+      "input_tokens": true,
+      "split": true,
+      "dataset": true,
+      "subset": true,
+      "tokens_path": true,
+      "package": true,
+      "registry": true,
+      "weighted_nll": true
+    },
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-ptq-test-s42/result.json"
+  }
+]

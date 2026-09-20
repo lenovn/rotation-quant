@@ -1,0 +1,20 @@
+{
+  "pid": 45373,
+  "gpu": 0,
+  "started": 1789843719.92325,
+  "command": [
+    "env",
+    "CUDA_VISIBLE_DEVICES=0",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "OMP_NUM_THREADS=4",
+    "MKL_NUM_THREADS=4",
+    "HF_HUB_OFFLINE=1",
+    "HF_DATASETS_OFFLINE=1",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/build_qwen_gptq.py"
+  ],
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/gptq_w4a16_package",
+  "log": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/gptq_w4a16_package/build.log",
+  "tmux_session": "qwen-original-gptq-build"
+}

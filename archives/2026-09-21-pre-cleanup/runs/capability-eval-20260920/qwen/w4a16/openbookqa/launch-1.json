@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py",
+    "--model",
+    "qwen",
+    "--method",
+    "w4a16",
+    "--task",
+    "openbookqa",
+    "--batch-size",
+    "4",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/w4a16/openbookqa"
+  ],
+  "pid": 96477,
+  "gpu": "0",
+  "started": 1789844532.8096964,
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/w4a16/openbookqa"
+}

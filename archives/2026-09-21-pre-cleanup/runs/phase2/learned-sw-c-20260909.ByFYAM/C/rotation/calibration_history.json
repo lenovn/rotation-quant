@@ -1,0 +1,10 @@
+[
+  {
+    "update_step": 0,
+    "kind": "initial",
+    "activation_scale_mean": 0.03639105334877968,
+    "weight_scale_mean": 0.004908643197268248,
+    "activation_relative_drift": null,
+    "weight_relative_drift": null
+  }
+]

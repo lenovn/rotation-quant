@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py",
+    "--model",
+    "llama",
+    "--method",
+    "w4a16",
+    "--task",
+    "social_iqa",
+    "--batch-size",
+    "4",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/w4a16/social_iqa"
+  ],
+  "pid": 3814415,
+  "gpu": "7",
+  "started": 1789837482.4233963,
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/w4a16/social_iqa"
+}

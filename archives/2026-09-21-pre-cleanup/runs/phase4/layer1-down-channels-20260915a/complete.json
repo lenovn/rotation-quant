@@ -1,0 +1,7 @@
+{
+  "target": "model.layers.1.mlp.down_proj",
+  "plots": [
+    "channels.png",
+    "row_histograms.png"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "trials": [
+    {
+      "step": 0,
+      "fit_mse": 0.0006962738698348403,
+      "heldout_mse": 0.00074439134914428,
+      "changed_codes": 0
+    },
+    {
+      "step": 32,
+      "fit_mse": 0.0005946060409769416,
+      "heldout_mse": 0.0006484558689408004,
+      "changed_codes": 31149
+    },
+    {
+      "step": 128,
+      "fit_mse": 0.0005653691478073597,
+      "heldout_mse": 0.0006337753147818148,
+      "changed_codes": 124977
+    },
+    {
+      "step": 512,
+      "fit_mse": 0.0004902593209408224,
+      "heldout_mse": 0.0006085058557800949,
+      "changed_codes": 490430
+    }
+  ],
+  "selected_step": 512
+}

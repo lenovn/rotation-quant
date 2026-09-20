@@ -1,0 +1,9 @@
+{
+  "ppl": 16.468088150024414,
+  "nll": 2.8014244567002553,
+  "split": "train",
+  "windows": 32,
+  "predicted_tokens": 65504,
+  "frozen_unchanged": true,
+  "down_statistics": {}
+}

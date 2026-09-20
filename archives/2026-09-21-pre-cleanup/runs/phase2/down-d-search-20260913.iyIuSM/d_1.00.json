@@ -1,0 +1,39 @@
+{
+  "strength": 1.0,
+  "channel": 1976,
+  "d_min": 0.9998308420181274,
+  "d_max": 3.9993228912353516,
+  "mean_log_d": 5.3080626883270066e-08,
+  "selected_round_step": 8192,
+  "train_nll": 2.8563241628067417,
+  "same_parent": false,
+  "fp64_equivalence": true,
+  "up_sw_transport": true,
+  "down_sw_expanded_rows": 1497,
+  "trials": [
+    {
+      "step": 0,
+      "fit_mse": 0.0010287046898156404,
+      "heldout_mse": 0.0013040120247751474,
+      "changed_codes": 0
+    },
+    {
+      "step": 512,
+      "fit_mse": 0.0007688561454415321,
+      "heldout_mse": 0.0010031096171587706,
+      "changed_codes": 470063
+    },
+    {
+      "step": 2048,
+      "fit_mse": 0.000658411649055779,
+      "heldout_mse": 0.0008773653535172343,
+      "changed_codes": 1741220
+    },
+    {
+      "step": 8192,
+      "fit_mse": 0.0005706546362489462,
+      "heldout_mse": 0.000795019674114883,
+      "changed_codes": 4794306
+    }
+  ]
+}

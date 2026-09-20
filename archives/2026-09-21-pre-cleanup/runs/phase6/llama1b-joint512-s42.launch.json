@@ -1,0 +1,33 @@
+{
+  "session": "phase6-llama1b-joint512-s42",
+  "socket": "rotation-quant-phase6",
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/phase6/joint.py",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase6/llama1b-joint512-s42",
+    "--steps",
+    "512",
+    "--arm",
+    "joint"
+  ],
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "PHASE5_MODEL_PATH": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "PHASE5_SEED": "42",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4",
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+    "HF_HOME": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface"
+  },
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase6/llama1b-joint512-s42",
+  "log": "/home/dongpeiyan/projects/rotation-quant/runs/phase6/llama1b-joint512-s42.log",
+  "gpu_at_launch": {
+    "total_mib": 24564,
+    "used_mib": 20,
+    "utilization": 0
+  }
+}

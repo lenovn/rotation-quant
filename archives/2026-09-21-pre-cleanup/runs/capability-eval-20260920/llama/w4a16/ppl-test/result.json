@@ -1,0 +1,63 @@
+{
+  "token_count": 289076,
+  "predicted_tokens": 288934,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 15.56099796295166,
+      "nll": 2.7447676531300744
+    },
+    {
+      "start_token": 262144,
+      "seqlen": 2048,
+      "windows": 13,
+      "predicted_tokens": 26611,
+      "ppl": 16.10816764831543,
+      "nll": 2.7793264507023325
+    },
+    {
+      "start_token": 288768,
+      "seqlen": 308,
+      "windows": 1,
+      "predicted_tokens": 307,
+      "ppl": 25.423864364624023,
+      "nll": 3.23568827484558
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.7484721558644774,
+  "ppl": 15.61875062886324,
+  "input_metadata": {
+    "dataset": "Salesforce/wikitext",
+    "subset": "wikitext-2-raw-v1",
+    "split": "test",
+    "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-test.arrow",
+    "rows": 4358,
+    "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "add_bos_token": false,
+    "add_eos_token": false,
+    "text_join": "double-newline",
+    "token_count": 289076,
+    "window_length": 2048,
+    "full_windows": 141,
+    "tail_tokens": 308,
+    "windows": 142,
+    "predicted_tokens": 288934,
+    "unscored_tail_tokens": 0,
+    "protocol": "all test rows in original order; disjoint 2048-token windows including partial tail"
+  },
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/w4_gptq_model.pt",
+  "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "loading": {
+    "backbone_w4_linears": 112,
+    "activation_bits": 16,
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/w4_gptq_model.pt",
+    "loading": "exact saved weights, embedding/head/norm; no rotation recomputation; no requantization"
+  },
+  "calibration": false,
+  "training": false,
+  "elapsed_seconds": 25.730327367782593
+}

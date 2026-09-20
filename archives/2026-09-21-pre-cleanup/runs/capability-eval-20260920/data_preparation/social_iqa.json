@@ -1,0 +1,10 @@
+{
+  "task": "social_iqa",
+  "path": "social_i_qa",
+  "name": null,
+  "splits": {
+    "train": 33410,
+    "validation": 1954
+  },
+  "status": "ready"
+}

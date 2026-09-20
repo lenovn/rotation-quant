@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py",
+    "--model",
+    "qwen",
+    "--method",
+    "w4a16",
+    "--task",
+    "mmlu",
+    "--batch-size",
+    "4",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/w4a16/mmlu"
+  ],
+  "pid": 2862,
+  "gpu": "2",
+  "started": 1789843139.9751093,
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/w4a16/mmlu"
+}

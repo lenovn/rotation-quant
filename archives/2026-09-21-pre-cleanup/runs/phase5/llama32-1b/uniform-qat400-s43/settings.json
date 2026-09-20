@@ -1,0 +1,49 @@
+{
+  "arguments": {
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s43",
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s43/static_w4a8.pt",
+    "resume": null,
+    "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s43/checkpoint-0100/state.pt",
+    "steps": 400,
+    "schedule_steps": 400,
+    "accumulation": 8,
+    "warmup": 10,
+    "weight_lr": 1e-05,
+    "weight_optimizer": "adam",
+    "offload_teacher_body": true,
+    "layer_devices": 1,
+    "momentum": 0.9,
+    "relative_scale_lr": 0.001,
+    "temperature": 1.0,
+    "ce_weight": 0.1,
+    "data_start": 800,
+    "resume_every": 25,
+    "checkpoints": [
+      100,
+      200,
+      400
+    ],
+    "validation_steps": [
+      400
+    ],
+    "target_ppl": null
+  },
+  "source": {
+    "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel",
+    "project_root": "/home/dongpeiyan/projects/rotation-quant",
+    "quant_linear": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/train_utils/quant_linear.py",
+    "quant_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/quant_utils.py",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase5/multimodel",
+    "pytorch": "2.4.1+cu121",
+    "cuda": "12.1",
+    "device": "NVIDIA GeForce RTX 4090",
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "model_cache_revision": "Revision:master,CreatedAt:1740591574",
+    "transformers": "4.44.2",
+    "seed": 43
+  },
+  "pid": 3893776,
+  "teacher": "original unrotated BF16; no norm fusion; frozen; no validation data",
+  "optimization": "all backbone FP32 master weights with declared SGD/Adam; weight/input static scales with Adam; fixed fused R; legacy SP2 optimizer group holds all down scales, including INT8 controls"
+}

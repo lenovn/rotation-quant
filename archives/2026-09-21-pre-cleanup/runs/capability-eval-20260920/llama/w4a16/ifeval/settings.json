@@ -1,0 +1,31 @@
+{
+  "arguments": {
+    "model": "llama",
+    "method": "w4a16",
+    "task": "ifeval",
+    "batch_size": 8,
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/w4a16/ifeval"
+  },
+  "effective_batch_size": 16,
+  "selected": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/w4_gptq_model.pt",
+    "seed": 42,
+    "note": "Historical Phase2 learned-SW-C GPTQ W4A16; distinct recipe, not same-final-weight activation ablation"
+  },
+  "seed": 42,
+  "harness_version": "0.4.8",
+  "generation_chat_template": true,
+  "enable_thinking": false,
+  "fewshot_as_multiturn": false,
+  "num_fewshot": 0,
+  "max_length": 8192,
+  "generation_max_new_tokens": 1280,
+  "scoring_use_cache": false,
+  "generation_use_cache": true,
+  "kv_bits": 16,
+  "calibration": false,
+  "training": false,
+  "source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel",
+  "generation_log": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/w4a16/ifeval/generation_batches-001.jsonl"
+}

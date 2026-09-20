@@ -1,0 +1,37 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 16.46786117553711,
+      "nll": 2.801410673919315
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 17.76614761352539,
+      "nll": 2.877294827078352
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.8016950203037343,
+  "ppl": 16.472544418121483,
+  "layer": 1,
+  "restored_weights": 7,
+  "remaining_w4": 105,
+  "split": "validation",
+  "use_cache": false,
+  "kv_bits": 16,
+  "frozen_checks_pass": true,
+  "historical_base_ppl": 17.64239997588965,
+  "historical_base_nll": 2.8703050943792365,
+  "delta_ppl": -1.169855557768166,
+  "delta_nll": -0.06861007407550224,
+  "bf16_plus_one_gap": 1.8378866924782802
+}

@@ -1,0 +1,5 @@
+Collecting lm_eval==0.4.8
+  Downloading lm_eval-0.4.8-py3-none-any.whl (3.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 1.4 MB/s eta 0:00:00
+Installing collected packages: lm_eval
+Successfully installed lm_eval-0.4.8

@@ -1,0 +1,20 @@
+{
+  "sp2": {
+    "model.layers.0.mlp.down_proj": 3.2209806638985086,
+    "model.layers.1.mlp.down_proj": 531.3484051543793,
+    "model.layers.2.mlp.down_proj": 2.7924244519187607,
+    "model.layers.3.mlp.down_proj": 2.775576987774717,
+    "model.layers.4.mlp.down_proj": 2.221989894479867,
+    "model.layers.5.mlp.down_proj": 1.4949334397316987,
+    "model.layers.6.mlp.down_proj": 1.5053149219520576,
+    "model.layers.7.mlp.down_proj": 2.2096260291298444,
+    "model.layers.8.mlp.down_proj": 2.845825058278131,
+    "model.layers.9.mlp.down_proj": 3.324139656616933,
+    "model.layers.10.mlp.down_proj": 4.32402390279745,
+    "model.layers.11.mlp.down_proj": 4.80343990591726,
+    "model.layers.12.mlp.down_proj": 5.363430998711268,
+    "model.layers.13.mlp.down_proj": 6.773391873052966,
+    "model.layers.14.mlp.down_proj": 10.134490843525777,
+    "model.layers.15.mlp.down_proj": 75.9579059361452
+  }
+}

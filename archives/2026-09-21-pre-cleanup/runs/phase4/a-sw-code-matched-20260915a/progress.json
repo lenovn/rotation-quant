@@ -1,0 +1,126 @@
+{
+  "stage": "completed",
+  "pid": 2800949,
+  "time": 1789414667.7895787,
+  "cuda_visible_devices": "0",
+  "allocated_gib": 0.685737133026123,
+  "reserved_gib": 2.294921875,
+  "peak_allocated_gib": 7.2867960929870605,
+  "gpu_time_budget": null,
+  "results": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+    "initial_train_nll": 2.6472935144882825,
+    "arms": {
+      "A1": {
+        "train_nll": 2.6472935144882825,
+        "choices": [
+          {
+            "module": "model.layers.1.mlp.down_proj",
+            "selected_cycle": 0,
+            "scores": [
+              {
+                "cycle": 1,
+                "train_nll": 2.648921486143531
+              },
+              {
+                "cycle": 2,
+                "train_nll": 2.651027244719207
+              }
+            ]
+          },
+          {
+            "module": "model.layers.8.mlp.down_proj",
+            "selected_cycle": 0,
+            "scores": [
+              {
+                "cycle": 1,
+                "train_nll": 2.6491598968469874
+              },
+              {
+                "cycle": 2,
+                "train_nll": 2.648265310370954
+              }
+            ]
+          },
+          {
+            "module": "model.layers.11.mlp.down_proj",
+            "selected_cycle": 0,
+            "scores": [
+              {
+                "cycle": 1,
+                "train_nll": 2.6493515958234077
+              },
+              {
+                "cycle": 2,
+                "train_nll": 2.6487664718350894
+              }
+            ]
+          }
+        ],
+        "changed_modules": [],
+        "validation": {
+          "reused_parent": true,
+          "ppl": 16.112577060930427,
+          "nll": 2.779600150933802,
+          "predicted_tokens": 252728
+        }
+      },
+      "A2": {
+        "train_nll": 2.6472935144882825,
+        "choices": [
+          {
+            "module": "model.layers.1.mlp.down_proj",
+            "selected_cycle": 0,
+            "scores": [
+              {
+                "cycle": 1,
+                "train_nll": 2.6481232903245586
+              },
+              {
+                "cycle": 2,
+                "train_nll": 2.6485016507326775
+              }
+            ]
+          },
+          {
+            "module": "model.layers.8.mlp.down_proj",
+            "selected_cycle": 0,
+            "scores": [
+              {
+                "cycle": 1,
+                "train_nll": 2.6479983311040716
+              },
+              {
+                "cycle": 2,
+                "train_nll": 2.6476719863157148
+              }
+            ]
+          },
+          {
+            "module": "model.layers.11.mlp.down_proj",
+            "selected_cycle": 0,
+            "scores": [
+              {
+                "cycle": 1,
+                "train_nll": 2.649546156642412
+              },
+              {
+                "cycle": 2,
+                "train_nll": 2.6491570645781937
+              }
+            ]
+          }
+        ],
+        "changed_modules": [],
+        "validation": {
+          "reused_parent": true,
+          "ppl": 16.112577060930427,
+          "nll": 2.779600150933802,
+          "predicted_tokens": 252728
+        }
+      }
+    },
+    "elapsed_seconds": 182.47220904601272,
+    "peak_allocated_gib": 7.2867960929870605
+  }
+}

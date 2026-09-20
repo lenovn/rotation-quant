@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "missing_count": true,
+    "missing_only_qwen_w4a16": true,
+    "expected_missing_tasks": true,
+    "all_available_cells_filled": true,
+    "Qwen3-1.7B/Original BF16/delta": true,
+    "Qwen3-1.7B/FIRON (QAT400, seed42)/delta": true,
+    "Qwen3-1.7B/FIRON pre-distillation (seed42)/delta": true,
+    "Qwen3-1.7B/W4A16 control (unavailable)/delta": true,
+    "Llama-3.2-1B-Instruct/Original BF16/delta": true,
+    "Llama-3.2-1B-Instruct/FIRON (QAT400, seed42)/delta": true,
+    "Llama-3.2-1B-Instruct/FIRON pre-distillation (seed42)/delta": true,
+    "Llama-3.2-1B-Instruct/Historical Phase2 GPTQ/delta": true
+  },
+  "pass": true
+}

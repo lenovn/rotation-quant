@@ -1,0 +1,30 @@
+{
+  "source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint",
+  "destination": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel",
+  "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+  "files": [
+    "experiments/phase3/README.md",
+    "experiments/phase3/common.py",
+    "experiments/phase3/distill.py",
+    "experiments/phase3/external_eval.py",
+    "experiments/phase3/launch.py",
+    "experiments/phase3/local_d.py",
+    "experiments/phase3/postprocess.py",
+    "experiments/phase3/quantization.py",
+    "experiments/phase3/run.py",
+    "experiments/phase3/sequential_postprocess.py",
+    "experiments/phase3/uniform_baseline.py",
+    "optimize_rotation.py",
+    "tests/test_learned_sw_training.py",
+    "tests/test_phase3_external.py",
+    "tests/test_phase3_joint.py",
+    "tests/test_phase3_uniform_baseline.py",
+    "tests/test_phase3_wikitext_test.py",
+    "tests/test_w4_aware_training.py",
+    "train_utils/quant_linear.py",
+    "train_utils/rotation_calibration.py",
+    "utils/process_args.py",
+    "utils/quant_utils.py"
+  ],
+  "utc": "2026-09-17T17:44:32.717873+00:00"
+}

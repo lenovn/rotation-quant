@@ -1,0 +1,25 @@
+{
+  "status": "FAIL",
+  "pid": 2245738,
+  "gpu": "2",
+  "source": "/home/dongpeiyan/projects/rotation-quant/repos/SpinQuant",
+  "model": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "torch": "2.4.1+cu121",
+  "transformers": "4.44.2",
+  "checks": {
+    "failure": {
+      "type": "AttributeError",
+      "message": "'tuple' object has no attribute 'optimized_rotation_path'",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/dongpeiyan/projects/rotation-quant/runs/phase5/verifier/external-spinquant-smoke/smoke.py\", line 177, in <module>\n    main()\n  File \"/home/dongpeiyan/projects/rotation-quant/runs/phase5/verifier/external-spinquant-smoke/smoke.py\", line 65, in main\n    args.optimized_rotation_path = None\nAttributeError: 'tuple' object has no attribute 'optimized_rotation_path'\n"
+    }
+  },
+  "candidate": "Local adapted SpinQuant learned-R + GPTQ W4/group32, dynamic asymmetric A8, KV16",
+  "smoke_only": true,
+  "rotation_updates": 1,
+  "rotation_token_visits": 2048,
+  "gptq_nsamples": 1,
+  "scope": "Local callable core functions; not CLI Trainer/DDP orchestration, not official full reproduction or formal PPL",
+  "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+  "git_status": " M optimize_rotation.py\n M train_utils/quant_linear.py\n M train_utils/rotation_calibration.py\n M utils/process_args.py\n M utils/quant_utils.py\n?? tests/test_learned_sw_training.py\n?? tests/test_w4_aware_training.py\n",
+  "elapsed_seconds": 0.16965913772583008
+}

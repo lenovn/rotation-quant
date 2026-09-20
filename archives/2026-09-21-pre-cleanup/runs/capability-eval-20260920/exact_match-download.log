@@ -1,0 +1,54 @@
+Downloading builder script: 0.00B [00:00, ?B/s]Downloading builder script: 5.67kB [00:00, 15.4MB/s]
+EvaluationModule(name: "exact_match", module_type: "metric", features: {'predictions': Value(dtype='string', id='sequence'), 'references': Value(dtype='string', id='sequence')}, usage: """
+Args:
+    predictions: List of predicted texts.
+    references: List of reference texts.
+    regexes_to_ignore: List, defaults to None. Regex expressions of characters to
+        ignore when calculating the exact matches. Note: these regexes are removed
+        from the input data before the changes based on the options below (e.g. ignore_case,
+        ignore_punctuation, ignore_numbers) are applied.
+    ignore_case: Boolean, defaults to False. If true, turns everything
+        to lowercase so that capitalization differences are ignored.
+    ignore_punctuation: Boolean, defaults to False. If true, removes all punctuation before
+        comparing predictions and references.
+    ignore_numbers: Boolean, defaults to False. If true, removes all punctuation before
+        comparing predictions and references.
+Returns:
+    exact_match: Dictionary containing exact_match rate. Possible values are between 0.0 and 1.0, inclusive.
+Examples:
+    >>> exact_match = evaluate.load("exact_match")
+    >>> refs = ["the cat", "theater", "YELLING", "agent007"]
+    >>> preds = ["cat?", "theater", "yelling", "agent"]
+    >>> results = exact_match.compute(references=refs, predictions=preds)
+    >>> print(round(results["exact_match"], 2))
+    0.25
+
+    >>> exact_match = evaluate.load("exact_match")
+    >>> refs = ["the cat", "theater", "YELLING", "agent007"]
+    >>> preds = ["cat?", "theater", "yelling", "agent"]
+    >>> results = exact_match.compute(references=refs, predictions=preds, regexes_to_ignore=["the ", "yell"], ignore_case=True, ignore_punctuation=True)
+    >>> print(round(results["exact_match"], 2))
+    0.5
+
+
+    >>> exact_match = evaluate.load("exact_match")
+    >>> refs = ["the cat", "theater", "YELLING", "agent007"]
+    >>> preds = ["cat?", "theater", "yelling", "agent"]
+    >>> results = exact_match.compute(references=refs, predictions=preds, regexes_to_ignore=["the ", "yell", "YELL"], ignore_case=True, ignore_punctuation=True)
+    >>> print(round(results["exact_match"], 2))
+    0.75
+
+    >>> exact_match = evaluate.load("exact_match")
+    >>> refs = ["the cat", "theater", "YELLING", "agent007"]
+    >>> preds = ["cat?", "theater", "yelling", "agent"]
+    >>> results = exact_match.compute(references=refs, predictions=preds, regexes_to_ignore=["the ", "yell", "YELL"], ignore_case=True, ignore_punctuation=True, ignore_numbers=True)
+    >>> print(round(results["exact_match"], 2))
+    1.0
+
+    >>> exact_match = evaluate.load("exact_match")
+    >>> refs = ["The cat sat on the mat.", "Theaters are great.", "It's like comparing oranges and apples."]
+    >>> preds = ["The cat sat on the mat?", "Theaters are great.", "It's like comparing apples and oranges."]
+    >>> results = exact_match.compute(references=refs, predictions=preds)
+    >>> print(round(results["exact_match"], 2))
+    0.33
+""", stored examples: 0)

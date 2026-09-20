@@ -1,0 +1,16 @@
+{
+  "mode": "quantized",
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-initial-s42/static_w4a8.pt",
+  "backbone_weight_bits": 4,
+  "activation_formats": {
+    "int8": 196
+  },
+  "rotary_buffer_dtypes": {
+    "model.rotary_emb.inv_freq": "torch.float32"
+  },
+  "kv_bits": 16,
+  "use_cache": false,
+  "training": false,
+  "calibration": false,
+  "down_int8_overlay": null
+}

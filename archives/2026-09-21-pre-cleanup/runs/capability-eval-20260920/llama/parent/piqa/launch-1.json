@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py",
+    "--model",
+    "llama",
+    "--method",
+    "parent",
+    "--task",
+    "piqa",
+    "--batch-size",
+    "4",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/parent/piqa"
+  ],
+  "pid": 3768932,
+  "gpu": "5",
+  "started": 1789836931.482112,
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/parent/piqa"
+}

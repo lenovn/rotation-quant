@@ -1,0 +1,6 @@
+{
+  "backbone_w4_linears": 112,
+  "activation_bits": 16,
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/w4_gptq_model.pt",
+  "loading": "exact saved weights, embedding/head/norm; no rotation recomputation; no requantization"
+}

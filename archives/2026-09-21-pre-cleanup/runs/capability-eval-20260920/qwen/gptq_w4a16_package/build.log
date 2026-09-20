@@ -1,0 +1,31 @@
+Token indices sequence length is longer than the specified maximum sequence length for this model (2518423 > 2048). Running this sequence through the model will result in indexing errors
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.92it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.81it/s]
+GPTQ layer 1/28 complete
+GPTQ layer 2/28 complete
+GPTQ layer 3/28 complete
+GPTQ layer 4/28 complete
+GPTQ layer 5/28 complete
+GPTQ layer 6/28 complete
+GPTQ layer 7/28 complete
+GPTQ layer 8/28 complete
+GPTQ layer 9/28 complete
+GPTQ layer 10/28 complete
+GPTQ layer 11/28 complete
+GPTQ layer 12/28 complete
+GPTQ layer 13/28 complete
+GPTQ layer 14/28 complete
+GPTQ layer 15/28 complete
+GPTQ layer 16/28 complete
+GPTQ layer 17/28 complete
+GPTQ layer 18/28 complete
+GPTQ layer 19/28 complete
+GPTQ layer 20/28 complete
+GPTQ layer 21/28 complete
+GPTQ layer 22/28 complete
+GPTQ layer 23/28 complete
+GPTQ layer 24/28 complete
+GPTQ layer 25/28 complete
+GPTQ layer 26/28 complete
+GPTQ layer 27/28 complete
+GPTQ layer 28/28 complete
+SAVED /home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/gptq_w4a16_package/w4_gptq_model.pt

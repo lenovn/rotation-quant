@@ -1,0 +1,16 @@
+{
+  "time": 1789843482.2377138,
+  "reason": "Clarify independent W4A16 baseline versus FIRON A16 ablation; preserve completed and active task outputs",
+  "processes": [
+    {
+      "pid": 2846,
+      "action": "scheduler SIGSTOP; active child may finish",
+      "command": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python -u /home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/schedule.py --jobs qwen:w4a16:0 --tasks boolq piqa social_iqa hellaswag winogrande arc_easy arc_challenge openbookqa "
+    },
+    {
+      "pid": 14523,
+      "action": "scheduler SIGSTOP; active child may finish",
+      "command": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python -u /home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/schedule.py --jobs qwen:w4a16:6 --skip-ppl --tasks boolq piqa social_iqa hellaswag winogrande arc_easy arc_challenge openbookqa "
+    }
+  ]
+}

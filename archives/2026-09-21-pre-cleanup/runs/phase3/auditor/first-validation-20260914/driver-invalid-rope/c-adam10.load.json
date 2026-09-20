@@ -1,0 +1,1443 @@
+{
+  "checkpoint": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-adam-100-20260914a/checkpoint-0010/static_w4a8.pt",
+  "metadata": {
+    "route": "C",
+    "step": 10,
+    "initial": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt"
+  },
+  "cold_load": true,
+  "pretrained_weights_loaded": false,
+  "trained_or_recalibrated": false,
+  "packed_weight_equality": {
+    "model.layers.0.self_attn.q_proj": true,
+    "model.layers.0.self_attn.k_proj": true,
+    "model.layers.0.self_attn.v_proj": true,
+    "model.layers.0.self_attn.o_proj": true,
+    "model.layers.0.mlp.gate_proj": true,
+    "model.layers.0.mlp.up_proj": true,
+    "model.layers.0.mlp.down_proj": true,
+    "model.layers.1.self_attn.q_proj": true,
+    "model.layers.1.self_attn.k_proj": true,
+    "model.layers.1.self_attn.v_proj": true,
+    "model.layers.1.self_attn.o_proj": true,
+    "model.layers.1.mlp.gate_proj": true,
+    "model.layers.1.mlp.up_proj": true,
+    "model.layers.1.mlp.down_proj": true,
+    "model.layers.2.self_attn.q_proj": true,
+    "model.layers.2.self_attn.k_proj": true,
+    "model.layers.2.self_attn.v_proj": true,
+    "model.layers.2.self_attn.o_proj": true,
+    "model.layers.2.mlp.gate_proj": true,
+    "model.layers.2.mlp.up_proj": true,
+    "model.layers.2.mlp.down_proj": true,
+    "model.layers.3.self_attn.q_proj": true,
+    "model.layers.3.self_attn.k_proj": true,
+    "model.layers.3.self_attn.v_proj": true,
+    "model.layers.3.self_attn.o_proj": true,
+    "model.layers.3.mlp.gate_proj": true,
+    "model.layers.3.mlp.up_proj": true,
+    "model.layers.3.mlp.down_proj": true,
+    "model.layers.4.self_attn.q_proj": true,
+    "model.layers.4.self_attn.k_proj": true,
+    "model.layers.4.self_attn.v_proj": true,
+    "model.layers.4.self_attn.o_proj": true,
+    "model.layers.4.mlp.gate_proj": true,
+    "model.layers.4.mlp.up_proj": true,
+    "model.layers.4.mlp.down_proj": true,
+    "model.layers.5.self_attn.q_proj": true,
+    "model.layers.5.self_attn.k_proj": true,
+    "model.layers.5.self_attn.v_proj": true,
+    "model.layers.5.self_attn.o_proj": true,
+    "model.layers.5.mlp.gate_proj": true,
+    "model.layers.5.mlp.up_proj": true,
+    "model.layers.5.mlp.down_proj": true,
+    "model.layers.6.self_attn.q_proj": true,
+    "model.layers.6.self_attn.k_proj": true,
+    "model.layers.6.self_attn.v_proj": true,
+    "model.layers.6.self_attn.o_proj": true,
+    "model.layers.6.mlp.gate_proj": true,
+    "model.layers.6.mlp.up_proj": true,
+    "model.layers.6.mlp.down_proj": true,
+    "model.layers.7.self_attn.q_proj": true,
+    "model.layers.7.self_attn.k_proj": true,
+    "model.layers.7.self_attn.v_proj": true,
+    "model.layers.7.self_attn.o_proj": true,
+    "model.layers.7.mlp.gate_proj": true,
+    "model.layers.7.mlp.up_proj": true,
+    "model.layers.7.mlp.down_proj": true,
+    "model.layers.8.self_attn.q_proj": true,
+    "model.layers.8.self_attn.k_proj": true,
+    "model.layers.8.self_attn.v_proj": true,
+    "model.layers.8.self_attn.o_proj": true,
+    "model.layers.8.mlp.gate_proj": true,
+    "model.layers.8.mlp.up_proj": true,
+    "model.layers.8.mlp.down_proj": true,
+    "model.layers.9.self_attn.q_proj": true,
+    "model.layers.9.self_attn.k_proj": true,
+    "model.layers.9.self_attn.v_proj": true,
+    "model.layers.9.self_attn.o_proj": true,
+    "model.layers.9.mlp.gate_proj": true,
+    "model.layers.9.mlp.up_proj": true,
+    "model.layers.9.mlp.down_proj": true,
+    "model.layers.10.self_attn.q_proj": true,
+    "model.layers.10.self_attn.k_proj": true,
+    "model.layers.10.self_attn.v_proj": true,
+    "model.layers.10.self_attn.o_proj": true,
+    "model.layers.10.mlp.gate_proj": true,
+    "model.layers.10.mlp.up_proj": true,
+    "model.layers.10.mlp.down_proj": true,
+    "model.layers.11.self_attn.q_proj": true,
+    "model.layers.11.self_attn.k_proj": true,
+    "model.layers.11.self_attn.v_proj": true,
+    "model.layers.11.self_attn.o_proj": true,
+    "model.layers.11.mlp.gate_proj": true,
+    "model.layers.11.mlp.up_proj": true,
+    "model.layers.11.mlp.down_proj": true,
+    "model.layers.12.self_attn.q_proj": true,
+    "model.layers.12.self_attn.k_proj": true,
+    "model.layers.12.self_attn.v_proj": true,
+    "model.layers.12.self_attn.o_proj": true,
+    "model.layers.12.mlp.gate_proj": true,
+    "model.layers.12.mlp.up_proj": true,
+    "model.layers.12.mlp.down_proj": true,
+    "model.layers.13.self_attn.q_proj": true,
+    "model.layers.13.self_attn.k_proj": true,
+    "model.layers.13.self_attn.v_proj": true,
+    "model.layers.13.self_attn.o_proj": true,
+    "model.layers.13.mlp.gate_proj": true,
+    "model.layers.13.mlp.up_proj": true,
+    "model.layers.13.mlp.down_proj": true,
+    "model.layers.14.self_attn.q_proj": true,
+    "model.layers.14.self_attn.k_proj": true,
+    "model.layers.14.self_attn.v_proj": true,
+    "model.layers.14.self_attn.o_proj": true,
+    "model.layers.14.mlp.gate_proj": true,
+    "model.layers.14.mlp.up_proj": true,
+    "model.layers.14.mlp.down_proj": true,
+    "model.layers.15.self_attn.q_proj": true,
+    "model.layers.15.self_attn.k_proj": true,
+    "model.layers.15.self_attn.v_proj": true,
+    "model.layers.15.self_attn.o_proj": true,
+    "model.layers.15.mlp.gate_proj": true,
+    "model.layers.15.mlp.up_proj": true,
+    "model.layers.15.mlp.down_proj": true
+  },
+  "high_precision_equality": {
+    "model.embed_tokens.weight": true,
+    "model.layers.0.input_layernorm.weight": true,
+    "model.layers.0.post_attention_layernorm.weight": true,
+    "model.layers.1.input_layernorm.weight": true,
+    "model.layers.1.post_attention_layernorm.weight": true,
+    "model.layers.2.input_layernorm.weight": true,
+    "model.layers.2.post_attention_layernorm.weight": true,
+    "model.layers.3.input_layernorm.weight": true,
+    "model.layers.3.post_attention_layernorm.weight": true,
+    "model.layers.4.input_layernorm.weight": true,
+    "model.layers.4.post_attention_layernorm.weight": true,
+    "model.layers.5.input_layernorm.weight": true,
+    "model.layers.5.post_attention_layernorm.weight": true,
+    "model.layers.6.input_layernorm.weight": true,
+    "model.layers.6.post_attention_layernorm.weight": true,
+    "model.layers.7.input_layernorm.weight": true,
+    "model.layers.7.post_attention_layernorm.weight": true,
+    "model.layers.8.input_layernorm.weight": true,
+    "model.layers.8.post_attention_layernorm.weight": true,
+    "model.layers.9.input_layernorm.weight": true,
+    "model.layers.9.post_attention_layernorm.weight": true,
+    "model.layers.10.input_layernorm.weight": true,
+    "model.layers.10.post_attention_layernorm.weight": true,
+    "model.layers.11.input_layernorm.weight": true,
+    "model.layers.11.post_attention_layernorm.weight": true,
+    "model.layers.12.input_layernorm.weight": true,
+    "model.layers.12.post_attention_layernorm.weight": true,
+    "model.layers.13.input_layernorm.weight": true,
+    "model.layers.13.post_attention_layernorm.weight": true,
+    "model.layers.14.input_layernorm.weight": true,
+    "model.layers.14.post_attention_layernorm.weight": true,
+    "model.layers.15.input_layernorm.weight": true,
+    "model.layers.15.post_attention_layernorm.weight": true,
+    "model.norm.weight": true,
+    "lm_head.weight": true,
+    "lm_head.module.weight": true,
+    "lm_head.quantizer.maxq": true,
+    "lm_head.quantizer.scale": true,
+    "lm_head.quantizer.zero": true,
+    "lm_head.quantizer._static_enabled": true,
+    "lm_head.quantizer._static_encoding_code": true,
+    "lm_head.quantizer._static_clip_ratio": true,
+    "lm_head.quantizer._static_maxq": true,
+    "lm_head.quantizer.prefill_state": true,
+    "lm_head.quantizer.prefill_scale": true,
+    "lm_head.quantizer.prefill_zero": true,
+    "lm_head.quantizer.prefill_clip_min": true,
+    "lm_head.quantizer.prefill_clip_max": true,
+    "lm_head.quantizer.prefill_sample_count": true,
+    "lm_head.quantizer.decode_state": true,
+    "lm_head.quantizer.decode_scale": true,
+    "lm_head.quantizer.decode_zero": true,
+    "lm_head.quantizer.decode_clip_min": true,
+    "lm_head.quantizer.decode_clip_max": true,
+    "lm_head.quantizer.decode_sample_count": true,
+    "lm_head.out_quantizer.maxq": true,
+    "lm_head.out_quantizer.scale": true,
+    "lm_head.out_quantizer.zero": true,
+    "lm_head.out_quantizer._static_enabled": true,
+    "lm_head.out_quantizer._static_encoding_code": true,
+    "lm_head.out_quantizer._static_clip_ratio": true,
+    "lm_head.out_quantizer._static_maxq": true,
+    "lm_head.out_quantizer.prefill_state": true,
+    "lm_head.out_quantizer.prefill_scale": true,
+    "lm_head.out_quantizer.prefill_zero": true,
+    "lm_head.out_quantizer.prefill_clip_min": true,
+    "lm_head.out_quantizer.prefill_clip_max": true,
+    "lm_head.out_quantizer.prefill_sample_count": true,
+    "lm_head.out_quantizer.decode_state": true,
+    "lm_head.out_quantizer.decode_scale": true,
+    "lm_head.out_quantizer.decode_zero": true,
+    "lm_head.out_quantizer.decode_clip_min": true,
+    "lm_head.out_quantizer.decode_clip_max": true,
+    "lm_head.out_quantizer.decode_sample_count": true
+  },
+  "boundaries": {
+    "model.layers.0.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.0.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.0.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.0.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.0.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.0.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.0.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.1.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.1.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.1.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.1.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.1.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.1.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.1.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.2.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.2.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.2.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.2.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.2.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.2.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.2.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.3.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.3.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.3.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.3.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.3.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.3.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.3.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.4.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.4.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.4.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.4.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.4.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.4.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.4.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.5.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.5.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.5.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.5.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.5.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.5.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.5.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.6.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.6.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.6.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.6.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.6.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.6.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.6.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.7.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.7.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.7.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.7.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.7.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.7.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.7.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.8.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.8.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.8.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.8.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.8.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.8.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.8.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.9.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.9.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.9.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.9.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.9.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.9.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.9.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.10.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.10.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.10.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.10.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.10.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.10.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.10.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.11.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.11.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.11.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.11.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.11.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.11.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.11.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.12.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.12.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.12.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.12.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.12.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.12.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.12.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.13.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.13.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.13.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.13.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.13.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.13.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.13.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.14.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.14.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.14.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.14.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.14.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.14.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.14.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.15.self_attn.q_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.15.self_attn.k_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.15.self_attn.v_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.15.self_attn.o_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.15.mlp.gate_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.15.mlp.up_proj": {
+      "input_bits": 8,
+      "format": "int8",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    },
+    "model.layers.15.mlp.down_proj": {
+      "input_bits": 8,
+      "format": "sp2",
+      "output_bits": 16,
+      "online_full_had": false,
+      "online_partial_had": false,
+      "scale_shape": [
+        1
+      ],
+      "observing": false
+    }
+  },
+  "rotation": "R1/R2 already fused in saved weights; no live R; R3/R4 off",
+  "attention_class": "LlamaSdpaAttention",
+  "parameter_dtypes": {
+    "torch.bfloat16": 147
+  },
+  "kv_bits": 16,
+  "use_cache": false,
+  "seed": 42
+}

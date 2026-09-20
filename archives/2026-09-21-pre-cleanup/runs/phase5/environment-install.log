@@ -1,0 +1,32 @@
+Collecting transformers==4.51.3
+  Downloading transformers-4.51.3-py3-none-any.whl (10.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 4.1 MB/s eta 0:00:00
+Requirement already satisfied: huggingface-hub<1.0,>=0.30.0 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from transformers==4.51.3) (0.36.2)
+Requirement already satisfied: packaging>=20.0 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from transformers==4.51.3) (26.3)
+Requirement already satisfied: requests in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from transformers==4.51.3) (2.32.5)
+Collecting tokenizers<0.22,>=0.21
+  Downloading tokenizers-0.21.4-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 4.2 MB/s eta 0:00:00
+Requirement already satisfied: tqdm>=4.27 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from transformers==4.51.3) (4.70.0)
+Requirement already satisfied: safetensors>=0.4.3 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from transformers==4.51.3) (0.7.0)
+Requirement already satisfied: filelock in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from transformers==4.51.3) (3.19.1)
+Requirement already satisfied: numpy>=1.17 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from transformers==4.51.3) (2.0.2)
+Requirement already satisfied: regex!=2019.12.17 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from transformers==4.51.3) (2026.1.15)
+Requirement already satisfied: pyyaml>=5.1 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from transformers==4.51.3) (6.0.3)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.30.0->transformers==4.51.3) (4.16.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.30.0->transformers==4.51.3) (2024.5.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.30.0->transformers==4.51.3) (1.6.0)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from requests->transformers==4.51.3) (2.6.3)
+Requirement already satisfied: certifi>=2017.4.17 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from requests->transformers==4.51.3) (2026.7.22)
+Requirement already satisfied: charset_normalizer<4,>=2 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from requests->transformers==4.51.3) (3.4.9)
+Requirement already satisfied: idna<4,>=2.5 in /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages (from requests->transformers==4.51.3) (3.18)
+Installing collected packages: tokenizers, transformers
+  Attempting uninstall: tokenizers
+    Found existing installation: tokenizers 0.19.1
+    Not uninstalling tokenizers at /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages, outside environment /home/dongpeiyan/projects/rotation-quant/runs/phase5/env
+    Can't uninstall 'tokenizers'. No files were found to uninstall.
+  Attempting uninstall: transformers
+    Found existing installation: transformers 4.44.2
+    Not uninstalling transformers at /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages, outside environment /home/dongpeiyan/projects/rotation-quant/runs/phase5/env
+    Can't uninstall 'transformers'. No files were found to uninstall.
+Successfully installed tokenizers-0.21.4 transformers-4.51.3

@@ -1,0 +1,48 @@
+{
+  "pair": {
+    "normalized_actual_commands_equal": true,
+    "settings_equal_except_declared_initialization": true,
+    "changed_common_functions": [
+      "prepare_student",
+      "save_resume",
+      "train",
+      "main"
+    ],
+    "reference_only_functions": [
+      "cell_reference_initialization",
+      "reference_for_parent"
+    ],
+    "gradient_loss_optimizer_export_eval_definitions_equal": true,
+    "initial_full_reference_tensor_comparison": "NOT TESTED: initial FP master tensors were not saved; no reconstruction or forward executed",
+    "initial_center_full_code_requantization_errors": 0
+  },
+  "parent_D": {
+    "selected_record_exact": true,
+    "changed_up_scale_rows": [
+      1417
+    ],
+    "changed_down_code_columns": [
+      1417
+    ],
+    "up_scale_halved": true,
+    "down_alpha_halved": true,
+    "parent_validation_matches_result": true
+  },
+  "verdicts": {
+    "center200_evidence": "PASS",
+    "reference200_training_export_recovered_full_evaluation_evidence": "PASS",
+    "same_200_actual_lr_and_windows": "PASS",
+    "all_112_packed_codes_and_224_scales_match_final_resume": "PASS",
+    "frozen_original_FP_weights_PTQ_claim": "FAIL",
+    "reference_original_driver_uninterrupted_success": "FAIL",
+    "SGD01_no_complete_step25_claim": "FAIL",
+    "SGD0001_completed100_no_improvement": "PASS",
+    "continuation_partial201_to234_resume225_not_complete800": "PASS",
+    "target_BF16_plus1": "FAIL",
+    "independent_auditor_GPU_reproduction": "NOT TESTED",
+    "full_initial_reference_tensor_bitwise_comparison": "NOT TESTED",
+    "model_forward_CPU_or_GPU": "NOT TESTED",
+    "application_code_pytest_verifier": "NOT TESTED",
+    "mobile_native_static_KV_acceptance": "NOT TESTED"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 17.167184829711914,
+      "nll": 2.8429997028011083
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 18.513452529907227,
+      "nll": 2.9184976316075644
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.8432826019598076,
+  "ppl": 17.17204209888376,
+  "restored_w": [],
+  "restored_a": [],
+  "frozen_checks_pass": true,
+  "delta_ppl": -0.47035787700588827,
+  "delta_nll": -0.02702249241942889,
+  "split": "validation",
+  "kv_bits": 16,
+  "use_cache": false,
+  "reference_ppl": 17.64239997588965
+}

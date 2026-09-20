@@ -1,0 +1,48 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 16.108898162841797,
+      "nll": 2.7793718002404173
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 17.121110916137695,
+      "nll": 2.8403122585696474
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.779600150933802,
+  "ppl": 16.112577060930427,
+  "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-rounded-sp2-contract-20260914a/static_w4a8.pt",
+  "parent_metadata": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-down-round-20260914b/static_w4a8.pt",
+    "mode": "sequential-sp2",
+    "reference_state": "None",
+    "parent_metadata": {
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+      "mode": "sequential-round",
+      "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+      "parent_metadata": {
+        "route": "B",
+        "step": 100,
+        "initial": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt"
+      },
+      "offline_only": true
+    },
+    "offline_only": true
+  },
+  "method": "sequential frozen-package postprocessing; no gradient training in this stage",
+  "format": "112 W4 /96 static INT8 /16 static SP2; BF16 KV16 prefill"
+}

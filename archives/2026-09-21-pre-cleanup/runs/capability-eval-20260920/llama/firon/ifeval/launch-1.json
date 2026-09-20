@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py",
+    "--model",
+    "llama",
+    "--method",
+    "firon",
+    "--task",
+    "ifeval",
+    "--batch-size",
+    "8",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/firon/ifeval"
+  ],
+  "pid": 3909897,
+  "gpu": "1",
+  "started": 1789838740.3907285,
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/firon/ifeval"
+}

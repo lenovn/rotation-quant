@@ -1,0 +1,15 @@
+{
+  "original_bf16": true,
+  "rotation": false,
+  "norm_fusion": false,
+  "original_tie_word_embeddings": true,
+  "lm_head_matches_embedding": true,
+  "quantized_linear_count": 0,
+  "attention_class": "LlamaSdpaAttention",
+  "parameter_dtypes": {
+    "torch.bfloat16": 147
+  },
+  "kv_bits": 16,
+  "use_cache": false,
+  "seed": 42
+}

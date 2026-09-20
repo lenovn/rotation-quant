@@ -1,0 +1,42 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 16.663360595703125,
+      "nll": 2.813212332825432
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 17.903766632080078,
+      "nll": 2.885011117083374
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.813481370876983,
+  "ppl": 16.667844276883457,
+  "restored_w": [
+    "model.layers.1.self_attn.q_proj",
+    "model.layers.1.self_attn.k_proj",
+    "model.layers.1.self_attn.v_proj",
+    "model.layers.1.self_attn.o_proj",
+    "model.layers.1.mlp.gate_proj",
+    "model.layers.1.mlp.up_proj",
+    "model.layers.1.mlp.down_proj"
+  ],
+  "restored_a": [],
+  "frozen_checks_pass": true,
+  "delta_ppl": -0.9745556990061921,
+  "delta_nll": -0.05682372350225373,
+  "split": "validation",
+  "kv_bits": 16,
+  "use_cache": false,
+  "reference_ppl": 17.64239997588965
+}

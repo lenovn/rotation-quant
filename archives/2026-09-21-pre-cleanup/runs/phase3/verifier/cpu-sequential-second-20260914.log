@@ -1,0 +1,10 @@
+...                                                                      [100%]
+=============================== warnings summary ===============================
+tests/test_phase3_joint.py::test_sequential_driver_prefix_resume_data_cold_validation_and_provenance[round]
+tests/test_phase3_joint.py::test_sequential_driver_prefix_resume_data_cold_validation_and_provenance[sp2]
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/cpu-sequential-second-20260914.xml -
+3 passed, 2 warnings in 12.54s

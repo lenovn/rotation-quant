@@ -1,0 +1,31 @@
+[
+  {
+    "step": 10,
+    "training_probe": 2.9560438990592957
+  },
+  {
+    "step": 25,
+    "training_probe": 3.103584408760071,
+    "validation_nll": 2.948260599256937,
+    "validation_ppl": 19.07274970404361,
+    "changed_codes": 99840
+  },
+  {
+    "step": 50,
+    "training_probe": 2.978018641471863
+  },
+  {
+    "step": 100,
+    "training_probe": 2.889245629310608,
+    "validation_nll": 2.772563153862937,
+    "validation_ppl": 15.999590911200382,
+    "changed_codes": 1202342
+  },
+  {
+    "step": 200,
+    "training_probe": 2.866321086883545,
+    "validation_nll": 2.7515042497043507,
+    "validation_ppl": 15.666180015269509,
+    "changed_codes": 1566408
+  }
+]

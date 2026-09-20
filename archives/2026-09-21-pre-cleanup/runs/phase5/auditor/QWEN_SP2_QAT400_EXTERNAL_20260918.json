@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "scope": "Qwen SP2-QAT400 seed42 same-package validation/test/C4; no evaluator rerun",
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/static_w4a8.pt",
+  "formats": {
+    "int8": 168,
+    "sp2": 28
+  },
+  "all_196_quantizer_states_before_after_equal": true,
+  "test_c4_initial_quantizer_states_equal": true,
+  "scales_match_package": true,
+  "test_c4_ids_and_complete_metadata_equal_bf16_and_exact_ptq": true,
+  "all_segment_structures_equal_bf16_and_ptq": true,
+  "metrics_exactly_recomputed": true,
+  "summary_three_rows_exact": true,
+  "summary_qat_data_label": "WikiText-only",
+  "validation_evidence_limit": "No separate validation input-ID or before/after state artifact in QAT checkpoint; count/segment/source package identity only, no new tokenization.",
+  "independent_full_test_report": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/verifier/QWEN_SEED42_FINAL_TEST_20260918.md",
+  "independent_full_test_raw_metrics_and_segments_exactly_equal": true,
+  "results": [
+    {
+      "split": "validation",
+      "ppl": 14.813941218960903,
+      "nll": 2.6955687116448495,
+      "targets": 262208,
+      "input_tokens": 262337,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/validation.json",
+      "bf16_ppl": 17.7149122731184,
+      "bf16_nll": 2.8744067861808946,
+      "ptq_ppl": 14.935424095235582,
+      "ptq_nll": 2.7037358473302344,
+      "delta_nll_vs_bf16": -0.17883807453604517,
+      "delta_nll_vs_ptq": -0.008167135685384963
+    },
+    {
+      "split": "test",
+      "ppl": 14.151216160997155,
+      "nll": 2.649800568169599,
+      "targets": 298931,
+      "input_tokens": 299078,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-test-s42/result.json",
+      "bf16_ppl": 16.715764347250076,
+      "bf16_nll": 2.816352247049716,
+      "ptq_ppl": 14.302163393485294,
+      "ptq_nll": 2.6604108120809626,
+      "delta_nll_vs_bf16": -0.16655167888011713,
+      "delta_nll_vs_ptq": -0.010610243911363781
+    },
+    {
+      "split": "c4",
+      "ppl": 24.24703443394153,
+      "nll": 3.1882943185214367,
+      "targets": 2096128,
+      "input_tokens": 2097152,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-c4-s42/result.json",
+      "bf16_ppl": 23.136144236064272,
+      "bf16_nll": 3.1413960802266425,
+      "ptq_ppl": 24.903332773203157,
+      "ptq_nll": 3.215001640827423,
+      "delta_nll_vs_bf16": 0.046898238294794226,
+      "delta_nll_vs_ptq": -0.02670732230598638
+    }
+  ]
+}

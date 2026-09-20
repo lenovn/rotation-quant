@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "scope": "training and validation; external acceptance pending",
+  "steps": 400,
+  "microbatches": 3200,
+  "input_token_visits": 6553600,
+  "prediction_target_visits": 6550400,
+  "exact_historical_window_sequence": true,
+  "exact_historical_weight_lr_sequence": true,
+  "matched_settings": [
+    "reference_state",
+    "steps",
+    "schedule_steps",
+    "accumulation",
+    "warmup",
+    "weight_lr",
+    "weight_optimizer",
+    "offload_teacher_body",
+    "momentum",
+    "relative_scale_lr",
+    "temperature",
+    "ce_weight",
+    "data_start",
+    "resume_every",
+    "checkpoints"
+  ],
+  "all_adam_counters": 400,
+  "parameter_tensors": 336,
+  "activation_formats": {
+    "int8": 112
+  },
+  "activation_scales_changed_during_qat": 112,
+  "parent_chain": [
+    {
+      "child": "uniform-down-readapt-s42",
+      "parent": "uniform-range-s42"
+    },
+    {
+      "child": "uniform-range-s42",
+      "parent": "uniform-down-round-s42"
+    },
+    {
+      "child": "uniform-down-round-s42",
+      "parent": "uniform-initial-s42"
+    }
+  ],
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s42/checkpoint-0400/static_w4a8.pt",
+  "validation": {
+    "ppl": 18.104944766122504,
+    "nll": 2.8961850924602586,
+    "targets": 252728
+  },
+  "historical_sp2_validation": 14.581654675328117,
+  "source_matches_audited_initial_sp2_qat": true
+}

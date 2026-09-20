@@ -1,0 +1,18 @@
+{
+  "pid": 2861,
+  "gpu": "0",
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/ppl_w4a16.py",
+    "--model",
+    "qwen"
+  ],
+  "started": 1789843146.3051856,
+  "selected": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/static_w4a8.pt",
+    "seed": 42,
+    "method_label": "FIRON weights / A16",
+    "activation_bits": 16,
+    "note": "Final FIRON W4 weights unchanged; fixed A16 execution without input quantization. No training, calibration or requantization. Not GPTQ."
+  }
+}

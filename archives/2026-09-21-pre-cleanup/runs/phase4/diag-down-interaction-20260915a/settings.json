@@ -1,0 +1,81 @@
+{
+  "arguments": {
+    "parent": "runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+    "reference_state": "runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase4/diag-down-interaction-20260915a",
+    "cases": [
+      "down16:down"
+    ]
+  },
+  "source": {
+    "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase4-w4",
+    "project_root": "/home/dongpeiyan/projects/rotation-quant",
+    "quant_linear": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase4-w4/train_utils/quant_linear.py",
+    "quant_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase4-w4/utils/quant_utils.py",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase4/w4-per-channel",
+    "pytorch": "2.4.1+cu121",
+    "cuda": "12.1",
+    "device": "NVIDIA GeForce RTX 4090",
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "model_cache_revision": "Revision:master,CreatedAt:1740591574"
+  },
+  "data": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "dataset_cache": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3",
+    "train_protocol": "tokenize each raw row without BOS/EOS, concatenate IDs, disjoint 2048 windows, drop tail, fixed order",
+    "validation_protocol": "double-newline joined raw validation; independent 2048 windows including tail; token-weighted NLL",
+    "train_windows": 1188,
+    "train_tokens": 2435022,
+    "dropped_train_tail": 1998,
+    "calibration_window_indices": [
+      182,
+      546,
+      792,
+      281,
+      1030,
+      865,
+      136,
+      18,
+      442,
+      357,
+      248,
+      128,
+      1110,
+      235,
+      621,
+      707,
+      1035,
+      208,
+      531,
+      689,
+      369,
+      424,
+      953,
+      973,
+      131,
+      443,
+      677,
+      1096,
+      731,
+      902,
+      29,
+      859
+    ],
+    "calibration_length": 128,
+    "probe_indices": [
+      1180,
+      1181,
+      1182,
+      1183
+    ],
+    "validation_tokens": 252852,
+    "validation_targets": 252728,
+    "seed": 42
+  },
+  "reference": "original unquantized norm-fused BF16 weights rotated with B100 saved R; never dequantized W4",
+  "protocol": "reset all 112 parent q/SW before every case; only specified weights/activation precision changes; same evaluator; no calibration, optimization or package export",
+  "rtn": "same unquantized reference and absmax/maxcode scale, nearest ties-to-even rounding and signed clip; channel versus contiguous input groups128; matched deterministic solver, no data or search",
+  "components": "Wparent-Wref=(clamp(Wref,-8SW,7SW)-Wref)+(Wparent-clamp(Wref,-8SW,7SW)); remove only one FP32 component then BF16 cast; grid includes optimized code decisions and dequant rounding, not only nearest rounding; diagnostic only",
+  "interpretation": "conditional restoration effects; not additive attribution"
+}

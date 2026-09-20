@@ -1,0 +1,7 @@
+{
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_postprocess_candidate_iso1/parent.pt",
+  "parent_probe": 2.0,
+  "best_probe": 2.0,
+  "selected": null,
+  "validation_status": "NOT TESTED: no candidate improved the fixed train probe"
+}

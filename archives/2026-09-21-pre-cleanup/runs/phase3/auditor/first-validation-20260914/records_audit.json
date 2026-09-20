@@ -1,0 +1,927 @@
+{
+  "route-a-adam-100-20260914a": {
+    "status": "PASS",
+    "checks": {
+      "source_root": true,
+      "revision": true,
+      "launch_pid": true,
+      "data_metadata": true,
+      "common_initial_keys": true,
+      "common_initial_parameters": true,
+      "exact_update_sequence": true,
+      "exact_train_windows": true,
+      "train_tokens": true,
+      "total_train_tokens": true,
+      "total_schedule": true,
+      "full_validation": true,
+      "segments": true,
+      "weighted_nll": true,
+      "ppl": true,
+      "complete_log": true,
+      "no_failure_file": true,
+      "package_metadata": true,
+      "weights_count": true,
+      "activation_formats": true,
+      "packed_weight_shapes": true,
+      "non_down_sa_saved": true,
+      "runtime_source_common_matches": true,
+      "runtime_source_quantization_matches": true,
+      "a_sw_untrained_before_switch": true,
+      "train_only_sp2_export": true,
+      "sp2_selects_output_mse": true,
+      "sp2_selected_range_saved": true
+    },
+    "validation": {
+      "token_count": 252852,
+      "predicted_tokens": 252728,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 33.37230682373047,
+          "nll": 3.5077264190443826
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 41.481266021728516,
+          "nll": 3.725241904152277
+        }
+      ],
+      "unscored_tail_tokens": 0,
+      "nll": 3.5085414738242138,
+      "ppl": 33.39951816978356,
+      "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+      "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+      "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+      "route": "A",
+      "update_step": 10,
+      "format": "112 W4 / 96 static INT8 / 16 static SP2; BF16 KV16 prefill",
+      "scale_initialization": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt",
+      "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint"
+    },
+    "command": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u /home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/run.py --output /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-a-adam-100-20260914a --initial /home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt --route A --steps 100 --schedule-steps 100 --scale-optimizer adam --relative-scale-lr 0.001",
+    "pid": 3979478,
+    "gpu": 1,
+    "resume_parent": null,
+    "checkpoint_state_metadata": {
+      "route": "A",
+      "update_step": 10,
+      "total_updates": 100,
+      "switch_step": 50,
+      "initial_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt",
+      "training_tokens": 163840
+    },
+    "gradients": {
+      "R": {
+        "gradient_tensors": [
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17
+        ],
+        "changed_elements": [
+          4246287,
+          4252253,
+          4255100,
+          4256139,
+          4257040,
+          4257484,
+          4257958,
+          4258118,
+          4258264,
+          4258422
+        ]
+      },
+      "SA": {
+        "gradient_tensors": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ],
+        "changed_elements": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ]
+      },
+      "SW": {
+        "gradient_tensors": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "changed_elements": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "SP2": {
+        "gradient_tensors": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "changed_elements": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "cumulative_training_targets": 163760,
+    "completed_event": [
+      {
+        "stage": "checkpoint-completed",
+        "pid": 3979478,
+        "time": 1789323866.654509,
+        "cuda_visible_devices": "1",
+        "allocated_gib": 2.845153331756592,
+        "reserved_gib": 2.9921875,
+        "peak_allocated_gib": 7.487032413482666,
+        "gpu_time_budget": null,
+        "step": 10,
+        "nll": 3.5085414738242138,
+        "ppl": 33.39951816978356
+      }
+    ],
+    "package_bytes": 2064318358
+  },
+  "route-b-adam-100-20260914a": {
+    "status": "PASS",
+    "checks": {
+      "source_root": true,
+      "revision": true,
+      "launch_pid": true,
+      "data_metadata": true,
+      "common_initial_keys": true,
+      "common_initial_parameters": true,
+      "exact_update_sequence": true,
+      "exact_train_windows": true,
+      "train_tokens": true,
+      "total_train_tokens": true,
+      "total_schedule": true,
+      "full_validation": true,
+      "segments": true,
+      "weighted_nll": true,
+      "ppl": true,
+      "complete_log": true,
+      "no_failure_file": true,
+      "package_metadata": true,
+      "weights_count": true,
+      "activation_formats": true,
+      "packed_weight_shapes": true,
+      "non_down_sa_saved": true,
+      "runtime_source_common_matches": true,
+      "runtime_source_quantization_matches": true,
+      "learned_sw_saved": true,
+      "train_only_sp2_export": true,
+      "sp2_selects_output_mse": true,
+      "sp2_selected_range_saved": true
+    },
+    "validation": {
+      "token_count": 252852,
+      "predicted_tokens": 252728,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 22.30966567993164,
+          "nll": 3.105020023120671
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 25.334726333618164,
+          "nll": 3.2321760369598485
+        }
+      ],
+      "unscored_tail_tokens": 0,
+      "nll": 3.1054964908848506,
+      "ppl": 22.32029804924722,
+      "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+      "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+      "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+      "route": "B",
+      "update_step": 10,
+      "format": "112 W4 / 96 static INT8 / 16 static SP2; BF16 KV16 prefill",
+      "scale_initialization": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt",
+      "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint"
+    },
+    "command": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u /home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/run.py --output /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a --initial /home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt --route B --steps 100 --schedule-steps 100 --scale-optimizer adam --relative-scale-lr 0.001",
+    "pid": 3979813,
+    "gpu": 5,
+    "resume_parent": null,
+    "checkpoint_state_metadata": {
+      "route": "B",
+      "update_step": 10,
+      "total_updates": 100,
+      "switch_step": 50,
+      "initial_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt",
+      "training_tokens": 163840
+    },
+    "gradients": {
+      "R": {
+        "gradient_tensors": [
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17
+        ],
+        "changed_elements": [
+          4259308,
+          4259570,
+          4259675,
+          4259703,
+          4259734,
+          4259754,
+          4259767,
+          4259779,
+          4259785,
+          4259783
+        ]
+      },
+      "SA": {
+        "gradient_tensors": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ],
+        "changed_elements": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ]
+      },
+      "SW": {
+        "gradient_tensors": [
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112
+        ],
+        "changed_elements": [
+          376832,
+          376803,
+          376792,
+          376810,
+          376806,
+          376813,
+          376808,
+          376808,
+          376818,
+          376813
+        ]
+      },
+      "SP2": {
+        "gradient_tensors": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "changed_elements": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "cumulative_training_targets": 163760,
+    "completed_event": [
+      {
+        "stage": "checkpoint-completed",
+        "pid": 3979813,
+        "time": 1789323905.1099205,
+        "cuda_visible_devices": "5",
+        "allocated_gib": 2.847960948944092,
+        "reserved_gib": 2.99609375,
+        "peak_allocated_gib": 7.489051818847656,
+        "gpu_time_budget": null,
+        "step": 10,
+        "nll": 3.1054964908848506,
+        "ppl": 22.32029804924722
+      }
+    ],
+    "package_bytes": 2064318358
+  },
+  "route-c-adam-100-20260914a": {
+    "status": "PASS",
+    "checks": {
+      "source_root": true,
+      "revision": true,
+      "launch_pid": true,
+      "data_metadata": true,
+      "common_initial_keys": true,
+      "common_initial_parameters": true,
+      "exact_update_sequence": true,
+      "exact_train_windows": true,
+      "train_tokens": true,
+      "total_train_tokens": true,
+      "total_schedule": true,
+      "full_validation": true,
+      "segments": true,
+      "weighted_nll": true,
+      "ppl": true,
+      "complete_log": true,
+      "no_failure_file": true,
+      "package_metadata": true,
+      "weights_count": true,
+      "activation_formats": true,
+      "packed_weight_shapes": true,
+      "non_down_sa_saved": true,
+      "runtime_source_common_matches": true,
+      "runtime_source_quantization_matches": true,
+      "learned_sw_saved": true,
+      "learned_sp2_saved": true,
+      "no_export_recalibration": true
+    },
+    "validation": {
+      "token_count": 252852,
+      "predicted_tokens": 252728,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 22.078083038330078,
+          "nll": 3.094585398723704
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 24.332530975341797,
+          "nll": 3.1918141783205494
+        }
+      ],
+      "unscored_tail_tokens": 0,
+      "nll": 3.0949497258037195,
+      "ppl": 22.08612814729231,
+      "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+      "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+      "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+      "route": "C",
+      "update_step": 10,
+      "format": "112 W4 / 96 static INT8 / 16 static SP2; BF16 KV16 prefill",
+      "scale_initialization": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt",
+      "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint"
+    },
+    "command": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u /home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/run.py --output /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-adam-100-20260914a --initial /home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt --route C --steps 100 --schedule-steps 100 --scale-optimizer adam --relative-scale-lr 0.001 --resume /home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-adam-20260914a",
+    "pid": 3979995,
+    "gpu": 7,
+    "resume_parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-adam-20260914a",
+    "checkpoint_state_metadata": {
+      "route": "C",
+      "update_step": 10,
+      "total_updates": 100,
+      "switch_step": 50,
+      "initial_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt",
+      "training_tokens": 163840
+    },
+    "gradients": {
+      "R": {
+        "gradient_tensors": [
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17
+        ],
+        "changed_elements": [
+          4259345,
+          4259602,
+          4259670,
+          4259705,
+          4259718,
+          4259754,
+          4259748,
+          4259779,
+          4259777,
+          4259800
+        ]
+      },
+      "SA": {
+        "gradient_tensors": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ],
+        "changed_elements": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ]
+      },
+      "SW": {
+        "gradient_tensors": [
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112
+        ],
+        "changed_elements": [
+          376832,
+          376808,
+          376806,
+          376807,
+          376808,
+          376812,
+          376812,
+          376813,
+          376810,
+          376822
+        ]
+      },
+      "SP2": {
+        "gradient_tensors": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "changed_elements": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ]
+      }
+    },
+    "cumulative_training_targets": 163760,
+    "completed_event": [
+      {
+        "stage": "checkpoint-completed",
+        "pid": 3979995,
+        "time": 1789323616.9390569,
+        "cuda_visible_devices": "7",
+        "allocated_gib": 2.8479762077331543,
+        "reserved_gib": 2.884765625,
+        "peak_allocated_gib": 7.489067077636719,
+        "gpu_time_budget": null,
+        "step": 10,
+        "nll": 3.0949497258037195,
+        "ppl": 22.08612814729231
+      }
+    ],
+    "package_bytes": 2064318358
+  },
+  "route-c-sgd-10-20260914a": {
+    "status": "PASS",
+    "checks": {
+      "source_root": true,
+      "revision": true,
+      "launch_pid": true,
+      "data_metadata": true,
+      "common_initial_keys": true,
+      "common_initial_parameters": true,
+      "exact_update_sequence": true,
+      "exact_train_windows": true,
+      "train_tokens": true,
+      "total_train_tokens": true,
+      "total_schedule": true,
+      "full_validation": true,
+      "segments": true,
+      "weighted_nll": true,
+      "ppl": true,
+      "complete_log": true,
+      "no_failure_file": true,
+      "package_metadata": true,
+      "weights_count": true,
+      "activation_formats": true,
+      "packed_weight_shapes": true,
+      "non_down_sa_saved": true,
+      "runtime_source_common_matches": true,
+      "runtime_source_quantization_matches": true,
+      "learned_sw_saved": true,
+      "learned_sp2_saved": true,
+      "no_export_recalibration": true
+    },
+    "validation": {
+      "token_count": 252852,
+      "predicted_tokens": 252728,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 22.164934158325195,
+          "nll": 3.098511497668138
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 24.42726707458496,
+          "nll": 3.1957000114141705
+        }
+      ],
+      "unscored_tail_tokens": 0,
+      "nll": 3.09887567386752,
+      "ppl": 22.173007569789448,
+      "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+      "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+      "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+      "route": "C",
+      "update_step": 10,
+      "format": "112 W4 / 96 static INT8 / 16 static SP2; BF16 KV16 prefill",
+      "scale_initialization": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt",
+      "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint"
+    },
+    "command": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u /home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/run.py --output /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-sgd-10-20260914a --initial /home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt --route C --steps 10 --schedule-steps 100 --checkpoints 10 --validation-steps 10 --scale-optimizer sgd --resume /home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-20260914a",
+    "pid": 3990988,
+    "gpu": 3,
+    "resume_parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-20260914a",
+    "checkpoint_state_metadata": {
+      "route": "C",
+      "update_step": 10,
+      "total_updates": 10,
+      "switch_step": 50,
+      "initial_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt",
+      "training_tokens": 163840
+    },
+    "gradients": {
+      "R": {
+        "gradient_tensors": [
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17
+        ],
+        "changed_elements": [
+          4259296,
+          4259562,
+          4259669,
+          4259677,
+          4259738,
+          4259759,
+          4259747,
+          4259769,
+          4259776,
+          4259784
+        ]
+      },
+      "SA": {
+        "gradient_tensors": [
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96,
+          96
+        ],
+        "changed_elements": [
+          20,
+          29,
+          38,
+          55,
+          56,
+          68,
+          74,
+          72,
+          81,
+          76
+        ]
+      },
+      "SW": {
+        "gradient_tensors": [
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112,
+          112
+        ],
+        "changed_elements": [
+          304365,
+          344250,
+          354802,
+          364021,
+          367792,
+          369982,
+          371307,
+          372537,
+          373299,
+          373483
+        ]
+      },
+      "SP2": {
+        "gradient_tensors": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "changed_elements": [
+          11,
+          13,
+          13,
+          12,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14
+        ]
+      }
+    },
+    "cumulative_training_targets": 163760,
+    "completed_event": [
+      {
+        "stage": "checkpoint-completed",
+        "pid": 3990988,
+        "time": 1789323804.7812865,
+        "cuda_visible_devices": "3",
+        "allocated_gib": 2.845061779022217,
+        "reserved_gib": 2.8828125,
+        "peak_allocated_gib": 7.486152648925781,
+        "gpu_time_budget": null,
+        "step": 10,
+        "nll": 3.09887567386752,
+        "ppl": 22.173007569789448
+      }
+    ],
+    "package_bytes": 2064318358
+  },
+  "matched_pairs": {
+    "route-a-adam-100-20260914a vs route-b-adam-100-20260914a": {
+      "argument_differences": {
+        "output": [
+          "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-a-adam-100-20260914a",
+          "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a"
+        ],
+        "route": [
+          "A",
+          "B"
+        ]
+      },
+      "all_recorded_learning_rates_equal": true,
+      "identical_sample_sequence": true
+    },
+    "route-b-adam-100-20260914a vs route-c-adam-100-20260914a": {
+      "argument_differences": {
+        "output": [
+          "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a",
+          "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-adam-100-20260914a"
+        ],
+        "resume": [
+          null,
+          "/home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-adam-20260914a"
+        ],
+        "route": [
+          "B",
+          "C"
+        ]
+      },
+      "all_recorded_learning_rates_equal": true,
+      "identical_sample_sequence": true
+    }
+  },
+  "data": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "dataset_cache": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3",
+    "train_protocol": "tokenize each raw row without BOS/EOS, concatenate IDs, disjoint 2048 windows, drop tail, fixed order",
+    "validation_protocol": "double-newline joined raw validation; independent 2048 windows including tail; token-weighted NLL",
+    "train_windows": 1188,
+    "train_tokens": 2435022,
+    "dropped_train_tail": 1998,
+    "calibration_window_indices": [
+      182,
+      546,
+      792,
+      281,
+      1030,
+      865,
+      136,
+      18,
+      442,
+      357,
+      248,
+      128,
+      1110,
+      235,
+      621,
+      707,
+      1035,
+      208,
+      531,
+      689,
+      369,
+      424,
+      953,
+      973,
+      131,
+      443,
+      677,
+      1096,
+      731,
+      902,
+      29,
+      859
+    ],
+    "calibration_length": 128,
+    "probe_indices": [
+      1180,
+      1181,
+      1182,
+      1183
+    ],
+    "validation_tokens": 252852,
+    "validation_targets": 252728,
+    "seed": 42
+  },
+  "history_bf16": {
+    "token_count": 252852,
+    "predicted_tokens": 252728,
+    "segments": [
+      {
+        "seqlen": 2048,
+        "windows": 123,
+        "predicted_tokens": 251781,
+        "ppl": 13.629024505615234,
+        "nll": 2.6122016734931566
+      },
+      {
+        "seqlen": 948,
+        "windows": 1,
+        "predicted_tokens": 947,
+        "ppl": 15.2180757522583,
+        "nll": 2.722483915548375
+      }
+    ],
+    "unscored_tail_tokens": 0,
+    "nll": 2.612614913352714,
+    "ppl": 13.634657725643203,
+    "input_model": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "mode": "w16a16",
+    "split": "validation",
+    "window_length": 2048,
+    "seed": 42,
+    "dtype": "bfloat16",
+    "kv_bits": 16,
+    "use_cache": false,
+    "evaluation": "prefill teacher-forced next-token; disjoint windows including partial tail",
+    "nll_precision": "log of original evaluator float32 PPL, token-weighted across segments",
+    "quantized_linear_count": 0,
+    "elapsed_seconds": 18.736610129999463,
+    "activation_scales_unchanged": null
+  }
+}

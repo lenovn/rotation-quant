@@ -1,0 +1,24 @@
+[
+  {
+    "candidate": "first",
+    "changed_modules": [
+      "model.layers.0.mlp.up_proj"
+    ],
+    "changed_alphas": {
+      "model.layers.0.mlp.down_proj": 5.079999923706055
+    },
+    "probe": {
+      "nll": 2.1
+    }
+  },
+  {
+    "candidate": "second",
+    "changed_modules": [
+      "model.layers.0.mlp.gate_proj"
+    ],
+    "changed_alphas": {},
+    "probe": {
+      "nll": 2.2
+    }
+  }
+]

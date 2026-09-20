@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py",
+    "--model",
+    "llama",
+    "--method",
+    "firon",
+    "--task",
+    "gsm8k_cot",
+    "--batch-size",
+    "8",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/firon/gsm8k_cot"
+  ],
+  "pid": 3904450,
+  "gpu": "1",
+  "started": 1789838663.9428406,
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/firon/gsm8k_cot"
+}

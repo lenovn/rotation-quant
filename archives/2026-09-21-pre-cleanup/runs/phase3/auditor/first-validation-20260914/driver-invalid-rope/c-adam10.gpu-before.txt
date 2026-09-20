@@ -1,0 +1,41 @@
+2026-09-14T02:44:15,917599779+08:00
+index, uuid, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%]
+0, GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b, 24564 MiB, 12742 MiB, 11350 MiB, 3 %
+1, GPU-75f32c85-75f6-07fa-f335-6e1cc84aacf9, 24564 MiB, 7857 MiB, 16236 MiB, 100 %
+2, GPU-835451b2-a7e7-335e-2968-fd188801cf61, 24564 MiB, 11884 MiB, 12208 MiB, 27 %
+3, GPU-b46f451f-cbbf-cb05-ec58-d124e7dbb743, 24564 MiB, 8631 MiB, 15462 MiB, 100 %
+4, GPU-34587165-f7a3-9c6e-e4f0-a431b17af503, 24564 MiB, 23619 MiB, 474 MiB, 0 %
+5, GPU-e888b579-a41b-5892-0c5d-f3145ddd6327, 24564 MiB, 9023 MiB, 15070 MiB, 100 %
+6, GPU-268df8cd-d4ff-6179-5702-d6173f63cac2, 24564 MiB, 9201 MiB, 14892 MiB, 100 %
+7, GPU-ed81f3c7-cf0c-01fd-e758-6e512ee3a0b9, 24564 MiB, 9156 MiB, 14937 MiB, 98 %
+gpu_uuid, pid, process_name, used_gpu_memory [MiB]
+GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b, 1451419, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 384 MiB
+GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b, 1451413, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 384 MiB
+GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b, 2260267, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 384 MiB
+GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b, 2260252, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 384 MiB
+GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b, 2260247, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 9988 MiB
+GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b, 2260262, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 384 MiB
+GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b, 2260255, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 384 MiB
+GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b, 2260259, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 384 MiB
+GPU-75f32c85-75f6-07fa-f335-6e1cc84aacf9, 2186949, python, 610 MiB
+GPU-75f32c85-75f6-07fa-f335-6e1cc84aacf9, 2260252, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 1734 MiB
+GPU-75f32c85-75f6-07fa-f335-6e1cc84aacf9, 3849625, /home/jiangrenchi/miniconda3/bin/python3.13, 526 MiB
+GPU-75f32c85-75f6-07fa-f335-6e1cc84aacf9, 3979478, /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python, 4948 MiB
+GPU-835451b2-a7e7-335e-2968-fd188801cf61, 1451413, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 3434 MiB
+GPU-835451b2-a7e7-335e-2968-fd188801cf61, 3451018, python, 8422 MiB
+GPU-b46f451f-cbbf-cb05-ec58-d124e7dbb743, 2189848, python, 650 MiB
+GPU-b46f451f-cbbf-cb05-ec58-d124e7dbb743, 2260255, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 2146 MiB
+GPU-b46f451f-cbbf-cb05-ec58-d124e7dbb743, 3974050, /home/jiangrenchi/miniconda3/bin/python3.13, 524 MiB
+GPU-b46f451f-cbbf-cb05-ec58-d124e7dbb743, 4123355, /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python, 5272 MiB
+GPU-34587165-f7a3-9c6e-e4f0-a431b17af503, 17499, 可能有问题, 23596 MiB
+GPU-e888b579-a41b-5892-0c5d-f3145ddd6327, 2190992, python, 608 MiB
+GPU-e888b579-a41b-5892-0c5d-f3145ddd6327, 2260259, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 2674 MiB
+GPU-e888b579-a41b-5892-0c5d-f3145ddd6327, 3516169, /home/jiangrenchi/miniconda3/bin/python3.13, 526 MiB
+GPU-e888b579-a41b-5892-0c5d-f3145ddd6327, 3979813, /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python, 5176 MiB
+GPU-268df8cd-d4ff-6179-5702-d6173f63cac2, 2192482, python, 546 MiB
+GPU-268df8cd-d4ff-6179-5702-d6173f63cac2, 2260262, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 2822 MiB
+GPU-268df8cd-d4ff-6179-5702-d6173f63cac2, 3994637, /home/jiangrenchi/miniconda3/bin/python3.13, 522 MiB
+GPU-268df8cd-d4ff-6179-5702-d6173f63cac2, 4123679, /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python, 5272 MiB
+GPU-ed81f3c7-cf0c-01fd-e758-6e512ee3a0b9, 1451419, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 1868 MiB
+GPU-ed81f3c7-cf0c-01fd-e758-6e512ee3a0b9, 2260267, /home/xuhaoxiang/miniconda3/envs/vac/bin/python, 1950 MiB
+GPU-ed81f3c7-cf0c-01fd-e758-6e512ee3a0b9, 3979995, /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python, 5304 MiB

@@ -1,0 +1,98 @@
+LlamaForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+Overwriting default num_fewshot of gsm8k_cot from 8 to 8
+Chat template formatting change affects loglikelihood and multiple-choice tasks. See docs/chat-template-readme.md for details.
+  0%|          | 0/1319 [00:00<?, ?it/s]  1%|          | 11/1319 [00:00<00:12, 107.71it/s]  2%|▏         | 22/1319 [00:00<00:12, 102.73it/s]  3%|▎         | 33/1319 [00:00<00:12, 101.91it/s]  3%|▎         | 44/1319 [00:00<00:12, 100.44it/s]  4%|▍         | 56/1319 [00:00<00:12, 104.81it/s]  5%|▌         | 70/1319 [00:00<00:10, 114.21it/s]  6%|▌         | 82/1319 [00:00<00:11, 107.96it/s]  7%|▋         | 93/1319 [00:00<00:11, 105.18it/s]  8%|▊         | 106/1319 [00:00<00:10, 110.38it/s]  9%|▉         | 120/1319 [00:01<00:10, 117.30it/s] 10%|█         | 134/1319 [00:01<00:09, 121.45it/s] 11%|█         | 148/1319 [00:01<00:09, 124.65it/s] 12%|█▏        | 162/1319 [00:01<00:09, 126.95it/s] 13%|█▎        | 176/1319 [00:01<00:08, 128.64it/s] 14%|█▍        | 190/1319 [00:01<00:08, 129.26it/s] 15%|█▌        | 204/1319 [00:01<00:08, 130.39it/s] 17%|█▋        | 218/1319 [00:01<00:08, 131.26it/s] 18%|█▊        | 232/1319 [00:01<00:08, 131.96it/s] 19%|█▊        | 246/1319 [00:02<00:08, 132.36it/s] 20%|█▉        | 260/1319 [00:02<00:08, 129.21it/s] 21%|██        | 273/1319 [00:02<00:08, 119.32it/s] 22%|██▏       | 286/1319 [00:02<00:08, 116.01it/s] 23%|██▎       | 298/1319 [00:02<00:08, 114.12it/s] 24%|██▎       | 310/1319 [00:02<00:09, 109.66it/s] 24%|██▍       | 322/1319 [00:02<00:09, 106.73it/s] 25%|██▌       | 333/1319 [00:02<00:09, 104.75it/s] 26%|██▌       | 344/1319 [00:02<00:09, 103.45it/s] 27%|██▋       | 357/1319 [00:03<00:08, 109.35it/s] 28%|██▊       | 369/1319 [00:03<00:08, 110.80it/s] 29%|██▉       | 381/1319 [00:03<00:08, 107.02it/s] 30%|██▉       | 392/1319 [00:03<00:08, 104.45it/s] 31%|███       | 403/1319 [00:03<00:08, 105.63it/s] 32%|███▏      | 417/1319 [00:03<00:07, 113.50it/s] 33%|███▎      | 430/1319 [00:03<00:07, 115.11it/s] 34%|███▎      | 442/1319 [00:03<00:07, 110.21it/s] 34%|███▍      | 454/1319 [00:03<00:08, 106.96it/s] 35%|███▌      | 465/1319 [00:04<00:08, 104.35it/s] 36%|███▌      | 478/1319 [00:04<00:07, 110.72it/s] 37%|███▋      | 492/1319 [00:04<00:07, 117.06it/s] 38%|███▊      | 505/1319 [00:04<00:06, 117.41it/s] 39%|███▉      | 517/1319 [00:04<00:07, 111.73it/s] 40%|████      | 529/1319 [00:04<00:07, 109.17it/s] 41%|████      | 540/1319 [00:04<00:07, 106.99it/s] 42%|████▏     | 551/1319 [00:04<00:07, 104.83it/s] 43%|████▎     | 562/1319 [00:04<00:07, 102.87it/s] 43%|████▎     | 573/1319 [00:05<00:07, 101.93it/s] 44%|████▍     | 584/1319 [00:05<00:07, 101.20it/s] 45%|████▌     | 595/1319 [00:05<00:07, 100.54it/s] 46%|████▌     | 607/1319 [00:05<00:06, 104.39it/s] 47%|████▋     | 619/1319 [00:05<00:06, 107.39it/s] 48%|████▊     | 630/1319 [00:05<00:06, 105.03it/s] 49%|████▊     | 642/1319 [00:05<00:06, 108.50it/s] 50%|████▉     | 653/1319 [00:05<00:06, 108.34it/s] 50%|█████     | 664/1319 [00:05<00:06, 104.91it/s] 51%|█████     | 675/1319 [00:06<00:06, 103.41it/s] 52%|█████▏    | 686/1319 [00:06<00:06, 102.57it/s] 53%|█████▎    | 697/1319 [00:06<00:06, 101.62it/s] 54%|█████▎    | 708/1319 [00:06<00:06, 100.97it/s] 55%|█████▍    | 719/1319 [00:06<00:05, 100.57it/s] 55%|█████▌    | 730/1319 [00:06<00:05, 100.59it/s] 56%|█████▋    | 742/1319 [00:06<00:05, 105.49it/s] 57%|█████▋    | 756/1319 [00:06<00:04, 113.38it/s] 58%|█████▊    | 770/1319 [00:06<00:04, 118.85it/s] 59%|█████▉    | 784/1319 [00:07<00:04, 122.17it/s] 61%|██████    | 798/1319 [00:07<00:04, 124.95it/s] 62%|██████▏   | 812/1319 [00:07<00:03, 127.09it/s] 63%|██████▎   | 826/1319 [00:07<00:03, 128.57it/s] 64%|██████▎   | 840/1319 [00:07<00:03, 129.56it/s] 65%|██████▍   | 854/1319 [00:07<00:03, 130.28it/s] 66%|██████▌   | 868/1319 [00:07<00:03, 130.67it/s] 67%|██████▋   | 882/1319 [00:07<00:03, 131.06it/s] 68%|██████▊   | 896/1319 [00:07<00:03, 127.96it/s] 69%|██████▉   | 909/1319 [00:08<00:03, 118.13it/s] 70%|██████▉   | 921/1319 [00:08<00:03, 117.41it/s] 71%|███████   | 934/1319 [00:08<00:03, 120.80it/s] 72%|███████▏  | 948/1319 [00:08<00:02, 124.13it/s] 73%|███████▎  | 962/1319 [00:08<00:02, 126.47it/s] 74%|███████▍  | 976/1319 [00:08<00:02, 128.17it/s] 75%|███████▍  | 989/1319 [00:08<00:02, 125.45it/s] 76%|███████▌  | 1002/1319 [00:08<00:02, 116.15it/s] 77%|███████▋  | 1014/1319 [00:08<00:02, 110.87it/s] 78%|███████▊  | 1026/1319 [00:09<00:02, 107.21it/s] 79%|███████▊  | 1037/1319 [00:09<00:02, 105.05it/s] 79%|███████▉  | 1048/1319 [00:09<00:02, 103.56it/s] 80%|████████  | 1059/1319 [00:09<00:02, 103.38it/s] 81%|████████  | 1070/1319 [00:09<00:02, 102.46it/s] 82%|████████▏ | 1081/1319 [00:09<00:02, 101.95it/s] 83%|████████▎ | 1092/1319 [00:09<00:02, 101.32it/s] 84%|████████▎ | 1103/1319 [00:09<00:02, 100.41it/s] 84%|████████▍ | 1114/1319 [00:09<00:02, 100.15it/s] 85%|████████▌ | 1125/1319 [00:10<00:01, 100.20it/s] 86%|████████▌ | 1136/1319 [00:10<00:01, 100.06it/s] 87%|████████▋ | 1147/1319 [00:10<00:01, 100.16it/s] 88%|████████▊ | 1158/1319 [00:10<00:01, 99.86it/s]  89%|████████▊ | 1168/1319 [00:10<00:01, 99.80it/s] 89%|████████▉ | 1178/1319 [00:10<00:01, 99.68it/s] 90%|█████████ | 1188/1319 [00:10<00:01, 99.67it/s] 91%|█████████ | 1199/1319 [00:10<00:01, 100.11it/s] 92%|█████████▏| 1210/1319 [00:10<00:01, 100.21it/s] 93%|█████████▎| 1221/1319 [00:10<00:00, 99.89it/s]  93%|█████████▎| 1232/1319 [00:11<00:00, 99.95it/s] 94%|█████████▍| 1242/1319 [00:11<00:00, 99.64it/s] 95%|█████████▍| 1252/1319 [00:11<00:00, 99.68it/s] 96%|█████████▌| 1262/1319 [00:11<00:00, 99.73it/s] 96%|█████████▋| 1272/1319 [00:11<00:00, 99.58it/s] 97%|█████████▋| 1282/1319 [00:11<00:00, 99.36it/s] 98%|█████████▊| 1292/1319 [00:11<00:00, 99.19it/s] 99%|█████████▊| 1302/1319 [00:11<00:00, 99.29it/s] 99%|█████████▉| 1312/1319 [00:11<00:00, 99.24it/s]100%|██████████| 1319/1319 [00:11<00:00, 110.33it/s]
+Running generate_until requests:   0%|          | 0/1319 [00:00<?, ?it/s]/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [64,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [65,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [66,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [67,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [68,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [69,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [70,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [71,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [72,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [73,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [74,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [75,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [76,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [77,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [78,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [79,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [80,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [81,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [82,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [83,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [84,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [85,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [86,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [87,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [88,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [89,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [90,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [91,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [92,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [93,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [94,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [461,0,0], thread: [95,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+Traceback (most recent call last):
+  File "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py", line 137, in <module>
+    main()
+  File "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py", line 112, in main
+    results = lm_eval.simple_evaluate(model=lm, tasks=[args.task],
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/utils.py", line 422, in _wrapper
+    return fn(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/evaluator.py", line 308, in simple_evaluate
+    results = evaluate(
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/utils.py", line 422, in _wrapper
+    return fn(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/evaluator.py", line 528, in evaluate
+    resps = getattr(lm, reqtype)(cloned_reqs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/models/huggingface.py", line 1355, in generate_until
+    cont = self._model_generate(
+  File "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py", line 57, in _model_generate
+    output = super()._model_generate(context, max_length, stop, **generation_kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/models/huggingface.py", line 898, in _model_generate
+    return self.model.generate(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/utils.py", line 2465, in generate
+    result = self._sample(
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/utils.py", line 3431, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/eval_utils/modeling_llama.py", line 1388, in forward
+    outputs = self.model(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/eval_utils/modeling_llama.py", line 1130, in forward
+    causal_mask = self._update_causal_mask(
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/eval_utils/modeling_llama.py", line 1237, in _update_causal_mask
+    if AttentionMaskConverter._ignore_causal_mask_sdpa(
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/modeling_attn_mask_utils.py", line 288, in _ignore_causal_mask_sdpa
+    elif not is_tracing and torch.all(attention_mask == 1):
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Running generate_until requests:   0%|          | 0/1319 [00:02<?, ?it/s]

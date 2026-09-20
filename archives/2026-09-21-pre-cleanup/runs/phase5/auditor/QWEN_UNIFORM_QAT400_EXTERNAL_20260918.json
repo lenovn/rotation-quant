@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "scope": "Qwen Uniform-QAT400 seed42 external acceptance and completed seed42 matched core matrix; no evaluator rerun",
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s42/checkpoint-0400/static_w4a8.pt",
+  "formats": {
+    "int8": 196
+  },
+  "all_196_quantizer_states_before_after_equal": true,
+  "test_c4_initial_quantizer_states_equal": true,
+  "scales_match_package": true,
+  "test_c4_ids_and_complete_metadata_equal_bf16_both_ptq_and_sp2_qat": true,
+  "all_segment_structures_equal": true,
+  "metrics_exactly_recomputed": true,
+  "summary_three_rows_exact": true,
+  "summary_qat_data_label": "WikiText-only",
+  "validation_evidence_limit": "No separate validation input-ID or before/after state artifact in QAT checkpoint; count/segment/source package identity only, no new tokenization.",
+  "paired_training_budget": {
+    "optimizer_steps": 400,
+    "global_batch": 8,
+    "input_tokens_per_microbatch": 2048,
+    "input_token_visits": 6553600,
+    "prediction_target_visits": 6550400,
+    "exact_window_sequence_and_weight_lr_match": true,
+    "proof": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/auditor/QWEN_UNIFORM_QAT400_20260918.json"
+  },
+  "results": [
+    {
+      "split": "validation",
+      "ppl": 15.715716054138214,
+      "nll": 2.7546612342218633,
+      "targets": 262208,
+      "input_tokens": 262337,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s42/checkpoint-0400/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s42/checkpoint-0400/validation.json",
+      "delta_nll_vs_bf16": -0.11974555195903136,
+      "delta_nll_vs_uniform_ptq": -0.10706872654612853
+    },
+    {
+      "split": "test",
+      "ppl": 15.055184987698569,
+      "nll": 2.7117224493174277,
+      "targets": 298931,
+      "input_tokens": 299078,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s42/checkpoint-0400/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-test-s42/result.json",
+      "delta_nll_vs_bf16": -0.10462979773228831,
+      "delta_nll_vs_uniform_ptq": -0.108785596714986
+    },
+    {
+      "split": "c4",
+      "ppl": 27.10478088408928,
+      "nll": 3.2997101287131727,
+      "targets": 2096128,
+      "input_tokens": 2097152,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s42/checkpoint-0400/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-c4-s42/result.json",
+      "delta_nll_vs_bf16": 0.1583140484865302,
+      "delta_nll_vs_uniform_ptq": -0.07863244322887075
+    }
+  ],
+  "core_matrix": [
+    {
+      "split": "validation",
+      "targets": 262208,
+      "metrics": {
+        "BF16": {
+          "ppl": 17.7149122731184,
+          "nll": 2.8744067861808946
+        },
+        "SP2-PTQ": {
+          "ppl": 14.935424095235582,
+          "nll": 2.7037358473302344
+        },
+        "Uniform-PTQ": {
+          "ppl": 17.491760837320335,
+          "nll": 2.861729960767992
+        },
+        "SP2-QAT400": {
+          "ppl": 14.813941218960903,
+          "nll": 2.6955687116448495
+        },
+        "Uniform-QAT400": {
+          "ppl": 15.715716054138214,
+          "nll": 2.7546612342218633
+        }
+      },
+      "delta_nll_sp2_minus_uniform_ptq": -0.15799411343775738,
+      "delta_nll_sp2_minus_uniform_qat": -0.059092522577013806,
+      "delta_nll_qat_minus_ptq_sp2": -0.008167135685384963,
+      "delta_nll_qat_minus_ptq_uniform": -0.10706872654612853
+    },
+    {
+      "split": "test",
+      "targets": 298931,
+      "metrics": {
+        "BF16": {
+          "ppl": 16.715764347250076,
+          "nll": 2.816352247049716
+        },
+        "SP2-PTQ": {
+          "ppl": 14.302163393485294,
+          "nll": 2.6604108120809626
+        },
+        "Uniform-PTQ": {
+          "ppl": 16.78537625006989,
+          "nll": 2.8205080460324137
+        },
+        "SP2-QAT400": {
+          "ppl": 14.151216160997155,
+          "nll": 2.649800568169599
+        },
+        "Uniform-QAT400": {
+          "ppl": 15.055184987698569,
+          "nll": 2.7117224493174277
+        }
+      },
+      "delta_nll_sp2_minus_uniform_ptq": -0.16009723395145103,
+      "delta_nll_sp2_minus_uniform_qat": -0.06192188114782882,
+      "delta_nll_qat_minus_ptq_sp2": -0.010610243911363781,
+      "delta_nll_qat_minus_ptq_uniform": -0.108785596714986
+    },
+    {
+      "split": "c4",
+      "targets": 2096128,
+      "metrics": {
+        "BF16": {
+          "ppl": 23.136144236064272,
+          "nll": 3.1413960802266425
+        },
+        "SP2-PTQ": {
+          "ppl": 24.903332773203157,
+          "nll": 3.215001640827423
+        },
+        "Uniform-PTQ": {
+          "ppl": 29.322131492633147,
+          "nll": 3.3783425719420435
+        },
+        "SP2-QAT400": {
+          "ppl": 24.24703443394153,
+          "nll": 3.1882943185214367
+        },
+        "Uniform-QAT400": {
+          "ppl": 27.10478088408928,
+          "nll": 3.2997101287131727
+        }
+      },
+      "delta_nll_sp2_minus_uniform_ptq": -0.16334093111462034,
+      "delta_nll_sp2_minus_uniform_qat": -0.11141581019173596,
+      "delta_nll_qat_minus_ptq_sp2": -0.02670732230598638,
+      "delta_nll_qat_minus_ptq_uniform": -0.07863244322887075
+    }
+  ],
+  "three_seed_statistics": "not complete; this acceptance covers seed42 only"
+}

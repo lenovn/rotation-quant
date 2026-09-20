@@ -1,0 +1,15 @@
+{
+  "nll": 4.0,
+  "ppl": 54.598150033144236,
+  "predicted_tokens": 252728,
+  "token_count": 252852,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-local-d-third-20260914/test_local_d_driver_matched_co2/ptq-parent.pt",
+  "parent_metadata": {
+    "method": "joint R/SW/SA PTQ then sequential W4/SP2",
+    "original_backbone_trained": false,
+    "source_run": "B100-prefix",
+    "step": 100
+  },
+  "method": "offline paired local D with declared SW transport and train-selected discrete W4",
+  "format": "112 W4 /96 static INT8 /16 static SP2; BF16 KV16 prefill"
+}

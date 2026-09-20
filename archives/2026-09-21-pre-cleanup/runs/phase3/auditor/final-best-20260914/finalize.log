@@ -1,0 +1,56 @@
+{
+  "verdict": "PASS",
+  "target": {
+    "baseline_ppl": 13.634657725643203,
+    "threshold_ppl": 14.634657725643203,
+    "final_ppl": 14.581654675328117,
+    "delta_ppl_vs_bf16": 0.9469969496849142,
+    "delta_nll_vs_bf16": 0.06714929617986742,
+    "margin_below_threshold": 0.05300305031508579,
+    "passed": true
+  },
+  "gpu_checks": {
+    "bf16": {
+      "exact_reproduction": true,
+      "exit_zero": true,
+      "log_matches": true,
+      "pid_matches": true,
+      "same_gpu": true,
+      "current_source": true,
+      "full_tokens": true,
+      "historical_tokens_equal": true,
+      "rope_fp32": true,
+      "original_bf16_unmodified": true,
+      "cold_package_no_calibration": null,
+      "activation_scales_unchanged": null
+    },
+    "final": {
+      "exact_reproduction": true,
+      "exit_zero": true,
+      "log_matches": true,
+      "pid_matches": true,
+      "same_gpu": true,
+      "current_source": true,
+      "full_tokens": true,
+      "historical_tokens_equal": true,
+      "rope_fp32": true,
+      "original_bf16_unmodified": null,
+      "cold_package_no_calibration": true,
+      "activation_scales_unchanged": true
+    }
+  },
+  "observations": {
+    "sampled_all_masters_change_every_step_claim": "FAIL: stronger claim is false, not required to establish actual optimizer updates",
+    "zero_sampled_change_records": [
+      {
+        "step": 400,
+        "weight_lr": 1.622214173602199e-10,
+        "tensors": [
+          "model.layers.1.self_attn.o_proj.module.weight",
+          "model.layers.8.self_attn.o_proj.module.weight"
+        ]
+      }
+    ],
+    "interpretation": "At step400 two tensors have no change among 64 sampled entries. Do not infer the full tensors did not change or an optimizer step was skipped; all336 optimizer states have step400 and all112 gradients are recorded. Finite-precision small updates are a possible explanation, not independently proved."
+  }
+}

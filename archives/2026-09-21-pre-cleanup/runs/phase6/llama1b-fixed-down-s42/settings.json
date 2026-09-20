@@ -1,0 +1,20 @@
+{
+  "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "arm": "fixed-down",
+  "steps": 128,
+  "schedule_horizon": 512,
+  "warmup": 10,
+  "seed": 42,
+  "global_batch": 8,
+  "training_windows": 800,
+  "calibration": "32x2048 train-only absmax",
+  "rotation_lr": 1.5,
+  "scale_optimizer": "Adam",
+  "relative_scale_lr": 0.001,
+  "adam_eps": 1e-12,
+  "source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel",
+  "torch": "2.4.1+cu121",
+  "transformers": "4.51.3",
+  "gpu": "2",
+  "pid": 852482
+}

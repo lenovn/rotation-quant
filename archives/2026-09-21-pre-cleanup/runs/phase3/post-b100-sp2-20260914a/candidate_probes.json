@@ -1,0 +1,46 @@
+[
+  {
+    "candidate": "sp2-ranges",
+    "changed_modules": [],
+    "changed_alphas": {
+      "model.layers.0.mlp.down_proj": 1.60756254196167,
+      "model.layers.1.mlp.down_proj": 3798.398087485092,
+      "model.layers.4.mlp.down_proj": 1.320454281200949,
+      "model.layers.12.mlp.down_proj": 6.477494940256125,
+      "model.layers.14.mlp.down_proj": 29.455058099827596,
+      "model.layers.15.mlp.down_proj": 170.7571920294678
+    },
+    "probe": {
+      "nll": 3.1082233786582947,
+      "ppl": 22.381246058520972,
+      "predicted_tokens": 8188,
+      "token_count": 8192,
+      "windows": [
+        {
+          "window": 0,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.3618037700653076
+        },
+        {
+          "window": 1,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.315951347351074
+        },
+        {
+          "window": 2,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.0451791286468506
+        },
+        {
+          "window": 3,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.7099592685699463
+        }
+      ]
+    }
+  }
+]

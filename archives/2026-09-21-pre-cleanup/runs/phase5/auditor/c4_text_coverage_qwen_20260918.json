@@ -1,0 +1,232 @@
+{
+  "family": "qwen",
+  "python": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+  "transformers": "4.51.3",
+  "tokenizers": "0.21.4",
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+  "source_documents": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/documents.jsonl",
+  "source_document_count": 4480,
+  "cached_input_tokens": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/c4-data/input_tokens.pt",
+  "cached_prefix_ids_exactly_equal": true,
+  "tokenization": {
+    "separator": "\n\n",
+    "add_special_tokens": false,
+    "add_bos_token": false,
+    "add_eos_token": false,
+    "retained_tokens": 2097152,
+    "full_tokens": 2191766,
+    "discarded_tokens": 94614
+  },
+  "character_unit": "Python Unicode code points, not UTF-8 bytes or grapheme clusters; zero-based half-open spans",
+  "total_source_document_characters": 10089434,
+  "total_separator_characters": 8958,
+  "total_joined_characters": 10098392,
+  "retained_offset_union_character_count": 9659562,
+  "retained_offset_union_intervals": [
+    [
+      0,
+      9659562
+    ]
+  ],
+  "retained_offset_span_endpoint": 9659562,
+  "conservative_complete_character_prefix_endpoint": 9659562,
+  "document_characters_in_offset_span": 9650912,
+  "conservative_complete_document_characters": 9650912,
+  "complete_documents_conservative": 4325,
+  "complete_documents_by_offset_span": 4325,
+  "last_touched_document": {
+    "ordinal_one_based": 4326,
+    "ordinal_zero_based": 4325,
+    "row_index": 230792,
+    "global_character_span": [
+      9619395,
+      9686734
+    ],
+    "total_characters": 67339,
+    "covered_characters_by_offset_span": 40167,
+    "conservative_complete_characters": 40167,
+    "covered_characters": 40167
+  },
+  "boundary": {
+    "last_retained_offset": [
+      9659554,
+      9659562
+    ],
+    "first_discarded_offset": [
+      9659562,
+      9659567
+    ],
+    "overlap_character_count": 0,
+    "endpoint_inside_separator": false,
+    "endpoint_at_document_end": false,
+    "endpoint_at_document_start": false,
+    "unicode_partial_character_possible": false,
+    "token_neighborhood": [
+      {
+        "token_index_zero_based": 2097148,
+        "retained": true,
+        "token_id": 6884,
+        "tokenizer_piece": "Ġwide",
+        "offset": [
+          9659541,
+          9659546
+        ],
+        "source_span": " wide",
+        "source_codepoints": [
+          "U+0020",
+          "U+0077",
+          "U+0069",
+          "U+0064",
+          "U+0065"
+        ],
+        "source_utf8_hex": "2077696465"
+      },
+      {
+        "token_index_zero_based": 2097149,
+        "retained": true,
+        "token_id": 3482,
+        "tokenizer_piece": "Ġweb",
+        "offset": [
+          9659546,
+          9659550
+        ],
+        "source_span": " web",
+        "source_codepoints": [
+          "U+0020",
+          "U+0077",
+          "U+0065",
+          "U+0062"
+        ],
+        "source_utf8_hex": "20776562"
+      },
+      {
+        "token_index_zero_based": 2097150,
+        "retained": true,
+        "token_id": 323,
+        "tokenizer_piece": "Ġand",
+        "offset": [
+          9659550,
+          9659554
+        ],
+        "source_span": " and",
+        "source_codepoints": [
+          "U+0020",
+          "U+0061",
+          "U+006E",
+          "U+0064"
+        ],
+        "source_utf8_hex": "20616e64"
+      },
+      {
+        "token_index_zero_based": 2097151,
+        "retained": true,
+        "token_id": 3709,
+        "tokenizer_piece": "Ġgetting",
+        "offset": [
+          9659554,
+          9659562
+        ],
+        "source_span": " getting",
+        "source_codepoints": [
+          "U+0020",
+          "U+0067",
+          "U+0065",
+          "U+0074",
+          "U+0074",
+          "U+0069",
+          "U+006E",
+          "U+0067"
+        ],
+        "source_utf8_hex": "2067657474696e67"
+      },
+      {
+        "token_index_zero_based": 2097152,
+        "retained": false,
+        "token_id": 10414,
+        "tokenizer_piece": "Ġtips",
+        "offset": [
+          9659562,
+          9659567
+        ],
+        "source_span": " tips",
+        "source_codepoints": [
+          "U+0020",
+          "U+0074",
+          "U+0069",
+          "U+0070",
+          "U+0073"
+        ],
+        "source_utf8_hex": "2074697073"
+      },
+      {
+        "token_index_zero_based": 2097153,
+        "retained": false,
+        "token_id": 429,
+        "tokenizer_piece": "Ġthat",
+        "offset": [
+          9659567,
+          9659572
+        ],
+        "source_span": " that",
+        "source_codepoints": [
+          "U+0020",
+          "U+0074",
+          "U+0068",
+          "U+0061",
+          "U+0074"
+        ],
+        "source_utf8_hex": "2074686174"
+      },
+      {
+        "token_index_zero_based": 2097154,
+        "retained": false,
+        "token_id": 1033,
+        "tokenizer_piece": "Ġwere",
+        "offset": [
+          9659572,
+          9659577
+        ],
+        "source_span": " were",
+        "source_codepoints": [
+          "U+0020",
+          "U+0077",
+          "U+0065",
+          "U+0072",
+          "U+0065"
+        ],
+        "source_utf8_hex": "2077657265"
+      },
+      {
+        "token_index_zero_based": 2097155,
+        "retained": false,
+        "token_id": 537,
+        "tokenizer_piece": "Ġnot",
+        "offset": [
+          9659577,
+          9659581
+        ],
+        "source_span": " not",
+        "source_codepoints": [
+          "U+0020",
+          "U+006E",
+          "U+006F",
+          "U+0074"
+        ],
+        "source_utf8_hex": "206e6f74"
+      }
+    ]
+  },
+  "retained_offsets": {
+    "adjacent_overlap_pairs": 343,
+    "identical_adjacent_pairs": 173,
+    "zero_length_spans": 0
+  },
+  "interpretation": "Offset-span coverage is not proof of complete Unicode decoding if retained/discarded offsets overlap. These are input-prefix spans, not the subset of characters assigned a prediction loss.",
+  "offset_mapping_reliable_for_coverage": true,
+  "coverage_method": "Formal Qwen2TokenizerFast offsets: retained nonempty spans form exactly [0,9659562); last/next token spans are adjacent and do not overlap.",
+  "joined_character_prefix_endpoint": 9659562,
+  "complete_documents": 4325,
+  "source_document_characters_covered": 9650912,
+  "separator_characters_covered": 8650
+}

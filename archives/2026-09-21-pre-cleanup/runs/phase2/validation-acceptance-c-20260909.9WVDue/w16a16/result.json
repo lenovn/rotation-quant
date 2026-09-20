@@ -1,0 +1,36 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 13.629024505615234,
+      "nll": 2.6122016734931566
+    },
+    {
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 15.2180757522583,
+      "nll": 2.722483915548375
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.612614913352714,
+  "ppl": 13.634657725643203,
+  "input_model": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "mode": "w16a16",
+  "split": "validation",
+  "window_length": 2048,
+  "seed": 42,
+  "dtype": "bfloat16",
+  "kv_bits": 16,
+  "use_cache": false,
+  "evaluation": "prefill teacher-forced next-token; disjoint windows including partial tail",
+  "nll_precision": "log of original evaluator float32 PPL, token-weighted across segments",
+  "quantized_linear_count": 0,
+  "elapsed_seconds": 18.736610129999463,
+  "activation_scales_unchanged": null
+}

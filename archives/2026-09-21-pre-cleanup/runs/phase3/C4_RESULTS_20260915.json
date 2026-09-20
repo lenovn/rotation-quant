@@ -1,0 +1,96 @@
+{
+  "bf16_ppl": 21.843397624525274,
+  "bf16_nll": 3.0838987076656394,
+  "best_ppl": 26.98478050458106,
+  "best_nll": 3.295273022058687,
+  "delta_ppl": 5.141382880055787,
+  "relative_ppl_increase_percent": 23.53746870534077,
+  "delta_nll": 0.21137431439304777,
+  "historical_phase2_raw_c_ppl": 29.539535457544623,
+  "delta_vs_historical_raw_c": -2.554754952963563,
+  "reduction_vs_historical_raw_c_percent": 8.6485955631745,
+  "wikitext_relative_ppl_increase_percent": 6.945513182218455,
+  "checks": {
+    "same_token_path": true,
+    "same_input_metadata": true,
+    "same_predicted_tokens": true,
+    "same_input_tokens": true,
+    "same_chunk_windows": true,
+    "same_segmentation": true,
+    "all_expected_segments": true,
+    "no_unscored_tail": true,
+    "states_unchanged": true,
+    "same_precision": true,
+    "no_training_calibration_selection": true,
+    "same_source_snapshots": true
+  },
+  "per_segment": [
+    {
+      "segment": 1,
+      "bf16_ppl": 21.724079132080078,
+      "best_ppl": 26.72515869140625,
+      "delta_nll": 0.2071841120550677
+    },
+    {
+      "segment": 2,
+      "bf16_ppl": 22.06345558166504,
+      "best_ppl": 27.086872100830078,
+      "delta_nll": 0.20512653995171437
+    },
+    {
+      "segment": 3,
+      "bf16_ppl": 22.67020606994629,
+      "best_ppl": 27.950593948364258,
+      "delta_nll": 0.2093868953015039
+    },
+    {
+      "segment": 4,
+      "bf16_ppl": 20.320926666259766,
+      "best_ppl": 25.00498390197754,
+      "delta_nll": 0.20742393575353768
+    },
+    {
+      "segment": 5,
+      "bf16_ppl": 23.026498794555664,
+      "best_ppl": 28.264575958251953,
+      "delta_nll": 0.20496361340428804
+    },
+    {
+      "segment": 6,
+      "bf16_ppl": 20.58588218688965,
+      "best_ppl": 25.4307861328125,
+      "delta_nll": 0.21135498243925088
+    },
+    {
+      "segment": 7,
+      "bf16_ppl": 22.03007698059082,
+      "best_ppl": 26.997028350830078,
+      "delta_nll": 0.20331814370591195
+    },
+    {
+      "segment": 8,
+      "bf16_ppl": 22.476787567138672,
+      "best_ppl": 28.6375675201416,
+      "delta_nll": 0.2422362925331094
+    }
+  ],
+  "dataset": "allenai/c4",
+  "subset": "en",
+  "split": "validation",
+  "input_tokens": 2097152,
+  "predicted_tokens": 2096128,
+  "windows": 1024,
+  "window_length": 2048,
+  "chunk_windows": 128,
+  "input_token_path": "runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt",
+  "bf16_result": "runs/phase3/c4-bf16-fixed-20260915a/result.json",
+  "best_result": "runs/phase3/c4-best-fixed-20260915a/result.json",
+  "best_package": "runs/phase3/distill-b100-refined-ref-adam1e5-400-20260914a/checkpoint-0400/static_w4a8.pt",
+  "new_gpu_evaluations": 2,
+  "independent_gpu_reproductions": 0,
+  "new_training_updates": 0,
+  "recalibrations": 0,
+  "historical_comparison": "Phase2 original C RTN + SP2, not Phase2 optimized PPL16.057 package; old score reused explicitly",
+  "independent_code_verifier": "runs/phase3/verifier/c4_external_cpu_20260915.md",
+  "status": "COMPLETED: measured cross-dataset evaluation; not an accuracy-threshold PASS"
+}

@@ -1,0 +1,130 @@
+{
+  "status": "awaiting_explicit_scope_confirmation",
+  "purpose": "Separate R adaptation under downA16 from adaptation under final frozen SP2A8",
+  "requires_relaxing": [
+    "no_gradient_training",
+    "freeze_C_R"
+  ],
+  "preserved": [
+    "original_FP_weights_frozen",
+    "112_SW_frozen",
+    "96_non_down_SA_frozen",
+    "16_SP2_alpha_frozen",
+    "no_distillation",
+    "no_new_online_transform",
+    "no_GPTQ",
+    "no_threshold_search"
+  ],
+  "common_start": {
+    "model": "cache/models/llama-3.2-1b-instruct",
+    "R": "runs/phase2/learned-sw-c-20260909.ByFYAM/C/rotation/R.bin",
+    "SW_SA": "runs/phase2/learned-sw-c-20260909.ByFYAM/C/rotation/quant_scales.pt",
+    "SP2_alpha": "runs/phase2/down-d-search-20260913.7U1l7n/down_scales.json",
+    "D": "identity",
+    "weight_codes": "RTN from same original FP/C-R; current best optimized integer codes are not the starting codes"
+  },
+  "arms": [
+    {
+      "name": "down_a16_train",
+      "train_down_bits": 16
+    },
+    {
+      "name": "down_sp2_a8_train",
+      "train_down_bits": 8,
+      "format": "SP2",
+      "backward": "proposed identity STE, exact frozen quantizer forward; not implemented"
+    }
+  ],
+  "common_training": {
+    "trainable": "R1 and 16 R2 tensors only",
+    "dataset": "WikiText-2 raw train via existing CustomJsonDataset",
+    "sequence_length": 2048,
+    "seed": 42,
+    "data_seed": 42,
+    "updates_per_arm": 100,
+    "single_gpu_batch": 1,
+    "gradient_accumulation": 8,
+    "optimizer": "existing SGDG, stiefel=True",
+    "R_learning_rate": 0.15,
+    "schedule": "cosine",
+    "warmup_steps": 10,
+    "weight_decay": 0,
+    "dtype": "BF16",
+    "gradient_checkpointing": true,
+    "W4_codes": [
+      -8,
+      7
+    ],
+    "non_down": "static INT8",
+    "SW_SA_update": "none"
+  },
+  "data_note": "Existing training loader tokenizes rows separately, concatenates token IDs, drops remainder, IterableDataset fixed order. This differs from validation join-with-two-newlines protocol and must stay identical between arms.",
+  "evaluation": {
+    "both_arms": "W4 RTN plus same non-down INT8 and frozen SP2 A8",
+    "complete_validation_max": 3,
+    "protocol": "252728 predicted tokens, 123x2048 plus 948 tail, weighted NLL, BF16/KV16/use_cache=False",
+    "untouched_best_reference": "runs/phase2/down-d-search-20260913.7U1l7n/selected_d/packed_model.pt",
+    "best_ppl": 16.05715342622255
+  },
+  "resource_limits": {
+    "gpus": 1,
+    "max_process_GiB": 12,
+    "launch_memory_fraction_strictly_below": 0.35,
+    "no_time_cap": true
+  },
+  "source_audit": [
+    {
+      "file": "repos/SpinQuant/optimize_rotation.py",
+      "line": 71,
+      "finding": "Current W4-aware requires learn_activation_scales"
+    },
+    {
+      "file": "repos/SpinQuant/optimize_rotation.py",
+      "line": 168,
+      "finding": "Disabling SA learning selects periodic recalibration"
+    },
+    {
+      "file": "repos/SpinQuant/optimize_rotation.py",
+      "line": 320,
+      "finding": "Initial calibration/current-R SW refresh remain active"
+    },
+    {
+      "file": "repos/SpinQuant/optimize_rotation.py",
+      "line": 342,
+      "finding": "Final SW refresh and/or calibration remain active"
+    },
+    {
+      "file": "repos/SpinQuant/train_utils/rotation_calibration.py",
+      "line": 37,
+      "finding": "SA-learning helper forces downA16"
+    },
+    {
+      "file": "repos/SpinQuant/train_utils/rotation_calibration.py",
+      "line": 92,
+      "finding": "W4-aware callback refreshes SW at each update"
+    },
+    {
+      "file": "scripts/phase2/down_codebooks.py",
+      "line": 39,
+      "finding": "Hard bucketize/sign projection is an evaluation forward; a training gradient rule is absent"
+    }
+  ],
+  "minimum_implementation": [
+    "Explicit frozen-qparams R-only mode with preserved old-mode validation",
+    "Load fixed SW/SA buffers once without enabling scale learning",
+    "Bypass all calibrator and SW-refresh entry points in new mode only",
+    "Explicit down policy, independent of SA-learning helper",
+    "Training SP2 wrapper with exact deployed forward and specified STE",
+    "Only R optimizer group; verify every other parameter frozen",
+    "Export paired R with unchanged SW/SA/alpha and explicit RTN rule"
+  ],
+  "required_checks": [
+    "Only 17 R tensors trainable and in optimizer",
+    "Fixed scales unchanged through init/update/export",
+    "SP2 forward equals existing projector, finite nonzero surrogate gradient",
+    "Zero-update training/export forward matches common starting model",
+    "Original weights unchanged; R orthogonality within measured numerical tolerance",
+    "Independent verifier readiness before GPU training"
+  ],
+  "verification": "Independent read-only source audit agrees; implementation and GPU training have not occurred"
+}

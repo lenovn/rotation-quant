@@ -1,0 +1,30 @@
+{
+  "W": {
+    "tensors": 196,
+    "elements": 1409286144,
+    "dtypes": [
+      "torch.float32"
+    ]
+  },
+  "SA": {
+    "tensors": 168,
+    "elements": 168,
+    "dtypes": [
+      "torch.float32"
+    ]
+  },
+  "SW": {
+    "tensors": 196,
+    "elements": 573440,
+    "dtypes": [
+      "torch.float32"
+    ]
+  },
+  "SP2": {
+    "tensors": 28,
+    "elements": 28,
+    "dtypes": [
+      "torch.float32"
+    ]
+  }
+}

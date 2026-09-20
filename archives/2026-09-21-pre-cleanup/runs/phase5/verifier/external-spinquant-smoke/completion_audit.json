@@ -1,0 +1,8 @@
+{
+  "tracked_diff_matches_start": true,
+  "git_status_matches_start": true,
+  "training_data_arrow": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-train.arrow",
+  "data_split": "train",
+  "actual_python_pid_exited": 2258826,
+  "gpu2_memory_after_MiB": 20
+}

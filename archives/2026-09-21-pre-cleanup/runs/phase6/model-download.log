@@ -1,0 +1,72 @@
+Qwen/Qwen3-0.6B c1899de289a04d12100db370d81485cdf75e47ca
+meta-llama/Llama-3.2-3B-Instruct 0cb88a4f764b7a12671c53f0838cd831a0843b95
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s][AFetching 9 files:  22%|██▏       | 2/9 [00:01<00:04,  1.63it/s]
+Fetching 13 files:  15%|█▌        | 2/13 [00:01<00:06,  1.80it/s][A
+Fetching 13 files:  31%|███       | 4/13 [00:01<00:02,  3.01it/s][AFetching 13 files:  85%|████████▍ | 11/13 [00:01<00:00,  8.28it/s]
+Fetching 9 files:  44%|████▍     | 4/9 [00:01<00:02,  2.16it/s]Fetching 9 files:  56%|█████▌    | 5/9 [00:20<00:16,  4.00s/it]Fetching 9 files:  67%|██████▋   | 6/9 [04:20<02:10, 43.41s/it]Fetching 9 files:  78%|███████▊  | 7/9 [04:25<01:15, 37.86s/it]Fetching 9 files:  89%|████████▉ | 8/9 [04:30<00:33, 33.84s/it]Fetching 9 files: 100%|██████████| 9/9 [07:29<00:00, 49.94s/it]Fetching 9 files: 100%|██████████| 9/9 [07:29<00:00, 49.94s/it]
+completed /home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-0.6b
+Traceback (most recent call last):
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dongpeiyan/projects/rotation-quant/scripts/phase6/prepare_models.py", line 24, in <module>
+    list(pool.map(fetch, MODELS))
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/scripts/phase6/prepare_models.py", line 17, in fetch
+    snapshot_download(repo, revision=revision, local_dir=directory,
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/tqdm/contrib/concurrent.py", line 191, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/tqdm/contrib/concurrent.py", line 163, in _executor_map
+    return list(ex.map(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 994, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1257, in _hf_hub_download_to_local_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/huggingface_hub/utils/_http.py", line 420, in hf_raise_for_status
+    raise _format(GatedRepoError, message, response) from e
+huggingface_hub.errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-6ab038ea-576475d2684c6ada21cfadaf;ecf72093-378b-4549-9206-1bb4deba67f3)
+
+Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/resolve/0cb88a4f764b7a12671c53f0838cd831a0843b95/config.json.
+Access to model meta-llama/Llama-3.2-3B-Instruct is restricted. You must have access to it and be authenticated to access it. Please log in.

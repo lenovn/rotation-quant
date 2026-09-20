@@ -1,0 +1,19 @@
+{
+  "model.layers.0.mlp.up_proj": {
+    "selected_step": 7,
+    "trials": [
+      {
+        "step": 0,
+        "fit_mse": 0.16913862526416779,
+        "heldout_mse": 0.09715835750102997,
+        "changed_codes": 0
+      },
+      {
+        "step": 7,
+        "fit_mse": 0.0,
+        "heldout_mse": 0.0,
+        "changed_codes": 8
+      }
+    ]
+  }
+}

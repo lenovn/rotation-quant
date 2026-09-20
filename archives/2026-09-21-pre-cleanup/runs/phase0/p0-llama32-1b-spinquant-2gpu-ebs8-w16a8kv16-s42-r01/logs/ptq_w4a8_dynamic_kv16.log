@@ -1,0 +1,191 @@
+2026-08-10 07:44:02,252 - spinquant - INFO - the rank is 0
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/dongpeiyan/projects/rotation-quant/repos/SpinQuant/eval_utils/rotation_utils.py:127: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  R1 = torch.load(R_cpk)["R1"].cuda().to(torch.float64)
+Rotating:   0%|          | 0/16 [00:00<?, ?layer/s]/home/dongpeiyan/projects/rotation-quant/repos/SpinQuant/eval_utils/rotation_utils.py:140: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  R2 = torch.load(R_cpk)[key].cuda().to(torch.float64)
+Rotating:   6%|▋         | 1/16 [00:00<00:12,  1.22layer/s]Rotating:  12%|█▎        | 2/16 [00:01<00:11,  1.23layer/s]Rotating:  19%|█▉        | 3/16 [00:02<00:10,  1.21layer/s]Rotating:  25%|██▌       | 4/16 [00:03<00:09,  1.21layer/s]Rotating:  31%|███▏      | 5/16 [00:04<00:09,  1.20layer/s]Rotating:  38%|███▊      | 6/16 [00:05<00:08,  1.16layer/s]Rotating:  44%|████▍     | 7/16 [00:06<00:08,  1.10layer/s]Rotating:  50%|█████     | 8/16 [00:06<00:07,  1.11layer/s]Rotating:  56%|█████▋    | 9/16 [00:07<00:06,  1.08layer/s]Rotating:  62%|██████▎   | 10/16 [00:08<00:05,  1.05layer/s]Rotating:  69%|██████▉   | 11/16 [00:10<00:04,  1.01layer/s]Rotating:  75%|███████▌  | 12/16 [00:10<00:03,  1.02layer/s]Rotating:  81%|████████▏ | 13/16 [00:11<00:02,  1.02layer/s]Rotating:  88%|████████▊ | 14/16 [00:12<00:01,  1.03layer/s]Rotating:  94%|█████████▍| 15/16 [00:13<00:00,  1.03layer/s]Rotating: 100%|██████████| 16/16 [00:14<00:00,  1.08layer/s]Rotating: 100%|██████████| 16/16 [00:14<00:00,  1.09layer/s]
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+  warnings.warn(
+Token indices sequence length is longer than the specified maximum sequence length for this model (2436214 > 131072). Running this sequence through the model will result in indexing errors
+
+Layer 0: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  WARNING:eval_utils.modeling_llama:The attention layers in this model are transitioning from computing the RoPE embeddings internally through `position_ids` (2D tensor with the indexes of the tokens), to using externally computed `position_embeddings` (Tuple of tensors, containing cos and sin). In v4.46 `position_ids` will be removed and `position_embeddings` will be mandatory.
+self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 1: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 2: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 3: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 4: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 5: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 6: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 7: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 8: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 9: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 10: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 11: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 12: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 13: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 14: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  
+Layer 15: self_attn.k_proj.module  self_attn.v_proj.module  self_attn.q_proj.module  self_attn.o_proj.module  mlp.up_proj.module  mlp.gate_proj.module  mlp.down_proj.module  2026-08-10 07:52:21,803 - spinquant - INFO - Model PTQ completed LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(128256, 2048)
+    (layers): ModuleList(
+      (0-15): 16 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (k_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=512, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (v_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=512, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (o_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (up_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (down_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=8192, out_features=2048, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((2048,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): ActQuantWrapper(
+    Input Quantizer Bits: 16
+    Output Quantizer Bits: 16
+    (module): Linear(in_features=2048, out_features=128256, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+)
+INFO:spinquant:Model PTQ completed LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(128256, 2048)
+    (layers): ModuleList(
+      (0-15): 16 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (k_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=512, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (v_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=512, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (o_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (up_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (down_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Asymmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=8192, out_features=2048, bias=False)
+            (quantizer): ActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((2048,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): ActQuantWrapper(
+    Input Quantizer Bits: 16
+    Output Quantizer Bits: 16
+    (module): Linear(in_features=2048, out_features=128256, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+)
+2026-08-10 07:52:21,803 - spinquant - INFO - Start to load tokenizer...
+INFO:spinquant:Start to load tokenizer...
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+2026-08-10 07:52:22,101 - spinquant - INFO - Complete tokenizer loading...
+INFO:spinquant:Complete tokenizer loading...
+Token indices sequence length is longer than the specified maximum sequence length for this model (289076 > 2048). Running this sequence through the model will result in indexing errors
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s](Eval) Layers:   6%|▋         | 1/16 [00:00<00:14,  1.06it/s](Eval) Layers:  12%|█▎        | 2/16 [00:01<00:12,  1.08it/s](Eval) Layers:  19%|█▉        | 3/16 [00:02<00:12,  1.07it/s](Eval) Layers:  25%|██▌       | 4/16 [00:03<00:11,  1.09it/s](Eval) Layers:  31%|███▏      | 5/16 [00:04<00:10,  1.09it/s](Eval) Layers:  38%|███▊      | 6/16 [00:05<00:09,  1.10it/s](Eval) Layers:  44%|████▍     | 7/16 [00:06<00:08,  1.07it/s](Eval) Layers:  50%|█████     | 8/16 [00:07<00:07,  1.09it/s](Eval) Layers:  56%|█████▋    | 9/16 [00:08<00:06,  1.09it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:09<00:05,  1.07it/s](Eval) Layers:  69%|██████▉   | 11/16 [00:10<00:04,  1.10it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:11<00:03,  1.09it/s](Eval) Layers:  81%|████████▏ | 13/16 [00:12<00:02,  1.07it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:12<00:01,  1.08it/s](Eval) Layers:  94%|█████████▍| 15/16 [00:13<00:00,  1.10it/s](Eval) Layers: 100%|██████████| 16/16 [00:14<00:00,  1.05it/s](Eval) Layers: 100%|██████████| 16/16 [00:14<00:00,  1.08it/s]
+2026-08-10 07:52:55,346 - spinquant - INFO - wiki2 ppl is: 13.733678817749023
+INFO:spinquant:wiki2 ppl is: 13.733678817749023
+[rank0]:[W810 07:52:55.157080071 ProcessGroupNCCL.cpp:1168] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

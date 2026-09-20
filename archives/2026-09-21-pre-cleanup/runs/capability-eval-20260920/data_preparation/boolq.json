@@ -1,0 +1,11 @@
+{
+  "task": "boolq",
+  "path": "super_glue",
+  "name": "boolq",
+  "splits": {
+    "train": 9427,
+    "validation": 3270,
+    "test": 3245
+  },
+  "status": "ready"
+}

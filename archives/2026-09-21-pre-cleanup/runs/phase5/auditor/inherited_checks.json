@@ -1,0 +1,104 @@
+{
+  "scope": "read-only JSON/document audit; no GPU rerun or tensor state revalidation",
+  "result_count": 13,
+  "results": [
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/auditor/final-best-20260914/bf16.result.json",
+      "segment_aggregation_exact": true,
+      "ppl": 13.634657725643203,
+      "nll": 2.612614913352714,
+      "targets": 252728
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/validation.json",
+      "segment_aggregation_exact": true,
+      "ppl": 17.11711490993314,
+      "nll": 2.840078834896178,
+      "targets": 252728
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-down-round-20260914b/validation.json",
+      "segment_aggregation_exact": true,
+      "ppl": 16.507098542639632,
+      "nll": 2.8037905030961543,
+      "targets": 252728
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-rounded-sp2-contract-20260914a/validation.json",
+      "segment_aggregation_exact": true,
+      "ppl": 16.19254871508746,
+      "nll": 2.7845511805673966,
+      "targets": 252728
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/validation.json",
+      "segment_aggregation_exact": true,
+      "ppl": 16.112577060930427,
+      "nll": 2.779600150933802,
+      "targets": 252728
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/distill-b100-refined-ref-adam1e5-400-20260914a/checkpoint-0400/validation.json",
+      "segment_aggregation_exact": true,
+      "ppl": 14.581654675328117,
+      "nll": 2.6797642095325815,
+      "targets": 252728
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/wiki2-test-bf16-fixed-20260917a/result.json",
+      "segment_aggregation_exact": true,
+      "ppl": 13.162650325300651,
+      "nll": 2.5773832981204734,
+      "targets": 288934
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/wiki2-test-best-fixed-20260917a/result.json",
+      "segment_aggregation_exact": true,
+      "ppl": 14.154416405154963,
+      "nll": 2.650026688830493,
+      "targets": 288934
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-bf16-fixed-20260915a/result.json",
+      "segment_aggregation_exact": true,
+      "ppl": 21.843397624525274,
+      "nll": 3.0838987076656394,
+      "targets": 2096128
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-b100-int8-fixed-20260918a/result.json",
+      "segment_aggregation_exact": true,
+      "ppl": 1330.1567504736056,
+      "nll": 7.193052071770102,
+      "targets": 2096128
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-b100-sp2-fixed-20260918a/result.json",
+      "segment_aggregation_exact": true,
+      "ppl": 29.18423776720624,
+      "nll": 3.373628761035482,
+      "targets": 2096128
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-ptq-parent-fixed-20260918a/result.json",
+      "segment_aggregation_exact": true,
+      "ppl": 27.43961641336637,
+      "nll": 3.311987823655252,
+      "targets": 2096128
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-best-fixed-20260915a/result.json",
+      "segment_aggregation_exact": true,
+      "ppl": 26.98478050458106,
+      "nll": 3.295273022058687,
+      "targets": 2096128
+    }
+  ],
+  "test_same_metadata_and_segments": true,
+  "test_c4_same_qat_package": true,
+  "c4_same_input_metadata_metric_segments": true,
+  "machine_summary_values_match_raw": true,
+  "c4_document_count": 4480,
+  "c4_document_order_matches_python_random42": true,
+  "c4_documents_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/documents.jsonl"
+}

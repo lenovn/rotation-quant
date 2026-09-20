@@ -1,0 +1,7 @@
+{
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+  "parent_probe": 2.9698206782341003,
+  "best_probe": 2.9698206782341003,
+  "selected": null,
+  "validation_status": "NOT TESTED: no candidate improved the fixed train probe"
+}

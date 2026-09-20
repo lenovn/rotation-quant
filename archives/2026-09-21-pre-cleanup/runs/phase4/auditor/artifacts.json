@@ -1,0 +1,105 @@
+{
+  "inherited_source_equal": {
+    "optimize_rotation.py": true,
+    "train_utils/quant_linear.py": true,
+    "train_utils/rotation_calibration.py": true,
+    "utils/process_args.py": true,
+    "utils/quant_utils.py": true,
+    "experiments/phase3/README.md": true,
+    "experiments/phase3/common.py": true,
+    "experiments/phase3/distill.py": true,
+    "experiments/phase3/external_eval.py": true,
+    "experiments/phase3/launch.py": true,
+    "experiments/phase3/local_d.py": true,
+    "experiments/phase3/postprocess.py": true,
+    "experiments/phase3/quantization.py": true,
+    "experiments/phase3/run.py": true,
+    "experiments/phase3/sequential_postprocess.py": true,
+    "tests/test_learned_sw_training.py": true,
+    "tests/test_phase3_external.py": true,
+    "tests/test_phase3_joint.py": true,
+    "tests/test_w4_aware_training.py": true
+  },
+  "phase3_diff_equals_inheritance": true,
+  "packages": {
+    "A1": {
+      "changed_q": [
+        "model.layers.8.mlp.down_proj"
+      ],
+      "changed_sw": [],
+      "activation_equal": true,
+      "high_precision_equal": true,
+      "export_matches_selected_record": true,
+      "int8_inputs": 96,
+      "sp2_inputs": 16,
+      "nll": 2.779605266359144,
+      "ppl": 16.112659483826263,
+      "metadata": {
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+        "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+        "method": "phase4-scale-round",
+        "arm": "A1",
+        "offline_only": true,
+        "changed_modules": [
+          "model.layers.8.mlp.down_proj"
+        ]
+      }
+    },
+    "A2": {
+      "changed_q": [
+        "model.layers.8.mlp.down_proj"
+      ],
+      "changed_sw": [
+        "model.layers.8.mlp.down_proj"
+      ],
+      "activation_equal": true,
+      "high_precision_equal": true,
+      "export_matches_selected_record": true,
+      "int8_inputs": 96,
+      "sp2_inputs": 16,
+      "nll": 2.7803035383838837,
+      "ppl": 16.123914432238468,
+      "metadata": {
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+        "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+        "method": "phase4-scale-round",
+        "arm": "A2",
+        "offline_only": true,
+        "changed_modules": [
+          "model.layers.8.mlp.down_proj"
+        ]
+      }
+    },
+    "B": {
+      "changed_q": [
+        "model.layers.8.mlp.down_proj"
+      ],
+      "changed_sw": [],
+      "activation_equal": true,
+      "high_precision_equal": true,
+      "export_matches_selected_record": true,
+      "int8_inputs": 96,
+      "sp2_inputs": 16,
+      "nll": 2.780084071227797,
+      "ppl": 16.12037615087552,
+      "metadata": {
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+        "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+        "method": "GuidedQuant-g1-objective-existing-neighbor",
+        "target": "model.layers.8.mlp.down_proj",
+        "offline_only": true
+      }
+    }
+  },
+  "status": "PASS",
+  "run_source_matches_live": {
+    "a-sw-code-matched-20260915a/scale_round.py": false,
+    "a-layer8-final-20260915a/scale_round.py": true,
+    "b-guided-g1-layer8-20260915a/guided_round.py": true,
+    "b-guided-g1-layer8-20260915a/scale_round.py": true
+  },
+  "first_a_source_difference": "Later addition of diagnostic --evaluate-best-rejected export, manually reviewed; candidate generation unchanged",
+  "saliency_zero_exactly_each_window_final_position": true,
+  "model_forwards": 0,
+  "gpu_used": false
+}

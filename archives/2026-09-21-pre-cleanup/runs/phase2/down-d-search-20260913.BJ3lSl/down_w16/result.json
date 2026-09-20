@@ -1,0 +1,54 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 15.23504638671875,
+      "nll": 2.723598457179919
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 15.943840026855469,
+      "nll": 2.76907254942159
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.7237688536747786,
+  "ppl": 15.237642606409151,
+  "restored_w": [
+    "model.layers.0.mlp.down_proj",
+    "model.layers.1.mlp.down_proj",
+    "model.layers.2.mlp.down_proj",
+    "model.layers.3.mlp.down_proj",
+    "model.layers.4.mlp.down_proj",
+    "model.layers.5.mlp.down_proj",
+    "model.layers.6.mlp.down_proj",
+    "model.layers.7.mlp.down_proj",
+    "model.layers.8.mlp.down_proj",
+    "model.layers.9.mlp.down_proj",
+    "model.layers.10.mlp.down_proj",
+    "model.layers.11.mlp.down_proj",
+    "model.layers.12.mlp.down_proj",
+    "model.layers.13.mlp.down_proj",
+    "model.layers.14.mlp.down_proj",
+    "model.layers.15.mlp.down_proj"
+  ],
+  "restored_a": [],
+  "frozen_checks_pass": true,
+  "delta_ppl": -2.404757369480498,
+  "delta_nll": -0.14653624070445792,
+  "split": "validation",
+  "kv_bits": 16,
+  "use_cache": false,
+  "reference_ppl": 17.64239997588965,
+  "parent_ppl": 16.11180256293439,
+  "delta_parent_ppl": -0.8741599565252383,
+  "delta_parent_nll": -0.05578322818801418
+}

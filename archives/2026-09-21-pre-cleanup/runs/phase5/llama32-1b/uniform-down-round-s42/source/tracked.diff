@@ -1,0 +1,481 @@
+diff --git a/optimize_rotation.py b/optimize_rotation.py
+index 2404686..db49f39 100644
+--- a/optimize_rotation.py
++++ b/optimize_rotation.py
+@@ -26,10 +26,13 @@ from train_utils.modeling_llama_quant import LlamaForCausalLM as LlamaForCausalL
+ from train_utils.optimizer import SGDG
+ from train_utils.rotation_calibration import (
+     LearnableScaleClampCallback,
++    LearnableWeightScaleCallback,
++    enable_weight_scale_learning,
+     PeriodicRecalibrationCallback,
+     RotationScaleCalibrator,
+     enable_non_downproj_scale_learning,
+     export_rotation_scales,
++    refresh_current_rotation_weight_scales,
+ )
+ from utils import static_quant_policy
+ from utils.data_utils import CustomJsonDataset, get_wikitext2
+@@ -60,6 +63,31 @@ def train() -> None:
+     )
+     static_quant_policy.validate_static_activation_model_config(ptq_args, config)
+ 
++    if ptq_args.learn_weight_scales:
++        if not ptq_args.w4_aware_training or not ptq_args.initial_weight_scale_path:
++            raise ValueError("Learned SW requires W4-aware mode and B initial SW path")
++        if not 0 < ptq_args.weight_scale_learning_rate < float("inf"):
++            raise ValueError("SW learning rate must be positive and finite")
++    if ptq_args.w4_aware_training:
++        if not (
++            ptq_args.learn_activation_scales
++            and ptq_args.a_quant_mode == static_quant_policy.ROTATION_STATIC
++            and ptq_args.w_bits == 4
++            and ptq_args.w_groupsize == -1
++            and not ptq_args.w_asym
++            and not ptq_args.w_clip
++            and ptq_args.rotation_components == "r1_r2"
++            and ptq_args.a_bits == 8
++            and ptq_args.k_bits == ptq_args.v_bits == 16
++            and not ptq_args.int8_down_proj
++            and model_args.optimized_rotation_path
++            and ptq_args.static_scale_path
++            and not ptq_args.calibration_only
++            and not ptq_args.downproj_mse_calibration
++        ):
++            raise ValueError("w4_aware_training requires paired R/SA, learnable static A8, R1/R2-only, symmetric per-channel W4 and KV16")
++        if training_args.fsdp:
++            raise ValueError("w4_aware_training currently supports unsharded Trainer/DDP only")
+     if not dist.is_initialized():
+         dist.init_process_group(backend="nccl", timeout=datetime.timedelta(hours=8))
+     local_rank = get_local_rank()
+@@ -126,6 +154,7 @@ def train() -> None:
+     rotation_static = ptq_args.a_quant_mode == static_quant_policy.ROTATION_STATIC
+     calibrator = None
+     callbacks = None
++    scale_callback = None
+     if rotation_static:
+         calibration_data = get_wikitext2(
+             nsamples=ptq_args.calibration_nsamples,
+@@ -137,7 +166,10 @@ def train() -> None:
+             [input_ids for input_ids, _ in calibration_data], logger=log
+         )
+         if ptq_args.learn_activation_scales:
+-            callbacks = [LearnableScaleClampCallback()]
++            scale_callback = LearnableScaleClampCallback(
++                w4_aware=ptq_args.w4_aware_training and not ptq_args.learn_weight_scales, logger=log
++            )
++            callbacks = [scale_callback]
+         else:
+             callbacks = [
+                 PeriodicRecalibrationCallback(
+@@ -215,6 +247,8 @@ def train() -> None:
+         block_size=min(training_args.model_max_length, 2048),
+     )
+ 
++    if ptq_args.learn_weight_scales:
++        model.cuda()
+     rotation_parameters = [model.R1.weight] + [
+         model.model.layers[i].self_attn.R2.weight
+         for i in range(model.config.num_hidden_layers)
+@@ -246,6 +280,24 @@ def train() -> None:
+                 training_args.learning_rate,
+                 ptq_args.activation_scale_learning_rate,
+             )
++    weight_scale_callback = None
++    if ptq_args.learn_weight_scales:
++        # Initialize before optimizer/DDP registration; never replace SW thereafter.
++        calibrator.run(model, update_step=0, kind="initial")
++        provided = torch.load(ptq_args.static_scale_path, map_location="cpu", weights_only=True)
++        static_quant_policy.load_rotation_static_activation_scales(
++            model, provided["activation"], down_proj_fp16=True)
++        initial_sw = torch.load(ptq_args.initial_weight_scale_path, map_location="cpu", weights_only=True)
++        sw_parameters = enable_weight_scale_learning(model, initial_sw["weight"])
++        optimizer_groups.append(dict(params=sw_parameters,
++            lr=ptq_args.weight_scale_learning_rate, stiefel=False))
++        weight_scale_callback = LearnableWeightScaleCallback()
++        callbacks.append(weight_scale_callback)
++        log.info("C joint R+SA+SW: %d FP32 SW tensors, SW lr=%g, source=%s",
++                 len(sw_parameters), ptq_args.weight_scale_learning_rate, ptq_args.initial_weight_scale_path)
++        if dist.get_rank() == 0:
++            os.makedirs(model_args.output_rotation_path, exist_ok=True)
++            torch.save(export_rotation_scales(model), os.path.join(model_args.output_rotation_path, "initial_quant_scales.pt"))
+     model.seqlen = training_args.model_max_length
+     optimizer = SGDG(optimizer_groups, lr=training_args.learning_rate)
+     MyTrainer = Trainer
+@@ -265,9 +317,19 @@ def train() -> None:
+     )
+     torch.distributed.barrier()
+ 
+-    if calibrator is not None:
++    if calibrator is not None and not ptq_args.learn_weight_scales:
+         calibrator.run(trainer.model, update_step=0, kind="initial")
+-        if ptq_args.learn_activation_scales and local_rank == 0:
++        if ptq_args.learn_activation_scales and ptq_args.static_scale_path:
++            provided_scales = torch.load(
++                ptq_args.static_scale_path, map_location="cpu", weights_only=True
++            )
++            static_quant_policy.load_rotation_static_activation_scales(
++                trainer.model, provided_scales["activation"], down_proj_fp16=True
++            )
++            log.info("Restored paired SA after SW initialization from %s", ptq_args.static_scale_path)
++        if ptq_args.w4_aware_training:
++            refresh_current_rotation_weight_scales(trainer.model)
++        if ptq_args.learn_activation_scales and dist.get_rank() == 0:
+             os.makedirs(model_args.output_rotation_path, exist_ok=True)
+             torch.save(
+                 export_rotation_scales(trainer.model),
+@@ -277,6 +339,8 @@ def train() -> None:
+                 ),
+             )
+     trainer.train()
++    if ptq_args.w4_aware_training and not ptq_args.learn_weight_scales:
++        refresh_current_rotation_weight_scales(trainer.model)
+     if calibrator is not None and not ptq_args.learn_activation_scales:
+         calibrator.run(
+             trainer.model,
+@@ -293,7 +357,7 @@ def train() -> None:
+         for key, value in cpu_state.items()
+         if "R1.weight" in key or "self_attn.R2" in key
+     }
+-    if local_rank == 0:
++    if dist.get_rank() == 0:
+         os.makedirs(model_args.output_rotation_path, exist_ok=True)
+         path = os.path.join(model_args.output_rotation_path, "R.bin")
+         torch.save(
+@@ -314,6 +378,12 @@ def train() -> None:
+                 encoding="utf-8",
+             ) as history_file:
+                 json.dump(trainer.state.log_history, history_file, indent=2)
++            if weight_scale_callback is not None:
++                weight_scale_callback.save_history(os.path.join(model_args.output_rotation_path, "sw_update_history.json"))
++            if scale_callback is not None:
++                scale_callback.save_history(
++                    os.path.join(model_args.output_rotation_path, "sa_update_history.json")
++                )
+     dist.barrier()
+     dist.destroy_process_group()
+ 
+diff --git a/train_utils/quant_linear.py b/train_utils/quant_linear.py
+index 5132c88..cebb3b0 100644
+--- a/train_utils/quant_linear.py
++++ b/train_utils/quant_linear.py
+@@ -11,14 +11,7 @@ from torch._tensor import Tensor
+ 
+ 
+ class QuantizeLinear(nn.Linear):
+-    def forward(
+-        self,
+-        input: Tensor,
+-        R1=None,
+-        R2=None,
+-        transpose=False,
+-    ) -> Tensor:
+-        # quantize weight
++    def rotated_weight(self, R1=None, R2=None, transpose=False):
+         if R1 is not None:
+             dtype = self.weight.dtype
+             if not transpose:
+@@ -48,6 +41,16 @@ class QuantizeLinear(nn.Linear):
+             weight = weight.to(dtype)
+         else:
+             weight = self.weight
++        return weight
++
++    def forward(
++        self,
++        input: Tensor,
++        R1=None,
++        R2=None,
++        transpose=False,
++    ) -> Tensor:
++        weight = self.rotated_weight(R1, R2, transpose)
+         if hasattr(self, "quantizer"):
+             dtype = weight.dtype
+             if getattr(self.quantizer, "rotation_static_enabled", False):
+diff --git a/train_utils/rotation_calibration.py b/train_utils/rotation_calibration.py
+index c40d53d..11b80d6 100644
+--- a/train_utils/rotation_calibration.py
++++ b/train_utils/rotation_calibration.py
+@@ -53,22 +53,153 @@ def enable_non_downproj_scale_learning(model):
+     return learned, bypassed
+ 
+ 
++@torch.no_grad()
++def refresh_current_rotation_weight_scales(model):
++    """No activation forward/calibration; share rotation math with training."""
++    for layer in model.model.layers:
++        for wrapper, r2, transpose in (
++            (layer.self_attn.q_proj, None, False),
++            (layer.self_attn.k_proj, None, False),
++            (layer.self_attn.v_proj, layer.self_attn.R2.weight, False),
++            (layer.self_attn.o_proj, layer.self_attn.R2.weight, True),
++            (layer.mlp.gate_proj, None, False),
++            (layer.mlp.up_proj, None, False),
++            (layer.mlp.down_proj, None, True),
++        ):
++            linear = wrapper.module
++            linear.quantizer.refresh_current_weight(
++                linear.rotated_weight(model.R1.weight, r2, transpose)
++            )
++
++
+ class LearnableScaleClampCallback(TrainerCallback):
+     """Keep directly optimized LSQ step sizes strictly positive."""
+ 
+-    def __init__(self, minimum: float = 1e-8) -> None:
++    def __init__(self, minimum: float = 1e-8, w4_aware=False, logger=None) -> None:
+         self.minimum = float(minimum)
++        self.w4_aware = w4_aware
++        self.logger = logger
++        self.history = []
++        self.before = {}
++
++    def on_train_begin(self, args, state, control, model=None, **kwargs):
++        # Check after Trainer/Accelerate wrapping; never silently train BF16 SA.
++        for name, module in _named_quantizers(model)[0]:
++            if module.scale_learnable and module.scale.dtype != torch.float32:
++                raise RuntimeError(f"Learnable SA must remain FP32 after wrapping: {name}")
++        return control
++
++    def on_step_begin(self, args, state, control, model=None, optimizer=None, **kwargs):
++        if self.w4_aware:
++            refresh_current_rotation_weight_scales(model)
++        self.before = {}
++        for name, module in _named_quantizers(model)[0]:
++            if not module.scale_learnable:
++                continue
++            scale = module.scale
++            if scale.dtype != torch.float32 or not torch.isfinite(scale).all():
++                raise RuntimeError(f"Invalid learnable SA before update: {name}, {scale.dtype}")
++            group = next(g for g in optimizer.param_groups if any(p is scale for p in g["params"]))
++            self.before[name] = (scale.detach().cpu().clone(), float(group["lr"]))
++        self.lr_used = [float(group["lr"]) for group in optimizer.param_groups]
++        return control
+ 
+     def on_step_end(self, args, state, control, model=None, **kwargs):
++        modules = {}
+         with torch.no_grad():
+-            for module in model.modules():
++            for name, module in model.named_modules():
+                 if (
+                     isinstance(module, RotationStaticActQuantizer)
+                     and module.scale_learnable
+                 ):
++                    if module.scale.dtype != torch.float32 or not torch.isfinite(module.scale).all():
++                        raise RuntimeError(f"Invalid SA after update: {name}, {module.scale.dtype}")
+                     module.scale.clamp_(min=self.minimum)
++                    if name in self.before:
++                        before, lr_used = self.before[name]
++                        after = module.scale.detach().cpu().clone()
++                        delta = (after - before).abs()
++                        modules[name] = {
++                            "before": before.tolist(), "after": after.tolist(),
++                            "delta_abs": delta.tolist(),
++                            "delta_relative": (delta / before.abs().clamp_min(self.minimum)).tolist(),
++                            "lr_used": lr_used, "dtype": str(module.scale.dtype),
++                            "finite": True,
++                        }
++        if modules and state.is_world_process_zero:
++            record = {"update_step": int(state.global_step), "lr_used": self.lr_used, "modules": modules}
++            self.history.append(record)
++            if self.logger is not None:
++                self.logger.info("SA update: %s", record)
+         return control
+ 
++    def on_optimizer_step(self, args, state, control, model=None, **kwargs):
++        # This event precedes Trainer's zero_grad and scheduler advancement.
++        for name, parameter in model.named_parameters():
++            if parameter.requires_grad:
++                if not torch.isfinite(parameter).all():
++                    raise RuntimeError(f"Non-finite trainable parameter: {name}")
++                if parameter.grad is not None and not torch.isfinite(parameter.grad).all():
++                    raise RuntimeError(f"Non-finite training gradient: {name}")
++        return control
++
++    def save_history(self, path):
++        Path(path).write_text(json.dumps(self.history, indent=2, allow_nan=False), encoding="utf-8")
++
++
++def enable_weight_scale_learning(model, weight_scales):
++    weights = _named_quantizers(model)[1]
++    if set(weight_scales) != {name for name, _ in weights}:
++        raise ValueError("Initial SW keys do not match model weight quantizers")
++    learned = []
++    for name, q in weights:
++        value = weight_scales[name]
++        if value.shape != q.scale.shape or not torch.isfinite(value).all() or not (value > 0).all():
++            raise ValueError(f"Invalid initial SW: {name}")
++        q.load_scale(value.float())
++        q.enable_scale_learning()
++        learned.append(q.scale)
++    return learned
++
++
++class LearnableWeightScaleCallback(TrainerCallback):
++    """Record actual per-channel SW updates, including warmup."""
++    def __init__(self):
++        self.history = []
++
++    def on_train_begin(self, args, state, control, model=None, **kwargs):
++        for name, q in _named_quantizers(model)[1]:
++            if not q.scale_learnable or q.scale.dtype != torch.float32:
++                raise RuntimeError(f"Expected persistent FP32 SW: {name}")
++
++    def on_step_begin(self, args, state, control, model=None, optimizer=None, **kwargs):
++        self.before = {}
++        for name, q in _named_quantizers(model)[1]:
++            group = next(g for g in optimizer.param_groups if any(p is q.scale for p in g["params"]))
++            self.before[name] = (q.scale.detach().clone(), float(group["lr"]))
++
++    def on_step_end(self, args, state, control, model=None, **kwargs):
++        records = {}
++        with torch.no_grad():
++            for name, q in _named_quantizers(model)[1]:
++                if q.scale.dtype != torch.float32 or not torch.isfinite(q.scale).all():
++                    raise RuntimeError(f"Invalid SW after update: {name}")
++                clamped = int((q.scale < 1e-8).sum().item())
++                q.scale.clamp_(min=1e-8)
++                before, lr = self.before[name]
++                delta = q.scale - before
++                records[name] = dict(lr_used=lr, dtype=str(q.scale.dtype),
++                    changed_channels=int((delta != 0).sum().item()), channels=q.scale.numel(),
++                    clamped_channels=clamped,
++                    relative_l2=float((delta.norm() / before.norm().clamp_min(1e-12)).item()),
++                    max_relative_update=float((delta.abs() / before.abs().clamp_min(1e-8)).max().item()),
++                    scale_min=float(q.scale.min().item()), scale_max=float(q.scale.max().item()))
++        if state.is_world_process_zero:
++            self.history.append(dict(update_step=int(state.global_step), modules=records))
++
++    def save_history(self, path):
++        Path(path).write_text(json.dumps(self.history, indent=2, allow_nan=False))
++
+ 
+ class RotationScaleCalibrator:
+     def __init__(self, input_batches: Iterable[torch.Tensor], logger=None) -> None:
+diff --git a/utils/process_args.py b/utils/process_args.py
+index 5809e59..e6afc8e 100644
+--- a/utils/process_args.py
++++ b/utils/process_args.py
+@@ -298,6 +298,15 @@ def parser_gen():
+             "with R; down_proj scales remain frozen"
+         ),
+     )
++    parser.add_argument(
++        "--w4_aware_training",
++        action=argparse.BooleanOptionalAction,
++        default=False,
++        help="Refresh current-R stop-gradient W4 scales once per R+SA optimizer update",
++    )
++    parser.add_argument("--learn_weight_scales", action="store_true")
++    parser.add_argument("--initial_weight_scale_path", type=str, default=None)
++    parser.add_argument("--weight_scale_learning_rate", type=float, default=0.01)
+     parser.add_argument(
+         "--activation_scale_learning_rate",
+         type=float,
+diff --git a/utils/quant_utils.py b/utils/quant_utils.py
+index d7380a7..c131f0c 100644
+--- a/utils/quant_utils.py
++++ b/utils/quant_utils.py
+@@ -72,6 +72,25 @@ class STEQuantize(torch.autograd.Function):
+         return grad_output, None, None
+ 
+ 
++class ChannelScaleQuantize(torch.autograd.Function):
++    """Per-row LSQ scale gradient, retaining B's identity weight STE."""
++    @staticmethod
++    def forward(ctx, x, scale, maxq):
++        ctx.qmax = int(maxq.item())
++        scaled = x.float() / scale
++        ctx.save_for_backward(scaled)
++        return (scale * scaled.round().clamp(-ctx.qmax - 1, ctx.qmax)).to(x.dtype)
++
++    @staticmethod
++    def backward(ctx, grad_output):
++        (scaled,) = ctx.saved_tensors
++        lo, hi = -ctx.qmax - 1, ctx.qmax
++        term = torch.where(scaled < lo, lo, torch.where(scaled > hi, hi, scaled.round() - scaled))
++        grad_scale = (grad_output.float() * term).sum(dim=1, keepdim=True)
++        grad_scale /= math.sqrt(scaled.shape[1] * hi)
++        return grad_output, grad_scale, None
++
++
+ class LSQQuantize(torch.autograd.Function):
+     """Signed per-tensor quantization with an LSQ step-size gradient."""
+ 
+@@ -619,7 +638,7 @@ class RotationStaticActQuantizer(torch.nn.Module):
+             return
+         initial_scale = self._buffers.pop("scale")
+         self.register_parameter(
+-            "scale", torch.nn.Parameter(initial_scale.detach().clone())
++            "scale", torch.nn.Parameter(initial_scale.detach().float().clone())
+         )
+ 
+     def begin_calibration(self) -> None:
+@@ -983,11 +1002,26 @@ class RotationStaticWeightQuantizer(WeightQuantizer):
+         self._previous_zero = None
+         self._previous_has_scale = False
+ 
++    @property
++    def scale_learnable(self):
++        return isinstance(self.scale, torch.nn.Parameter)
++
++    def enable_scale_learning(self):
++        if not self.has_scale or bool(self._calibration_pending.item()):
++            raise RuntimeError("Initialize SW before enabling learning")
++        if self.bits != 4 or not self.sym or not self.perchannel or self.weight_groupsize != -1 or self.mse:
++            raise ValueError("Learned SW requires symmetric per-channel W4")
++        if not self.scale_learnable:
++            initial = self._buffers.pop("scale")
++            self.register_parameter("scale", torch.nn.Parameter(initial.detach().float().clone()))
++
+     @property
+     def has_scale(self) -> bool:
+         return bool(self._has_scale.item())
+ 
+     def begin_calibration(self) -> None:
++        if self.scale_learnable:
++            raise RuntimeError("Cannot recalibrate learned SW")
+         if bool(self._calibration_pending.item()):
+             raise RuntimeError("Weight calibration is already running")
+         self._previous_has_scale = self.has_scale
+@@ -1013,11 +1047,31 @@ class RotationStaticWeightQuantizer(WeightQuantizer):
+         self._previous_zero = None
+ 
+     def load_scale(self, scale: torch.Tensor) -> None:
++        if self.scale_learnable:
++            raise RuntimeError("Cannot overwrite learned SW")
+         self.scale = scale.detach().clone().to(self.maxq.device)
+         self.zero = torch.zeros_like(self.scale)
+         self._has_scale.fill_(True)
+         self._calibration_pending.fill_(False)
+ 
++    @torch.no_grad()
++    def refresh_current_weight(self, weight: torch.Tensor) -> None:
++        """Stop-gradient symmetric W4 per-output scales at update boundaries."""
++        if self.bits != 4 or not self.sym or not self.perchannel or self.weight_groupsize != -1 or self.mse:
++            raise ValueError("W4-aware training requires unclipped symmetric per-channel W4")
++        if self.scale_learnable:
++            raise RuntimeError("Cannot refresh learned SW")
++        scale = weight.detach().float().abs().amax(dim=1, keepdim=True).clamp_min(1e-5) / 7
++        if not torch.isfinite(scale).all():
++            raise RuntimeError("Non-finite current-R weight scale")
++        # Preserve storage once initialized, including DDP's broadcast buffers.
++        if self.scale.shape == scale.shape and self.scale.dtype == scale.dtype:
++            self.scale.copy_(scale)
++            self.zero.zero_()
++        else:
++            self.load_scale(scale)
++        self._has_scale.fill_(True)
++
+     def calibrate_if_pending(self, weight: torch.Tensor) -> None:
+         if not bool(self._calibration_pending.item()):
+             return
+@@ -1028,6 +1082,8 @@ class RotationStaticWeightQuantizer(WeightQuantizer):
+     def quantize(self, x):
+         if not self.has_scale:
+             raise RuntimeError("Rotation-static W4 requires calibration")
++        if self.scale_learnable:
++            return ChannelScaleQuantize.apply(x, self.scale, self.maxq)
+         return super().quantize(x)
+ 
+ 

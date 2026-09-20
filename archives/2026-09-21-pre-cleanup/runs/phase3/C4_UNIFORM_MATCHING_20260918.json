@@ -1,0 +1,28 @@
+{
+  "layers": 16,
+  "candidates": 800,
+  "calibration_tokens": 4096,
+  "overlay_bytes": 6618,
+  "int8_local_mse_better_layers": 2,
+  "selected_log2_ratios": {
+    "model.layers.0.mlp.down_proj": -0.26171875,
+    "model.layers.1.mlp.down_proj": 0.0703125,
+    "model.layers.2.mlp.down_proj": -1.19140625,
+    "model.layers.3.mlp.down_proj": -1.45703125,
+    "model.layers.4.mlp.down_proj": -1.72265625,
+    "model.layers.5.mlp.down_proj": -2.12109375,
+    "model.layers.6.mlp.down_proj": -1.45703125,
+    "model.layers.7.mlp.down_proj": -1.5234375,
+    "model.layers.8.mlp.down_proj": -1.32421875,
+    "model.layers.9.mlp.down_proj": -1.58984375,
+    "model.layers.10.mlp.down_proj": -1.45703125,
+    "model.layers.11.mlp.down_proj": -1.45703125,
+    "model.layers.12.mlp.down_proj": -1.45703125,
+    "model.layers.13.mlp.down_proj": -0.7265625,
+    "model.layers.14.mlp.down_proj": -0.9921875,
+    "model.layers.15.mlp.down_proj": -0.79296875
+  },
+  "non_down_quantizers_exactly_unchanged": 96,
+  "all_112_static_int8": true,
+  "same_parent": true
+}

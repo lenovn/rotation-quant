@@ -1,0 +1,12 @@
+[
+  {
+    "step": 0,
+    "training_probe": 3.5926966667175293
+  },
+  {
+    "step": 100,
+    "training_probe": 2.918057143688202,
+    "validation_nll": 2.8520175414808633,
+    "validation_ppl": 17.32269586594728
+  }
+]

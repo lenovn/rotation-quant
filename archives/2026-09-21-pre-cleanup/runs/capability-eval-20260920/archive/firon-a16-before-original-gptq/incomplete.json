@@ -1,0 +1,50 @@
+[
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "piqa",
+    "reason": "pending"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "social_iqa",
+    "reason": "pending"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "hellaswag",
+    "reason": "pending"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "winogrande",
+    "reason": "pending"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "arc_easy",
+    "reason": "pending"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "arc_challenge",
+    "reason": "pending"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "openbookqa",
+    "reason": "pending"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "mmlu",
+    "reason": "pending"
+  }
+]

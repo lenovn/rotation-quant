@@ -1,0 +1,3 @@
+2026-09-13T17:43:51.169835Z ERROR codex_core::tools::router: error=agent with id 01a09bdc-03c8-7f33-a19f-012bed230c9e not found
+2026-09-13T17:51:26.663449Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 219ms)... turn_id=01a09bdd-57fc-77a2-ad49-c90c99d50353 retries=1 max_retries=5 sampling_error=stream disconnected before completion: WebSocket protocol error: Connection reset without closing handshake
+2026-09-13T18:00:08.628355Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 193ms)... turn_id=01a09bdd-57fc-77a2-ad49-c90c99d50353 retries=1 max_retries=5 sampling_error=stream disconnected before completion: WebSocket protocol error: Connection reset without closing handshake

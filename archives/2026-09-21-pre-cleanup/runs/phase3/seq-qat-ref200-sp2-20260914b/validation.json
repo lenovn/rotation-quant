@@ -1,0 +1,39 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 15.612288475036621,
+      "nll": 2.74805832692351
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 17.006498336791992,
+      "nll": 2.8335955261207575
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.748378844347934,
+  "ppl": 15.61729328754997,
+  "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/distill-b100-d-adam2e5-ref-200-20260914a/checkpoint-0200/static_w4a8.pt",
+  "parent_metadata": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/post-b100-d-20260914a/static_w4a8.pt",
+    "method": "quantization-aware distillation; original backbone weights trained",
+    "step": 200,
+    "teacher": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "temperature": 1.0,
+    "ce_weight": 0.1
+  },
+  "method": "sequential frozen-package postprocessing; no gradient training in this stage",
+  "format": "112 W4 /96 static INT8 /16 static SP2; BF16 KV16 prefill"
+}

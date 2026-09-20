@@ -1,0 +1,28 @@
+{
+  "reason": "Operational batch64 chosen from max prompt and KV memory; same batch for all Qwen methods, no score-based changes",
+  "previous_launch": {
+    "command": [
+      "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+      "-u",
+      "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py",
+      "--model",
+      "qwen",
+      "--method",
+      "bf16",
+      "--task",
+      "ifeval",
+      "--batch-size",
+      "8",
+      "--output",
+      "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/bf16/ifeval"
+    ],
+    "pid": 3966847,
+    "gpu": "0",
+    "started": 1789839524.560014,
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/bf16/ifeval"
+  },
+  "partial_raw_files": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/bf16/ifeval/generation_batches-001.jsonl"
+  ],
+  "discarded_partial_sample_count": 48
+}

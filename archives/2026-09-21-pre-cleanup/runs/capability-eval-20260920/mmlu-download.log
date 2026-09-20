@@ -1,0 +1,639 @@
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 42.6kB [00:00, 18.9MB/s]
+Downloading data:   0%|          | 0.00/9.97k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/28.3k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/21.6k [00:00<?, ?B/s][A[A
+
+
+Downloading data:   0%|          | 0.00/20.1k [00:00<?, ?B/s][A[A[ADownloading data: 100%|██████████| 9.97k/9.97k [00:01<00:00, 6.20kB/s]Downloading data: 100%|██████████| 9.97k/9.97k [00:01<00:00, 6.20kB/s]
+Downloading data:   0%|          | 0.00/3.74k [00:00<?, ?B/s]
+
+Downloading data: 100%|██████████| 21.6k/21.6k [00:01<00:00, 13.0kB/s][A[A
+Downloading data: 100%|██████████| 28.3k/28.3k [00:01<00:00, 16.2kB/s][ADownloading data: 100%|██████████| 28.3k/28.3k [00:01<00:00, 16.2kB/s]
+
+Downloading data:   0%|          | 0.00/6.06k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 21.6k/21.6k [00:01<00:00, 12.5kB/s]
+
+
+Downloading data:   0%|          | 0.00/5.10k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 3.74k/3.74k [00:00<00:00, 4.57kB/s]Downloading data: 100%|██████████| 3.74k/3.74k [00:00<00:00, 4.57kB/s]
+Downloading data:   0%|          | 0.00/3.46k [00:00<?, ?B/s]
+
+
+Downloading data: 100%|██████████| 20.1k/20.1k [00:01<00:00, 11.5kB/s][A[A[ADownloading data: 100%|██████████| 20.1k/20.1k [00:01<00:00, 11.5kB/s]
+
+
+
+Downloading data:   0%|          | 0.00/5.29k [00:00<?, ?B/s][A[A[A
+Downloading data: 100%|██████████| 6.06k/6.06k [00:00<00:00, 7.47kB/s][ADownloading data: 100%|██████████| 6.06k/6.06k [00:00<00:00, 7.46kB/s]
+
+Downloading data:   0%|          | 0.00/4.95k [00:00<?, ?B/s][A
+
+Downloading data: 100%|██████████| 5.10k/5.10k [00:00<00:00, 6.29kB/s][A[ADownloading data: 100%|██████████| 5.10k/5.10k [00:00<00:00, 6.28kB/s]
+
+
+Downloading data:   0%|          | 0.00/4.97k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 3.46k/3.46k [00:00<00:00, 4.29kB/s]Downloading data: 100%|██████████| 3.46k/3.46k [00:00<00:00, 4.28kB/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 10677.69 examples/s]
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11/11 [00:00<00:00, 4930.78 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3315.13 examples/s]
+{"config": "abstract_algebra", "splits": {"test": 100, "validation": 11, "dev": 5}}
+
+Downloading data: 100%|██████████| 4.95k/4.95k [00:00<00:00, 6.44kB/s][ADownloading data: 100%|██████████| 4.95k/4.95k [00:00<00:00, 6.40kB/s]
+Generating test split:   0%|          | 0/152 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 152/152 [00:00<00:00, 22725.25 examples/s]
+Generating validation split:   0%|          | 0/16 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 16/16 [00:00<00:00, 8838.25 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3104.13 examples/s]
+{"config": "astronomy", "splits": {"test": 152, "validation": 16, "dev": 5}}
+
+
+Downloading data: 100%|██████████| 4.97k/4.97k [00:00<00:00, 6.00kB/s][A[ADownloading data: 100%|██████████| 4.97k/4.97k [00:00<00:00, 6.00kB/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 25631.29 examples/s]
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11/11 [00:00<00:00, 5648.55 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2696.95 examples/s]
+{"config": "business_ethics", "splits": {"test": 100, "validation": 11, "dev": 5}}
+
+
+
+Downloading data: 100%|██████████| 5.29k/5.29k [00:01<00:00, 4.31kB/s][A[A[ADownloading data: 100%|██████████| 5.29k/5.29k [00:01<00:00, 4.31kB/s]
+Downloading data:   0%|          | 0.00/3.51k [00:00<?, ?B/s]Downloading data: 100%|██████████| 3.51k/3.51k [00:00<00:00, 3.96kB/s]Downloading data: 100%|██████████| 3.51k/3.51k [00:00<00:00, 3.95kB/s]
+Generating test split:   0%|          | 0/135 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 135/135 [00:00<00:00, 17335.02 examples/s]
+Generating validation split:   0%|          | 0/14 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 14/14 [00:00<00:00, 6219.05 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2555.94 examples/s]
+{"config": "anatomy", "splits": {"test": 135, "validation": 14, "dev": 5}}
+Downloading data:   0%|          | 0.00/40.5k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/31.9k [00:00<?, ?B/s][A
+Downloading data: 100%|██████████| 31.9k/31.9k [00:01<00:00, 29.7kB/s][ADownloading data: 100%|██████████| 31.9k/31.9k [00:01<00:00, 29.7kB/s]
+
+Downloading data:   0%|          | 0.00/6.91k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 40.5k/40.5k [00:02<00:00, 17.9kB/s]Downloading data: 100%|██████████| 40.5k/40.5k [00:02<00:00, 17.9kB/s]
+Downloading data:   0%|          | 0.00/7.49k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 6.91k/6.91k [00:00<00:00, 8.59kB/s][ADownloading data: 100%|██████████| 6.91k/6.91k [00:00<00:00, 8.59kB/s]
+
+Downloading data:   0%|          | 0.00/4.28k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/17.9k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 7.49k/7.49k [00:00<00:00, 8.74kB/s]Downloading data: 100%|██████████| 7.49k/7.49k [00:00<00:00, 8.74kB/s]
+Downloading data:   0%|          | 0.00/3.68k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 4.28k/4.28k [00:00<00:00, 5.64kB/s][ADownloading data: 100%|██████████| 4.28k/4.28k [00:00<00:00, 5.63kB/s]
+
+Generating test split:   0%|          | 0/144 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 144/144 [00:00<00:00, 16791.68 examples/s]
+
+Generating validation split:   0%|          | 0/16 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 16/16 [00:00<00:00, 7465.67 examples/s]
+
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 1399.59 examples/s]
+{"config": "college_biology", "splits": {"test": 144, "validation": 16, "dev": 5}}
+
+
+Downloading data: 100%|██████████| 17.9k/17.9k [00:00<00:00, 22.0kB/s][A[ADownloading data: 100%|██████████| 17.9k/17.9k [00:00<00:00, 22.0kB/s]
+
+Downloading data:   0%|          | 0.00/4.88k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/28.1k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 3.68k/3.68k [00:01<00:00, 3.21kB/s]Downloading data: 100%|██████████| 3.68k/3.68k [00:01<00:00, 3.20kB/s]
+Generating test split:   0%|          | 0/265 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 265/265 [00:00<00:00, 67794.48 examples/s]
+Generating validation split:   0%|          | 0/29 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 29/29 [00:00<00:00, 15445.69 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2911.09 examples/s]
+{"config": "clinical_knowledge", "splits": {"test": 265, "validation": 29, "dev": 5}}
+
+Downloading data: 100%|██████████| 4.88k/4.88k [00:00<00:00, 6.03kB/s][ADownloading data: 100%|██████████| 4.88k/4.88k [00:00<00:00, 6.03kB/s]
+Downloading data:   0%|          | 0.00/4.05k [00:00<?, ?B/s]
+
+Downloading data: 100%|██████████| 28.1k/28.1k [00:01<00:00, 24.9kB/s][A[ADownloading data: 100%|██████████| 28.1k/28.1k [00:01<00:00, 24.9kB/s]
+
+Downloading data:   0%|          | 0.00/6.26k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 4.05k/4.05k [00:00<00:00, 4.98kB/s]Downloading data: 100%|██████████| 4.05k/4.05k [00:00<00:00, 4.98kB/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 21338.54 examples/s]
+Generating validation split:   0%|          | 0/8 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 8/8 [00:00<00:00, 5093.27 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3497.59 examples/s]
+{"config": "college_chemistry", "splits": {"test": 100, "validation": 8, "dev": 5}}
+
+Downloading data: 100%|██████████| 6.26k/6.26k [00:00<00:00, 7.35kB/s][ADownloading data: 100%|██████████| 6.26k/6.26k [00:00<00:00, 7.34kB/s]
+Downloading data:   0%|          | 0.00/6.82k [00:00<?, ?B/s]Downloading data: 100%|██████████| 6.82k/6.82k [00:00<00:00, 8.11kB/s]Downloading data: 100%|██████████| 6.82k/6.82k [00:00<00:00, 8.11kB/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 11379.63 examples/s]
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11/11 [00:00<00:00, 6013.73 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3296.89 examples/s]
+{"config": "college_computer_science", "splits": {"test": 100, "validation": 11, "dev": 5}}
+Downloading data:   0%|          | 0.00/16.6k [00:00<?, ?B/s]Downloading data: 100%|██████████| 16.6k/16.6k [00:00<00:00, 20.8kB/s]Downloading data: 100%|██████████| 16.6k/16.6k [00:00<00:00, 20.8kB/s]
+Downloading data:   0%|          | 0.00/5.01k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/42.5k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/19.2k [00:00<?, ?B/s][A[A
+
+
+Downloading data:   0%|          | 0.00/18.6k [00:00<?, ?B/s][A[A[ADownloading data: 100%|██████████| 5.01k/5.01k [00:00<00:00, 6.45kB/s]Downloading data: 100%|██████████| 5.01k/5.01k [00:00<00:00, 6.44kB/s]
+Downloading data:   0%|          | 0.00/5.17k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 42.5k/42.5k [00:01<00:00, 34.1kB/s][ADownloading data: 100%|██████████| 42.5k/42.5k [00:01<00:00, 34.1kB/s]
+
+Downloading data:   0%|          | 0.00/9.00k [00:00<?, ?B/s][A
+
+
+Downloading data: 100%|██████████| 18.6k/18.6k [00:00<00:00, 22.7kB/s][A[A[ADownloading data: 100%|██████████| 18.6k/18.6k [00:00<00:00, 22.6kB/s]
+
+
+
+Downloading data:   0%|          | 0.00/6.40k [00:00<?, ?B/s][A[A[ADownloading data: 100%|██████████| 5.17k/5.17k [00:00<00:00, 6.48kB/s]Downloading data: 100%|██████████| 5.17k/5.17k [00:00<00:00, 6.46kB/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 27597.74 examples/s]
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11/11 [00:00<00:00, 5892.38 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2594.52 examples/s]
+{"config": "college_mathematics", "splits": {"test": 100, "validation": 11, "dev": 5}}
+
+
+Downloading data: 100%|██████████| 19.2k/19.2k [00:01<00:00, 17.3kB/s][A[ADownloading data: 100%|██████████| 19.2k/19.2k [00:01<00:00, 17.3kB/s]
+Downloading data:   0%|          | 0.00/6.68k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 9.00k/9.00k [00:00<00:00, 10.6kB/s][ADownloading data: 100%|██████████| 9.00k/9.00k [00:00<00:00, 10.6kB/s]
+
+Downloading data:   0%|          | 0.00/4.85k [00:00<?, ?B/s][A
+
+
+Downloading data: 100%|██████████| 6.40k/6.40k [00:01<00:00, 5.80kB/s][A[A[ADownloading data: 100%|██████████| 6.40k/6.40k [00:01<00:00, 5.78kB/s]
+
+
+Downloading data:   0%|          | 0.00/4.52k [00:00<?, ?B/s][A[A
+Downloading data: 100%|██████████| 4.85k/4.85k [00:01<00:00, 4.12kB/s][ADownloading data: 100%|██████████| 4.85k/4.85k [00:01<00:00, 4.12kB/s]
+
+Generating test split:   0%|          | 0/173 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 173/173 [00:00<00:00, 33940.53 examples/s]
+
+Generating validation split:   0%|          | 0/22 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 22/22 [00:00<00:00, 6805.92 examples/s]
+
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 1733.61 examples/s]
+{"config": "college_medicine", "splits": {"test": 173, "validation": 22, "dev": 5}}
+
+
+Downloading data: 100%|██████████| 4.52k/4.52k [00:00<00:00, 4.80kB/s][A[ADownloading data: 100%|██████████| 4.52k/4.52k [00:00<00:00, 4.79kB/s]
+
+Generating test split:   0%|          | 0/102 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 102/102 [00:00<00:00, 25776.89 examples/s]
+
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 11/11 [00:00<00:00, 5449.08 examples/s]
+
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 1712.66 examples/s]
+{"config": "college_physics", "splits": {"test": 102, "validation": 11, "dev": 5}}
+Downloading data: 100%|██████████| 6.68k/6.68k [00:02<00:00, 2.97kB/s]Downloading data: 100%|██████████| 6.68k/6.68k [00:02<00:00, 2.97kB/s]
+Downloading data:   0%|          | 0.00/4.33k [00:00<?, ?B/s]Downloading data: 100%|██████████| 4.33k/4.33k [00:00<00:00, 5.19kB/s]Downloading data: 100%|██████████| 4.33k/4.33k [00:00<00:00, 5.19kB/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 20402.30 examples/s]
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11/11 [00:00<00:00, 4707.89 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2813.84 examples/s]
+{"config": "computer_security", "splits": {"test": 100, "validation": 11, "dev": 5}}
+Downloading data:   0%|          | 0.00/41.1k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/24.5k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/17.6k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 41.1k/41.1k [00:00<00:00, 43.9kB/s]Downloading data: 100%|██████████| 41.1k/41.1k [00:00<00:00, 43.9kB/s]
+Downloading data:   0%|          | 0.00/9.39k [00:00<?, ?B/s]
+
+
+Downloading data:   0%|          | 0.00/25.0k [00:00<?, ?B/s][A[A[A
+
+Downloading data: 100%|██████████| 17.6k/17.6k [00:00<00:00, 18.2kB/s][A[ADownloading data: 100%|██████████| 17.6k/17.6k [00:00<00:00, 18.2kB/s]
+
+
+Downloading data:   0%|          | 0.00/5.09k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 9.39k/9.39k [00:01<00:00, 8.46kB/s]Downloading data: 100%|██████████| 9.39k/9.39k [00:01<00:00, 8.46kB/s]
+Downloading data:   0%|          | 0.00/4.56k [00:00<?, ?B/s]
+
+
+Downloading data: 100%|██████████| 25.0k/25.0k [00:01<00:00, 21.9kB/s][A[A[ADownloading data: 100%|██████████| 25.0k/25.0k [00:01<00:00, 21.9kB/s]
+
+
+
+Downloading data:   0%|          | 0.00/5.99k [00:00<?, ?B/s][A[A[A
+Downloading data: 100%|██████████| 24.5k/24.5k [00:01<00:00, 14.8kB/s][ADownloading data: 100%|██████████| 24.5k/24.5k [00:01<00:00, 14.8kB/s]
+
+Downloading data:   0%|          | 0.00/7.03k [00:00<?, ?B/s][A
+
+Downloading data: 100%|██████████| 5.09k/5.09k [00:00<00:00, 6.48kB/s][A[ADownloading data: 100%|██████████| 5.09k/5.09k [00:00<00:00, 6.48kB/s]
+
+
+Downloading data:   0%|          | 0.00/4.09k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 4.56k/4.56k [00:00<00:00, 5.60kB/s]Downloading data: 100%|██████████| 4.56k/4.56k [00:00<00:00, 5.60kB/s]
+Generating test split:   0%|          | 0/378 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 378/378 [00:00<00:00, 93042.66 examples/s]
+Generating validation split:   0%|          | 0/41 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 41/41 [00:00<00:00, 19501.75 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2822.17 examples/s]
+{"config": "elementary_mathematics", "splits": {"test": 378, "validation": 41, "dev": 5}}
+
+Downloading data: 100%|██████████| 7.03k/7.03k [00:00<00:00, 8.21kB/s][ADownloading data: 100%|██████████| 7.03k/7.03k [00:00<00:00, 8.19kB/s]
+Downloading data:   0%|          | 0.00/4.55k [00:00<?, ?B/s]
+
+
+Downloading data: 100%|██████████| 5.99k/5.99k [00:01<00:00, 5.49kB/s][A[A[ADownloading data: 100%|██████████| 5.99k/5.99k [00:01<00:00, 5.48kB/s]
+
+Downloading data:   0%|          | 0.00/3.97k [00:00<?, ?B/s][A
+
+Downloading data: 100%|██████████| 4.09k/4.09k [00:00<00:00, 5.35kB/s][A[ADownloading data: 100%|██████████| 4.09k/4.09k [00:00<00:00, 5.34kB/s]
+
+
+Generating test split:   0%|          | 0/145 [00:00<?, ? examples/s][A[AGenerating test split: 100%|██████████| 145/145 [00:00<00:00, 32360.01 examples/s]
+
+
+Generating validation split:   0%|          | 0/16 [00:00<?, ? examples/s][A[AGenerating validation split: 100%|██████████| 16/16 [00:00<00:00, 8009.17 examples/s]
+
+
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][A[AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 1545.32 examples/s]
+{"config": "electrical_engineering", "splits": {"test": 145, "validation": 16, "dev": 5}}
+Downloading data: 100%|██████████| 4.55k/4.55k [00:00<00:00, 5.48kB/s]Downloading data: 100%|██████████| 4.55k/4.55k [00:00<00:00, 5.48kB/s]
+Generating test split:   0%|          | 0/114 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 114/114 [00:00<00:00, 17608.85 examples/s]
+Generating validation split:   0%|          | 0/12 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 12/12 [00:00<00:00, 3199.32 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2835.14 examples/s]
+{"config": "econometrics", "splits": {"test": 114, "validation": 12, "dev": 5}}
+
+Downloading data: 100%|██████████| 3.97k/3.97k [00:00<00:00, 4.73kB/s][ADownloading data: 100%|██████████| 3.97k/3.97k [00:00<00:00, 4.72kB/s]
+Generating test split:   0%|          | 0/235 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 235/235 [00:00<00:00, 38736.94 examples/s]
+Generating validation split:   0%|          | 0/26 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 26/26 [00:00<00:00, 13354.38 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3061.98 examples/s]
+{"config": "conceptual_physics", "splits": {"test": 235, "validation": 26, "dev": 5}}
+Downloading data:   0%|          | 0.00/33.3k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/11.5k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 33.3k/33.3k [00:00<00:00, 43.6kB/s]Downloading data: 100%|██████████| 33.3k/33.3k [00:00<00:00, 43.5kB/s]
+Downloading data:   0%|          | 0.00/8.32k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 11.5k/11.5k [00:00<00:00, 15.1kB/s][ADownloading data: 100%|██████████| 11.5k/11.5k [00:00<00:00, 15.1kB/s]
+
+Downloading data:   0%|          | 0.00/4.20k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/62.7k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 8.32k/8.32k [00:00<00:00, 9.16kB/s]Downloading data: 100%|██████████| 8.32k/8.32k [00:00<00:00, 9.15kB/s]
+Downloading data:   0%|          | 0.00/4.17k [00:00<?, ?B/s]Downloading data: 100%|██████████| 4.17k/4.17k [00:00<00:00, 5.32kB/s]Downloading data: 100%|██████████| 4.17k/4.17k [00:00<00:00, 5.31kB/s]
+Generating test split:   0%|          | 0/203 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 203/203 [00:00<00:00, 39284.11 examples/s]
+Generating validation split:   0%|          | 0/22 [00:00<?, ? examples/s]
+
+
+Downloading data:   0%|          | 0.00/21.5k [00:00<?, ?B/s][A[A[AGenerating validation split: 100%|██████████| 22/22 [00:00<00:00, 4007.94 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1958.49 examples/s]
+{"config": "high_school_chemistry", "splits": {"test": 203, "validation": 22, "dev": 5}}
+
+
+Downloading data: 100%|██████████| 62.7k/62.7k [00:01<00:00, 45.3kB/s][A[ADownloading data: 100%|██████████| 62.7k/62.7k [00:01<00:00, 45.2kB/s]
+Downloading data:   0%|          | 0.00/10.6k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 4.20k/4.20k [00:01<00:00, 2.15kB/s][ADownloading data: 100%|██████████| 4.20k/4.20k [00:01<00:00, 2.15kB/s]
+
+Downloading data:   0%|          | 0.00/3.58k [00:00<?, ?B/s][A
+
+
+Downloading data: 100%|██████████| 21.5k/21.5k [00:01<00:00, 13.9kB/s][A[A[ADownloading data: 100%|██████████| 21.5k/21.5k [00:01<00:00, 13.9kB/s]
+
+
+Downloading data:   0%|          | 0.00/6.57k [00:00<?, ?B/s][A[A
+Downloading data: 100%|██████████| 3.58k/3.58k [00:01<00:00, 2.92kB/s][ADownloading data: 100%|██████████| 3.58k/3.58k [00:01<00:00, 2.91kB/s]
+
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 100/100 [00:00<00:00, 22017.34 examples/s]
+
+Generating validation split:   0%|          | 0/10 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 10/10 [00:00<00:00, 3508.70 examples/s]
+
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 2484.78 examples/s]
+{"config": "global_facts", "splits": {"test": 100, "validation": 10, "dev": 5}}
+Downloading data: 100%|██████████| 10.6k/10.6k [00:01<00:00, 6.52kB/s]Downloading data: 100%|██████████| 10.6k/10.6k [00:01<00:00, 6.52kB/s]
+Downloading data:   0%|          | 0.00/4.95k [00:00<?, ?B/s]
+
+Downloading data: 100%|██████████| 6.57k/6.57k [00:01<00:00, 5.14kB/s][A[ADownloading data: 100%|██████████| 6.57k/6.57k [00:01<00:00, 5.13kB/s]
+
+Downloading data:   0%|          | 0.00/4.82k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 4.95k/4.95k [00:00<00:00, 5.70kB/s]Downloading data: 100%|██████████| 4.95k/4.95k [00:00<00:00, 5.70kB/s]
+Generating test split:   0%|          | 0/310 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 310/310 [00:00<00:00, 58595.50 examples/s]
+Generating validation split:   0%|          | 0/32 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 32/32 [00:00<00:00, 15696.14 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3189.58 examples/s]
+{"config": "high_school_biology", "splits": {"test": 310, "validation": 32, "dev": 5}}
+
+Downloading data: 100%|██████████| 4.82k/4.82k [00:00<00:00, 6.06kB/s][ADownloading data: 100%|██████████| 4.82k/4.82k [00:00<00:00, 6.03kB/s]
+Generating test split:   0%|          | 0/126 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 126/126 [00:00<00:00, 23902.41 examples/s]
+Generating validation split:   0%|          | 0/14 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 14/14 [00:00<00:00, 4701.01 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1925.05 examples/s]
+{"config": "formal_logic", "splits": {"test": 126, "validation": 14, "dev": 5}}
+Downloading data:   0%|          | 0.00/142k [00:00<?, ?B/s]Downloading data: 100%|██████████| 142k/142k [00:01<00:00, 117kB/s]Downloading data: 100%|██████████| 142k/142k [00:01<00:00, 117kB/s]
+Downloading data:   0%|          | 0.00/31.6k [00:00<?, ?B/s]Downloading data: 100%|██████████| 31.6k/31.6k [00:00<00:00, 36.8kB/s]Downloading data: 100%|██████████| 31.6k/31.6k [00:00<00:00, 36.7kB/s]
+Downloading data:   0%|          | 0.00/22.2k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/28.2k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 22.2k/22.2k [00:00<00:00, 25.9kB/s]Downloading data: 100%|██████████| 22.2k/22.2k [00:00<00:00, 25.8kB/s]
+Generating test split:   0%|          | 0/165 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 165/165 [00:00<00:00, 14825.31 examples/s]
+Generating validation split:   0%|          | 0/18 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 18/18 [00:00<00:00, 8181.35 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2889.83 examples/s]
+{"config": "high_school_european_history", "splits": {"test": 165, "validation": 18, "dev": 5}}
+Downloading data:   0%|          | 0.00/40.2k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 28.2k/28.2k [00:00<00:00, 34.2kB/s][ADownloading data: 100%|██████████| 28.2k/28.2k [00:00<00:00, 34.0kB/s]
+
+Downloading data:   0%|          | 0.00/6.17k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 40.2k/40.2k [00:01<00:00, 33.1kB/s]Downloading data: 100%|██████████| 40.2k/40.2k [00:01<00:00, 33.1kB/s]
+Downloading data:   0%|          | 0.00/8.28k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 6.17k/6.17k [00:01<00:00, 5.49kB/s][ADownloading data: 100%|██████████| 6.17k/6.17k [00:01<00:00, 5.49kB/s]
+
+Downloading data:   0%|          | 0.00/3.94k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 8.28k/8.28k [00:00<00:00, 9.64kB/s]Downloading data: 100%|██████████| 8.28k/8.28k [00:00<00:00, 9.63kB/s]
+Downloading data:   0%|          | 0.00/4.48k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 3.94k/3.94k [00:00<00:00, 4.79kB/s][ADownloading data: 100%|██████████| 3.94k/3.94k [00:00<00:00, 4.79kB/s]
+
+Generating test split:   0%|          | 0/198 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 198/198 [00:00<00:00, 58087.16 examples/s]
+
+Generating validation split:   0%|          | 0/22 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 22/22 [00:00<00:00, 11854.40 examples/s]
+
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 2957.90 examples/s]
+{"config": "high_school_geography", "splits": {"test": 198, "validation": 22, "dev": 5}}
+Downloading data: 100%|██████████| 4.48k/4.48k [00:00<00:00, 5.26kB/s]Downloading data: 100%|██████████| 4.48k/4.48k [00:00<00:00, 5.26kB/s]
+Generating test split:   0%|          | 0/193 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 193/193 [00:00<00:00, 33931.37 examples/s]
+Generating validation split:   0%|          | 0/21 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 21/21 [00:00<00:00, 11103.04 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1965.65 examples/s]
+{"config": "high_school_government_and_politics", "splits": {"test": 193, "validation": 21, "dev": 5}}
+Downloading data:   0%|          | 0.00/27.3k [00:00<?, ?B/s]Downloading data: 100%|██████████| 27.3k/27.3k [00:01<00:00, 18.0kB/s]Downloading data: 100%|██████████| 27.3k/27.3k [00:01<00:00, 18.0kB/s]
+Downloading data:   0%|          | 0.00/5.29k [00:00<?, ?B/s]Downloading data: 100%|██████████| 5.29k/5.29k [00:00<00:00, 6.79kB/s]Downloading data: 100%|██████████| 5.29k/5.29k [00:00<00:00, 6.78kB/s]
+Downloading data:   0%|          | 0.00/6.55k [00:00<?, ?B/s]Downloading data: 100%|██████████| 6.55k/6.55k [00:00<00:00, 8.49kB/s]Downloading data: 100%|██████████| 6.55k/6.55k [00:00<00:00, 8.48kB/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 13624.06 examples/s]
+Generating validation split:   0%|          | 0/9 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 9/9 [00:00<00:00, 3871.67 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2371.81 examples/s]
+{"config": "high_school_computer_science", "splits": {"test": 100, "validation": 9, "dev": 5}}
+Downloading data:   0%|          | 0.00/38.8k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/54.8k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/33.7k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 38.8k/38.8k [00:00<00:00, 44.1kB/s]Downloading data: 100%|██████████| 38.8k/38.8k [00:00<00:00, 44.1kB/s]
+Downloading data:   0%|          | 0.00/7.23k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 54.8k/54.8k [00:01<00:00, 51.1kB/s][ADownloading data: 100%|██████████| 54.8k/54.8k [00:01<00:00, 51.0kB/s]
+
+Downloading data:   0%|          | 0.00/9.90k [00:00<?, ?B/s][A
+
+Downloading data: 100%|██████████| 33.7k/33.7k [00:01<00:00, 30.3kB/s][A[ADownloading data: 100%|██████████| 33.7k/33.7k [00:01<00:00, 30.3kB/s]
+
+
+Downloading data:   0%|          | 0.00/7.00k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 7.23k/7.23k [00:00<00:00, 8.60kB/s]Downloading data: 100%|██████████| 7.23k/7.23k [00:00<00:00, 8.60kB/s]
+Downloading data:   0%|          | 0.00/3.84k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 9.90k/9.90k [00:00<00:00, 12.2kB/s][ADownloading data: 100%|██████████| 9.90k/9.90k [00:00<00:00, 12.1kB/s]
+
+Downloading data:   0%|          | 0.00/4.05k [00:00<?, ?B/s][A
+
+Downloading data: 100%|██████████| 7.00k/7.00k [00:00<00:00, 7.43kB/s][A[ADownloading data: 100%|██████████| 7.00k/7.00k [00:00<00:00, 7.42kB/s]
+
+
+Downloading data:   0%|          | 0.00/4.51k [00:00<?, ?B/s][A[A
+Downloading data: 100%|██████████| 4.05k/4.05k [00:00<00:00, 4.50kB/s][ADownloading data: 100%|██████████| 4.05k/4.05k [00:00<00:00, 4.50kB/s]
+
+Generating test split:   0%|          | 0/390 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 390/390 [00:00<00:00, 46918.84 examples/s]
+
+Generating validation split:   0%|          | 0/43 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 43/43 [00:00<00:00, 12805.67 examples/s]
+
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][ADownloading data: 100%|██████████| 3.84k/3.84k [00:01<00:00, 3.11kB/s]Downloading data: 100%|██████████| 3.84k/3.84k [00:01<00:00, 3.11kB/s]
+Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1363.65 examples/s]
+{"config": "high_school_macroeconomics", "splits": {"test": 390, "validation": 43, "dev": 5}}
+Generating test split:   0%|          | 0/238 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 238/238 [00:00<00:00, 44708.18 examples/s]
+Generating validation split:   0%|          | 0/26 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 26/26 [00:00<00:00, 8499.76 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2112.57 examples/s]
+{"config": "high_school_microeconomics", "splits": {"test": 238, "validation": 26, "dev": 5}}
+
+
+Downloading data: 100%|██████████| 4.51k/4.51k [00:01<00:00, 3.03kB/s][A[ADownloading data: 100%|██████████| 4.51k/4.51k [00:01<00:00, 3.02kB/s]
+Generating test split:   0%|          | 0/270 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 270/270 [00:00<00:00, 38963.09 examples/s]
+Generating validation split:   0%|          | 0/29 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 29/29 [00:00<00:00, 13322.54 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3153.14 examples/s]
+{"config": "high_school_mathematics", "splits": {"test": 270, "validation": 29, "dev": 5}}
+Downloading data:   0%|          | 0.00/33.0k [00:00<?, ?B/s]Downloading data: 100%|██████████| 33.0k/33.0k [00:01<00:00, 21.6kB/s]Downloading data: 100%|██████████| 33.0k/33.0k [00:01<00:00, 21.6kB/s]
+Downloading data:   0%|          | 0.00/7.97k [00:00<?, ?B/s]Downloading data: 100%|██████████| 7.97k/7.97k [00:00<00:00, 9.25kB/s]Downloading data: 100%|██████████| 7.97k/7.97k [00:00<00:00, 9.20kB/s]
+Downloading data:   0%|          | 0.00/4.58k [00:00<?, ?B/s]Downloading data: 100%|██████████| 4.58k/4.58k [00:00<00:00, 5.69kB/s]Downloading data: 100%|██████████| 4.58k/4.58k [00:00<00:00, 5.69kB/s]
+Generating test split:   0%|          | 0/151 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 151/151 [00:00<00:00, 28712.48 examples/s]
+Generating validation split:   0%|          | 0/17 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 17/17 [00:00<00:00, 8773.61 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2748.20 examples/s]
+{"config": "high_school_physics", "splits": {"test": 151, "validation": 17, "dev": 5}}
+Downloading data:   0%|          | 0.00/92.8k [00:00<?, ?B/s]Downloading data: 100%|██████████| 92.8k/92.8k [00:00<00:00, 109kB/s]Downloading data: 100%|██████████| 92.8k/92.8k [00:00<00:00, 108kB/s]
+Downloading data:   0%|          | 0.00/15.2k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/155k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/58.0k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 15.2k/15.2k [00:00<00:00, 17.5kB/s]Downloading data: 100%|██████████| 15.2k/15.2k [00:00<00:00, 17.5kB/s]
+Downloading data:   0%|          | 0.00/5.19k [00:00<?, ?B/s]Downloading data: 100%|██████████| 5.19k/5.19k [00:00<00:00, 6.18kB/s]Downloading data: 100%|██████████| 5.19k/5.19k [00:00<00:00, 6.17kB/s]
+Generating test split:   0%|          | 0/545 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 545/545 [00:00<00:00, 57841.49 examples/s]
+Generating validation split:   0%|          | 0/60 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 60/60 [00:00<00:00, 18180.77 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2838.59 examples/s]
+{"config": "high_school_psychology", "splits": {"test": 545, "validation": 60, "dev": 5}}
+
+
+Downloading data: 100%|██████████| 58.0k/58.0k [00:01<00:00, 48.7kB/s][A[ADownloading data: 100%|██████████| 58.0k/58.0k [00:01<00:00, 48.6kB/s]
+Downloading data:   0%|          | 0.00/10.9k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 155k/155k [00:01<00:00, 92.8kB/s][ADownloading data: 100%|██████████| 155k/155k [00:01<00:00, 92.7kB/s]
+
+Downloading data:   0%|          | 0.00/27.3k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 10.9k/10.9k [00:00<00:00, 12.9kB/s]Downloading data: 100%|██████████| 10.9k/10.9k [00:00<00:00, 12.9kB/s]
+Downloading data:   0%|          | 0.00/6.08k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 27.3k/27.3k [00:01<00:00, 18.1kB/s][ADownloading data: 100%|██████████| 27.3k/27.3k [00:01<00:00, 18.1kB/s]
+
+Downloading data:   0%|          | 0.00/17.8k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 6.08k/6.08k [00:00<00:00, 7.60kB/s]Downloading data: 100%|██████████| 6.08k/6.08k [00:00<00:00, 7.59kB/s]
+Generating test split:   0%|          | 0/216 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 216/216 [00:00<00:00, 45226.12 examples/s]
+Generating validation split:   0%|          | 0/23 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 23/23 [00:00<00:00, 9653.66 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2856.77 examples/s]
+{"config": "high_school_statistics", "splits": {"test": 216, "validation": 23, "dev": 5}}
+
+Downloading data: 100%|██████████| 17.8k/17.8k [00:01<00:00, 11.4kB/s][ADownloading data: 100%|██████████| 17.8k/17.8k [00:01<00:00, 11.4kB/s]
+Generating test split:   0%|          | 0/204 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 204/204 [00:00<00:00, 28244.47 examples/s]
+Generating validation split:   0%|          | 0/22 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 22/22 [00:00<00:00, 8259.46 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2365.92 examples/s]
+{"config": "high_school_us_history", "splits": {"test": 204, "validation": 22, "dev": 5}}
+Downloading data:   0%|          | 0.00/202k [00:00<?, ?B/s]Downloading data: 100%|██████████| 202k/202k [00:01<00:00, 108kB/s]Downloading data: 100%|██████████| 202k/202k [00:01<00:00, 108kB/s]
+Downloading data:   0%|          | 0.00/38.5k [00:00<?, ?B/s]Downloading data: 100%|██████████| 38.5k/38.5k [00:00<00:00, 45.2kB/s]Downloading data: 100%|██████████| 38.5k/38.5k [00:00<00:00, 45.1kB/s]
+Downloading data:   0%|          | 0.00/10.3k [00:00<?, ?B/s]Downloading data: 100%|██████████| 10.3k/10.3k [00:01<00:00, 9.60kB/s]Downloading data: 100%|██████████| 10.3k/10.3k [00:01<00:00, 9.57kB/s]
+Generating test split:   0%|          | 0/237 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 237/237 [00:00<00:00, 33221.38 examples/s]
+Generating validation split:   0%|          | 0/26 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 26/26 [00:00<00:00, 7504.78 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1756.41 examples/s]
+{"config": "high_school_world_history", "splits": {"test": 237, "validation": 26, "dev": 5}}
+Downloading data:   0%|          | 0.00/31.3k [00:00<?, ?B/s]Downloading data: 100%|██████████| 31.3k/31.3k [00:00<00:00, 41.7kB/s]Downloading data: 100%|██████████| 31.3k/31.3k [00:00<00:00, 41.7kB/s]
+Downloading data:   0%|          | 0.00/6.29k [00:00<?, ?B/s]Downloading data: 100%|██████████| 6.29k/6.29k [00:00<00:00, 7.72kB/s]Downloading data: 100%|██████████| 6.29k/6.29k [00:00<00:00, 7.72kB/s]
+Downloading data:   0%|          | 0.00/3.68k [00:00<?, ?B/s]Downloading data: 100%|██████████| 3.68k/3.68k [00:01<00:00, 3.29kB/s]Downloading data: 100%|██████████| 3.68k/3.68k [00:01<00:00, 3.29kB/s]
+Generating test split:   0%|          | 0/223 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 223/223 [00:00<00:00, 57661.66 examples/s]
+Generating validation split:   0%|          | 0/23 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 23/23 [00:00<00:00, 12631.79 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2908.27 examples/s]
+{"config": "human_aging", "splits": {"test": 223, "validation": 23, "dev": 5}}
+Downloading data:   0%|          | 0.00/23.2k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/29.5k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 23.2k/23.2k [00:01<00:00, 19.9kB/s]Downloading data: 100%|██████████| 23.2k/23.2k [00:01<00:00, 19.9kB/s]
+Downloading data:   0%|          | 0.00/5.27k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 29.5k/29.5k [00:01<00:00, 20.2kB/s][ADownloading data: 100%|██████████| 29.5k/29.5k [00:01<00:00, 20.2kB/s]
+
+Downloading data:   0%|          | 0.00/7.13k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 5.27k/5.27k [00:00<00:00, 6.35kB/s]Downloading data: 100%|██████████| 5.27k/5.27k [00:00<00:00, 6.34kB/s]
+Downloading data:   0%|          | 0.00/4.09k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 7.13k/7.13k [00:00<00:00, 8.52kB/s][ADownloading data: 100%|██████████| 7.13k/7.13k [00:00<00:00, 8.51kB/s]
+
+Downloading data:   0%|          | 0.00/4.97k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 4.09k/4.09k [00:00<00:00, 4.85kB/s]Downloading data: 100%|██████████| 4.09k/4.09k [00:00<00:00, 4.85kB/s]
+Generating test split:   0%|          | 0/131 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 131/131 [00:00<00:00, 34480.94 examples/s]
+Generating validation split:   0%|          | 0/12 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 12/12 [00:00<00:00, 7245.09 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2795.08 examples/s]
+{"config": "human_sexuality", "splits": {"test": 131, "validation": 12, "dev": 5}}
+
+Downloading data: 100%|██████████| 4.97k/4.97k [00:00<00:00, 5.85kB/s][ADownloading data: 100%|██████████| 4.97k/4.97k [00:00<00:00, 5.84kB/s]
+Generating test split:   0%|          | 0/121 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 121/121 [00:00<00:00, 19473.96 examples/s]
+Generating validation split:   0%|          | 0/13 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 13/13 [00:00<00:00, 6700.17 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2779.53 examples/s]
+{"config": "international_law", "splits": {"test": 121, "validation": 13, "dev": 5}}
+Downloading data:   0%|          | 0.00/23.3k [00:00<?, ?B/s]Downloading data: 100%|██████████| 23.3k/23.3k [00:01<00:00, 21.0kB/s]Downloading data: 100%|██████████| 23.3k/23.3k [00:01<00:00, 21.0kB/s]
+Downloading data:   0%|          | 0.00/6.22k [00:00<?, ?B/s]Downloading data: 100%|██████████| 6.22k/6.22k [00:00<00:00, 7.91kB/s]Downloading data: 100%|██████████| 6.22k/6.22k [00:00<00:00, 7.90kB/s]
+Downloading data:   0%|          | 0.00/4.06k [00:00<?, ?B/s]Downloading data: 100%|██████████| 4.06k/4.06k [00:00<00:00, 5.31kB/s]Downloading data: 100%|██████████| 4.06k/4.06k [00:00<00:00, 5.31kB/s]
+Generating test split:   0%|          | 0/108 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 108/108 [00:00<00:00, 11558.68 examples/s]
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11/11 [00:00<00:00, 7176.44 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3651.67 examples/s]
+{"config": "jurisprudence", "splits": {"test": 108, "validation": 11, "dev": 5}}
+Downloading data:   0%|          | 0.00/23.0k [00:00<?, ?B/s]Downloading data: 100%|██████████| 23.0k/23.0k [00:00<00:00, 28.6kB/s]Downloading data: 100%|██████████| 23.0k/23.0k [00:00<00:00, 28.6kB/s]
+Downloading data:   0%|          | 0.00/6.53k [00:00<?, ?B/s]Downloading data: 100%|██████████| 6.53k/6.53k [00:00<00:00, 8.46kB/s]Downloading data: 100%|██████████| 6.53k/6.53k [00:00<00:00, 8.45kB/s]
+Downloading data:   0%|          | 0.00/4.13k [00:00<?, ?B/s]Downloading data: 100%|██████████| 4.13k/4.13k [00:00<00:00, 5.10kB/s]Downloading data: 100%|██████████| 4.13k/4.13k [00:00<00:00, 5.10kB/s]
+Generating test split:   0%|          | 0/163 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 163/163 [00:00<00:00, 26325.44 examples/s]
+Generating validation split:   0%|          | 0/18 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 18/18 [00:00<00:00, 9457.28 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1562.71 examples/s]
+{"config": "logical_fallacies", "splits": {"test": 163, "validation": 18, "dev": 5}}
+Downloading data:   0%|          | 0.00/19.7k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/14.7k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 19.7k/19.7k [00:00<00:00, 23.7kB/s]Downloading data: 100%|██████████| 19.7k/19.7k [00:00<00:00, 23.6kB/s]
+Downloading data:   0%|          | 0.00/6.18k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 14.7k/14.7k [00:00<00:00, 15.6kB/s][ADownloading data: 100%|██████████| 14.7k/14.7k [00:00<00:00, 15.5kB/s]
+
+Downloading data:   0%|          | 0.00/4.51k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 6.18k/6.18k [00:00<00:00, 7.63kB/s]Downloading data: 100%|██████████| 6.18k/6.18k [00:00<00:00, 7.63kB/s]
+Downloading data:   0%|          | 0.00/5.26k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 4.51k/4.51k [00:00<00:00, 5.44kB/s][ADownloading data: 100%|██████████| 4.51k/4.51k [00:00<00:00, 5.43kB/s]
+
+Downloading data:   0%|          | 0.00/3.62k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 5.26k/5.26k [00:00<00:00, 5.64kB/s]Downloading data: 100%|██████████| 5.26k/5.26k [00:00<00:00, 5.64kB/s]
+Generating test split:   0%|          | 0/112 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 112/112 [00:00<00:00, 27272.11 examples/s]
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11/11 [00:00<00:00, 3364.99 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2531.87 examples/s]
+{"config": "machine_learning", "splits": {"test": 112, "validation": 11, "dev": 5}}
+
+Downloading data: 100%|██████████| 3.62k/3.62k [00:00<00:00, 4.59kB/s][ADownloading data: 100%|██████████| 3.62k/3.62k [00:00<00:00, 4.59kB/s]
+Generating test split:   0%|          | 0/103 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 103/103 [00:00<00:00, 32641.73 examples/s]
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11/11 [00:00<00:00, 6361.14 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2883.87 examples/s]
+{"config": "management", "splits": {"test": 103, "validation": 11, "dev": 5}}
+Downloading data:   0%|          | 0.00/37.3k [00:00<?, ?B/s]Downloading data: 100%|██████████| 37.3k/37.3k [00:00<00:00, 41.8kB/s]Downloading data: 100%|██████████| 37.3k/37.3k [00:00<00:00, 41.8kB/s]
+Downloading data:   0%|          | 0.00/8.21k [00:00<?, ?B/s]Downloading data: 100%|██████████| 8.21k/8.21k [00:00<00:00, 10.5kB/s]Downloading data: 100%|██████████| 8.21k/8.21k [00:00<00:00, 10.4kB/s]
+Downloading data:   0%|          | 0.00/4.29k [00:00<?, ?B/s]Downloading data: 100%|██████████| 4.29k/4.29k [00:01<00:00, 4.00kB/s]Downloading data: 100%|██████████| 4.29k/4.29k [00:01<00:00, 3.99kB/s]
+Generating test split:   0%|          | 0/234 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 234/234 [00:00<00:00, 21061.98 examples/s]
+Generating validation split:   0%|          | 0/25 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 25/25 [00:00<00:00, 10080.52 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2820.27 examples/s]
+{"config": "marketing", "splits": {"test": 234, "validation": 25, "dev": 5}}
+Downloading data:   0%|          | 0.00/16.4k [00:00<?, ?B/s]Downloading data: 100%|██████████| 16.4k/16.4k [00:00<00:00, 20.4kB/s]Downloading data: 100%|██████████| 16.4k/16.4k [00:00<00:00, 20.3kB/s]
+Downloading data:   0%|          | 0.00/5.64k [00:00<?, ?B/s]Downloading data: 100%|██████████| 5.64k/5.64k [00:01<00:00, 3.79kB/s]Downloading data: 100%|██████████| 5.64k/5.64k [00:01<00:00, 3.79kB/s]
+Downloading data:   0%|          | 0.00/3.77k [00:00<?, ?B/s]Downloading data: 100%|██████████| 3.77k/3.77k [00:01<00:00, 3.51kB/s]Downloading data: 100%|██████████| 3.77k/3.77k [00:01<00:00, 3.50kB/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 26318.03 examples/s]
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11/11 [00:00<00:00, 5962.44 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2911.50 examples/s]
+{"config": "medical_genetics", "splits": {"test": 100, "validation": 11, "dev": 5}}
+Downloading data:   0%|          | 0.00/98.6k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/60.9k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 98.6k/98.6k [00:01<00:00, 76.3kB/s]Downloading data: 100%|██████████| 98.6k/98.6k [00:01<00:00, 76.2kB/s]
+Downloading data:   0%|          | 0.00/13.2k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 60.9k/60.9k [00:01<00:00, 47.7kB/s][ADownloading data: 100%|██████████| 60.9k/60.9k [00:01<00:00, 47.5kB/s]
+
+Downloading data:   0%|          | 0.00/10.7k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 13.2k/13.2k [00:01<00:00, 10.3kB/s]Downloading data: 100%|██████████| 13.2k/13.2k [00:01<00:00, 10.3kB/s]
+Downloading data:   0%|          | 0.00/3.38k [00:00<?, ?B/s]Downloading data: 100%|██████████| 3.38k/3.38k [00:00<00:00, 4.00kB/s]Downloading data: 100%|██████████| 3.38k/3.38k [00:00<00:00, 3.99kB/s]
+Generating test split:   0%|          | 0/783 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 783/783 [00:00<00:00, 73761.12 examples/s]
+Generating validation split:   0%|          | 0/86 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 86/86 [00:00<00:00, 25378.89 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 2597.74 examples/s]
+{"config": "miscellaneous", "splits": {"test": 783, "validation": 86, "dev": 5}}
+
+Downloading data: 100%|██████████| 10.7k/10.7k [00:01<00:00, 8.60kB/s][ADownloading data: 100%|██████████| 10.7k/10.7k [00:01<00:00, 8.59kB/s]
+Downloading data:   0%|          | 0.00/4.42k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/89.8k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 4.42k/4.42k [00:00<00:00, 5.11kB/s]Downloading data: 100%|██████████| 4.42k/4.42k [00:00<00:00, 5.11kB/s]
+Generating test split:   0%|          | 0/346 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 346/346 [00:00<00:00, 35441.65 examples/s]
+Generating validation split:   0%|          | 0/38 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 38/38 [00:00<00:00, 12008.10 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1844.14 examples/s]
+{"config": "moral_disputes", "splits": {"test": 346, "validation": 38, "dev": 5}}
+
+Downloading data: 100%|██████████| 89.8k/89.8k [00:01<00:00, 72.1kB/s][ADownloading data: 100%|██████████| 89.8k/89.8k [00:01<00:00, 70.5kB/s]
+Downloading data:   0%|          | 0.00/14.9k [00:00<?, ?B/s]Downloading data: 100%|██████████| 14.9k/14.9k [00:00<00:00, 18.7kB/s]Downloading data: 100%|██████████| 14.9k/14.9k [00:00<00:00, 18.7kB/s]
+Downloading data:   0%|          | 0.00/5.15k [00:00<?, ?B/s]Downloading data: 100%|██████████| 5.15k/5.15k [00:00<00:00, 6.04kB/s]Downloading data: 100%|██████████| 5.15k/5.15k [00:00<00:00, 6.03kB/s]
+Generating test split:   0%|          | 0/895 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 895/895 [00:00<00:00, 87691.60 examples/s]
+Generating validation split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 100/100 [00:00<00:00, 23473.83 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3054.85 examples/s]
+{"config": "moral_scenarios", "splits": {"test": 895, "validation": 100, "dev": 5}}
+Downloading data:   0%|          | 0.00/55.0k [00:00<?, ?B/s]Downloading data: 100%|██████████| 55.0k/55.0k [00:00<00:00, 55.2kB/s]Downloading data: 100%|██████████| 55.0k/55.0k [00:00<00:00, 55.1kB/s]
+Downloading data:   0%|          | 0.00/9.03k [00:00<?, ?B/s]Downloading data: 100%|██████████| 9.03k/9.03k [00:00<00:00, 11.9kB/s]Downloading data: 100%|██████████| 9.03k/9.03k [00:00<00:00, 11.9kB/s]
+Downloading data:   0%|          | 0.00/5.00k [00:00<?, ?B/s]Downloading data: 100%|██████████| 5.00k/5.00k [00:00<00:00, 6.32kB/s]Downloading data: 100%|██████████| 5.00k/5.00k [00:00<00:00, 6.32kB/s]
+Generating test split:   0%|          | 0/306 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 306/306 [00:00<00:00, 32378.64 examples/s]
+Generating validation split:   0%|          | 0/33 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 33/33 [00:00<00:00, 9103.06 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1283.21 examples/s]
+{"config": "nutrition", "splits": {"test": 306, "validation": 33, "dev": 5}}
+Downloading data:   0%|          | 0.00/48.6k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/54.3k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 48.6k/48.6k [00:00<00:00, 53.2kB/s]Downloading data: 100%|██████████| 48.6k/48.6k [00:00<00:00, 53.1kB/s]
+Downloading data:   0%|          | 0.00/9.16k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 54.3k/54.3k [00:01<00:00, 43.5kB/s][ADownloading data: 100%|██████████| 54.3k/54.3k [00:01<00:00, 42.5kB/s]
+
+Downloading data:   0%|          | 0.00/9.90k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 9.16k/9.16k [00:00<00:00, 11.3kB/s]Downloading data: 100%|██████████| 9.16k/9.16k [00:00<00:00, 11.2kB/s]
+Downloading data:   0%|          | 0.00/4.21k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 9.90k/9.90k [00:00<00:00, 11.7kB/s][ADownloading data: 100%|██████████| 9.90k/9.90k [00:00<00:00, 11.2kB/s]
+
+Downloading data:   0%|          | 0.00/4.62k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 4.21k/4.21k [00:00<00:00, 4.81kB/s]Downloading data: 100%|██████████| 4.21k/4.21k [00:00<00:00, 4.79kB/s]
+Generating test split:   0%|          | 0/311 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 311/311 [00:00<00:00, 35714.28 examples/s]
+Generating validation split:   0%|          | 0/34 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 34/34 [00:00<00:00, 8237.90 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 998.55 examples/s]
+{"config": "philosophy", "splits": {"test": 311, "validation": 34, "dev": 5}}
+
+Downloading data: 100%|██████████| 4.62k/4.62k [00:00<00:00, 5.34kB/s][ADownloading data: 100%|██████████| 4.62k/4.62k [00:00<00:00, 5.34kB/s]
+Generating test split:   0%|          | 0/324 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 324/324 [00:00<00:00, 56173.71 examples/s]
+Generating validation split:   0%|          | 0/35 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 35/35 [00:00<00:00, 16659.17 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3084.05 examples/s]
+{"config": "prehistory", "splits": {"test": 324, "validation": 35, "dev": 5}}
+Downloading data:   0%|          | 0.00/69.5k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/1.04M [00:00<?, ?B/s][ADownloading data: 100%|██████████| 69.5k/69.5k [00:02<00:00, 25.5kB/s]Downloading data: 100%|██████████| 69.5k/69.5k [00:02<00:00, 25.5kB/s]
+Downloading data:   0%|          | 0.00/12.9k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 1.04M/1.04M [00:01<00:00, 609kB/s][ADownloading data: 100%|██████████| 1.04M/1.04M [00:01<00:00, 607kB/s]
+
+Downloading data:   0%|          | 0.00/116k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 12.9k/12.9k [00:01<00:00, 9.12kB/s]Downloading data: 100%|██████████| 12.9k/12.9k [00:01<00:00, 9.12kB/s]
+Downloading data:   0%|          | 0.00/4.90k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 116k/116k [00:01<00:00, 70.3kB/s][ADownloading data: 100%|██████████| 116k/116k [00:01<00:00, 70.2kB/s]
+
+Downloading data:   0%|          | 0.00/15.1k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 4.90k/4.90k [00:01<00:00, 4.59kB/s]Downloading data: 100%|██████████| 4.90k/4.90k [00:01<00:00, 4.59kB/s]
+Generating test split:   0%|          | 0/282 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 282/282 [00:00<00:00, 56253.86 examples/s]
+Generating validation split:   0%|          | 0/31 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 31/31 [00:00<00:00, 11439.68 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1643.79 examples/s]
+{"config": "professional_accounting", "splits": {"test": 282, "validation": 31, "dev": 5}}
+
+Downloading data: 100%|██████████| 15.1k/15.1k [00:00<00:00, 17.5kB/s][ADownloading data: 100%|██████████| 15.1k/15.1k [00:00<00:00, 17.5kB/s]
+Generating test split:   0%|          | 0/1534 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1534/1534 [00:00<00:00, 126777.06 examples/s]
+Generating validation split:   0%|          | 0/170 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 170/170 [00:00<00:00, 53874.70 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3015.75 examples/s]
+{"config": "professional_law", "splits": {"test": 1534, "validation": 170, "dev": 5}}
+Downloading data:   0%|          | 0.00/125k [00:00<?, ?B/s]Downloading data: 100%|██████████| 125k/125k [00:00<00:00, 142kB/s]Downloading data: 100%|██████████| 125k/125k [00:00<00:00, 141kB/s]
+Downloading data:   0%|          | 0.00/19.9k [00:00<?, ?B/s]Downloading data: 100%|██████████| 19.9k/19.9k [00:01<00:00, 15.1kB/s]Downloading data: 100%|██████████| 19.9k/19.9k [00:01<00:00, 15.0kB/s]
+Downloading data:   0%|          | 0.00/8.45k [00:00<?, ?B/s]Downloading data: 100%|██████████| 8.45k/8.45k [00:00<00:00, 9.86kB/s]Downloading data: 100%|██████████| 8.45k/8.45k [00:00<00:00, 9.51kB/s]
+Generating test split:   0%|          | 0/272 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 272/272 [00:00<00:00, 27770.76 examples/s]
+Generating validation split:   0%|          | 0/31 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 31/31 [00:00<00:00, 11944.10 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1999.00 examples/s]
+{"config": "professional_medicine", "splits": {"test": 272, "validation": 31, "dev": 5}}
+Downloading data:   0%|          | 0.00/114k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/20.6k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/133k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 114k/114k [00:00<00:00, 148kB/s]Downloading data: 100%|██████████| 114k/114k [00:00<00:00, 148kB/s]
+Downloading data:   0%|          | 0.00/18.7k [00:00<?, ?B/s]Downloading data: 100%|██████████| 18.7k/18.7k [00:00<00:00, 24.7kB/s]Downloading data: 100%|██████████| 18.7k/18.7k [00:00<00:00, 24.6kB/s]
+Downloading data:   0%|          | 0.00/7.50k [00:00<?, ?B/s]
+
+Downloading data: 100%|██████████| 133k/133k [00:01<00:00, 102kB/s][A[A
+Downloading data: 100%|██████████| 20.6k/20.6k [00:01<00:00, 14.7kB/s][ADownloading data: 100%|██████████| 20.6k/20.6k [00:01<00:00, 14.6kB/s]
+Downloading data: 100%|██████████| 133k/133k [00:01<00:00, 101kB/s]
+
+Downloading data:   0%|          | 0.00/6.46k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/22.1k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 7.50k/7.50k [00:00<00:00, 9.50kB/s]Downloading data: 100%|██████████| 7.50k/7.50k [00:00<00:00, 9.49kB/s]
+Generating test split:   0%|          | 0/245 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 245/245 [00:00<00:00, 19712.34 examples/s]
+Generating validation split:   0%|          | 0/27 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 27/27 [00:00<00:00, 11910.62 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1824.24 examples/s]
+{"config": "security_studies", "splits": {"test": 245, "validation": 27, "dev": 5}}
+
+Downloading data: 100%|██████████| 6.46k/6.46k [00:00<00:00, 8.45kB/s][ADownloading data: 100%|██████████| 6.46k/6.46k [00:00<00:00, 8.44kB/s]
+Downloading data:   0%|          | 0.00/4.44k [00:00<?, ?B/s]
+
+Downloading data: 100%|██████████| 22.1k/22.1k [00:01<00:00, 18.7kB/s][A[ADownloading data: 100%|██████████| 22.1k/22.1k [00:01<00:00, 18.7kB/s]
+
+Downloading data:   0%|          | 0.00/4.70k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 4.44k/4.44k [00:01<00:00, 4.09kB/s]Downloading data: 100%|██████████| 4.44k/4.44k [00:01<00:00, 4.09kB/s]
+Generating test split:   0%|          | 0/110 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 110/110 [00:00<00:00, 19159.23 examples/s]
+Generating validation split:   0%|          | 0/12 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 12/12 [00:00<00:00, 2944.40 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1477.18 examples/s]
+{"config": "public_relations", "splits": {"test": 110, "validation": 12, "dev": 5}}
+
+Downloading data: 100%|██████████| 4.70k/4.70k [00:00<00:00, 5.52kB/s][ADownloading data: 100%|██████████| 4.70k/4.70k [00:00<00:00, 5.52kB/s]
+Generating test split:   0%|          | 0/612 [00:00<?, ? examples/s]
+Downloading data:   0%|          | 0.00/43.9k [00:00<?, ?B/s][AGenerating test split: 100%|██████████| 612/612 [00:00<00:00, 43317.60 examples/s]
+Generating validation split:   0%|          | 0/69 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 69/69 [00:00<00:00, 22686.13 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1568.67 examples/s]
+{"config": "professional_psychology", "splits": {"test": 612, "validation": 69, "dev": 5}}
+
+Downloading data: 100%|██████████| 43.9k/43.9k [00:01<00:00, 34.7kB/s][ADownloading data: 100%|██████████| 43.9k/43.9k [00:01<00:00, 34.5kB/s]
+Downloading data:   0%|          | 0.00/8.36k [00:00<?, ?B/s]Downloading data: 100%|██████████| 8.36k/8.36k [00:00<00:00, 10.3kB/s]Downloading data: 100%|██████████| 8.36k/8.36k [00:00<00:00, 10.3kB/s]
+Downloading data:   0%|          | 0.00/4.21k [00:00<?, ?B/s]Downloading data: 100%|██████████| 4.21k/4.21k [00:00<00:00, 5.19kB/s]Downloading data: 100%|██████████| 4.21k/4.21k [00:00<00:00, 5.19kB/s]
+Generating test split:   0%|          | 0/201 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 201/201 [00:00<00:00, 37216.05 examples/s]
+Generating validation split:   0%|          | 0/22 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 22/22 [00:00<00:00, 11126.82 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3098.17 examples/s]
+{"config": "sociology", "splits": {"test": 201, "validation": 22, "dev": 5}}
+Downloading data:   0%|          | 0.00/19.5k [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/27.3k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 19.5k/19.5k [00:01<00:00, 15.2kB/s]Downloading data: 100%|██████████| 19.5k/19.5k [00:01<00:00, 15.2kB/s]
+Downloading data:   0%|          | 0.00/5.28k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 27.3k/27.3k [00:01<00:00, 17.4kB/s][ADownloading data: 100%|██████████| 27.3k/27.3k [00:01<00:00, 17.3kB/s]
+
+Downloading data:   0%|          | 0.00/7.06k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 5.28k/5.28k [00:01<00:00, 4.89kB/s]Downloading data: 100%|██████████| 5.28k/5.28k [00:01<00:00, 4.88kB/s]
+Downloading data:   0%|          | 0.00/4.23k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 7.06k/7.06k [00:00<00:00, 9.56kB/s][ADownloading data: 100%|██████████| 7.06k/7.06k [00:00<00:00, 9.55kB/s]
+
+Downloading data:   0%|          | 0.00/3.88k [00:00<?, ?B/s][ADownloading data: 100%|██████████| 4.23k/4.23k [00:00<00:00, 5.39kB/s]Downloading data: 100%|██████████| 4.23k/4.23k [00:00<00:00, 5.38kB/s]
+Generating test split:   0%|          | 0/100 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 100/100 [00:00<00:00, 30671.33 examples/s]
+Generating validation split:   0%|          | 0/11 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11/11 [00:00<00:00, 2097.72 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 1414.61 examples/s]
+{"config": "us_foreign_policy", "splits": {"test": 100, "validation": 11, "dev": 5}}
+Downloading data:   0%|          | 0.00/18.9k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 3.88k/3.88k [00:00<00:00, 5.26kB/s][ADownloading data: 100%|██████████| 3.88k/3.88k [00:00<00:00, 5.24kB/s]
+
+Generating test split:   0%|          | 0/166 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 166/166 [00:00<00:00, 21871.41 examples/s]
+
+Generating validation split:   0%|          | 0/18 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 18/18 [00:00<00:00, 5853.42 examples/s]
+
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s][AGenerating dev split: 100%|██████████| 5/5 [00:00<00:00, 1165.47 examples/s]
+{"config": "virology", "splits": {"test": 166, "validation": 18, "dev": 5}}
+Downloading data: 100%|██████████| 18.9k/18.9k [00:01<00:00, 16.0kB/s]Downloading data: 100%|██████████| 18.9k/18.9k [00:01<00:00, 16.0kB/s]
+Downloading data:   0%|          | 0.00/4.95k [00:00<?, ?B/s]Downloading data: 100%|██████████| 4.95k/4.95k [00:00<00:00, 6.14kB/s]Downloading data: 100%|██████████| 4.95k/4.95k [00:00<00:00, 6.11kB/s]
+Downloading data:   0%|          | 0.00/3.31k [00:00<?, ?B/s]Downloading data: 100%|██████████| 3.31k/3.31k [00:01<00:00, 2.19kB/s]Downloading data: 100%|██████████| 3.31k/3.31k [00:01<00:00, 2.19kB/s]
+Generating test split:   0%|          | 0/171 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 171/171 [00:00<00:00, 52760.48 examples/s]
+Generating validation split:   0%|          | 0/19 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 19/19 [00:00<00:00, 4593.98 examples/s]
+Generating dev split:   0%|          | 0/5 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 5/5 [00:00<00:00, 3275.78 examples/s]
+{"config": "world_religions", "splits": {"test": 171, "validation": 19, "dev": 5}}

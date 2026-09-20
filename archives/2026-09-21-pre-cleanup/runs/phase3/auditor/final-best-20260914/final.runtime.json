@@ -1,0 +1,20 @@
+{
+  "mode": "final",
+  "pid": 3563303,
+  "command": [
+    "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+    "-u",
+    "runs/phase3/auditor/final-best-20260914/replicate.py",
+    "final"
+  ],
+  "cuda_visible_devices": "1",
+  "torch": "2.4.1+cu121",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "started_at": 1789361292.8230612,
+  "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "model_revision": "Revision:master,CreatedAt:1740591574",
+  "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint",
+  "source_head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+  "kind": "independent final audit reproduction; not a new algorithm candidate"
+}

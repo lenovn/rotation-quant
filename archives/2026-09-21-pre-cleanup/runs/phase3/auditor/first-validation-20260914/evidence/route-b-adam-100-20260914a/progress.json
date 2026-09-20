@@ -1,0 +1,14 @@
+{
+  "stage": "training",
+  "pid": 3979813,
+  "time": 1789324841.2882414,
+  "cuda_visible_devices": "5",
+  "allocated_gib": 2.847960948944092,
+  "reserved_gib": 4.5625,
+  "peak_allocated_gib": 7.489051818847656,
+  "gpu_time_budget": null,
+  "step": 20,
+  "total": 100,
+  "loss": 2.952172189950943,
+  "elapsed_seconds": 1944.970941742009
+}

@@ -1,0 +1,101 @@
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+Token indices sequence length is longer than the specified maximum sequence length for this model (252852 > 2048). Running this sequence through the model will result in indexing errors
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+  warnings.warn(
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+{"stage": "distillation-training", "pid": 977986, "time": 1789334071.3759432, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 14.685546875, "peak_allocated_gib": 14.674142360687256, "gpu_time_budget": null, "step": 1, "total": 100, "ce": 2.906501740217209, "elapsed_seconds": 4.993763612001203}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334076.3756297, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 2, "total": 100, "ce": 2.6664156019687653, "elapsed_seconds": 9.993455077987164}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334081.3575888, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 3, "total": 100, "ce": 2.9455531537532806, "elapsed_seconds": 14.975414627988357}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334086.419477, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 4, "total": 100, "ce": 2.6261032819747925, "elapsed_seconds": 20.037306582031306}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334091.5659933, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 5, "total": 100, "ce": 3.1634055972099304, "elapsed_seconds": 25.183820625010412}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334096.4645698, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 6, "total": 100, "ce": 4.209075748920441, "elapsed_seconds": 30.08239933603909}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334101.361219, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 7, "total": 100, "ce": 9.485007166862488, "elapsed_seconds": 34.97904915799154}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334106.2596588, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 8, "total": 100, "ce": 9.769962072372437, "elapsed_seconds": 39.877483337011654}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334111.1697633, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 9, "total": 100, "ce": 11.317964434623718, "elapsed_seconds": 44.787589858984575}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334147.018464, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 10, "total": 100, "ce": 9.709655284881592, "elapsed_seconds": 80.63627154100686}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334152.6389337, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 11, "total": 100, "ce": 9.881303191184998, "elapsed_seconds": 86.25676098500844}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334157.524524, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 12, "total": 100, "ce": 10.977768778800964, "elapsed_seconds": 91.14235486101825}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334162.5171342, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 13, "total": 100, "ce": 10.580361008644104, "elapsed_seconds": 96.13495829002932}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334167.4603288, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 14, "total": 100, "ce": 8.765278697013855, "elapsed_seconds": 101.07815515901893}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334172.3911989, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 15, "total": 100, "ce": 9.678280472755432, "elapsed_seconds": 106.00902920402586}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334177.2953644, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 16, "total": 100, "ce": 9.846254825592041, "elapsed_seconds": 110.91318464803044}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334182.2682278, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 17, "total": 100, "ce": 8.768910884857178, "elapsed_seconds": 115.88605713302968}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334187.176138, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 18, "total": 100, "ce": 9.147818088531494, "elapsed_seconds": 120.79396328702569}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334192.0650702, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 19, "total": 100, "ce": 9.030319213867188, "elapsed_seconds": 125.68289690103848}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334196.9527411, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 20, "total": 100, "ce": 8.437712728977203, "elapsed_seconds": 130.57057218399132}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334201.842642, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 21, "total": 100, "ce": 8.632960021495819, "elapsed_seconds": 135.4604723090306}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334206.7554152, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 22, "total": 100, "ce": 8.228050231933594, "elapsed_seconds": 140.3732448699884}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334211.782302, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 23, "total": 100, "ce": 8.369457125663757, "elapsed_seconds": 145.40012221201323}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334216.7646103, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 24, "total": 100, "ce": 8.174770951271057, "elapsed_seconds": 150.38243772799615}
+{"stage": "distillation-training", "pid": 977986, "time": 1789334255.935657, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 25, "total": 100, "ce": 8.566487848758698, "elapsed_seconds": 189.55346718098735}
+{"stage": "export-for-validation", "pid": 977986, "time": 1789334256.549602, "cuda_visible_devices": "7", "allocated_gib": 11.047683715820312, "reserved_gib": 15.939453125, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 25}
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{"stage": "full-validation", "pid": 977986, "time": 1789334280.7845986, "cuda_visible_devices": "7", "allocated_gib": 6.439113140106201, "reserved_gib": 6.498046875, "peak_allocated_gib": 15.866312503814697, "gpu_time_budget": null, "step": 25}
+Evaluation segment 1/2: start=0, windows=123, seqlen=2048
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s]The attention layers in this model are transitioning from computing the RoPE embeddings internally through `position_ids` (2D tensor with the indexes of the tokens), to using externally computed `position_embeddings` (Tuple of tensors, containing cos and sin). In v4.46 `position_ids` will be removed and `position_embeddings` will be mandatory.
+(Eval) Layers:   6%|▋         | 1/16 [00:00<00:09,  1.63it/s](Eval) Layers:  12%|█▎        | 2/16 [00:01<00:08,  1.66it/s](Eval) Layers:  19%|█▉        | 3/16 [00:01<00:07,  1.69it/s](Eval) Layers:  25%|██▌       | 4/16 [00:02<00:07,  1.69it/s](Eval) Layers:  31%|███▏      | 5/16 [00:02<00:06,  1.68it/s](Eval) Layers:  38%|███▊      | 6/16 [00:03<00:05,  1.67it/s](Eval) Layers:  44%|████▍     | 7/16 [00:04<00:05,  1.63it/s](Eval) Layers:  50%|█████     | 8/16 [00:04<00:04,  1.63it/s](Eval) Layers:  56%|█████▋    | 9/16 [00:05<00:04,  1.63it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:06<00:03,  1.63it/s](Eval) Layers:  69%|██████▉   | 11/16 [00:06<00:03,  1.59it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:07<00:02,  1.59it/s](Eval) Layers:  81%|████████▏ | 13/16 [00:08<00:01,  1.57it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:08<00:01,  1.55it/s](Eval) Layers:  94%|█████████▍| 15/16 [00:09<00:00,  1.54it/s](Eval) Layers: 100%|██████████| 16/16 [00:09<00:00,  1.54it/s](Eval) Layers: 100%|██████████| 16/16 [00:09<00:00,  1.60it/s]
+Evaluation segment 2/2: start=251904, windows=1, seqlen=948
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s](Eval) Layers:  12%|█▎        | 2/16 [00:00<00:00, 19.43it/s](Eval) Layers:  31%|███▏      | 5/16 [00:00<00:00, 22.72it/s](Eval) Layers:  50%|█████     | 8/16 [00:00<00:00, 15.08it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:00<00:00, 11.91it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:00<00:00, 10.84it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:01<00:00, 10.03it/s](Eval) Layers: 100%|██████████| 16/16 [00:01<00:00, 10.06it/s](Eval) Layers: 100%|██████████| 16/16 [00:01<00:00, 11.54it/s]
+Traceback (most recent call last):
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/distill.py", line 348, in <module>
+    main()
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/distill.py", line 341, in main
+    train(args)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/distill.py", line 254, in train
+    loss, ce, divergence = distillation_loss(student, teacher, ids, args.temperature, args.ce_weight)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/distill.py", line 96, in distillation_loss
+    student_hidden = backbone(student, ids)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/common.py", line 76, in backbone
+    hidden = model.model(ids, **kwargs)[0]
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/eval_utils/modeling_llama.py", line 1152, in forward
+    layer_outputs = self._gradient_checkpointing_func(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/_compile.py", line 31, in inner
+    return disable_fn(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/_dynamo/eval_frame.py", line 600, in _fn
+    return fn(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/checkpoint.py", line 488, in checkpoint
+    ret = function(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/eval_utils/modeling_llama.py", line 877, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/eval_utils/modeling_llama.py", line 357, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/quant_utils.py", line 793, in forward
+    x = self.module(x).to(x_dtype)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/distill.py", line 42, in forward
+    weight = self.quantizer.quantize(self.weight).to(inputs.dtype)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/quantization.py", line 73, in quantize
+    return super().quantize(inputs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/quant_utils.py", line 1083, in quantize
+    if not self.has_scale:
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/quant_utils.py", line 1020, in has_scale
+    return bool(self._has_scale.item())
+KeyboardInterrupt

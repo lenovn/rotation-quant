@@ -1,0 +1,1 @@
+{"model.layers.1.mlp.down_proj": {"selected": {"channels": [0, 2], "factor": 2.0, "alpha": 4.0, "range_exponent": -1, "heldout_mse": 0.1}}, "model.layers.0.mlp.down_proj": {"selected": {"channels": [1], "factor": 64.0}}}

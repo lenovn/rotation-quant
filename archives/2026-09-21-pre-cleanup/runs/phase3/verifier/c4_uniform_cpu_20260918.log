@@ -1,0 +1,460 @@
+2026-09-18 independent C4 uniform INT8 CPU verifier preparation
+SOURCE=/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint
+HEAD=24918316ed594848d4de797c356b120f2a4ee0f3
+Initial Git status: existing 5 tracked modifications, untracked experiments/ and prior tests retained.
+Read project AGENTS, STATUS/SPEC/PLAN/LESSONS, Phase3 STATUS and C4_ATTRIBUTION_20260918.md.
+Read common.calibrate_sp2, actual RotationStaticActQuantizer/STEQuantize, B100 data.json,
+historical checkpoint-0100/sp2_calibration.json and original calibration/export order.
+Saved pre-change external_eval.py and launch.py in session for later actual diff review.
+Prepared new tests only; no application modification or pytest execution yet.
+NOT TESTED; no PASS/FAIL until application patch review and actual narrow CPU execution.
+
+
+APPLICATION PATCH REVIEW COMPLETE
+External diff:
+--- external_eval.py.before
++++ worktrees/SpinQuant-phase3-joint/experiments/phase3/external_eval.py	2026-09-18 00:20:10.573301900 +0800
+@@ -112,10 +112,19 @@
+         input_metadata=metadata, reused_tokens=reused_tokens, calibration=False, training=False, selection=False))
+     progress(args.output, "loading-fixed-model", mode=args.mode)
+     model = load_model(args.mode, args.package)
++    overlay_path = getattr(args, "down_int8_scales", None)
++    overlay = None
++    if overlay_path is not None:
++        from experiments.phase3.uniform_baseline import apply_down_int8
++
++        if args.mode != "quantized":
++            raise ValueError("Only quantized mode accepts a down INT8 overlay")
++        overlay = apply_down_int8(model, overlay_path, args.package)
+     quantizers = wrappers(model)
+     formats = Counter("sp2" if isinstance(wrapper.quantizer, SP2Quantizer) else "int8"
+                       for wrapper in quantizers.values())
+-    if args.mode == "quantized" and (formats != {"int8": 96, "sp2": 16}
++    expected_formats = {"int8": 112} if overlay is not None else {"int8": 96, "sp2": 16}
++    if args.mode == "quantized" and (formats != expected_formats
+             or any(wrapper.quantizer.bits != 8 or getattr(wrapper.quantizer, "observing", False)
+                    or wrapper.online_full_had or wrapper.online_partial_had for wrapper in quantizers.values())):
+         raise ValueError("Frozen candidate input quantization coverage differs")
+@@ -128,7 +137,8 @@
+     torch.save(before, args.output / "quantizers_before.pt")
+     write_json(args.output / "model.json", dict(mode=args.mode, package=str(args.package) if args.package else None,
+         backbone_weight_bits=4 if quantizers else 16, activation_formats=dict(formats),
+-        rotary_buffer_dtypes=rotary_dtypes, kv_bits=16, use_cache=False, training=False, calibration=False))
++        rotary_buffer_dtypes=rotary_dtypes, kv_bits=16, use_cache=False, training=False, calibration=False,
++        down_int8_overlay=overlay))
+     torch.cuda.reset_peak_memory_stats()
+     progress(args.output, dataset_label + "-fixed-evaluation", windows=metadata["windows"],
+              chunk_windows=args.chunk_windows)
+@@ -144,6 +154,7 @@
+     result.update(dataset=metadata["dataset"], subset=metadata["subset"], split=metadata["split"], mode=args.mode,
+         input_token_path=str(token_path), input_metadata=metadata, reused_tokens=reused_tokens,
+         package=str(args.package) if args.package else None, chunk_windows=args.chunk_windows,
++        down_int8_overlay=overlay, activation_formats=dict(formats),
+         calibration=False, training=False, candidate_selection=False, activation_scales_unchanged=unchanged,
+         elapsed_seconds=time.monotonic() - started, peak_allocated_gib=torch.cuda.max_memory_allocated() / 2 ** 30,
+         evaluation_precision="BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL",
+@@ -162,6 +173,7 @@
+     parser.add_argument("--output", type=Path, required=True)
+     parser.add_argument("--mode", choices=("bf16", "quantized"), required=True)
+     parser.add_argument("--package", type=Path)
++    parser.add_argument("--down-int8-scales", type=Path)
+     data_source = parser.add_mutually_exclusive_group(required=True)
+     data_source.add_argument("--tokens", type=Path)
+     data_source.add_argument("--wikitext2-test", action="store_true")
+@@ -169,8 +181,11 @@
+     args = parser.parse_args()
+     if (args.mode == "quantized") != (args.package is not None) or args.chunk_windows < 1:
+         parser.error("Only quantized mode requires a package; chunk-windows must be positive")
++    if args.down_int8_scales is not None and args.mode != "quantized":
++        parser.error("Only quantized mode accepts --down-int8-scales")
+     args.tokens = args.tokens.resolve() if args.tokens else None
+     args.package = args.package.resolve() if args.package else None
++    args.down_int8_scales = args.down_int8_scales.resolve() if args.down_int8_scales else None
+     args.output.mkdir(parents=True, exist_ok=False)
+     source_directory = args.output / "source"
+     source_directory.mkdir()
+
+Launcher diff:
+--- launch.py.before
++++ worktrees/SpinQuant-phase3-joint/experiments/phase3/launch.py	2026-09-18 00:20:11.213302486 +0800
+@@ -21,7 +21,8 @@
+     parser = argparse.ArgumentParser()
+     parser.add_argument("--gpu", type=int, choices=(1, 3, 5, 6, 7), required=True)
+     parser.add_argument("--name", required=True)
+-    parser.add_argument("--task", choices=("train", "postprocess", "sequential", "local-d", "distill", "external"), default="train")
++    parser.add_argument("--task", choices=("train", "postprocess", "sequential", "local-d", "distill", "external",
++                                          "uniform-calibration"), default="train")
+     parser.add_argument("arguments", nargs=argparse.REMAINDER)
+     args = parser.parse_args()
+     if Path(args.name).name != args.name or args.name in (".", ".."):
+@@ -50,7 +51,8 @@
+                        OMP_NUM_THREADS="4", MKL_NUM_THREADS="4")
+     arguments = args.arguments[1:] if args.arguments[:1] == ["--"] else args.arguments
+     entrypoint = {"train": "run.py", "postprocess": "postprocess.py", "sequential": "sequential_postprocess.py",
+-                  "local-d": "local_d.py", "distill": "distill.py", "external": "external_eval.py"}[args.task]
++                  "local-d": "local_d.py", "distill": "distill.py", "external": "external_eval.py",
++                  "uniform-calibration": "uniform_baseline.py"}[args.task]
+     command = ["/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python", "-u",
+                str(Path(__file__).parent / entrypoint),
+                "--output", str(output), *arguments]
+
+WORKDIR=/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint
+FIRST COMMAND=CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 TOKENIZERS_PARALLELISM=false PYTHONPATH=/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -m pytest -p no:cacheprovider tests/test_phase3_uniform_baseline.py -q -s
+BEGIN RAW FIRST RUN OUTPUT
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+UNIFORM_TRAIN_ORACLE {"calibration_length": 128, "calibration_tokens": 4096, "calibration_window_indices": [182, 546, 792, 281, 1030, 865, 136, 18, 442, 357, 248, 128, 1110, 235, 621, 707, 1035, 208, 531, 689, 369, 424, 953, 973, 131, 443, 677, 1096, 731, 902, 29, 859], "calibration_windows": 32, "train_tokens": 2435022, "train_windows": 1188}
+.....{"stage": "loading-b100-for-train-only-calibration", "pid": 2, "time": 1789662266.88177, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.8871243, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.0.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.8930795, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.1.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.9032052, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.2.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.9096014, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.3.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.9190505, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.4.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.9289875, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.5.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.9366453, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.6.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.9494445, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.7.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.9603498, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.8.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.9717093, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.9.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.983782, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.10.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662266.9967642, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.11.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662267.0102856, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.12.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662267.0238743, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.13.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662267.0385046, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.14.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662267.0529041, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.15.mlp.down_proj"}
+F{"stage": "loading-fixed-model", "pid": 2, "time": 1789662267.7896867, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized"}
+{"stage": "c4-fixed-evaluation", "pid": 2, "time": 1789662268.0180278, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "windows": 1024, "chunk_windows": 128}
+Evaluation segment 1/8: start=0, windows=128, seqlen=2048
+Evaluation segment 2/8: start=262144, windows=128, seqlen=2048
+Evaluation segment 3/8: start=524288, windows=128, seqlen=2048
+Evaluation segment 4/8: start=786432, windows=128, seqlen=2048
+Evaluation segment 5/8: start=1048576, windows=128, seqlen=2048
+Evaluation segment 6/8: start=1310720, windows=128, seqlen=2048
+Evaluation segment 7/8: start=1572864, windows=128, seqlen=2048
+Evaluation segment 8/8: start=1835008, windows=128, seqlen=2048
+C4_RESULT {"token_count": 2097152, "predicted_tokens": 2096128, "segments": [{"start_token": 0, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 262144, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 524288, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 786432, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 1048576, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 1310720, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 1572864, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 1835008, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}], "unscored_tail_tokens": 0, "nll": 0.6931471805599453, "ppl": 2.0, "dataset": "allenai/c4", "subset": "en", "split": "validation", "mode": "quantized", "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt", "input_metadata": {"dataset": "allenai/c4", "subset": "en", "split": "validation", "source_files": ["https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"], "source_document_count": 364608, "seed": 42, "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix", "selected_document_count": 4480, "concatenated_token_count": 2150947, "discarded_suffix_tokens": 53795, "token_count": 2097152, "window_length": 2048, "windows": 1024, "predicted_tokens": 2096128, "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "tokenizer_class": "LlamaTokenizerFast", "add_bos_token": false, "add_eos_token": false, "text_separator": "\n\n", "purpose": "external evaluation only; no calibration or selection"}, "reused_tokens": true, "package": "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_external_c4_overl0/frozen.pt", "chunk_windows": 128, "down_int8_overlay": null, "activation_formats": {"int8": 96, "sp2": 16}, "calibration": false, "training": false, "candidate_selection": false, "activation_scales_unchanged": true, "elapsed_seconds": 0.28572375990916044, "peak_allocated_gib": 0.0, "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL", "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py", "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py", "scope": "fixed 1024-window protocol when windows=1024; not all C4, native kernels or decode"}
+{"stage": "completed", "pid": 2, "time": 1789662268.0505784, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized", "ppl": 2.0, "nll": 0.6931471805599453, "predicted_tokens": 2096128, "elapsed_seconds": 0.28572375990916044}
+{"stage": "loading-fixed-model", "pid": 2, "time": 1789662268.1641567, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized"}
+{"stage": "c4-fixed-evaluation", "pid": 2, "time": 1789662268.6905134, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "windows": 1024, "chunk_windows": 128}
+Evaluation segment 1/8: start=0, windows=128, seqlen=2048
+Evaluation segment 2/8: start=262144, windows=128, seqlen=2048
+Evaluation segment 3/8: start=524288, windows=128, seqlen=2048
+Evaluation segment 4/8: start=786432, windows=128, seqlen=2048
+Evaluation segment 5/8: start=1048576, windows=128, seqlen=2048
+Evaluation segment 6/8: start=1310720, windows=128, seqlen=2048
+Evaluation segment 7/8: start=1572864, windows=128, seqlen=2048
+Evaluation segment 8/8: start=1835008, windows=128, seqlen=2048
+C4_RESULT {"token_count": 2097152, "predicted_tokens": 2096128, "segments": [{"start_token": 0, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 262144, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 524288, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 786432, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 1048576, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 1310720, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 1572864, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}, {"start_token": 1835008, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 2.0, "nll": 0.6931471805599453}], "unscored_tail_tokens": 0, "nll": 0.6931471805599453, "ppl": 2.0, "dataset": "allenai/c4", "subset": "en", "split": "validation", "mode": "quantized", "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt", "input_metadata": {"dataset": "allenai/c4", "subset": "en", "split": "validation", "source_files": ["https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"], "source_document_count": 364608, "seed": 42, "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix", "selected_document_count": 4480, "concatenated_token_count": 2150947, "discarded_suffix_tokens": 53795, "token_count": 2097152, "window_length": 2048, "windows": 1024, "predicted_tokens": 2096128, "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "tokenizer_class": "LlamaTokenizerFast", "add_bos_token": false, "add_eos_token": false, "text_separator": "\n\n", "purpose": "external evaluation only; no calibration or selection"}, "reused_tokens": true, "package": "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_external_c4_overl0/frozen.pt", "chunk_windows": 128, "down_int8_overlay": {"path": "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_external_c4_overl0/overlay.pt", "parent": "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_external_c4_overl0/frozen.pt", "down_format": "int8", "calibration_metadata": {"dataset": "Salesforce/wikitext", "subset": "wikitext-2-raw-v1", "split": "train", "calibration_length": 128, "calibration_tokens": 4096, "calibration_window_indices": [182, 546, 792, 281, 1030, 865, 136, 18, 442, 357, 248, 128, 1110, 235, 621, 707, 1035, 208, 531, 689, 369, 424, 953, 973, 131, 443, 677, 1096, 731, 902, 29, 859]}}, "activation_formats": {"int8": 112}, "calibration": false, "training": false, "candidate_selection": false, "activation_scales_unchanged": true, "elapsed_seconds": 0.6092397370375693, "peak_allocated_gib": 0.0, "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL", "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py", "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py", "scope": "fixed 1024-window protocol when windows=1024; not all C4, native kernels or decode"}
+{"stage": "completed", "pid": 2, "time": 1789662268.7462173, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized", "ppl": 2.0, "nll": 0.6931471805599453, "predicted_tokens": 2096128, "elapsed_seconds": 0.6092397370375693}
+{"stage": "loading-fixed-model", "pid": 2, "time": 1789662269.0470774, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized"}
+{"stage": "loading-fixed-model", "pid": 2, "time": 1789662269.074433, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "bf16"}
+.usage: external_eval.py [-h] --output OUTPUT --mode {bf16,quantized}
+                        [--package PACKAGE]
+                        [--down-int8-scales DOWN_INT8_SCALES]
+                        (--tokens TOKENS | --wikitext2-test)
+                        [--chunk-windows CHUNK_WINDOWS]
+external_eval.py: error: Only quantized mode accepts --down-int8-scales
+{"pid": 12345, "gpu": 1, "started": 1789662269.1990433, "command": ["/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python", "-u", "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/worktrees/SpinQuant-phase3-joint/experiments/phase3/uniform_baseline.py", "--output", "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/runs/phase3/uniform-calibration", "--parent", "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/parent with spaces.pt", "--calibration-data", "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/data.json", "--sp2-calibration", "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/sp2_calibration.json"], "backend": "tmux", "tmux_socket": "mock-socket", "tmux_session": "phase3-uniform-calibration", "attach_command": "tmux -L mock-socket attach -t phase3-uniform-calibration", "child_environment": {"CUDA_VISIBLE_DEVICES": "1", "PYTHONDONTWRITEBYTECODE": "1", "TOKENIZERS_PARALLELISM": "false", "HF_HUB_OFFLINE": "1", "HF_DATASETS_OFFLINE": "1", "HF_HOME": "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/cache/huggingface", "GIT_OPTIONAL_LOCKS": "0", "OMP_NUM_THREADS": "4", "MKL_NUM_THREADS": "4"}, "shell_command": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u /tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/worktrees/SpinQuant-phase3-joint/experiments/phase3/uniform_baseline.py --output /tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/runs/phase3/uniform-calibration --parent '/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/parent with spaces.pt' --calibration-data /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/data.json --sp2-calibration /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/sp2_calibration.json", "selected_gpu": {"index": 1, "uuid": "GPU-mock", "memory_used_mib": 0, "memory_total_mib": 24576, "utilization": 0}, "gpu_snapshot": [{"index": 1, "uuid": "GPU-mock", "memory_used_mib": 0, "memory_total_mib": 24576, "utilization": 0}], "output": "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/runs/phase3/uniform-calibration", "log": "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/runs/phase3/uniform-calibration.log", "policy": "latest user authorization: actual headroom, parallel independent jobs, no hard ratio/memory/time cap, never terminate others"}
+{"pid": 12345, "gpu": 1, "started": 1789662269.200742, "command": ["/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python", "-u", "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/worktrees/SpinQuant-phase3-joint/experiments/phase3/external_eval.py", "--output", "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/runs/phase3/external", "--mode", "quantized", "--package", "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/parent with spaces.pt", "--tokens", "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt", "--down-int8-scales", "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/overlay with spaces.pt"], "backend": "tmux", "tmux_socket": "mock-socket", "tmux_session": "phase3-external", "attach_command": "tmux -L mock-socket attach -t phase3-external", "child_environment": {"CUDA_VISIBLE_DEVICES": "1", "PYTHONDONTWRITEBYTECODE": "1", "TOKENIZERS_PARALLELISM": "false", "HF_HUB_OFFLINE": "1", "HF_DATASETS_OFFLINE": "1", "HF_HOME": "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/cache/huggingface", "GIT_OPTIONAL_LOCKS": "0", "OMP_NUM_THREADS": "4", "MKL_NUM_THREADS": "4"}, "shell_command": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u /tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/worktrees/SpinQuant-phase3-joint/experiments/phase3/external_eval.py --output /tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/runs/phase3/external --mode quantized --package '/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/parent with spaces.pt' --tokens /home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt --down-int8-scales '/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/overlay with spaces.pt'", "selected_gpu": {"index": 1, "uuid": "GPU-mock", "memory_used_mib": 0, "memory_total_mib": 24576, "utilization": 0}, "gpu_snapshot": [{"index": 1, "uuid": "GPU-mock", "memory_used_mib": 0, "memory_total_mib": 24576, "utilization": 0}], "output": "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/runs/phase3/external", "log": "/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_cli_overlay_rejec0/runs/phase3/external.log", "policy": "latest user authorization: actual headroom, parallel independent jobs, no hard ratio/memory/time cap, never terminate others"}
+.
+=================================== FAILURES ===================================
+______ test_uniform_calibration_driver_history_matching_and_small_overlay ______
+
+external_tiny = namespace(original=LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32, 8)
+    (layers): ModuleL...  [0.0051],
+        [0.0041],
+        [0.0053],
+        [0.0056],
+        [0.0059]])}}, device_calls=[], load_calls=[])
+tmp_path = PosixPath('/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_calibration_drive0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fca23db7310>
+
+    def test_uniform_calibration_driver_history_matching_and_small_overlay(external_tiny, tmp_path, monkeypatch):
+        fixture = external_tiny
+        original_state = copy.deepcopy(fixture.frozen.state_dict())
+        package_bytes = fixture.package.read_bytes()
+        overlay = make_overlay(fixture.frozen, fixture.package)
+        values = torch.linspace(-2, 3, 32).reshape(2, 16).to(torch.bfloat16)
+        bound = float(values.abs().max())
+        samples = {name: values.clone() for name in overlay["scales"]}
+        maximum = {name: bound for name in samples}
+        historical = {name: dict(sampled_rows=2, full_absmax=bound,
+            candidates=[dict(alpha=bound)] * 50, selected=dict(alpha=bound, output_mse=0.1)) for name in samples}
+        historical_path = tmp_path / "synthetic-sp2.json"
+        historical_path.write_text(json.dumps(historical))
+        monkeypatch.setattr(uniform_baseline, "load_calibration", lambda path:
+            ([torch.ones((1, 128), dtype=torch.long)] * 32, overlay["calibration_metadata"]))
+        monkeypatch.setattr(uniform_baseline, "load_static", lambda path: (fixture.frozen, fixture.records))
+        monkeypatch.setattr(uniform_baseline, "capture_down_inputs", lambda model, calibration:
+            ({name: value.clone() for name, value in samples.items()}, maximum.copy()))
+        output = tmp_path / "calibration"
+        output.mkdir()
+        args = SimpleNamespace(parent=fixture.package, calibration_data=CALIBRATION_DATA,
+            sp2_calibration=historical_path, output=output)
+>       uniform_baseline.run(args)
+
+tests/test_phase3_uniform_baseline.py:248: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+experiments/phase3/uniform_baseline.py:180: in run
+    progress(args.output, "completed", **result)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+output = PosixPath('/tmp/pytest-of-dongpeiyan/pytest-5/test_uniform_calibration_drive0/calibration')
+stage = 'completed'
+details = {'c4_used': False, 'calibration': True, 'calibration_metadata': {'calibration_length': 128, 'calibration_tokens': 4096...ndices': [182, 546, 792, 281, 1030, 865, ...], 'dataset': 'Salesforce/wikitext', ...}, 'candidates_per_layer': 50, ...}
+
+    def progress(output, stage, **details):
+>       record = dict(stage=stage, pid=os.getpid(), time=time.time(),
+                      cuda_visible_devices=os.environ.get("CUDA_VISIBLE_DEVICES"),
+                      allocated_gib=torch.cuda.memory_allocated() / 2 ** 30,
+                      reserved_gib=torch.cuda.memory_reserved() / 2 ** 30,
+                      peak_allocated_gib=torch.cuda.max_memory_allocated() / 2 ** 30,
+                      gpu_time_budget=None, **details)
+E       TypeError: dict() got multiple values for keyword argument 'peak_allocated_gib'
+
+experiments/phase3/run.py:70: TypeError
+=============================== warnings summary ===============================
+tests/test_phase3_uniform_baseline.py::test_uniform_capture_stride_full_max_and_restoration[success]
+tests/test_phase3_uniform_baseline.py::test_uniform_capture_stride_full_max_and_restoration[exception]
+tests/test_phase3_uniform_baseline.py::test_uniform_overlay_down_only_and_invalid_inputs
+tests/test_phase3_uniform_baseline.py::test_uniform_calibration_driver_history_matching_and_small_overlay
+tests/test_phase3_uniform_baseline.py::test_uniform_external_c4_overlay_and_default_compatibility
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_phase3_uniform_baseline.py::test_uniform_calibration_driver_history_matching_and_small_overlay
+1 failed, 7 passed, 5 warnings in 28.93s
+
+END RAW FIRST RUN OUTPUT
+FIRST EXIT_CODE=1
+F001 APPLICATION FAIL: uniform_baseline.py:180 progress(args.output, "completed", **result)
+passes peak_allocated_gib a second time to run.py:70 progress(), raising TypeError after
+writing down_int8_scales.pt and result.json. This is not a test oracle error.
+Notified primary executor to fix application; verifier did not edit application.
+7 PASS; calibration driver completion and downstream assertions remain unresolved.
+Next run will select only the failed test after application fix notice.
+
+
+F001 FIX REVIEW AND SINGLE-TEST RETEST
+Reviewed uniform_baseline.py:180:
+progress(args.output, "completed", down_layers=len(scales), elapsed_seconds=result["elapsed_seconds"])
+Source stat: 10841 bytes; mtime 2026-09-18 00:26:10.949652878 +0800.
+Result JSON retains peak_allocated_gib; only completion progress arguments changed.
+COMMAND=CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 TOKENIZERS_PARALLELISM=false PYTHONPATH=/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -m pytest -p no:cacheprovider tests/test_phase3_uniform_baseline.py::test_uniform_calibration_driver_history_matching_and_small_overlay -q -s
+BEGIN RAW RETEST OUTPUT
+{"stage": "loading-b100-for-train-only-calibration", "pid": 2, "time": 1789662397.3354766, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.339568, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.0.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.3522077, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.1.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.356864, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.2.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.3634412, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.3.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.3688846, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.4.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.3759508, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.5.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.383856, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.6.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.3921509, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.7.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.4007926, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.8.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.409735, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.9.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.4191334, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.10.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.4288993, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.11.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.438897, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.12.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.4492333, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.13.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.4595776, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.14.mlp.down_proj"}
+{"stage": "search-uniform-int8", "pid": 2, "time": 1789662397.469973, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "layer": "model.layers.15.mlp.down_proj"}
+{"stage": "completed", "pid": 2, "time": 1789662397.5187457, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "down_layers": 16, "elapsed_seconds": 0.1833195670042187}
+{"stage": "loading-b100-for-train-only-calibration", "pid": 2, "time": 1789662397.6008248, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null}
+{"stage": "loading-b100-for-train-only-calibration", "pid": 2, "time": 1789662397.6069255, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null}
+{"stage": "loading-b100-for-train-only-calibration", "pid": 2, "time": 1789662397.6143522, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null}
+.
+=============================== warnings summary ===============================
+tests/test_phase3_uniform_baseline.py::test_uniform_calibration_driver_history_matching_and_small_overlay
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+1 passed, 1 warning in 10.16s
+
+END RAW RETEST OUTPUT
+RETEST EXIT_CODE=0
+FINAL LIMITED CPU PASS: first-run 7 passing cases plus repaired driver 1 passing case.
+No previously passing test rerun; no old suite, application edits, or GPU by verifier.
+F001 CLOSED. Actual large-model calibration/historical absmax matching and C4 PPL remain NOT TESTED by verifier.
+
+
+V-PROJECTION LAYOUT FOLLOW-UP (authorized narrow CPU check; no original 8 tests rerun)
+Read-only review found diagnostics-only capture_metadata.json addition; original thresholds and search unchanged.
+Source chain: quant_linear.py rotated_weight(R2, transpose=False) ends reshape(...).t();
+common.frozen_model installs reconstructed BF16 W with .data assignment;
+common.reload_frozen copies reconstructed values into existing destination storage;
+run.evaluate_checkpoint reload_check uses the same frozen object, not a new coldloaded model.
+
+READ-ONLY SOURCE AND CAPTURE-B JSON EVIDENCE
+
+--- layout-source evidence ---
+    14	    def rotated_weight(self, R1=None, R2=None, transpose=False):
+    15	        if R1 is not None:
+    16	            dtype = self.weight.dtype
+    17	            if not transpose:
+    18	                weight = (self.weight.to(torch.float64) @ R1.to(torch.float64)).to(
+    19	                    dtype
+    20	                )
+    21	            else:
+    22	                weight = (R1.T.to(torch.float64) @ self.weight.to(torch.float64)).to(
+    23	                    dtype
+    24	                )
+    25	            if R2 is not None:
+    26	                # Each head dim = 128 for Llama model
+    27	                had_dim = R2.shape[0]
+    28	                dtype = weight.dtype
+    29	                if transpose:
+    30	                    W_ = weight
+    31	                    init_shape = W_.shape
+    32	                    temp = W_.reshape(-1, init_shape[-1] // had_dim, had_dim)
+    33	                    temp = temp.to(torch.float64) @ R2.to(torch.float64)
+    34	                    weight = temp.reshape(init_shape)
+    35	                else:
+    36	                    W_ = weight.t()
+    37	                    transposed_shape = W_.shape
+    38	                    temp = W_.reshape(-1, transposed_shape[-1] // had_dim, had_dim)
+    39	                    temp = temp.to(torch.float64) @ R2.to(torch.float64)
+    40	                    weight = temp.reshape(transposed_shape).t()
+    41	            weight = weight.to(dtype)
+    42	        else:
+    43	            weight = self.weight
+    44	        return weight
+   312	    rotation1 = model.R1.weight.detach().double()
+   313	    for module in (frozen.model.embed_tokens, frozen.lm_head):
+   314	        module.weight.data = (module.weight.to(device).double() @ rotation1).to(torch.bfloat16).cpu()
+   315	    add_actquant(frozen)
+   316	    records = {}
+   317	    for name, wrapper, rotation2, transpose in rotated_linears(model):
+   318	        weight = wrapper.module.rotated_weight(model.R1.weight, rotation2, transpose)
+   319	        scale = (weight.float().abs().amax(dim=1, keepdim=True).clamp_min(1e-5) / 7
+   320	                 if current_minmax else wrapper.module.quantizer.scale.detach())
+   321	        codes = int4_codes(weight, scale)
+   322	        destination = frozen.get_submodule(name)
+   323	        destination.module.weight.data = (codes.float() * scale).to(torch.bfloat16).cpu()
+   324	        records[name] = dict(packed=pack_int4(codes).cpu(), shape=tuple(weight.shape), scale=scale.cpu().clone())
+   325	        if name.endswith("down_proj"):
+   326	            destination.quantizer = SP2Quantizer(float(wrapper.quantizer.alpha))
+   327	            destination.quantizer.bits = wrapper.quantizer.bits
+   328	        else:
+   329	            destination.quantizer = RotationStaticActQuantizer()
+   330	            destination.quantizer.load_scale(wrapper.quantizer.scale.detach().cpu())
+   331	    frozen.requires_grad_(False).eval()
+   332	    frozen.config.use_cache = False
+   333	    return frozen.to(device), records
+   432	            if scale.shape != (1,) or not torch.isfinite(scale).all() or not (scale > 0).all():
+   433	                raise ValueError(f"Invalid frozen activation scale: {name}")
+   434	    device = next(model.parameters()).device
+   435	    model.load_state_dict(state["high_precision"], strict=False)
+   436	    for name, record in state["weights"].items():
+   437	        wrapper = model.get_submodule(name)
+   438	        codes = unpack_int4(record["packed"], record["shape"])
+   439	        wrapper.module.weight.copy_((codes.float() * record["scale"]).to(wrapper.module.weight))
+   440	        activation = state["activation"][name]
+   441	        if activation["format"] == "sp2":
+   442	            wrapper.quantizer = SP2Quantizer(activation["alpha"]).to(device)
+   443	        else:
+   444	            wrapper.quantizer.load_scale(activation["scale"].to(device))
+   445	    return state
+   175	               initial_state=str(args.initial), training_tokens=step * args.accumulation * 2048)
+   176	    fixed_probe = probe_with_saturation(model, probe)
+   177	    write_json(directory / "training_probe.json", fixed_probe)
+   178	    if step not in args.validation_steps:
+   179	        return dict(step=step, training_probe=fixed_probe["nll"])
+   180	    progress(args.output, "freeze-and-calibrate", step=step)
+   181	    frozen, records = frozen_model(model, current_minmax=args.route == "A" and step <= args.switch_step)
+   182	    if args.route != "C":
+   183	        calibrate_sp2(frozen, calibration, directory)
+   184	    else:
+   185	        for name, wrapper in wrappers(frozen).items():
+   186	            if name.endswith("down_proj"):
+   187	                wrapper.quantizer.bits = 8
+   188	    save_frozen(frozen, records, directory / "static_w4a8.pt",
+   189	                dict(route=args.route, step=step, initial=str(args.initial)))
+   190	    before = evaluate(frozen, probe[:1])
+   191	    reload_frozen(frozen, directory / "static_w4a8.pt")
+   192	    after = evaluate(frozen, probe[:1])
+   193	    if before["nll"] != after["nll"]:
+   194	        raise RuntimeError("Frozen pack/reload probe NLL mismatch")
+   195	    write_json(directory / "reload_check.json", dict(before=before["nll"], after=after["nll"], exact=True))
+   196	    progress(args.output, "full-validation", step=step)
+
+--- PyTorch layout preservation internals ---
+
+--- actual capture b and model dimensions (read-only JSON) ---
+{"layer": "model.layers.0.mlp.down_proj", "sampled_rows": 512, "full_absmax": 28.25, "historical_sampled_rows": 512, "historical_full_absmax": 28.125, "historical_candidates": 50, "delta": 0.125, "relative_delta": 0.0044444444444444444}
+{"layer": "model.layers.1.mlp.down_proj", "sampled_rows": 512, "full_absmax": 824.0, "historical_sampled_rows": 512, "historical_full_absmax": 816.0, "historical_candidates": 50, "delta": 8.0, "relative_delta": 0.00980392156862745}
+{"layer": "model.layers.2.mlp.down_proj", "sampled_rows": 512, "full_absmax": 2.734375, "historical_sampled_rows": 512, "historical_full_absmax": 2.734375, "historical_candidates": 50, "delta": 0.0, "relative_delta": 0.0}
+{"layer": "model.layers.3.mlp.down_proj", "sampled_rows": 512, "full_absmax": 3.515625, "historical_sampled_rows": 512, "historical_full_absmax": 3.53125, "historical_candidates": 50, "delta": -0.015625, "relative_delta": -0.004424778761061947}
+{"layer": "model.layers.4.mlp.down_proj", "sampled_rows": 512, "full_absmax": 4.21875, "historical_sampled_rows": 512, "historical_full_absmax": 4.21875, "historical_candidates": 50, "delta": 0.0, "relative_delta": 0.0}
+{"layer": "model.layers.5.mlp.down_proj", "sampled_rows": 512, "full_absmax": 4.625, "historical_sampled_rows": 512, "historical_full_absmax": 4.65625, "historical_candidates": 50, "delta": -0.03125, "relative_delta": -0.006711409395973154}
+{"layer": "model.layers.6.mlp.down_proj", "sampled_rows": 512, "full_absmax": 2.546875, "historical_sampled_rows": 512, "historical_full_absmax": 2.5625, "historical_candidates": 50, "delta": -0.015625, "relative_delta": -0.006097560975609756}
+{"layer": "model.layers.7.mlp.down_proj", "sampled_rows": 512, "full_absmax": 2.90625, "historical_sampled_rows": 512, "historical_full_absmax": 3.015625, "historical_candidates": 50, "delta": -0.109375, "relative_delta": -0.03626943005181347}
+{"layer": "model.layers.8.mlp.down_proj", "sampled_rows": 512, "full_absmax": 4.40625, "historical_sampled_rows": 512, "historical_full_absmax": 4.4375, "historical_candidates": 50, "delta": -0.03125, "relative_delta": -0.007042253521126761}
+{"layer": "model.layers.9.mlp.down_proj", "sampled_rows": 512, "full_absmax": 7.0, "historical_sampled_rows": 512, "historical_full_absmax": 6.875, "historical_candidates": 50, "delta": 0.125, "relative_delta": 0.01818181818181818}
+{"layer": "model.layers.10.mlp.down_proj", "sampled_rows": 512, "full_absmax": 7.1875, "historical_sampled_rows": 512, "historical_full_absmax": 7.1875, "historical_candidates": 50, "delta": 0.0, "relative_delta": 0.0}
+{"layer": "model.layers.11.mlp.down_proj", "sampled_rows": 512, "full_absmax": 9.5, "historical_sampled_rows": 512, "historical_full_absmax": 9.375, "historical_candidates": 50, "delta": 0.125, "relative_delta": 0.013333333333333334}
+{"layer": "model.layers.12.mlp.down_proj", "sampled_rows": 512, "full_absmax": 9.5625, "historical_sampled_rows": 512, "historical_full_absmax": 9.4375, "historical_candidates": 50, "delta": 0.125, "relative_delta": 0.013245033112582781}
+{"layer": "model.layers.13.mlp.down_proj", "sampled_rows": 512, "full_absmax": 9.75, "historical_sampled_rows": 512, "historical_full_absmax": 9.6875, "historical_candidates": 50, "delta": 0.0625, "relative_delta": 0.0064516129032258064}
+{"layer": "model.layers.14.mlp.down_proj", "sampled_rows": 512, "full_absmax": 44.0, "historical_sampled_rows": 512, "historical_full_absmax": 43.5, "historical_candidates": 50, "delta": 0.5, "relative_delta": 0.011494252873563218}
+{"layer": "model.layers.15.mlp.down_proj", "sampled_rows": 512, "full_absmax": 233.0, "historical_sampled_rows": 512, "historical_full_absmax": 230.0, "historical_candidates": 50, "delta": 3.0, "relative_delta": 0.013043478260869565}
+MODEL_CONFIG {"hidden_size": 2048, "num_attention_heads": 32, "num_key_value_heads": 8, "head_dim": 64, "torch_dtype": "bfloat16", "pretraining_tp": 1}
+failure.json exists= True
+{
+  "type": "ValueError",
+  "message": "B100 calibration inputs or search budget differ: model.layers.0.mlp.down_proj"
+}
+
+result.json exists= False
+down_int8_scales.pt exists= False
+
+
+Main executor subsequently changed capture_down_inputs only: save V weight.data references,
+use .t().contiguous().t() during capture, finally restore original data; result adds capture_layout.
+Verifier added one parametrized test, success and exception, with small real rotated_weight/int4 packing chain.
+COMMAND=CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 TOKENIZERS_PARALLELISM=false PYTHONPATH=/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -m pytest -p no:cacheprovider tests/test_phase3_uniform_baseline.py::test_uniform_capture_v_layout_restores_original_storage -q -s
+BEGIN RAW LAYOUT TEST OUTPUT
+V_LAYOUT_SOURCE_CHAIN {"shape": [4, 8], "online_stride": [1, 4], "cold_stride": [8, 1], "values_equal": true}
+..
+=============================== warnings summary ===============================
+tests/test_phase3_uniform_baseline.py::test_uniform_capture_v_layout_restores_original_storage[success]
+tests/test_phase3_uniform_baseline.py::test_uniform_capture_v_layout_restores_original_storage[exception]
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2 passed, 2 warnings in 8.98s
+
+END RAW LAYOUT TEST OUTPUT
+EXIT_CODE=0
+LAYOUT PATCH LIMITED CPU PASS: 2 passed, 2 existing warnings in 8.98s.
+All 16 V projections column-major during capture with exact values; all original storage pointers,
+strides, offsets, Parameter/ActQuantWrapper aliases, bits and hooks restored on success and exception.
+No original 8 tests rerun. No GPU, no full model reconstruction/forward, no application edit by verifier.
+Actual GPU causal claim and capture-c historical extrema agreement remain NOT TESTED by verifier.
+
+
+READ-ONLY FOLLOW-UP: MAIN EXECUTOR FORMAL CAPTURE C
+Read only:
+runs/phase3/b100-uniform-calibration-20260918c/capture_metadata.json
+runs/phase3/b100-uniform-calibration-20260918c/result.json
+No new pytest, GPU, model forward, or actual overlay/state tensor reads.
+CAPTURE_METADATA {"model.layers.0.mlp.down_proj": {"full_absmax": 28.125, "historical_candidates": 50, "historical_full_absmax": 28.125, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.1.mlp.down_proj": {"full_absmax": 816.0, "historical_candidates": 50, "historical_full_absmax": 816.0, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.10.mlp.down_proj": {"full_absmax": 7.1875, "historical_candidates": 50, "historical_full_absmax": 7.1875, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.11.mlp.down_proj": {"full_absmax": 9.375, "historical_candidates": 50, "historical_full_absmax": 9.375, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.12.mlp.down_proj": {"full_absmax": 9.4375, "historical_candidates": 50, "historical_full_absmax": 9.4375, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.13.mlp.down_proj": {"full_absmax": 9.6875, "historical_candidates": 50, "historical_full_absmax": 9.6875, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.14.mlp.down_proj": {"full_absmax": 43.5, "historical_candidates": 50, "historical_full_absmax": 43.5, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.15.mlp.down_proj": {"full_absmax": 230.0, "historical_candidates": 50, "historical_full_absmax": 230.0, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.2.mlp.down_proj": {"full_absmax": 2.734375, "historical_candidates": 50, "historical_full_absmax": 2.734375, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.3.mlp.down_proj": {"full_absmax": 3.53125, "historical_candidates": 50, "historical_full_absmax": 3.53125, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.4.mlp.down_proj": {"full_absmax": 4.21875, "historical_candidates": 50, "historical_full_absmax": 4.21875, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.5.mlp.down_proj": {"full_absmax": 4.65625, "historical_candidates": 50, "historical_full_absmax": 4.65625, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.6.mlp.down_proj": {"full_absmax": 2.5625, "historical_candidates": 50, "historical_full_absmax": 2.5625, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.7.mlp.down_proj": {"full_absmax": 3.015625, "historical_candidates": 50, "historical_full_absmax": 3.015625, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.8.mlp.down_proj": {"full_absmax": 4.4375, "historical_candidates": 50, "historical_full_absmax": 4.4375, "historical_sampled_rows": 512, "sampled_rows": 512}, "model.layers.9.mlp.down_proj": {"full_absmax": 6.875, "historical_candidates": 50, "historical_full_absmax": 6.875, "historical_sampled_rows": 512, "sampled_rows": 512}}
+RESULT {"c4_used": false, "calibration": true, "calibration_metadata": {"add_bos_token": false, "add_eos_token": false, "calibration_length": 128, "calibration_tokens": 4096, "calibration_window_indices": [182, 546, 792, 281, 1030, 865, 136, 18, 442, 357, 248, 128, 1110, 235, 621, 707, 1035, 208, 531, 689, 369, 424, 953, 973, 131, 443, 677, 1096, 731, 902, 29, 859], "dataset": "Salesforce/wikitext", "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-train.arrow", "protocol": "tokenize each raw row without BOS/EOS, concatenate IDs, disjoint 2048 windows, drop tail, fixed order", "seed": 42, "source_metadata_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/data.json", "split": "train", "subset": "wikitext-2-raw-v1", "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "train_tokens": 2435022, "train_windows": 1188}, "candidates_per_layer": 50, "capture_layout": "original frozen_model column-major v_proj; original coldload storage restored afterward", "down_layers": 16, "elapsed_seconds": 23.186752076027915, "historical_capture_matched": true, "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt", "parent_scales_unchanged": true, "peak_allocated_gib": 2.9195966720581055, "training": false}
+READ_ONLY_SUMMARY {"absmax_mismatches": {}, "exact_absmax_matches": 16, "exact_row_matches": 16, "historical_candidate_counts": [50], "layers": 16, "sampled_rows": [512]}
+
+Conclusion: recorded full_absmax and sampled_rows match historical fields exactly in all 16 layers,
+not merely within tolerance. This supports the temporary V-layout restoration explanation for the
+previous capture-statistics mismatch; it is not independent GPU reproduction or full activation equality.
+50 candidates/layer and unchanged parent scales are result.json declarations in this follow-up;
+actual overlay/96 SA/state pairing is being checked by the primary executor, not duplicated here.

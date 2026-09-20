@@ -1,0 +1,42 @@
+{
+  "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct/model.safetensors": {
+    "size": 2471645608,
+    "mtime_ns": 1786311308734661772
+  },
+  "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct/tokenizer.json": {
+    "size": 9085657,
+    "mtime_ns": 1786308197713158091
+  },
+  "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/launch.py": {
+    "size": 3973,
+    "mtime_ns": 1789325035949597796
+  },
+  "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/postprocess.py": {
+    "size": 16030,
+    "mtime_ns": 1789325145365626638
+  },
+  "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/common.py": {
+    "size": 21949,
+    "mtime_ns": 1789322478524743722
+  },
+  "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/quantization.py": {
+    "size": 3380,
+    "mtime_ns": 1789321683860332156
+  },
+  "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/run.py": {
+    "size": 18432,
+    "mtime_ns": 1789324167169337092
+  },
+  "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py": {
+    "size": 4257,
+    "mtime_ns": 1789320751755758698
+  },
+  "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/eval_utils/modeling_llama.py": {
+    "size": 77040,
+    "mtime_ns": 1789320751723758673
+  },
+  "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py": {
+    "size": 10815,
+    "mtime_ns": 1789230024605580355
+  }
+}

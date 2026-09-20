@@ -1,0 +1,43 @@
+{
+  "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+  "source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel",
+  "seed": 42,
+  "nsamples": 128,
+  "seqlen": 2048,
+  "w_bits": 4,
+  "activation_bits": 16,
+  "perchannel": true,
+  "sym": true,
+  "groupsize": -1,
+  "mse_clip": false,
+  "blocksize": 128,
+  "percdamp": 0.01,
+  "actorder": false,
+  "static_groups": false,
+  "rotation": false,
+  "distillation": false,
+  "training": false,
+  "solver": "eval_utils.gptq_utils.GPTQ.fasterquant",
+  "sequential_groups": [
+    [
+      "self_attn.k_proj",
+      "self_attn.v_proj",
+      "self_attn.q_proj"
+    ],
+    [
+      "self_attn.o_proj"
+    ],
+    [
+      "mlp.up_proj",
+      "mlp.gate_proj"
+    ],
+    [
+      "mlp.down_proj"
+    ]
+  ],
+  "high_precision": "embedding, lm_head, all norms including Q/K norms",
+  "model_revision": {
+    "repo": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+  }
+}

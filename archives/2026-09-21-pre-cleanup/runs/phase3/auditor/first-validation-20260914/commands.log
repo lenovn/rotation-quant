@@ -1,0 +1,5 @@
+CUDA_VISIBLE_DEVICES=1 PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python runs/phase3/auditor/first-validation-20260914/replicate.py bf16
+CUDA_VISIBLE_DEVICES=1 PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python runs/phase3/auditor/first-validation-20260914/replicate.py c-adam10
+CUDA_VISIBLE_DEVICES=1 PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python runs/phase3/auditor/first-validation-20260914/replicate.py bf16
+CUDA_VISIBLE_DEVICES=1 PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python runs/phase3/auditor/first-validation-20260914/replicate.py c-adam10
+CUDA_VISIBLE_DEVICES=1 PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python runs/phase3/auditor/first-validation-20260914/replicate.py c-adam10

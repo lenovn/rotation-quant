@@ -1,0 +1,22 @@
+{
+  "arguments": {
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-bf16-fixed-20260915a",
+    "mode": "bf16",
+    "package": null,
+    "tokens": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt",
+    "chunk_windows": 128
+  },
+  "source": {
+    "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint",
+    "project_root": "/home/dongpeiyan/projects/rotation-quant",
+    "quant_linear": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/train_utils/quant_linear.py",
+    "quant_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/quant_utils.py",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase3/joint-r-sw-sa-sp2",
+    "pytorch": "2.4.1+cu121",
+    "cuda": "12.1",
+    "device": "NVIDIA GeForce RTX 4090",
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "model_cache_revision": "Revision:master,CreatedAt:1740591574"
+  }
+}

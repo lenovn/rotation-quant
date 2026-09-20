@@ -1,0 +1,24 @@
+{
+  "arguments": {
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-initial-s43",
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s43/checkpoint-0100/static_w4a8.pt",
+    "calibration_data": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s43/data.json",
+    "sp2_calibration": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s43/checkpoint-0100/sp2_calibration.json",
+    "export_package": "True"
+  },
+  "source": {
+    "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel",
+    "project_root": "/home/dongpeiyan/projects/rotation-quant",
+    "quant_linear": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/train_utils/quant_linear.py",
+    "quant_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/quant_utils.py",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase5/multimodel",
+    "pytorch": "2.4.1+cu121",
+    "cuda": "12.1",
+    "device": "NVIDIA GeForce RTX 4090",
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "model_cache_revision": "Revision:master,CreatedAt:1740591574",
+    "transformers": "4.44.2",
+    "seed": 43
+  }
+}

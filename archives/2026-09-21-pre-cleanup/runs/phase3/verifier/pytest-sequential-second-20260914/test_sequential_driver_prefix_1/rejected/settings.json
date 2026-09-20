@@ -1,0 +1,109 @@
+{
+  "arguments": {
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-sequential-second-20260914/test_sequential_driver_prefix_1/rejected",
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-sequential-second-20260914/test_sequential_driver_prefix_1/parent.pt",
+    "reference_state": null,
+    "resume_prefix": null,
+    "mode": "sp2",
+    "targets": [
+      "model.layers.0.mlp.down_proj",
+      "model.layers.1.mlp.down_proj"
+    ],
+    "family": "down",
+    "milestones": [
+      512,
+      2048
+    ],
+    "alpha_factors": [
+      1,
+      1.25,
+      2
+    ]
+  },
+  "source": {},
+  "data": {
+    "calibration_window_indices": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24,
+      23,
+      22,
+      21,
+      20,
+      19,
+      18,
+      17,
+      16,
+      15,
+      14,
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "calibration_length": 2048,
+    "fit_window_indices": [
+      31,
+      30,
+      29,
+      28,
+      27,
+      26,
+      25,
+      24,
+      23,
+      22,
+      21,
+      20,
+      19,
+      18,
+      17,
+      16,
+      15,
+      14,
+      13,
+      12,
+      11,
+      10,
+      9,
+      8
+    ],
+    "selection_window_indices": [
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "fit_rows": 49152,
+    "heldout_rows": 16384,
+    "selection_predicted_tokens": 16376
+  },
+  "parent_metadata": {
+    "method": "quantization-aware distillation",
+    "source_run": "retained-parent",
+    "step": 100,
+    "original_backbone_trained": true
+  },
+  "selection": "Greedy actual eight full train-window NLL; accept prefix before next module; no validation calibration",
+  "selection_precision": "existing BF16 logits evaluator, log(float32 PPL), 16376 predicted train tokens",
+  "constraints": "112 static W4 scales fixed; 96 non-down SA fixed; no gradient training in this stage; parent provenance retained"
+}

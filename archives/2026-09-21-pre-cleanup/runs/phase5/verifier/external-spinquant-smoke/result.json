@@ -1,0 +1,276 @@
+{
+  "status": "PASS",
+  "pid": 2258826,
+  "gpu": "2",
+  "source": "/home/dongpeiyan/projects/rotation-quant/repos/SpinQuant",
+  "model": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "torch": "2.4.1+cu121",
+  "transformers": "4.44.2",
+  "checks": {
+    "data": {
+      "split": "train",
+      "arrow": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-train.arrow",
+      "rotation_window_index": 0,
+      "rotation_protocol": "native CustomJsonDataset row tokenization without BOS/EOS, concatenation, first 2048-token window",
+      "gptq_protocol": "native get_wikitext2 double-newline raw train join, default tokenizer special tokens, seed42 random continuous window",
+      "rotation_targets": 2047,
+      "gptq_window_tokens": 2048,
+      "training_pool_windows": 1188
+    },
+    "rotation_update": {
+      "loss": 2.905704975128174,
+      "gradient_norm_before_clip": 10.559890747070312,
+      "learned_parameters": 17,
+      "gradients": {
+        "model.layers.0.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.024933822453022003
+        },
+        "model.layers.1.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.016355207189917564
+        },
+        "model.layers.2.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.02073274552822113
+        },
+        "model.layers.3.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.022572573274374008
+        },
+        "model.layers.4.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.0165359228849411
+        },
+        "model.layers.5.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.018337437883019447
+        },
+        "model.layers.6.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.008448909968137741
+        },
+        "model.layers.7.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.010876556858420372
+        },
+        "model.layers.8.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.009381845593452454
+        },
+        "model.layers.9.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.012244734913110733
+        },
+        "model.layers.10.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.008479911834001541
+        },
+        "model.layers.11.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.004908557049930096
+        },
+        "model.layers.12.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.010368592105805874
+        },
+        "model.layers.13.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.005890629254281521
+        },
+        "model.layers.14.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.006417872384190559
+        },
+        "model.layers.15.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.014169087633490562
+        },
+        "R1.weight": {
+          "finite": true,
+          "max_abs": 0.24361291527748108
+        }
+      },
+      "max_parameter_changes": {
+        "model.layers.0.self_attn.R2.weight": 7.241964340209961e-06,
+        "model.layers.1.self_attn.R2.weight": 8.687376976013184e-06,
+        "model.layers.2.self_attn.R2.weight": 1.068413257598877e-05,
+        "model.layers.3.self_attn.R2.weight": 1.0147690773010254e-05,
+        "model.layers.4.self_attn.R2.weight": 7.286667823791504e-06,
+        "model.layers.5.self_attn.R2.weight": 5.044043064117432e-06,
+        "model.layers.6.self_attn.R2.weight": 4.537403583526611e-06,
+        "model.layers.7.self_attn.R2.weight": 5.125999450683594e-06,
+        "model.layers.8.self_attn.R2.weight": 4.9173831939697266e-06,
+        "model.layers.9.self_attn.R2.weight": 5.5730342864990234e-06,
+        "model.layers.10.self_attn.R2.weight": 3.851950168609619e-06,
+        "model.layers.11.self_attn.R2.weight": 2.771615982055664e-06,
+        "model.layers.12.self_attn.R2.weight": 3.1441450119018555e-06,
+        "model.layers.13.self_attn.R2.weight": 3.4570693969726562e-06,
+        "model.layers.14.self_attn.R2.weight": 3.635883331298828e-06,
+        "model.layers.15.self_attn.R2.weight": 4.1425228118896484e-06,
+        "R1.weight": 0.00010826624929904938
+      },
+      "online_down_hadamard": 16,
+      "W": 16,
+      "A": 8,
+      "A_asymmetric": true,
+      "KV": 16,
+      "lr": 1.5,
+      "updates": 1
+    },
+    "gptq_entry": {
+      "backbone_dynamic_A8": 112,
+      "down_online_hadamard": 16,
+      "o_proj_groupsizes": [
+        64
+      ],
+      "order": "input dynamic A8 configured BEFORE GPTQ, local adaptation differs from official current order"
+    },
+    "gptq_complete": {
+      "quantized_backbone_matrices": 112,
+      "w_bits": 4,
+      "groupsize": 32,
+      "w_clip": true,
+      "nsamples": 1,
+      "act_order": false,
+      "percdamp": 0.01,
+      "all_quantized_weights_finite": true
+    },
+    "finite_quantized_forward": {
+      "input_tokens": 2048,
+      "targets": 2047,
+      "nll": 2.9911930561065674,
+      "finite_logits": true,
+      "backbone_dynamic_quantizer_calls": {
+        "model.layers.0.self_attn.q_proj": 1,
+        "model.layers.0.self_attn.k_proj": 1,
+        "model.layers.0.self_attn.v_proj": 1,
+        "model.layers.0.self_attn.o_proj": 1,
+        "model.layers.0.mlp.gate_proj": 1,
+        "model.layers.0.mlp.up_proj": 1,
+        "model.layers.0.mlp.down_proj": 1,
+        "model.layers.1.self_attn.q_proj": 1,
+        "model.layers.1.self_attn.k_proj": 1,
+        "model.layers.1.self_attn.v_proj": 1,
+        "model.layers.1.self_attn.o_proj": 1,
+        "model.layers.1.mlp.gate_proj": 1,
+        "model.layers.1.mlp.up_proj": 1,
+        "model.layers.1.mlp.down_proj": 1,
+        "model.layers.2.self_attn.q_proj": 1,
+        "model.layers.2.self_attn.k_proj": 1,
+        "model.layers.2.self_attn.v_proj": 1,
+        "model.layers.2.self_attn.o_proj": 1,
+        "model.layers.2.mlp.gate_proj": 1,
+        "model.layers.2.mlp.up_proj": 1,
+        "model.layers.2.mlp.down_proj": 1,
+        "model.layers.3.self_attn.q_proj": 1,
+        "model.layers.3.self_attn.k_proj": 1,
+        "model.layers.3.self_attn.v_proj": 1,
+        "model.layers.3.self_attn.o_proj": 1,
+        "model.layers.3.mlp.gate_proj": 1,
+        "model.layers.3.mlp.up_proj": 1,
+        "model.layers.3.mlp.down_proj": 1,
+        "model.layers.4.self_attn.q_proj": 1,
+        "model.layers.4.self_attn.k_proj": 1,
+        "model.layers.4.self_attn.v_proj": 1,
+        "model.layers.4.self_attn.o_proj": 1,
+        "model.layers.4.mlp.gate_proj": 1,
+        "model.layers.4.mlp.up_proj": 1,
+        "model.layers.4.mlp.down_proj": 1,
+        "model.layers.5.self_attn.q_proj": 1,
+        "model.layers.5.self_attn.k_proj": 1,
+        "model.layers.5.self_attn.v_proj": 1,
+        "model.layers.5.self_attn.o_proj": 1,
+        "model.layers.5.mlp.gate_proj": 1,
+        "model.layers.5.mlp.up_proj": 1,
+        "model.layers.5.mlp.down_proj": 1,
+        "model.layers.6.self_attn.q_proj": 1,
+        "model.layers.6.self_attn.k_proj": 1,
+        "model.layers.6.self_attn.v_proj": 1,
+        "model.layers.6.self_attn.o_proj": 1,
+        "model.layers.6.mlp.gate_proj": 1,
+        "model.layers.6.mlp.up_proj": 1,
+        "model.layers.6.mlp.down_proj": 1,
+        "model.layers.7.self_attn.q_proj": 1,
+        "model.layers.7.self_attn.k_proj": 1,
+        "model.layers.7.self_attn.v_proj": 1,
+        "model.layers.7.self_attn.o_proj": 1,
+        "model.layers.7.mlp.gate_proj": 1,
+        "model.layers.7.mlp.up_proj": 1,
+        "model.layers.7.mlp.down_proj": 1,
+        "model.layers.8.self_attn.q_proj": 1,
+        "model.layers.8.self_attn.k_proj": 1,
+        "model.layers.8.self_attn.v_proj": 1,
+        "model.layers.8.self_attn.o_proj": 1,
+        "model.layers.8.mlp.gate_proj": 1,
+        "model.layers.8.mlp.up_proj": 1,
+        "model.layers.8.mlp.down_proj": 1,
+        "model.layers.9.self_attn.q_proj": 1,
+        "model.layers.9.self_attn.k_proj": 1,
+        "model.layers.9.self_attn.v_proj": 1,
+        "model.layers.9.self_attn.o_proj": 1,
+        "model.layers.9.mlp.gate_proj": 1,
+        "model.layers.9.mlp.up_proj": 1,
+        "model.layers.9.mlp.down_proj": 1,
+        "model.layers.10.self_attn.q_proj": 1,
+        "model.layers.10.self_attn.k_proj": 1,
+        "model.layers.10.self_attn.v_proj": 1,
+        "model.layers.10.self_attn.o_proj": 1,
+        "model.layers.10.mlp.gate_proj": 1,
+        "model.layers.10.mlp.up_proj": 1,
+        "model.layers.10.mlp.down_proj": 1,
+        "model.layers.11.self_attn.q_proj": 1,
+        "model.layers.11.self_attn.k_proj": 1,
+        "model.layers.11.self_attn.v_proj": 1,
+        "model.layers.11.self_attn.o_proj": 1,
+        "model.layers.11.mlp.gate_proj": 1,
+        "model.layers.11.mlp.up_proj": 1,
+        "model.layers.11.mlp.down_proj": 1,
+        "model.layers.12.self_attn.q_proj": 1,
+        "model.layers.12.self_attn.k_proj": 1,
+        "model.layers.12.self_attn.v_proj": 1,
+        "model.layers.12.self_attn.o_proj": 1,
+        "model.layers.12.mlp.gate_proj": 1,
+        "model.layers.12.mlp.up_proj": 1,
+        "model.layers.12.mlp.down_proj": 1,
+        "model.layers.13.self_attn.q_proj": 1,
+        "model.layers.13.self_attn.k_proj": 1,
+        "model.layers.13.self_attn.v_proj": 1,
+        "model.layers.13.self_attn.o_proj": 1,
+        "model.layers.13.mlp.gate_proj": 1,
+        "model.layers.13.mlp.up_proj": 1,
+        "model.layers.13.mlp.down_proj": 1,
+        "model.layers.14.self_attn.q_proj": 1,
+        "model.layers.14.self_attn.k_proj": 1,
+        "model.layers.14.self_attn.v_proj": 1,
+        "model.layers.14.self_attn.o_proj": 1,
+        "model.layers.14.mlp.gate_proj": 1,
+        "model.layers.14.mlp.up_proj": 1,
+        "model.layers.14.mlp.down_proj": 1,
+        "model.layers.15.self_attn.q_proj": 1,
+        "model.layers.15.self_attn.k_proj": 1,
+        "model.layers.15.self_attn.v_proj": 1,
+        "model.layers.15.self_attn.o_proj": 1,
+        "model.layers.15.mlp.gate_proj": 1,
+        "model.layers.15.mlp.up_proj": 1,
+        "model.layers.15.mlp.down_proj": 1
+      },
+      "KV": 16,
+      "use_cache": false,
+      "embedding_head_precision": "BF16, explicitly untied",
+      "online_down_hadamard": 16,
+      "qk_postrope_quantization_wrappers": 0
+    },
+    "conclusion": "Local adapted callable learned-R + GPTQ/group32 + dynamic asymmetric A8/KV16 path runnable on existing Llama; smoke only, no formal baseline score"
+  },
+  "candidate": "Local adapted SpinQuant learned-R + GPTQ W4/group32, dynamic asymmetric A8, KV16",
+  "smoke_only": true,
+  "rotation_updates": 1,
+  "rotation_token_visits": 2048,
+  "gptq_nsamples": 1,
+  "scope": "Local callable core functions; not CLI Trainer/DDP orchestration, not official full reproduction or formal PPL",
+  "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+  "git_status": " M optimize_rotation.py\n M train_utils/quant_linear.py\n M train_utils/rotation_calibration.py\n M utils/process_args.py\n M utils/quant_utils.py\n?? tests/test_learned_sw_training.py\n?? tests/test_w4_aware_training.py\n",
+  "elapsed_seconds": 281.1803867816925,
+  "max_allocated_gib": 9.15443468093872
+}

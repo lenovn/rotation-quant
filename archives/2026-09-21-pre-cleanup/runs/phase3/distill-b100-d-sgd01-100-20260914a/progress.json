@@ -1,0 +1,11 @@
+{
+  "stage": "full-validation",
+  "pid": 977986,
+  "time": 1789334280.7845986,
+  "cuda_visible_devices": "7",
+  "allocated_gib": 6.439113140106201,
+  "reserved_gib": 6.498046875,
+  "peak_allocated_gib": 15.866312503814697,
+  "gpu_time_budget": null,
+  "step": 25
+}

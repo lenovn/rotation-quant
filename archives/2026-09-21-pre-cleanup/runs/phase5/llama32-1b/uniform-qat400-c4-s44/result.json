@@ -1,0 +1,126 @@
+{
+  "token_count": 2097152,
+  "predicted_tokens": 2096128,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 44.314247131347656,
+      "nll": 3.7913062310208323
+    },
+    {
+      "start_token": 262144,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 45.34611892700195,
+      "nll": 3.8143245924579596
+    },
+    {
+      "start_token": 524288,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 47.373939514160156,
+      "nll": 3.8580722782266648
+    },
+    {
+      "start_token": 786432,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 42.69499588012695,
+      "nll": 3.7540817208641193
+    },
+    {
+      "start_token": 1048576,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 47.433956146240234,
+      "nll": 3.8593383466206292
+    },
+    {
+      "start_token": 1310720,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 42.6259651184082,
+      "nll": 3.752463577421446
+    },
+    {
+      "start_token": 1572864,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 44.266658782958984,
+      "nll": 3.790231770278402
+    },
+    {
+      "start_token": 1835008,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 48.28775405883789,
+      "nll": 3.8771779893575467
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 3.8121245632809497,
+  "ppl": 45.24646580238375,
+  "dataset": "allenai/c4",
+  "subset": "en",
+  "split": "validation",
+  "mode": "quantized",
+  "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt",
+  "input_metadata": {
+    "dataset": "allenai/c4",
+    "subset": "en",
+    "split": "validation",
+    "source_files": [
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"
+    ],
+    "source_document_count": 364608,
+    "seed": 42,
+    "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix",
+    "selected_document_count": 4480,
+    "concatenated_token_count": 2150947,
+    "discarded_suffix_tokens": 53795,
+    "token_count": 2097152,
+    "window_length": 2048,
+    "windows": 1024,
+    "predicted_tokens": 2096128,
+    "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "tokenizer_class": "LlamaTokenizerFast",
+    "add_bos_token": false,
+    "add_eos_token": false,
+    "text_separator": "\n\n",
+    "purpose": "external evaluation only; no calibration or selection"
+  },
+  "reused_tokens": true,
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s44/checkpoint-0400/static_w4a8.pt",
+  "chunk_windows": 128,
+  "down_int8_overlay": null,
+  "activation_formats": {
+    "int8": 112
+  },
+  "calibration": false,
+  "training": false,
+  "candidate_selection": false,
+  "activation_scales_unchanged": true,
+  "elapsed_seconds": 237.42106214293744,
+  "peak_allocated_gib": 7.976369857788086,
+  "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL",
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/eval_utils.py",
+  "scope": "fixed 1024-window protocol when windows=1024; not all C4, native kernels or decode"
+}

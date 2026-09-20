@@ -1,0 +1,33 @@
+{
+  "layer": 0,
+  "chosen_t": 1.0,
+  "trials": [
+    {
+      "t": 0.0,
+      "mse": 0.000540303299203515,
+      "full_absmax": 23.25,
+      "alpha": 23.25,
+      "calibration_token_rows": 4096,
+      "mse_token_rows": 128,
+      "d_min": 1.0,
+      "d_max": 1.0,
+      "log_d_mean": 0.0
+    },
+    {
+      "t": 1.0,
+      "mse": 0.00027963632601313293,
+      "full_absmax": 5.8125,
+      "alpha": 5.8125,
+      "calibration_token_rows": 4096,
+      "mse_token_rows": 128,
+      "d_min": 0.546285092830658,
+      "d_max": 4.0,
+      "log_d_mean": 7.2685089416452825e-09
+    }
+  ],
+  "direction_nonconstant": true,
+  "propagation_check": {
+    "rows": 4096,
+    "outside_fullrange": 0
+  }
+}

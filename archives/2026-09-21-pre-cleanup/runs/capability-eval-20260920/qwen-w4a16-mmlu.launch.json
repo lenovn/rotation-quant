@@ -1,0 +1,18 @@
+{
+  "pid": 2849,
+  "gpu": 2,
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/schedule.py",
+    "--jobs",
+    "qwen:w4a16:2",
+    "--tasks",
+    "mmlu",
+    "--skip-ppl"
+  ],
+  "started": 1789843139.887691,
+  "log": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen-w4a16-mmlu.log",
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/w4a16",
+  "tmux_session": "qwen-w4a16-mmlu"
+}

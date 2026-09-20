@@ -1,0 +1,9 @@
+{
+  "stage": "completed",
+  "pid": 550536,
+  "arms": [
+    "float",
+    "int8",
+    "int16"
+  ]
+}

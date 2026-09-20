@@ -1,0 +1,20 @@
+[
+  {
+    "name": "model.layers.0.mlp.up_proj",
+    "normalized_mse": 1.0000001192092896,
+    "fit_mse": 0.1691386103630066,
+    "heldout_mse": 0.09715836495161057
+  },
+  {
+    "name": "model.layers.0.mlp.gate_proj",
+    "normalized_mse": 0.0,
+    "fit_mse": 0.0,
+    "heldout_mse": 0.0
+  },
+  {
+    "name": "model.layers.0.mlp.down_proj",
+    "normalized_mse": 0.0,
+    "fit_mse": 0.0,
+    "heldout_mse": 0.0
+  }
+]

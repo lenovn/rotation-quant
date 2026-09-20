@@ -1,0 +1,36 @@
+{
+  "module": "model.layers.6.self_attn.o_proj",
+  "selected_step": 0,
+  "previous_train_nll": 2.645860130048202,
+  "selected_train_nll": 2.645860130048202,
+  "trials": [
+    {
+      "step": 0,
+      "fit_mse": 0.0001354050764348358,
+      "heldout_mse": 0.00013790742377750576,
+      "changed_codes": 0,
+      "train_nll": 2.645860130048202
+    },
+    {
+      "step": 512,
+      "fit_mse": 4.885079397354275e-05,
+      "heldout_mse": 6.066675268812105e-05,
+      "changed_codes": 270877,
+      "train_nll": 2.6482770544718552
+    },
+    {
+      "step": 2048,
+      "fit_mse": 4.23323581344448e-05,
+      "heldout_mse": 5.450888420455158e-05,
+      "changed_codes": 342883,
+      "train_nll": 2.648288730941188
+    },
+    {
+      "step": 8192,
+      "fit_mse": 3.882538294419646e-05,
+      "heldout_mse": 5.0835515139624476e-05,
+      "changed_codes": 379934,
+      "train_nll": 2.6485085335954626
+    }
+  ]
+}

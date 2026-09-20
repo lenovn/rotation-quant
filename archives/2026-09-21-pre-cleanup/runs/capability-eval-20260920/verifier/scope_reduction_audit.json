@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "seven_rows": true,
+    "only_four_metrics": true,
+    "no_qwen_w4a16": true,
+    "exact_original_cells": true,
+    "numeric_identical": true,
+    "no_missing": true,
+    "appendix_zero_shot.csv": true,
+    "metric_deltas.csv": true,
+    "63_unchanged_details": true,
+    "schedule_nine_tasks": true,
+    "schedule_choices_same": true,
+    "paper_only_reduced_tables": true,
+    "snapshots_match": true
+  },
+  "pass": true,
+  "paper_references": [
+    "main_results.tex",
+    "appendix_zero_shot_scores.tex",
+    "appendix_zero_shot_deltas.tex",
+    "metric_deltas.tex"
+  ],
+  "scope": "7 rows; 14 PPL and 63 likelihood tasks; no GPU execution"
+}

@@ -1,0 +1,1 @@
+本次审计已完成并暂停。BF16 PPL13.634657725643203 / C-Adam10 PPL22.08612814729231，NLL和两个分段均与各自参考完全一致。GPU1有效PID25317/59541均exit0。四臂checkpoint10证据PASS；当前BF16+1目标FAIL；100-step/后处理/应用代码verifier及设备验收NOT TESTED。保留一次auditor RoPE构造错误的无效全评测，非新算法收益。详见REPORT.md和summary.json。不跟踪或复跑中间checkpoint；下个常规点是三条100-step全部完成。

@@ -1,0 +1,34 @@
+{
+  "original_bf16": true,
+  "rotation": false,
+  "norm_fusion": false,
+  "original_tie_word_embeddings": true,
+  "lm_head_matches_embedding": true,
+  "quantized_linear_count": 0,
+  "attention_class": "LlamaSdpaAttention",
+  "parameter_dtypes": {
+    "torch.bfloat16": 147
+  },
+  "rotary_buffer_dtypes": {
+    "model.layers.0.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.1.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.2.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.3.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.4.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.5.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.6.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.7.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.8.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.9.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.10.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.11.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.12.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.13.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.14.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.15.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.rotary_emb.inv_freq": "torch.float32"
+  },
+  "kv_bits": 16,
+  "use_cache": false,
+  "seed": 42
+}

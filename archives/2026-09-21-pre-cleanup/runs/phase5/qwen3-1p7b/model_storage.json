@@ -1,0 +1,24 @@
+{
+  "architecture_from_config": true,
+  "backbone_linear_parameters": 1409286144,
+  "norm_parameters": 123904,
+  "embedding_parameters": 311164928,
+  "native_unique_parameters": 1720574976,
+  "student_unique_parameters_after_untie": 2031739904,
+  "additional_head_bf16_bytes": 622329856,
+  "initial_export_bytes": 2574404416,
+  "export_note": "Legacy save_frozen clones lm_head wrapper weight and module.weight separately; serialized size includes this duplication, not an inference parameter count.",
+  "raw_checkpoint_bytes": 4063515592,
+  "raw_checkpoint_files": [
+    {
+      "path": "cache/models/qwen3-1.7b/model-00001-of-00002.safetensors",
+      "bytes": 3441185608
+    },
+    {
+      "path": "cache/models/qwen3-1.7b/model-00002-of-00002.safetensors",
+      "bytes": 622329984
+    }
+  ],
+  "raw_checkpoint_note": "Actual on-disk sum of the official safetensors shards; distinct from runtime native unique-parameter memory after tied-weight handling and from exported student-package size.",
+  "initial_export_path": "runs/phase5/qwen3-1p7b/init-s42/initial_static.pt"
+}

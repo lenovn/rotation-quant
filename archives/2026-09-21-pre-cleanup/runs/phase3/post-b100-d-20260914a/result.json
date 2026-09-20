@@ -1,0 +1,39 @@
+{
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+  "parent_probe": 2.9698206782341003,
+  "best_probe": 2.954445779323578,
+  "selected": "local-d-model.layers.1.mlp.down_proj",
+  "validation_status": "completed",
+  "validation": {
+    "token_count": 252852,
+    "predicted_tokens": 252728,
+    "segments": [
+      {
+        "start_token": 0,
+        "seqlen": 2048,
+        "windows": 123,
+        "predicted_tokens": 251781,
+        "ppl": 16.999279022216797,
+        "nll": 2.8331709326990318
+      },
+      {
+        "start_token": 251904,
+        "seqlen": 948,
+        "windows": 1,
+        "predicted_tokens": 947,
+        "ppl": 18.149599075317383,
+        "nll": 2.898648470952689
+      }
+    ],
+    "unscored_tail_tokens": 0,
+    "nll": 2.8334162843368644,
+    "ppl": 17.003450334865143,
+    "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+    "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+    "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+    "format": "112 W4 / 96 static INT8 / 16 static SP2; BF16 KV16 prefill",
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+    "candidate": "local-d-model.layers.1.mlp.down_proj",
+    "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint"
+  }
+}

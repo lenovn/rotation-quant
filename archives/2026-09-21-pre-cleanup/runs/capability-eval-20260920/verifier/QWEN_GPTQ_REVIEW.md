@@ -1,0 +1,25 @@
+# Independent original-BF16 Qwen GPTQ baseline review
+
+Final status: PASS for code, completed-package CPU verification, all nine formal capability tasks, both PPL evaluations and current paper-table aggregation. The verifier did not start GPU work.
+
+`build_qwen_gptq.py` loads the original local Qwen3-1.7B with the official architecture; it does not load FIRON weights, rotate parameters, add activation wrappers, create an optimizer, or distill/train. It reads only the explicit WikiText-2 raw train Arrow file, joins text with double newlines, disables added special tokens, and samples 128 length-2048 windows using Python Random(42). All start positions and dataset/tokenizer provenance are saved. There is no test, validation or C4 read in the build path.
+
+GPTQ is genuinely sequential and uses the existing project's Hessian-based solver, not round-to-nearest: Q/K/V, output projection, up/gate, then down. Every group recaptures all calibration inputs with the already quantized earlier groups in effect. `fasterquant` uses damped Hessian Cholesky inversion, columnwise quantization-error compensation and cross-block error updates. The complete quantized layer is rerun to feed the next layer. Parameters are symmetric per-output-channel W4, groupsize -1, no MSE clipping or activation ordering, 0.01 damping and blocksize128.
+
+The adapter captures the official first decoder layer's kwargs via a dedicated exception type. Runtime `capture.json` confirms 128 samples and attention_mask, position_ids, past_key_value, output_attentions, use_cache, cache_position and position_embeddings, with use_cache=False. Reusing these kwargs is valid for equally sized unpadded windows with the same position range and fixed RoPE configuration. No unrelated ValueError is swallowed.
+
+The build compares every high-precision tensor against its original pre-GPTQ value before saving and checks the full 196-module coverage. The generic W4A16 loader detects the GPTQ checkpoint structure, loads all saved tensors exactly and verifies each W4 weight; it does not use the older FIRON/A16 branch for the new package.
+
+CPU-only verifier `check_qwen_gptq_cpu.py` passed on the completed package. All 196 weight tensors exactly reconstruct from signed codes in [-8,7] times positive per-output-channel scales after BF16 casting. All 115 high-precision tensors match a fresh original BF16 model load, and all 311 loaded model tensors exactly match the saved checkpoint. No activation wrapper or rotation parameter exists. Full name coverage is correct. Raw evidence: `qwen_gptq_cpu.json`.
+
+The saved 128 calibration offsets were independently regenerated from Random(42) and the recorded 2518423 train tokens and matched exactly. The calibration record names the train Arrow file and train split. Registry now points to this new GPTQ package and labels it `GPTQ (original BF16)`; the table no longer contains scores from the previous final-FIRON/A16 ablation, which is stored separately.
+
+## Final formal-result audit
+
+The two completed PPL results pass independent metadata, model/package, token counts, segment-weighted NLL and exp(NLL) checks. WikiText-2 test PPL is 24.83100895245416 (299078 input tokens / 298931 targets); fixed C4 validation subset PPL is 34.65030837772175 (2097152 / 2096128). Each input metadata object exactly matches the corresponding original Qwen BF16 result. The evaluation loader uses the existing Qwen C4 token path selected from that BF16 record and the same full-test tokenization helper.
+
+All eight zero-shot tasks and MMLU now pass full sample-count, actual prompt/target matching to BF16, per-sample score reconstruction and shot-setting checks. MMLU covers all 57 subjects and 14042 examples; aggregation of individual correctness reproduces the official sample-weighted score, and the actual prompts match the independently accepted five-shot BF16 reference. Each task records execution of exactly all 196 new GPTQ W4 linears, no A8 wrappers, and the new package path. No task remains pending in `qwen_gptq_results_audit.json`; the reusable audit is `audit_qwen_gptq_results.py`.
+
+Final Qwen GPTQ row: WikiText-2 24.83100895245416; C4-subset 34.65030837772175; eight-task mean 51.50238030780219 percent; MMLU 47.813701751887194 percent. The label is `GPTQ (original BF16)`, and every task's settings/loading/weight-source fields point to the independently built new package.
+
+`qwen_gptq_final_table_audit.json` passes all final table checks: eight rows and exactly four metrics, all cells filled, 72 detailed likelihood-task records, empty incomplete list, all new eight-task scores/deltas and average matching raw results, MMLU/PPL matching raw results, all main BF16-relative deltas correct, and each LaTeX row matching the CSV's two-decimal presentation. All live Python entrypoints match their saved source snapshots. No old `FIRON weights / A16` label or archived-ablation result source is present in the current tables. The archived ablation remains separate and is not the new independent GPTQ baseline.

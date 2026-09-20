@@ -1,0 +1,706 @@
+{
+  "nll": 3.025318920612335,
+  "ppl": 20.600573611212088,
+  "predicted_tokens": 8188,
+  "token_count": 8192,
+  "windows": [
+    {
+      "window": 0,
+      "tokens": 2048,
+      "predicted_tokens": 2047,
+      "nll": 3.2735440731048584
+    },
+    {
+      "window": 1,
+      "tokens": 2048,
+      "predicted_tokens": 2047,
+      "nll": 3.1978304386138916
+    },
+    {
+      "window": 2,
+      "tokens": 2048,
+      "predicted_tokens": 2047,
+      "nll": 2.949760913848877
+    },
+    {
+      "window": 3,
+      "tokens": 2048,
+      "predicted_tokens": 2047,
+      "nll": 2.680140256881714
+    }
+  ],
+  "saturation": {
+    "model.layers.0.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.0.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.0.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.0.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.0.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.0.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.0.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.1.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 4,
+      "bits": 8,
+      "fraction": 2.384185791015625e-07
+    },
+    "model.layers.1.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.1.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 5,
+      "bits": 8,
+      "fraction": 2.980232238769531e-07
+    },
+    "model.layers.1.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.1.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.1.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.1.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.2.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.2.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.2.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.2.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.2.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.2.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 4,
+      "bits": 8,
+      "fraction": 2.384185791015625e-07
+    },
+    "model.layers.2.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 180,
+      "bits": 8,
+      "fraction": 2.682209014892578e-06
+    },
+    "model.layers.3.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.3.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.3.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.3.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.3.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.3.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.3.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 590,
+      "bits": 8,
+      "fraction": 8.791685104370117e-06
+    },
+    "model.layers.4.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.4.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.4.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.4.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.4.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.4.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.4.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 854,
+      "bits": 8,
+      "fraction": 1.2725591659545898e-05
+    },
+    "model.layers.5.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.5.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.5.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.5.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 16,
+      "bits": 8,
+      "fraction": 9.5367431640625e-07
+    },
+    "model.layers.5.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.5.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.5.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 488,
+      "bits": 8,
+      "fraction": 7.271766662597656e-06
+    },
+    "model.layers.6.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 5,
+      "bits": 8,
+      "fraction": 2.980232238769531e-07
+    },
+    "model.layers.6.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 5,
+      "bits": 8,
+      "fraction": 2.980232238769531e-07
+    },
+    "model.layers.6.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 5,
+      "bits": 8,
+      "fraction": 2.980232238769531e-07
+    },
+    "model.layers.6.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.6.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.6.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.6.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 662,
+      "bits": 8,
+      "fraction": 9.864568710327148e-06
+    },
+    "model.layers.7.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.7.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.7.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.7.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 9,
+      "bits": 8,
+      "fraction": 5.364418029785156e-07
+    },
+    "model.layers.7.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 13,
+      "bits": 8,
+      "fraction": 7.748603820800781e-07
+    },
+    "model.layers.7.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 13,
+      "bits": 8,
+      "fraction": 7.748603820800781e-07
+    },
+    "model.layers.7.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 42,
+      "bits": 8,
+      "fraction": 6.258487701416016e-07
+    },
+    "model.layers.8.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 4,
+      "bits": 8,
+      "fraction": 2.384185791015625e-07
+    },
+    "model.layers.8.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 4,
+      "bits": 8,
+      "fraction": 2.384185791015625e-07
+    },
+    "model.layers.8.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 4,
+      "bits": 8,
+      "fraction": 2.384185791015625e-07
+    },
+    "model.layers.8.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.8.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.8.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.8.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 341,
+      "bits": 8,
+      "fraction": 5.081295967102051e-06
+    },
+    "model.layers.9.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.9.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.9.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.9.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 5,
+      "bits": 8,
+      "fraction": 2.980232238769531e-07
+    },
+    "model.layers.9.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 4,
+      "bits": 8,
+      "fraction": 2.384185791015625e-07
+    },
+    "model.layers.9.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 4,
+      "bits": 8,
+      "fraction": 2.384185791015625e-07
+    },
+    "model.layers.9.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 522,
+      "bits": 8,
+      "fraction": 7.778406143188477e-06
+    },
+    "model.layers.10.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.10.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.10.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.10.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.10.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.10.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.10.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 704,
+      "bits": 8,
+      "fraction": 1.049041748046875e-05
+    },
+    "model.layers.11.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.11.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.11.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.11.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.11.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 4,
+      "bits": 8,
+      "fraction": 2.384185791015625e-07
+    },
+    "model.layers.11.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 4,
+      "bits": 8,
+      "fraction": 2.384185791015625e-07
+    },
+    "model.layers.11.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 297,
+      "bits": 8,
+      "fraction": 4.425644874572754e-06
+    },
+    "model.layers.12.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 5,
+      "bits": 8,
+      "fraction": 2.980232238769531e-07
+    },
+    "model.layers.12.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.12.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 4,
+      "bits": 8,
+      "fraction": 2.384185791015625e-07
+    },
+    "model.layers.12.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 23,
+      "bits": 8,
+      "fraction": 1.3709068298339844e-06
+    },
+    "model.layers.12.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.12.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.12.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 273,
+      "bits": 8,
+      "fraction": 4.06801700592041e-06
+    },
+    "model.layers.13.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.13.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.13.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 1,
+      "bits": 8,
+      "fraction": 5.960464477539063e-08
+    },
+    "model.layers.13.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.13.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.13.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 2,
+      "bits": 8,
+      "fraction": 1.1920928955078125e-07
+    },
+    "model.layers.13.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 13,
+      "bits": 8,
+      "fraction": 1.9371509552001953e-07
+    },
+    "model.layers.14.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.14.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.14.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.14.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 28,
+      "bits": 8,
+      "fraction": 1.6689300537109375e-06
+    },
+    "model.layers.14.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.14.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.14.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.15.self_attn.q_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.15.self_attn.k_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.15.self_attn.v_proj": {
+      "total": 16777216,
+      "saturated": 3,
+      "bits": 8,
+      "fraction": 1.7881393432617188e-07
+    },
+    "model.layers.15.self_attn.o_proj": {
+      "total": 16777216,
+      "saturated": 9,
+      "bits": 8,
+      "fraction": 5.364418029785156e-07
+    },
+    "model.layers.15.mlp.gate_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.15.mlp.up_proj": {
+      "total": 16777216,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    },
+    "model.layers.15.mlp.down_proj": {
+      "total": 67108864,
+      "saturated": 0,
+      "bits": 8,
+      "fraction": 0.0
+    }
+  }
+}

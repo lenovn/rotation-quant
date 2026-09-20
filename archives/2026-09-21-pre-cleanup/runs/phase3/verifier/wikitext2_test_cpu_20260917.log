@@ -1,0 +1,175 @@
+2026-09-17 independent WikiText-2 test CPU verifier preparation
+SOURCE=/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint
+HEAD=24918316ed594848d4de797c356b120f2a4ee0f3
+Initial git status --short (GIT_OPTIONAL_LOCKS=0):
+ M optimize_rotation.py
+ M train_utils/quant_linear.py
+ M train_utils/rotation_calibration.py
+ M utils/process_args.py
+ M utils/quant_utils.py
+?? experiments/
+?? tests/test_learned_sw_training.py
+?? tests/test_phase3_external.py
+?? tests/test_phase3_joint.py
+?? tests/test_w4_aware_training.py
+
+Read-only inspection completed: project AGENTS and STATUS/SPEC/PLAN/LESSONS;
+runs/phase3/STATUS.md; external_eval.py; test_phase3_external.py;
+common.py data protocol; scripts/phase2/validation_acceptance.py aggregation.
+Nested AGENTS search found none in worktrees/ and runs/.
+New test/report prepared only. Waiting for application-patch completion notice.
+No pytest invocation, GPU, tmux, model forward, training, calibration or selection.
+RESULT: NOT TESTED; neither PASS nor FAIL issued.
+
+
+Application patch completion notice received; actual external_eval.py diff reviewed.
+Only source imports, new test loader, dataset selection/output metadata and CLI data-source handling changed.
+load_c4_tokens, load_model, quantizer_snapshot and evaluate_tokens were unchanged in the reviewed diff.
+New test oracle uses metadata text_join=double-newline (not an additional required text_separator field).
+Added synthetic singleton-tail regression for explicit unscored_tail_tokens=1.
+
+WORKDIR=/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint
+COMMAND=CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 TOKENIZERS_PARALLELISM=false PYTHONPATH=/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -m pytest -p no:cacheprovider tests/test_phase3_wikitext_test.py tests/test_phase3_external.py::test_external_paired_driver_real_coldload_rope_and_immutable_scales tests/test_phase3_external.py::test_external_launcher_routing_environment_and_driver_default -q -s
+
+BEGIN RAW PYTEST OUTPUT (fake evaluator PPL values are NOT model measurements)
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+Token indices sequence length is longer than the specified maximum sequence length for this model (289076 > 2048). Running this sequence through the model will result in indexing errors
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+Token indices sequence length is longer than the specified maximum sequence length for this model (289076 > 2048). Running this sequence through the model will result in indexing errors
+WIKITEXT_TEST_ORACLE {"add_bos_token": false, "add_eos_token": false, "dataset": "Salesforce/wikitext", "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-test.arrow", "full_windows": 141, "predicted_tokens": 288934, "rows": 4358, "split": "test", "subset": "wikitext-2-raw-v1", "tail_tokens": 308, "text_join": "double-newline", "token_count": 289076, "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "unscored_tail_tokens": 0, "window_length": 2048, "windows": 142}
+.Evaluation segment 1/3: start=0, windows=128, seqlen=2048
+Evaluation segment 2/3: start=262144, windows=13, seqlen=2048
+Evaluation segment 3/3: start=288768, windows=1, seqlen=308
+.The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+Token indices sequence length is longer than the specified maximum sequence length for this model (289076 > 2048). Running this sequence through the model will result in indexing errors
+{"stage": "loading-fixed-model", "pid": 2, "time": 1789660065.2092676, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "bf16"}
+{"stage": "wikitext2-test-fixed-evaluation", "pid": 2, "time": 1789660065.2480114, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "windows": 142, "chunk_windows": 128}
+Evaluation segment 1/3: start=0, windows=128, seqlen=2048
+Evaluation segment 2/3: start=262144, windows=13, seqlen=2048
+Evaluation segment 3/3: start=288768, windows=1, seqlen=308
+WIKITEXT2_TEST_RESULT {"token_count": 289076, "predicted_tokens": 288934, "segments": [{"start_token": 0, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 3.490342855453491, "nll": 1.2499999707741178}, {"start_token": 262144, "seqlen": 2048, "windows": 13, "predicted_tokens": 26611, "ppl": 4.481688976287842, "nll": 1.4999999790145584}, {"start_token": 288768, "seqlen": 308, "windows": 1, "predicted_tokens": 307, "ppl": 5.754602909088135, "nll": 1.7500000405036478}], "unscored_tail_tokens": 0, "nll": 1.273556389335773, "ppl": 3.5735388858159927, "dataset": "Salesforce/wikitext", "subset": "wikitext-2-raw-v1", "split": "test", "mode": "bf16", "input_token_path": "/tmp/pytest-of-dongpeiyan/pytest-4/test_wikitext2_test_paired_dri0/bf16/input_tokens.pt", "input_metadata": {"dataset": "Salesforce/wikitext", "subset": "wikitext-2-raw-v1", "split": "test", "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-test.arrow", "rows": 4358, "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "add_bos_token": false, "add_eos_token": false, "text_join": "double-newline", "token_count": 289076, "window_length": 2048, "full_windows": 141, "tail_tokens": 308, "windows": 142, "predicted_tokens": 288934, "unscored_tail_tokens": 0, "protocol": "all test rows in original order; disjoint 2048-token windows including partial tail"}, "reused_tokens": false, "package": null, "chunk_windows": 128, "calibration": false, "training": false, "candidate_selection": false, "activation_scales_unchanged": true, "elapsed_seconds": 1.4915546340635046, "peak_allocated_gib": 0.0, "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL", "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py", "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py", "scope": "complete WikiText-2 test, including partial tail; frozen model; not native kernels or decode"}
+{"stage": "completed", "pid": 2, "time": 1789660065.2541003, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "bf16", "ppl": 3.5735388858159927, "nll": 1.273556389335773, "predicted_tokens": 288934, "elapsed_seconds": 1.4915546340635046}
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+Token indices sequence length is longer than the specified maximum sequence length for this model (289076 > 2048). Running this sequence through the model will result in indexing errors
+{"stage": "loading-fixed-model", "pid": 2, "time": 1789660066.4801116, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized"}
+{"stage": "wikitext2-test-fixed-evaluation", "pid": 2, "time": 1789660066.997921, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "windows": 142, "chunk_windows": 128}
+Evaluation segment 1/3: start=0, windows=128, seqlen=2048
+Evaluation segment 2/3: start=262144, windows=13, seqlen=2048
+Evaluation segment 3/3: start=288768, windows=1, seqlen=308
+WIKITEXT2_TEST_RESULT {"token_count": 289076, "predicted_tokens": 288934, "segments": [{"start_token": 0, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 3.490342855453491, "nll": 1.2499999707741178}, {"start_token": 262144, "seqlen": 2048, "windows": 13, "predicted_tokens": 26611, "ppl": 4.481688976287842, "nll": 1.4999999790145584}, {"start_token": 288768, "seqlen": 308, "windows": 1, "predicted_tokens": 307, "ppl": 5.754602909088135, "nll": 1.7500000405036478}], "unscored_tail_tokens": 0, "nll": 1.273556389335773, "ppl": 3.5735388858159927, "dataset": "Salesforce/wikitext", "subset": "wikitext-2-raw-v1", "split": "test", "mode": "quantized", "input_token_path": "/tmp/pytest-of-dongpeiyan/pytest-4/test_wikitext2_test_paired_dri0/quantized/input_tokens.pt", "input_metadata": {"dataset": "Salesforce/wikitext", "subset": "wikitext-2-raw-v1", "split": "test", "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-test.arrow", "rows": 4358, "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "add_bos_token": false, "add_eos_token": false, "text_join": "double-newline", "token_count": 289076, "window_length": 2048, "full_windows": 141, "tail_tokens": 308, "windows": 142, "predicted_tokens": 288934, "unscored_tail_tokens": 0, "protocol": "all test rows in original order; disjoint 2048-token windows including partial tail"}, "reused_tokens": false, "package": "/tmp/pytest-of-dongpeiyan/pytest-4/test_wikitext2_test_paired_dri0/frozen.pt", "chunk_windows": 128, "calibration": false, "training": false, "candidate_selection": false, "activation_scales_unchanged": true, "elapsed_seconds": 1.7576894629746675, "peak_allocated_gib": 0.0, "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL", "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py", "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py", "scope": "complete WikiText-2 test, including partial tail; frozen model; not native kernels or decode"}
+{"stage": "completed", "pid": 2, "time": 1789660067.026658, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized", "ppl": 3.5735388858159927, "nll": 1.273556389335773, "predicted_tokens": 288934, "elapsed_seconds": 1.7576894629746675}
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+Token indices sequence length is longer than the specified maximum sequence length for this model (289076 > 2048). Running this sequence through the model will result in indexing errors
+{"stage": "loading-fixed-model", "pid": 2, "time": 1789660068.5661206, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized"}
+{"stage": "wikitext2-test-fixed-evaluation", "pid": 2, "time": 1789660068.6043181, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "windows": 142, "chunk_windows": 128}
+.{"stage": "loading-fixed-model", "pid": 2, "time": 1789660068.6525967, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "bf16"}
+{"stage": "wikitext2-test-fixed-evaluation", "pid": 2, "time": 1789660068.6537292, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "windows": 1, "chunk_windows": 128}
+Evaluation segment 1/1: start=0, windows=1, seqlen=2048
+WIKITEXT2_TEST_RESULT {"token_count": 2049, "predicted_tokens": 2047, "segments": [{"start_token": 0, "seqlen": 2048, "windows": 1, "predicted_tokens": 2047, "ppl": 2.0, "nll": 0.6931471805599453}], "unscored_tail_tokens": 1, "nll": 0.6931471805599453, "ppl": 2.0, "dataset": "Salesforce/wikitext", "subset": "wikitext-2-raw-v1", "split": "test", "mode": "bf16", "input_token_path": "/tmp/pytest-of-dongpeiyan/pytest-4/test_wikitext2_test_singleton_0/input_tokens.pt", "input_metadata": {"dataset": "Salesforce/wikitext", "subset": "wikitext-2-raw-v1", "split": "test", "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-test.arrow", "rows": 1, "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "add_bos_token": false, "add_eos_token": false, "text_join": "double-newline", "token_count": 2049, "window_length": 2048, "full_windows": 1, "tail_tokens": 1, "windows": 1, "predicted_tokens": 2047, "unscored_tail_tokens": 1, "protocol": "all test rows in original order; disjoint 2048-token windows including partial tail"}, "reused_tokens": false, "package": null, "chunk_windows": 128, "calibration": false, "training": false, "candidate_selection": false, "activation_scales_unchanged": true, "elapsed_seconds": 0.010426725959405303, "peak_allocated_gib": 0.0, "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL", "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py", "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py", "scope": "complete WikiText-2 test, including partial tail; frozen model; not native kernels or decode"}
+{"stage": "completed", "pid": 2, "time": 1789660068.6589205, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "bf16", "ppl": 2.0, "nll": 0.6931471805599453, "predicted_tokens": 2047, "elapsed_seconds": 0.010426725959405303}
+.usage: external_eval.py [-h] --output OUTPUT --mode {bf16,quantized}
+                        [--package PACKAGE]
+                        (--tokens TOKENS | --wikitext2-test)
+                        [--chunk-windows CHUNK_WINDOWS]
+external_eval.py: error: one of the arguments --tokens --wikitext2-test is required
+usage: external_eval.py [-h] --output OUTPUT --mode {bf16,quantized}
+                        [--package PACKAGE]
+                        (--tokens TOKENS | --wikitext2-test)
+                        [--chunk-windows CHUNK_WINDOWS]
+external_eval.py: error: argument --wikitext2-test: not allowed with argument --tokens
+.{"stage": "loading-fixed-model", "pid": 2, "time": 1789660069.025457, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "bf16"}
+{"stage": "c4-fixed-evaluation", "pid": 2, "time": 1789660069.1033854, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "windows": 1024, "chunk_windows": 128}
+Evaluation segment 1/8: start=0, windows=128, seqlen=2048
+Evaluation segment 2/8: start=262144, windows=128, seqlen=2048
+Evaluation segment 3/8: start=524288, windows=128, seqlen=2048
+Evaluation segment 4/8: start=786432, windows=128, seqlen=2048
+Evaluation segment 5/8: start=1048576, windows=128, seqlen=2048
+Evaluation segment 6/8: start=1310720, windows=128, seqlen=2048
+Evaluation segment 7/8: start=1572864, windows=128, seqlen=2048
+Evaluation segment 8/8: start=1835008, windows=128, seqlen=2048
+C4_RESULT {"token_count": 2097152, "predicted_tokens": 2096128, "segments": [{"start_token": 0, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 7.389056205749512, "nll": 2.0000000144563606}, {"start_token": 262144, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 7.7679009437561035, "nll": 2.0499999790740553}, {"start_token": 524288, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 8.166169166564941, "nll": 2.0999999086471686}, {"start_token": 786432, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 8.584858894348145, "nll": 2.150000057912456}, {"start_token": 1048576, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 9.02501392364502, "nll": 2.2000000470039063}, {"start_token": 1310720, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 9.487735748291016, "nll": 2.2499999907177526}, {"start_token": 1572864, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 9.97418212890625, "nll": 2.299999967324793}, {"start_token": 1835008, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 10.48556900024414, "nll": 2.3499999309066193}], "unscored_tail_tokens": 0, "nll": 2.174999987005389, "ppl": 8.802185007806637, "dataset": "allenai/c4", "subset": "en", "split": "validation", "mode": "bf16", "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt", "input_metadata": {"dataset": "allenai/c4", "subset": "en", "split": "validation", "source_files": ["https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"], "source_document_count": 364608, "seed": 42, "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix", "selected_document_count": 4480, "concatenated_token_count": 2150947, "discarded_suffix_tokens": 53795, "token_count": 2097152, "window_length": 2048, "windows": 1024, "predicted_tokens": 2096128, "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "tokenizer_class": "LlamaTokenizerFast", "add_bos_token": false, "add_eos_token": false, "text_separator": "\n\n", "purpose": "external evaluation only; no calibration or selection"}, "reused_tokens": true, "package": null, "chunk_windows": 128, "calibration": false, "training": false, "candidate_selection": false, "activation_scales_unchanged": true, "elapsed_seconds": 0.1117430180311203, "peak_allocated_gib": 0.0, "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL", "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py", "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py", "scope": "fixed 1024-window protocol when windows=1024; not all C4, native kernels or decode"}
+{"stage": "completed", "pid": 2, "time": 1789660069.111484, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "bf16", "ppl": 8.802185007806637, "nll": 2.174999987005389, "predicted_tokens": 2096128, "elapsed_seconds": 0.1117430180311203}
+{"stage": "loading-fixed-model", "pid": 2, "time": 1789660069.13762, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized"}
+{"stage": "c4-fixed-evaluation", "pid": 2, "time": 1789660069.5635335, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "windows": 1024, "chunk_windows": 128}
+Evaluation segment 1/8: start=0, windows=128, seqlen=2048
+Evaluation segment 2/8: start=262144, windows=128, seqlen=2048
+Evaluation segment 3/8: start=524288, windows=128, seqlen=2048
+Evaluation segment 4/8: start=786432, windows=128, seqlen=2048
+Evaluation segment 5/8: start=1048576, windows=128, seqlen=2048
+Evaluation segment 6/8: start=1310720, windows=128, seqlen=2048
+Evaluation segment 7/8: start=1572864, windows=128, seqlen=2048
+Evaluation segment 8/8: start=1835008, windows=128, seqlen=2048
+C4_RESULT {"token_count": 2097152, "predicted_tokens": 2096128, "segments": [{"start_token": 0, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 7.389056205749512, "nll": 2.0000000144563606}, {"start_token": 262144, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 7.7679009437561035, "nll": 2.0499999790740553}, {"start_token": 524288, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 8.166169166564941, "nll": 2.0999999086471686}, {"start_token": 786432, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 8.584858894348145, "nll": 2.150000057912456}, {"start_token": 1048576, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 9.02501392364502, "nll": 2.2000000470039063}, {"start_token": 1310720, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 9.487735748291016, "nll": 2.2499999907177526}, {"start_token": 1572864, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 9.97418212890625, "nll": 2.299999967324793}, {"start_token": 1835008, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 10.48556900024414, "nll": 2.3499999309066193}], "unscored_tail_tokens": 0, "nll": 2.174999987005389, "ppl": 8.802185007806637, "dataset": "allenai/c4", "subset": "en", "split": "validation", "mode": "quantized", "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt", "input_metadata": {"dataset": "allenai/c4", "subset": "en", "split": "validation", "source_files": ["https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"], "source_document_count": 364608, "seed": 42, "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix", "selected_document_count": 4480, "concatenated_token_count": 2150947, "discarded_suffix_tokens": 53795, "token_count": 2097152, "window_length": 2048, "windows": 1024, "predicted_tokens": 2096128, "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "tokenizer_class": "LlamaTokenizerFast", "add_bos_token": false, "add_eos_token": false, "text_separator": "\n\n", "purpose": "external evaluation only; no calibration or selection"}, "reused_tokens": true, "package": "/tmp/pytest-of-dongpeiyan/pytest-4/test_external_paired_driver_re0/frozen.pt", "chunk_windows": 128, "calibration": false, "training": false, "candidate_selection": false, "activation_scales_unchanged": true, "elapsed_seconds": 0.6938248169608414, "peak_allocated_gib": 0.0, "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL", "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py", "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py", "scope": "fixed 1024-window protocol when windows=1024; not all C4, native kernels or decode"}
+{"stage": "completed", "pid": 2, "time": 1789660069.8072495, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized", "ppl": 8.802185007806637, "nll": 2.174999987005389, "predicted_tokens": 2096128, "elapsed_seconds": 0.6938248169608414}
+{"stage": "loading-fixed-model", "pid": 2, "time": 1789660069.9309237, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "mode": "quantized"}
+{"stage": "c4-fixed-evaluation", "pid": 2, "time": 1789660070.3493164, "cuda_visible_devices": "", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null, "windows": 1024, "chunk_windows": 128}
+..
+=============================== warnings summary ===============================
+tests/test_phase3_wikitext_test.py::test_wikitext2_test_paired_driver_saved_tokens_and_frozen_scales
+tests/test_phase3_external.py::test_external_paired_driver_real_coldload_rope_and_immutable_scales
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+7 passed, 2 warnings in 21.42s
+
+END RAW PYTEST OUTPUT
+EXIT_CODE=0
+
+
+--- source identity ---
+24918316ed594848d4de797c356b120f2a4ee0f3
+worktrees/SpinQuant-phase3-joint/experiments/phase3/external_eval.py | 10865 bytes | 2026-09-17 23:43:54.359779234 +0800
+
+--- new test whitespace ---
+
+--- test entrypoints ---
+41:def test_wikitext2_test_real_arrow_tokenizer_and_metadata(wikitext_test_oracle, monkeypatch):
+79:def test_wikitext2_test_real_tail_target_weighted_nll(wikitext_test_oracle, monkeypatch):
+114:def test_wikitext2_test_paired_driver_saved_tokens_and_frozen_scales(
+198:def test_wikitext2_test_singleton_tail_is_reported_without_scoring(tmp_path, monkeypatch):
+229:def test_wikitext2_test_cli_required_exclusive_and_c4_compatible(tmp_path, monkeypatch):
+
+--- final source status ---
+ M optimize_rotation.py
+ M train_utils/quant_linear.py
+ M train_utils/rotation_calibration.py
+ M utils/process_args.py
+ M utils/quant_utils.py
+?? experiments/
+?? tests/test_learned_sw_training.py
+?? tests/test_phase3_external.py
+?? tests/test_phase3_joint.py
+?? tests/test_phase3_wikitext_test.py
+?? tests/test_w4_aware_training.py
+
+--- memory citation coordinates ---
+    27	- `runs/phase2/down-codebooks-c-20260909.6YRIty/results/calibration_layer_*.json`
+    28	- `runs/phase2/down-code-books-c-20260909.6YRIty/results/summary.json`（实际路径为 `down-codebooks-c-20260909.6YRIty`）
+    29	
+    30	## Task 2: 选择并执行外部数据集评测
+    31	
+    32	Outcome: success
+    33	
+    34	Preference signals:
+    35	
+    36	- 用户说“我们先评价当前设置吧，比较原始 BF16 和当前 W4A8＋down-SP2”，并随后授权“可以开始测吧” -> 类似任务应固定现有权重、R、SA 和 SP2 scales，只做 matched evaluation，不因新数据重新校准、训练或选择格式。
+    37	- 用户追问“为什么用validation而不用test” -> 需要明确解释数据集实际 split，而不是仅按名称称为 test；C4 官方只提供 train 和 validation，因此未参与开发的 validation 子集可作为外部测试数据，但不能声称绝对独立于基础模型预训练语料。
+    38	
+    39	Key steps:
+
+FINAL RESULT: LIMITED CPU PASS; 7 passed, 2 warnings in 21.42s.
+Real WikiText-2 test: 4358 rows; 289076 tokens; 141 full 2048 windows plus tail=308;
+142 scored windows; 288934 targets; unscored_tail_tokens=0.
+No production model GPU evaluation or real test PPL was performed by this verifier.

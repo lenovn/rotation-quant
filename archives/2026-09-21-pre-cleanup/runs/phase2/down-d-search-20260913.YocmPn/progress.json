@@ -1,0 +1,8 @@
+{
+  "pid": 405873,
+  "stage": "precision_loop_completed",
+  "gpu_seconds": 83.92961131798802,
+  "gpu_budget_seconds": null,
+  "peak_reserved_gib": 4.869140625,
+  "full_validation_evaluations": 0
+}

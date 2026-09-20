@@ -1,0 +1,15 @@
+{
+  "mode": "bf16",
+  "pid": 14530,
+  "command": [
+    "runs/phase3/auditor/first-validation-20260914/replicate.py",
+    "bf16"
+  ],
+  "cuda_visible_devices": "1",
+  "torch": "2.4.1+cu121",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "started_at": 1789324926.294335,
+  "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "model_revision": "Revision:master,CreatedAt:1740591574"
+}

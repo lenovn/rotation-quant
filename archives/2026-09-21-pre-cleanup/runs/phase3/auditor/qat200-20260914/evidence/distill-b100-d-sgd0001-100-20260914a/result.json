@@ -1,0 +1,30 @@
+{
+  "completed_steps": 100,
+  "target_reached": false,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/post-b100-d-20260914a/static_w4a8.pt",
+  "checkpoints": [
+    {
+      "step": 10,
+      "training_probe": 2.9611217975616455
+    },
+    {
+      "step": 25,
+      "training_probe": 2.9697712063789368,
+      "validation_nll": 2.8375366765719927,
+      "validation_ppl": 17.07365575720706,
+      "changed_codes": 594
+    },
+    {
+      "step": 50,
+      "training_probe": 2.9775173664093018
+    },
+    {
+      "step": 100,
+      "training_probe": 2.9676241874694824,
+      "validation_nll": 2.8425382978723266,
+      "validation_ppl": 17.15926563313684,
+      "changed_codes": 49986
+    }
+  ],
+  "method": "quantization-aware distillation, not frozen-weight PTQ"
+}

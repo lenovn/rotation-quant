@@ -1,0 +1,15 @@
+{
+  "stage": "completed",
+  "pid": 2485935,
+  "time": 1789685108.0322316,
+  "cuda_visible_devices": "0",
+  "allocated_gib": 3.7957167625427246,
+  "reserved_gib": 5.994140625,
+  "peak_allocated_gib": 5.543839454650879,
+  "gpu_time_budget": null,
+  "mode": "quantized",
+  "ppl": 24.903332773203157,
+  "nll": 3.215001640827423,
+  "predicted_tokens": 2096128,
+  "elapsed_seconds": 243.082197495969
+}

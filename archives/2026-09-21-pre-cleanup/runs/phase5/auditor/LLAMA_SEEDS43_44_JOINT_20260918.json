@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "scope": "Llama seeds43/44 initialization, Joint100 and paired initial INT8 only; downstream/final results not covered",
+  "source_identical_to_seed42_audited_version": true,
+  "seed43_and44_calibration_indices_different": true,
+  "seed43_and44_all17_initial_rotations_different": true,
+  "seed_proof": "Original metadata plus exact checkpoint0 parameter load; independent seeded-index reconstruction; original R tensors differ from seed42 and each other. No fresh model initialization performed.",
+  "results": [
+    {
+      "seed": 43,
+      "init": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/init-s43",
+      "joint": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s43",
+      "uniform": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-initial-s43",
+      "calibration_indices": [
+        1088,
+        40,
+        1087,
+        252,
+        281,
+        790,
+        290,
+        547,
+        517,
+        0,
+        401,
+        754,
+        746,
+        317,
+        1103,
+        612,
+        243,
+        218,
+        786,
+        562,
+        439,
+        458,
+        1035,
+        963,
+        618,
+        322,
+        984,
+        287,
+        10,
+        965,
+        1122,
+        753
+      ],
+      "initial_241_parameters_exactly_loaded_into_checkpoint0": true,
+      "all_17_initial_rotations_different_from_seed42": true,
+      "all_17_rotations_changed_by_joint100": true,
+      "updates": 100,
+      "global_batch": 8,
+      "input_token_visits": 1638400,
+      "prediction_targets": 1637600,
+      "W_SW_records_bitwise_equal": 112,
+      "non_down_SA_equal": 96,
+      "high_precision_tensors_bitwise_equal": 74,
+      "initial_sp2_formats": {
+        "int8": 96,
+        "sp2": 16
+      },
+      "initial_int8_formats": {
+        "int8": 112
+      },
+      "calibration": {
+        "train_tokens": 4096,
+        "layers": 16,
+        "sampled_rows_per_layer": 512,
+        "candidates_per_layer": 50,
+        "matched_bounds_and_capture_counts": true,
+        "parent_quantizer_state_unchanged": true
+      },
+      "validation": {
+        "ppl": 17.32269586594728,
+        "nll": 2.8520175414808633,
+        "targets": 252728
+      },
+      "summary_exact": true
+    },
+    {
+      "seed": 44,
+      "init": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/init-s44",
+      "joint": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s44",
+      "uniform": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-initial-s44",
+      "calibration_indices": [
+        932,
+        1005,
+        907,
+        0,
+        439,
+        584,
+        10,
+        514,
+        815,
+        1080,
+        732,
+        403,
+        467,
+        525,
+        222,
+        595,
+        543,
+        573,
+        665,
+        994,
+        90,
+        774,
+        159,
+        314,
+        577,
+        41,
+        247,
+        193,
+        1044,
+        179,
+        934,
+        493
+      ],
+      "initial_241_parameters_exactly_loaded_into_checkpoint0": true,
+      "all_17_initial_rotations_different_from_seed42": true,
+      "all_17_rotations_changed_by_joint100": true,
+      "updates": 100,
+      "global_batch": 8,
+      "input_token_visits": 1638400,
+      "prediction_targets": 1637600,
+      "W_SW_records_bitwise_equal": 112,
+      "non_down_SA_equal": 96,
+      "high_precision_tensors_bitwise_equal": 74,
+      "initial_sp2_formats": {
+        "int8": 96,
+        "sp2": 16
+      },
+      "initial_int8_formats": {
+        "int8": 112
+      },
+      "calibration": {
+        "train_tokens": 4096,
+        "layers": 16,
+        "sampled_rows_per_layer": 512,
+        "candidates_per_layer": 50,
+        "matched_bounds_and_capture_counts": true,
+        "parent_quantizer_state_unchanged": true
+      },
+      "validation": {
+        "ppl": 17.117556465258705,
+        "nll": 2.8401046306937046,
+        "targets": 252728
+      },
+      "summary_exact": true
+    }
+  ]
+}

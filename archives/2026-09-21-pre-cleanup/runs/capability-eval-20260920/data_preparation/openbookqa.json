@@ -1,0 +1,11 @@
+{
+  "task": "openbookqa",
+  "path": "openbookqa",
+  "name": "main",
+  "splits": {
+    "train": 4957,
+    "validation": 500,
+    "test": 500
+  },
+  "status": "ready"
+}

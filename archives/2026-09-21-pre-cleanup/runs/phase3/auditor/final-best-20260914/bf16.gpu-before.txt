@@ -1,0 +1,12 @@
+2026-09-14T12:47:22,892210565+08:00
+index, uuid, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%]
+0, GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b, 24564 MiB, 18 MiB, 24075 MiB, 0 %
+1, GPU-75f32c85-75f6-07fa-f335-6e1cc84aacf9, 24564 MiB, 18 MiB, 24075 MiB, 0 %
+2, GPU-835451b2-a7e7-335e-2968-fd188801cf61, 24564 MiB, 18 MiB, 24075 MiB, 0 %
+3, GPU-b46f451f-cbbf-cb05-ec58-d124e7dbb743, 24564 MiB, 18 MiB, 24075 MiB, 0 %
+4, GPU-34587165-f7a3-9c6e-e4f0-a431b17af503, 24564 MiB, 23619 MiB, 474 MiB, 0 %
+5, GPU-e888b579-a41b-5892-0c5d-f3145ddd6327, 24564 MiB, 18 MiB, 24075 MiB, 0 %
+6, GPU-268df8cd-d4ff-6179-5702-d6173f63cac2, 24564 MiB, 18 MiB, 24075 MiB, 0 %
+7, GPU-ed81f3c7-cf0c-01fd-e758-6e512ee3a0b9, 24564 MiB, 18 MiB, 24075 MiB, 0 %
+gpu_uuid, pid, process_name, used_gpu_memory [MiB]
+GPU-34587165-f7a3-9c6e-e4f0-a431b17af503, 17499, 可能有问题, 23596 MiB

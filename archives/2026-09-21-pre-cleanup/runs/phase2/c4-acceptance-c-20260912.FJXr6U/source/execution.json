@@ -1,0 +1,8 @@
+{
+  "project_commit": "d9a636ba273fa812b1d6098e9f9df0f8a33eb154",
+  "spinquant_commit": "24918316ed594848d4de797c356b120f2a4ee0f3",
+  "gpu_index": 3,
+  "python": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+  "torchrun": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/torchrun",
+  "command": "PYTHON_BIN=/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python TORCHRUN_BIN=/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/torchrun CUDA_VISIBLE_DEVICES=3 bash scripts/phase2/44_run_c4_acceptance_c_local.sh"
+}

@@ -1,0 +1,32 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 18.136058807373047,
+      "nll": 2.897902155776782
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 20.364675521850586,
+      "nll": 3.0138018078455553
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.898336444698109,
+  "ppl": 18.143936807329858,
+  "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/eval_utils.py",
+  "method": "full-backbone quantization-aware distillation, not frozen-weight PTQ",
+  "update_step": 400,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s43/static_w4a8.pt",
+  "format": "112 W4 / 112 static INT8; BF16 KV16 prefill"
+}

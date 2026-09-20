@@ -1,0 +1,135 @@
+.F..F.....                                                               [100%]
+=================================== FAILURES ===================================
+__________ test_distill_parent_grid_aliases_real_checkpoint_backward ___________
+
+distill_student = (LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32, 8)
+    (layers): ModuleList(
+      (0-15):...
+        [ 0.0000,  0.0000,  0.0000, -0.0374,  0.0000,  0.0107,  0.0000,  0.0107]],
+       dtype=torch.bfloat16), ...])
+calibration = [tensor([[1, 4, 8, 3, 7, 2, 9, 5]]), tensor([[6, 2, 5, 1, 8, 4]])]
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fee87aedeb0>
+
+    def test_distill_parent_grid_aliases_real_checkpoint_backward(distill_student, calibration, monkeypatch):
+        from experiments.phase3 import distill
+    
+        student, parent, records, old_weights = distill_student
+        groups = distill.parameter_groups(student)
+        assert {name: len(values) for name, values in groups.items()} == dict(W=112, SA=96, SW=112, SP2=16)
+        trainable = {id(parameter) for values in groups.values() for _, parameter in values}
+        assert len(trainable) == 336
+        assert trainable == {id(parameter) for parameter in student.parameters() if parameter.requires_grad}
+        assert not {id(parameter) for parameter in old_weights} & {id(parameter) for parameter in student.parameters()}
+        for name, wrapper in common.wrappers(student).items():
+            assert isinstance(wrapper.module, distill.TrainableQuantLinear)
+            assert wrapper.weight is wrapper.module.weight and wrapper.bias is None
+            assert wrapper.module.weight.dtype == wrapper.module.quantizer.scale.dtype == torch.float32
+            assert torch.equal(wrapper.module.quantizer.quantize(wrapper.module.weight).to(torch.bfloat16),
+                               parent.get_submodule(name).module.weight)
+        assert not hasattr(student, "R1")
+        assert student.model.gradient_checkpointing
+        assert student.model._gradient_checkpointing_func.keywords["use_reentrant"] is False
+        high_precision = {name: parameter.detach().clone() for name, parameter in student.named_parameters()
+                          if id(parameter) not in trainable}
+        with torch.no_grad():
+            for ids in calibration:
+                expected = parent.lm_head(common.backbone(parent, ids))
+                assert torch.equal(student.lm_head(common.backbone(student, ids)), expected)
+        teacher = distill.teacher_model()
+        teacher_before = cloned_state(teacher)
+        checkpoints = []
+        original_checkpoint = distill.checkpoint
+    
+        def record_checkpoint(function, *args, **kwargs):
+            checkpoints.append(kwargs)
+            return original_checkpoint(function, *args, **kwargs)
+    
+        monkeypatch.setattr(distill, "checkpoint", record_checkpoint)
+        optimizers = distill.make_optimizers(groups, distill_arguments("parent.pt"))
+        assert isinstance(optimizers[0], torch.optim.SGD) and isinstance(optimizers[1], torch.optim.Adam)
+        assert optimizers[0].defaults["momentum"] == 0.9 and optimizers[0].defaults["foreach"] is False
+        assert len(optimizers[1].param_groups) == 224
+        assert optimizers[1].defaults["eps"] == 1e-12
+        optimized = [parameter for optimizer in optimizers for group in optimizer.param_groups for parameter in group["params"]]
+        assert len(optimized) == len({id(parameter) for parameter in optimized}) == 336
+        assert {id(parameter) for parameter in optimized} == trainable
+        before = {id(parameter): parameter.detach().clone() for parameter in optimized}
+        student.train()
+        loss, ce, divergence = distill.distillation_loss(student, teacher, calibration[0], chunk_size=3)
+        loss.backward()
+        assert len(checkpoints) == 3 and all(row["use_reentrant"] is False for row in checkpoints)
+        assert all(torch.isfinite(value) for value in (loss, ce, divergence))
+        for values in groups.values():
+>           assert all(parameter.grad is not None and torch.isfinite(parameter.grad).all() for _, parameter in values)
+E           assert False
+E            +  where False = all(<generator object test_distill_parent_grid_aliases_real_checkpoint_backward.<locals>.<genexpr> at 0x7fee7cb56820>)
+
+tests/test_phase3_joint.py:1413: AssertionError
+___________ test_distill_export_coldload_exact_forward_codes_and_hp ____________
+
+distill_student = (LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32, 8)
+    (layers): ModuleList(
+      (0-15):...
+        [ 0.0000,  0.0000,  0.0000, -0.0374,  0.0000,  0.0107,  0.0000,  0.0107]],
+       dtype=torch.bfloat16), ...])
+calibration = [tensor([[1, 4, 8, 3, 7, 2, 9, 5]]), tensor([[6, 2, 5, 1, 8, 4]])]
+tmp_path = PosixPath('/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-distill-first-20260914/test_distill_export_coldload_e0')
+
+    def test_distill_export_coldload_exact_forward_codes_and_hp(distill_student, calibration, tmp_path):
+        from experiments.phase3 import distill, postprocess
+    
+        student, parent, records, _ = distill_student
+        original_records = copy.deepcopy(records)
+        name = next(iter(records))
+        wrapper = student.get_submodule(name)
+        original_code = int(quantization.unpack_int4(records[name]["packed"], records[name]["shape"])[0, 0])
+        next_code = original_code + 1 if original_code < 7 else original_code - 1
+        with torch.no_grad():
+            wrapper.module.weight[0, 0] = (next_code + 0.1) * wrapper.module.quantizer.scale[0, 0]
+            student.get_submodule("model.layers.0.mlp.down_proj").quantizer.scale.mul_(1.125)
+        before = cloned_state(student)
+        output = tmp_path / "student.pt"
+        changed = distill.export_student(student, records, output, dict(test="distill-export"))
+        state = torch.load(output, map_location="cpu", weights_only=True)
+        assert len(changed) == len(state["weights"]) == 112
+        assert changed[name]["changed_codes"] > 0
+        for module_name, current in common.wrappers(student).items():
+            expected = (current.module.weight.detach().float() / current.module.quantizer.scale.detach()).round().clamp(-8, 7).to(torch.int8)
+            packed = state["weights"][module_name]
+            codes = quantization.unpack_int4(packed["packed"], packed["shape"])
+            assert torch.equal(codes, expected) and ((codes >= -8) & (codes <= 7)).all()
+            parent_codes = quantization.unpack_int4(records[module_name]["packed"], records[module_name]["shape"])
+            assert changed[module_name] == dict(changed_codes=int((expected != parent_codes).sum()), total_codes=expected.numel())
+        for key, value in state["high_precision"].items():
+>           assert torch.equal(value, parent.state_dict()[key])
+E           assert False
+E            +  where False = <built-in method equal of type object at 0x7fef43c67500>(tensor([nan]), tensor([nan]))
+E            +    where <built-in method equal of type object at 0x7fef43c67500> = torch.equal
+
+tests/test_phase3_joint.py:1515: AssertionError
+=============================== warnings summary ===============================
+tests/test_phase3_joint.py::test_distill_parent_grid_aliases_real_checkpoint_backward
+tests/test_phase3_joint.py::test_distill_export_coldload_exact_forward_codes_and_hp
+tests/test_phase3_joint.py::test_distill_resume_optimizer_rng_next_step_and_atomic_save
+tests/test_phase3_joint.py::test_distill_resume_rejects_malformed_without_mutation[coverage]
+tests/test_phase3_joint.py::test_distill_resume_rejects_malformed_without_mutation[weight_shape]
+tests/test_phase3_joint.py::test_distill_resume_rejects_malformed_without_mutation[scale_nonpositive]
+tests/test_phase3_joint.py::test_distill_resume_rejects_malformed_without_mutation[optimizer_count]
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+tests/test_phase3_joint.py::test_distill_parent_grid_aliases_real_checkpoint_backward
+tests/test_phase3_joint.py::test_distill_loss_chunk_tail_shift_and_token_normalization
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+    with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/cpu-distill-first-20260914.xml -
+=========================== short test summary info ============================
+FAILED tests/test_phase3_joint.py::test_distill_parent_grid_aliases_real_checkpoint_backward
+FAILED tests/test_phase3_joint.py::test_distill_export_coldload_exact_forward_codes_and_hp
+2 failed, 8 passed, 69 deselected, 9 warnings in 10.10s

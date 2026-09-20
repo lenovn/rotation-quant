@@ -1,0 +1,13 @@
+{
+  "stage": "completed",
+  "pid": 1012993,
+  "time": 1789335179.1834972,
+  "cuda_visible_devices": "7",
+  "allocated_gib": 11.047683715820312,
+  "reserved_gib": 11.056640625,
+  "peak_allocated_gib": 15.866312503814697,
+  "gpu_time_budget": null,
+  "steps": 100,
+  "target_reached": false,
+  "elapsed_seconds": 762.5129474119749
+}

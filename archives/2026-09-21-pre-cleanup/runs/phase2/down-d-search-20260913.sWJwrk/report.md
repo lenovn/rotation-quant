@@ -1,0 +1,5 @@
+# Full-window down1 rounding
+
+Validation PPL=17.156840423438286, NLL=2.8423969525985595; delta_PPL=-0.4855595524513632, delta_NLL=-0.02790814178067702. New best original W4A8 scope, original SW/SA/SP2 alpha retained. Independent verifier PASS; pack and recorded code count4765850 match. Selected8192 steps by8full train heldout windows (16384rows), fit24full windows (49152rows), all drawn from original32-window seed42 settings. This changes both data coverage and search depth relative to GXOlZS, so benefit cannot be assigned to either alone.
+
+Next round: 16down sequential extension with heldout true NLL acceptance instead of relying solely on MSE. Per layer fit24/hold8, candidate0/512/2048/8192. MSE prefilters; each surviving candidate scored with8-window true next-token NLL; no gain retains original current-layer codes. Previous selected prefix's NLL is reused as exact current-layer identity control. Final fullvalidation only after all layers. Run ../down-d-search-20260913.k0nDFs with PRECISION_LOOP=rounding_downs_nll bash scripts/phase2/46_run_down_d_search_local.sh. Prior best saved independently, not overwritten.

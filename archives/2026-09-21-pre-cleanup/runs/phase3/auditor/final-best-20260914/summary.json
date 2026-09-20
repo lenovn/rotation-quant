@@ -1,0 +1,348 @@
+{
+  "created_at": "2026-09-14T04:54:49.181005+00:00",
+  "verdict": "PASS",
+  "scope": "same independent experiment auditor; final evidence and exactly two independent GPU full evaluations",
+  "gpu_checks": {
+    "bf16": {
+      "exact_reproduction": true,
+      "exit_zero": true,
+      "log_matches": true,
+      "pid_matches": true,
+      "same_gpu": true,
+      "current_source": true,
+      "full_tokens": true,
+      "historical_tokens_equal": true,
+      "rope_fp32": true,
+      "original_bf16_unmodified": true,
+      "cold_package_no_calibration": null,
+      "activation_scales_unchanged": null
+    },
+    "final": {
+      "exact_reproduction": true,
+      "exit_zero": true,
+      "log_matches": true,
+      "pid_matches": true,
+      "same_gpu": true,
+      "current_source": true,
+      "full_tokens": true,
+      "historical_tokens_equal": true,
+      "rope_fp32": true,
+      "original_bf16_unmodified": null,
+      "cold_package_no_calibration": true,
+      "activation_scales_unchanged": true
+    }
+  },
+  "required_run_checks": {
+    "distill-b100-refined-ref-adam1e5-400-20260914a": {
+      "source_root": true,
+      "source_head": true,
+      "dirty_matches": true,
+      "distill_matches_previous_audited": true,
+      "data_equal_prior": true,
+      "fresh_run": true,
+      "exact_steps": true,
+      "all_microbatch_targets": true,
+      "all_cumulative_tokens": true,
+      "gradient_coverage": true,
+      "finite_losses": true,
+      "lr_schedule": true,
+      "window_sequence": true,
+      "resume_step": true,
+      "adam_state_steps": true,
+      "resume_fp32": true,
+      "completed": true,
+      "completion_event": true,
+      "pid_chain": true,
+      "final_result_matches": true,
+      "no_failure": true,
+      "full_protocol": true,
+      "final_sw_matches_resume": true,
+      "final_sa_matches_resume": true,
+      "final_sp2_matches_resume": true
+    },
+    "distill-b100-refined-ref-adam2e5-400-20260914a": {
+      "source_root": true,
+      "source_head": true,
+      "dirty_matches": true,
+      "distill_matches_previous_audited": true,
+      "data_equal_prior": true,
+      "fresh_run": true,
+      "exact_steps": true,
+      "all_microbatch_targets": true,
+      "all_cumulative_tokens": true,
+      "gradient_coverage": true,
+      "finite_losses": true,
+      "lr_schedule": true,
+      "window_sequence": true,
+      "resume_step": true,
+      "adam_state_steps": true,
+      "resume_fp32": true,
+      "completed": true,
+      "completion_event": true,
+      "pid_chain": true,
+      "final_result_matches": true,
+      "no_failure": true,
+      "full_protocol": true,
+      "final_sw_matches_resume": true,
+      "final_sa_matches_resume": true,
+      "final_sp2_matches_resume": true
+    }
+  },
+  "pair": {
+    "same_windows": true,
+    "same_scale_LRs": true,
+    "weight_LR_exact_half": true,
+    "scale_LR_pairs_checked": 89600,
+    "weight_LR_pairs_checked": 400,
+    "same_initial_probe": true,
+    "same_master_initialization": true,
+    "same_arguments_except_weightLR_output": true,
+    "same_source_snapshots": {
+      "launch.py": true,
+      "tracked.diff": true,
+      "postprocess.py": true,
+      "common.py": true,
+      "local_d.py": true,
+      "quantization.py": true,
+      "distill.py": true,
+      "run.py": true,
+      "sequential_postprocess.py": true
+    },
+    "first_microbatch_losses_equal": true,
+    "identical_gradients_or_learned_scales_claimed": false
+  },
+  "normalized_training_commands_equal": true,
+  "results": {
+    "bf16": {
+      "token_count": 252852,
+      "predicted_tokens": 252728,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 13.629024505615234,
+          "nll": 2.6122016734931566
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 15.2180757522583,
+          "nll": 2.722483915548375
+        }
+      ],
+      "unscored_tail_tokens": 0,
+      "nll": 2.612614913352714,
+      "ppl": 13.634657725643203,
+      "mode": "bf16",
+      "pid": 3561110,
+      "command": [
+        "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+        "-u",
+        "runs/phase3/auditor/final-best-20260914/replicate.py",
+        "bf16"
+      ],
+      "cuda_visible_devices": "1",
+      "torch": "2.4.1+cu121",
+      "cuda": "12.1",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "started_at": 1789361255.1422348,
+      "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+      "model_revision": "Revision:master,CreatedAt:1740591574",
+      "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint",
+      "source_head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+      "kind": "independent final audit reproduction; not a new algorithm candidate",
+      "evaluation_seconds": 18.582161845988594,
+      "total_seconds": 26.91453150799498,
+      "peak_allocated_gib": 4.336132526397705,
+      "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+      "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+      "precision": "BF16 logits CE reduction none; losses to FP32; float32 segment PPL then log; target-weighted NLL",
+      "activation_scales_unchanged": null,
+      "input_tokens": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/auditor/final-best-20260914/validation_input_tokens.pt",
+      "tokens_equal_first_independent_audit": true,
+      "status": "COMPLETED"
+    },
+    "final": {
+      "token_count": 252852,
+      "predicted_tokens": 252728,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 14.576189041137695,
+          "nll": 2.6793893097760986
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 16.1099910736084,
+          "nll": 2.7794396430986237
+        }
+      ],
+      "unscored_tail_tokens": 0,
+      "nll": 2.6797642095325815,
+      "ppl": 14.581654675328117,
+      "mode": "final",
+      "pid": 3563303,
+      "command": [
+        "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+        "-u",
+        "runs/phase3/auditor/final-best-20260914/replicate.py",
+        "final"
+      ],
+      "cuda_visible_devices": "1",
+      "torch": "2.4.1+cu121",
+      "cuda": "12.1",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "started_at": 1789361292.8230612,
+      "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+      "model_revision": "Revision:master,CreatedAt:1740591574",
+      "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint",
+      "source_head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+      "kind": "independent final audit reproduction; not a new algorithm candidate",
+      "evaluation_seconds": 23.51341075298842,
+      "total_seconds": 73.34639406198403,
+      "peak_allocated_gib": 4.6500020027160645,
+      "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+      "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+      "precision": "BF16 logits CE reduction none; losses to FP32; float32 segment PPL then log; target-weighted NLL",
+      "activation_scales_unchanged": true,
+      "input_tokens": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/auditor/final-best-20260914/validation_input_tokens.pt",
+      "tokens_equal_first_independent_audit": true,
+      "status": "COMPLETED"
+    },
+    "primary_final": {
+      "token_count": 252852,
+      "predicted_tokens": 252728,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 14.576189041137695,
+          "nll": 2.6793893097760986
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 16.1099910736084,
+          "nll": 2.7794396430986237
+        }
+      ],
+      "unscored_tail_tokens": 0,
+      "nll": 2.6797642095325815,
+      "ppl": 14.581654675328117,
+      "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+      "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+      "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+      "method": "full-backbone quantization-aware distillation, not frozen-weight PTQ",
+      "update_step": 400,
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+      "format": "112 W4 / 96 static INT8 / 16 static SP2; BF16 KV16 prefill"
+    },
+    "control_primary": {
+      "token_count": 252852,
+      "predicted_tokens": 252728,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 15.248114585876465,
+          "nll": 2.7244558616971246
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 16.99923324584961,
+          "nll": 2.8331682398537197
+        }
+      ],
+      "unscored_tail_tokens": 0,
+      "nll": 2.7248632191015845,
+      "ppl": 15.254327283565368,
+      "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+      "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+      "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+      "method": "full-backbone quantization-aware distillation, not frozen-weight PTQ",
+      "update_step": 400,
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+      "format": "112 W4 / 96 static INT8 / 16 static SP2; BF16 KV16 prefill"
+    }
+  },
+  "target": {
+    "baseline_ppl": 13.634657725643203,
+    "threshold_ppl": 14.634657725643203,
+    "final_ppl": 14.581654675328117,
+    "delta_ppl_vs_bf16": 0.9469969496849142,
+    "delta_nll_vs_bf16": 0.06714929617986742,
+    "margin_below_threshold": 0.05300305031508579,
+    "passed": true
+  },
+  "execution": {
+    "full_gpu_evaluations": 2,
+    "valid_full_evaluations": 2,
+    "invalid_full_evaluations": 0,
+    "failed_evaluation_attempts": 0,
+    "new_training_updates": 0,
+    "recalibrations": 0,
+    "pytest_runs": 0,
+    "algorithm_candidates": 0,
+    "gpu": 1,
+    "bf16_pid": 3561110,
+    "final_pid": 3563303,
+    "tmux_session": "auditor-final-best-20260914",
+    "environment_changed": false,
+    "other_processes_touched": false,
+    "resource_query_note": "Initial sandbox NVML query failed; require_escalated read and authorized tmux launch succeeded, not an evaluation attempt"
+  },
+  "observations": {
+    "sampled_all_masters_change_every_step_claim": "FAIL: stronger claim is false, not required to establish actual optimizer updates",
+    "zero_sampled_change_records": [
+      {
+        "step": 400,
+        "weight_lr": 1.622214173602199e-10,
+        "tensors": [
+          "model.layers.1.self_attn.o_proj.module.weight",
+          "model.layers.8.self_attn.o_proj.module.weight"
+        ]
+      }
+    ],
+    "interpretation": "At step400 two tensors have no change among 64 sampled entries. Do not infer the full tensors did not change or an optimizer step was skipped; all336 optimizer states have step400 and all112 gradients are recorded. Finite-precision small updates are a possible explanation, not independently proved."
+  },
+  "verdicts": {
+    "final_run_evidence": "PASS",
+    "source_model_data_teacher_provenance": "PASS",
+    "paired_400_actual_LRs_and_windows": "PASS",
+    "final_packed_export": "PASS",
+    "independent_bf16_full_GPU": "PASS",
+    "independent_final_full_GPU": "PASS",
+    "original_BF16_plus1": "PASS",
+    "independent_control_2e5_GPU": "NOT TESTED",
+    "initial_FP_master_full_tensor_bitwise_comparison": "NOT TESTED",
+    "application_pytest_verifier": "NOT TESTED",
+    "unseen_test_C4_multiseed_generalization": "NOT TESTED",
+    "native_INT4_INT8_mobile_KV_decode_latency": "NOT TESTED",
+    "main_goal_administrative_completion": "NOT TESTED"
+  },
+  "notes": [
+    "Full-validation exactness refers to segment and aggregate JSON results, not a comparison of every logit.",
+    "This result is full-backbone quantization-aware distillation, not frozen-original-weight PTQ.",
+    "Baseline/model/data provenance is reused where declared; both reported GPU evaluations are new independent reproductions.",
+    "No automatic follow-up training, calibration, search, checkpoint replay, or goal update."
+  ]
+}

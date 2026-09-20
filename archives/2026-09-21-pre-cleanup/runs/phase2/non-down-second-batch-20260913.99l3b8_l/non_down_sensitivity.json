@@ -1,0 +1,71 @@
+{
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/down-d-search-20260913.JVI83z",
+  "parent_train_nll": 2.727271304469372,
+  "calibration_window_indices": [
+    205,
+    888,
+    943,
+    849,
+    895,
+    1068,
+    67,
+    69,
+    282,
+    382,
+    1058,
+    957,
+    4,
+    31,
+    195,
+    253,
+    1023,
+    680,
+    693,
+    545,
+    637,
+    649,
+    893,
+    458,
+    1153,
+    182,
+    1020,
+    560,
+    758,
+    1048,
+    22,
+    889
+  ],
+  "selected_weights": [
+    "model.layers.11.mlp.gate_proj",
+    "model.layers.11.mlp.up_proj",
+    "model.layers.15.self_attn.q_proj",
+    "model.layers.15.self_attn.k_proj",
+    "model.layers.15.self_attn.v_proj"
+  ],
+  "selected_groups": [
+    {
+      "layer": 11,
+      "family": "gate_up",
+      "restored_weights": [
+        "model.layers.11.mlp.gate_proj",
+        "model.layers.11.mlp.up_proj"
+      ],
+      "train_nll": 2.7277400765451767,
+      "delta_train_nll": -0.002439202972258414
+    },
+    {
+      "layer": 15,
+      "family": "qkv",
+      "restored_weights": [
+        "model.layers.15.self_attn.q_proj",
+        "model.layers.15.self_attn.k_proj",
+        "model.layers.15.self_attn.v_proj"
+      ],
+      "train_nll": 2.728171803395373,
+      "delta_train_nll": -0.0020074761220620907
+    }
+  ],
+  "ranking_source": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/down-d-search-20260913.GpmBQJ",
+  "ranking_measured_parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/down-d-search-20260913.Ds4vSf",
+  "note": "Proposal from prior measured ranking; no new sensitivity scores on current parent. Actual candidate NLL will use current parent."
+}

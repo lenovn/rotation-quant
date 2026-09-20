@@ -1,0 +1,121 @@
+{
+  "token_count": 2097152,
+  "predicted_tokens": 2096128,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 21.724079132080078,
+      "nll": 3.0784212827769055
+    },
+    {
+      "start_token": 262144,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 22.06345558166504,
+      "nll": 3.0939226462389584
+    },
+    {
+      "start_token": 524288,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 22.67020606994629,
+      "nll": 3.1210515544625212
+    },
+    {
+      "start_token": 786432,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 20.320926666259766,
+      "nll": 3.0116512253249823
+    },
+    {
+      "start_token": 1048576,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 23.026498794555664,
+      "nll": 3.136645674248921
+    },
+    {
+      "start_token": 1310720,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 20.58588218688965,
+      "nll": 3.024605510115566
+    },
+    {
+      "start_token": 1572864,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 22.03007698059082,
+      "nll": 3.0924086551608845
+    },
+    {
+      "start_token": 1835008,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 22.476787567138672,
+      "nll": 3.112483112996378
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 3.0838987076656394,
+  "ppl": 21.843397624525274,
+  "input_model": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "mode": "w16a16",
+  "dataset": "allenai/c4",
+  "subset": "en",
+  "split": "validation",
+  "window_length": 2048,
+  "seed": 42,
+  "dtype": "bfloat16",
+  "kv_bits": 16,
+  "use_cache": false,
+  "evaluation": "prefill teacher-forced next-token; disjoint windows including partial tail",
+  "nll_precision": "log of original evaluator float32 PPL, token-weighted across segments",
+  "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt",
+  "input_metadata": {
+    "dataset": "allenai/c4",
+    "subset": "en",
+    "split": "validation",
+    "source_files": [
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"
+    ],
+    "source_document_count": 364608,
+    "seed": 42,
+    "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix",
+    "selected_document_count": 4480,
+    "concatenated_token_count": 2150947,
+    "discarded_suffix_tokens": 53795,
+    "token_count": 2097152,
+    "window_length": 2048,
+    "windows": 1024,
+    "predicted_tokens": 2096128,
+    "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "tokenizer_class": "LlamaTokenizerFast",
+    "add_bos_token": false,
+    "add_eos_token": false,
+    "text_separator": "\n\n",
+    "purpose": "external evaluation only; no calibration or selection"
+  },
+  "chunk_windows": 128,
+  "quantized_linear_count": 0,
+  "elapsed_seconds": 163.10074340400752,
+  "activation_scales_unchanged": null
+}

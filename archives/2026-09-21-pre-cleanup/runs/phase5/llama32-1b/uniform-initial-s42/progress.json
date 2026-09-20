@@ -1,0 +1,11 @@
+{
+  "stage": "completed",
+  "pid": 1390227,
+  "time": 1789668696.444309,
+  "cuda_visible_devices": "3",
+  "allocated_gib": 2.7945094108581543,
+  "reserved_gib": 2.845703125,
+  "peak_allocated_gib": 2.825721263885498,
+  "gpu_time_budget": null,
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-initial-s42/static_w4a8.pt"
+}

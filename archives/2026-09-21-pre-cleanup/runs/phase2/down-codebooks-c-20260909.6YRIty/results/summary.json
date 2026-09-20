@@ -1,0 +1,94 @@
+{
+  "input_model": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "weight_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rtn/w4_rtn_model.pt",
+  "rotation_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rotation/R.bin",
+  "scale_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rotation/quant_scales.pt",
+  "bits": 8,
+  "weight_method": "rtn",
+  "reference_mode": "fixed-W4/non-down-static-A8/down-A16/KV16",
+  "calibration_split": "train",
+  "calibration_windows": 32,
+  "calibration_rows_per_window": 64,
+  "local_split": "validation",
+  "local_windows": 8,
+  "eval_split": "test",
+  "eval_nsamples": 8,
+  "seqlen": 2048,
+  "seed": 42,
+  "non_down_scale_count": 96,
+  "down_count": 16,
+  "coarse_steps": 33,
+  "refine_steps": 17,
+  "calibration_objective": "mean(square((Q_bf16(X)-X) @ W4.T)) in FP32",
+  "scale_range_relative_to_full_absmax": [
+    1.52587890625e-05,
+    2.0
+  ],
+  "results": {
+    "down_a16": {
+      "ppl": 14.655250549316406,
+      "nll": 2.6847986705241436
+    },
+    "int8": {
+      "ppl": 42.356781005859375,
+      "nll": 3.7461285264826225,
+      "delta_ppl_vs_down_a16": 27.70153045654297
+    },
+    "pot": {
+      "ppl": 16.853595733642578,
+      "nll": 2.824564030687889,
+      "delta_ppl_vs_down_a16": 2.198345184326172
+    },
+    "sp2": {
+      "ppl": 15.796591758728027,
+      "nll": 2.7597942052909454,
+      "delta_ppl_vs_down_a16": 1.141341209411621
+    }
+  },
+  "calibration_window_indices": [
+    205,
+    888,
+    943,
+    849,
+    895,
+    1068,
+    67,
+    69,
+    282,
+    382,
+    1058,
+    957,
+    4,
+    31,
+    195,
+    253,
+    1023,
+    680,
+    693,
+    545,
+    637,
+    649,
+    893,
+    458,
+    1153,
+    182,
+    1020,
+    560,
+    758,
+    1048,
+    22,
+    889
+  ],
+  "local_window_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "non_down_scales_unchanged": true,
+  "elapsed_seconds": 52.8755180589942
+}

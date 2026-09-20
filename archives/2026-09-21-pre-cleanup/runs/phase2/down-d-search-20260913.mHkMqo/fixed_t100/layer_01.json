@@ -1,0 +1,22 @@
+{
+  "layer": 1,
+  "chosen_t": 1.0,
+  "trials": [
+    {
+      "t": 1.0,
+      "mse": 0.0011636270210146904,
+      "full_absmax": 241.0,
+      "alpha": 241.0,
+      "calibration_token_rows": 65536,
+      "mse_token_rows": 2048,
+      "d_min": 0.5176793932914734,
+      "d_max": 4.0,
+      "log_d_mean": 6.296200523621398e-09
+    }
+  ],
+  "direction_nonconstant": true,
+  "propagation_check": {
+    "rows": 65536,
+    "outside_fullrange": 0
+  }
+}

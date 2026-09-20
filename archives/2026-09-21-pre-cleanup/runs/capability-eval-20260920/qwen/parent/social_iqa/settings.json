@@ -1,0 +1,28 @@
+{
+  "arguments": {
+    "model": "qwen",
+    "method": "parent",
+    "task": "social_iqa",
+    "batch_size": 4,
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/parent/social_iqa"
+  },
+  "selected": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/static_w4a8.pt",
+    "seed": 42
+  },
+  "seed": 42,
+  "harness_version": "0.4.8",
+  "generation_chat_template": false,
+  "enable_thinking": false,
+  "fewshot_as_multiturn": false,
+  "num_fewshot": 0,
+  "max_length": 8192,
+  "generation_max_new_tokens": null,
+  "scoring_use_cache": false,
+  "generation_use_cache": true,
+  "kv_bits": 16,
+  "calibration": false,
+  "training": false,
+  "source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel"
+}

@@ -1,0 +1,39 @@
+{
+  "strength": 0.5,
+  "channel": 2,
+  "layer": 0,
+  "diagonal_min": 0.8408964276313782,
+  "diagonal_max": 1.6817928552627563,
+  "mean_log_diagonal": 1.4719605555268966e-08,
+  "selected_step": 512,
+  "selected_train_nll": 2.6999999999999997,
+  "parent_train_nll": 3.0,
+  "sp2_alpha": 2.5399999618530273,
+  "expanded_sw_rows": 0,
+  "trials": [
+    {
+      "step": 0,
+      "fit_mse": 4.0,
+      "heldout_mse": 4.0,
+      "train_nll": 3.0
+    },
+    {
+      "step": 512,
+      "fit_mse": 3.0,
+      "heldout_mse": 3.0,
+      "train_nll": 2.6999999999999997
+    },
+    {
+      "step": 2048,
+      "fit_mse": 2.0,
+      "heldout_mse": 2.0,
+      "train_nll": 3.1999999999999997
+    },
+    {
+      "step": 8192,
+      "fit_mse": 1.0,
+      "heldout_mse": 1.0,
+      "train_nll": 3.4
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Token indices sequence length is longer than the specified maximum sequence length for this model (262337 > 2048). Running this sequence through the model will result in indexing errors
+{"stage": "initializing-from-pretrained", "pid": 852493, "time": 1789934128.8303368, "gpu": "1", "allocated_gib": 0.0, "peak_gib": 0.0}
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.27it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.46it/s]
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.

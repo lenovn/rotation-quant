@@ -1,0 +1,4 @@
+Observed 2026-09-20: NVIDIA GeForce RTX 4090, 24564 MiB per GPU, driver 570.181.
+Formal task launch records identify GPU indices and PIDs. GPU 4 was excluded from this experiment; no foreign processes were stopped.
+Torch 2.4.1+cu121; transformers 4.51.3; harness 0.4.8. Full combined package list: environment.txt.
+Single GPU per model/task, BF16 fake quantization, no distributed model execution or native integer-kernel latency claim.

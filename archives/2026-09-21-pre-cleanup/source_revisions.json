@@ -1,0 +1,44 @@
+[
+  {
+    "path": ".",
+    "head": "d9a636ba273fa812b1d6098e9f9df0f8a33eb154",
+    "branch": "master",
+    "status": "M PLAN.md\n M STATUS.md\n M scripts/phase2/validation_acceptance.py\n?? WXD-imported-rotation-quant-copy-20260914/\n?? archives/\n?? scripts/capability_eval/\n?? scripts/phase2/44_run_c4_acceptance_c_local.sh\n?? scripts/phase2/45_run_validation_diagnostics_c_local.sh\n?? scripts/phase2/46_run_down_d_search_local.sh\n?? scripts/phase2/down_d_followup.py\n?? scripts/phase2/down_d_search.py\n?? scripts/phase2/fixed_code_sw.py\n?? scripts/phase2/fixed_grid_rounding.py\n?? scripts/phase2/frozen_c4_loop.py\n?? scripts/phase2/mixed_layer_validation.py\n?? scripts/phase2/neighbor_rounding_loop.py\n?? scripts/phase2/non_down_rounding.py\n?? scripts/phase2/non_down_sensitivity.py\n?? scripts/phase2/precision_loop.py\n?? scripts/phase2/prepare_c4_evaluation.py\n?? scripts/phase2/rounding_family.py\n?? scripts/phase2/sp2_alpha_loop.py\n?? scripts/phase2/sparse_d_sp2.py\n?? scripts/phase2/test_c4_acceptance.py\n?? scripts/phase2/test_down_d_search.py\n?? scripts/phase2/test_fixed_code_sw.py\n?? scripts/phase2/test_fixed_grid_rounding.py\n?? scripts/phase6/\n?? worktrees/SpinQuant-multimodel/\n?? worktrees/SpinQuant-phase3-joint/\n?? worktrees/SpinQuant-phase4-w4/"
+  },
+  {
+    "path": "repos/SpinQuant",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase2/joint-r-sa-w16-gptq-w4",
+    "status": "M optimize_rotation.py\n M train_utils/quant_linear.py\n M train_utils/rotation_calibration.py\n M utils/process_args.py\n M utils/quant_utils.py\n?? tests/test_learned_sw_training.py\n?? tests/test_w4_aware_training.py"
+  },
+  {
+    "path": "worktrees/SpinQuant-distribution-experiment",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "distribution-experiment",
+    "status": "?? experiments/"
+  },
+  {
+    "path": "worktrees/SpinQuant-multimodel",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase5/multimodel",
+    "status": "M optimize_rotation.py\n M train_utils/quant_linear.py\n M train_utils/rotation_calibration.py\n M utils/process_args.py\n M utils/quant_utils.py\n?? experiments/\n?? tests/test_learned_sw_training.py\n?? tests/test_phase3_external.py\n?? tests/test_phase3_joint.py\n?? tests/test_phase3_uniform_baseline.py\n?? tests/test_phase3_wikitext_test.py\n?? tests/test_phase5_architecture.py\n?? tests/test_phase5_eval_protocol.py\n?? tests/test_phase5_uniform.py\n?? tests/test_w4_aware_training.py\n?? train_utils/__pycache__/\n?? utils/__pycache__/"
+  },
+  {
+    "path": "worktrees/SpinQuant-phase0-dynamic-kv8-8f47aa3f",
+    "head": "8f47aa3f00e8662caf1a484153920a07e5281c3a",
+    "branch": "audit/phase0-8f47aa3f",
+    "status": ""
+  },
+  {
+    "path": "worktrees/SpinQuant-phase3-joint",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase3/joint-r-sw-sa-sp2",
+    "status": "M optimize_rotation.py\n M train_utils/quant_linear.py\n M train_utils/rotation_calibration.py\n M utils/process_args.py\n M utils/quant_utils.py\n?? experiments/\n?? tests/test_learned_sw_training.py\n?? tests/test_phase3_budget_export.py\n?? tests/test_phase3_external.py\n?? tests/test_phase3_joint.py\n?? tests/test_phase3_uniform_baseline.py\n?? tests/test_phase3_wikitext_test.py\n?? tests/test_w4_aware_training.py"
+  },
+  {
+    "path": "worktrees/SpinQuant-phase4-w4",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase4/w4-per-channel",
+    "status": "M optimize_rotation.py\n M train_utils/quant_linear.py\n M train_utils/rotation_calibration.py\n M utils/process_args.py\n M utils/quant_utils.py\n?? experiments/\n?? tests/test_learned_sw_training.py\n?? tests/test_phase3_external.py\n?? tests/test_phase3_joint.py\n?? tests/test_phase4_guided_round.py\n?? tests/test_phase4_scale_round.py\n?? tests/test_w4_aware_training.py"
+  }
+]

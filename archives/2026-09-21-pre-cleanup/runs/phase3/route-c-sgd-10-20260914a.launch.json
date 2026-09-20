@@ -1,0 +1,97 @@
+{
+  "pid": 3990988,
+  "gpu": 3,
+  "started": 1789322958.728382,
+  "command": [
+    "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/run.py",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-sgd-10-20260914a",
+    "--initial",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt",
+    "--route",
+    "C",
+    "--steps",
+    "10",
+    "--schedule-steps",
+    "100",
+    "--checkpoints",
+    "10",
+    "--validation-steps",
+    "10",
+    "--scale-optimizer",
+    "sgd",
+    "--resume",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-20260914a"
+  ],
+  "shell_command": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u /home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/run.py --output /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-sgd-10-20260914a --initial /home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt --route C --steps 10 --schedule-steps 100 --checkpoints 10 --validation-steps 10 --scale-optimizer sgd --resume /home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-20260914a",
+  "selected_gpu": {
+    "index": 3,
+    "uuid": "GPU-b46f451f-cbbf-cb05-ec58-d124e7dbb743",
+    "memory_used_mib": 3322,
+    "memory_total_mib": 24564,
+    "utilization": 56
+  },
+  "gpu_snapshot": [
+    {
+      "index": 0,
+      "uuid": "GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b",
+      "memory_used_mib": 11434,
+      "memory_total_mib": 24564,
+      "utilization": 0
+    },
+    {
+      "index": 1,
+      "uuid": "GPU-75f32c85-75f6-07fa-f335-6e1cc84aacf9",
+      "memory_used_mib": 7767,
+      "memory_total_mib": 24564,
+      "utilization": 100
+    },
+    {
+      "index": 2,
+      "uuid": "GPU-835451b2-a7e7-335e-2968-fd188801cf61",
+      "memory_used_mib": 11824,
+      "memory_total_mib": 24564,
+      "utilization": 28
+    },
+    {
+      "index": 3,
+      "uuid": "GPU-b46f451f-cbbf-cb05-ec58-d124e7dbb743",
+      "memory_used_mib": 3322,
+      "memory_total_mib": 24564,
+      "utilization": 56
+    },
+    {
+      "index": 4,
+      "uuid": "GPU-34587165-f7a3-9c6e-e4f0-a431b17af503",
+      "memory_used_mib": 23619,
+      "memory_total_mib": 24564,
+      "utilization": 0
+    },
+    {
+      "index": 5,
+      "uuid": "GPU-e888b579-a41b-5892-0c5d-f3145ddd6327",
+      "memory_used_mib": 8975,
+      "memory_total_mib": 24564,
+      "utilization": 100
+    },
+    {
+      "index": 6,
+      "uuid": "GPU-268df8cd-d4ff-6179-5702-d6173f63cac2",
+      "memory_used_mib": 3626,
+      "memory_total_mib": 24564,
+      "utilization": 100
+    },
+    {
+      "index": 7,
+      "uuid": "GPU-ed81f3c7-cf0c-01fd-e758-6e512ee3a0b9",
+      "memory_used_mib": 9106,
+      "memory_total_mib": 24564,
+      "utilization": 100
+    }
+  ],
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-sgd-10-20260914a",
+  "log": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-sgd-10-20260914a.log",
+  "policy": "latest user authorization: actual headroom, parallel independent jobs, no hard ratio/memory/time cap, never terminate others"
+}

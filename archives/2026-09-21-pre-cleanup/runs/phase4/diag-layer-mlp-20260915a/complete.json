@@ -1,0 +1,22 @@
+{
+  "cases": [
+    "all16:mlp@0",
+    "all16:mlp@1",
+    "all16:mlp@2",
+    "all16:mlp@3",
+    "all16:mlp@4",
+    "all16:mlp@5",
+    "all16:mlp@6",
+    "all16:mlp@7",
+    "all16:mlp@8",
+    "all16:mlp@9",
+    "all16:mlp@10",
+    "all16:mlp@11",
+    "all16:mlp@12",
+    "all16:mlp@13",
+    "all16:mlp@14",
+    "all16:mlp@15",
+    "all16:up",
+    "all16:gate"
+  ]
+}

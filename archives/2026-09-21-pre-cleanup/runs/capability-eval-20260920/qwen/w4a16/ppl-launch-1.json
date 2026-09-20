@@ -1,0 +1,18 @@
+{
+  "pid": 62299,
+  "gpu": "0",
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/ppl_w4a16.py",
+    "--model",
+    "qwen"
+  ],
+  "started": 1789844021.8955777,
+  "selected": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/gptq_w4a16_package/w4_gptq_model.pt",
+    "seed": 42,
+    "method_label": "GPTQ (original BF16)",
+    "activation_bits": 16,
+    "note": "Independent original BF16 -> GPTQ; train-only calibration 128x2048 seed42; symmetric per-output-channel W4 groupsize=-1; no rotation or distillation."
+  }
+}

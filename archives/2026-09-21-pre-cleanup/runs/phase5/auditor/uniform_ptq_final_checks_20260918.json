@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "scope": "complete Uniform-PTQ seed42 only; QAT not covered; no GPU/PPL rerun",
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s42/static_w4a8.pt",
+  "activation_formats": {
+    "int8": 112
+  },
+  "same_package_validation_test_c4": true,
+  "train_selection_nll_initial": 3.549447552560451,
+  "train_selection_nll_final": 3.484595846334799,
+  "readapt_trial_steps": {
+    "model.layers.0.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.1.mlp.down_proj": [
+      0,
+      109
+    ],
+    "model.layers.2.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.3.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.4.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.5.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.6.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.7.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.8.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.9.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.10.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.11.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.12.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.13.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.14.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "model.layers.15.mlp.down_proj": [
+      0,
+      512,
+      2048,
+      8192
+    ]
+  },
+  "reference": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+  "train_only_24_8_selection": true,
+  "all_activation_scales_and_weight_scales_unchanged_in_readapt": true,
+  "non_down_weight_codes_unchanged": true,
+  "test_c4_before_after_equal_and_scales_equal_package": true,
+  "historical_tokens_and_metric_segments_match": true,
+  "summary_three_rows_match": true,
+  "results": [
+    {
+      "run": "uniform-down-readapt-s42",
+      "split": "validation",
+      "dataset": "Salesforce/wikitext",
+      "ppl": 41.5470707013954,
+      "nll": 3.7268270182480743,
+      "targets": 252728,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s42/static_w4a8.pt"
+    },
+    {
+      "run": "uniform-ptq-test-s42",
+      "split": "test",
+      "dataset": "Salesforce/wikitext",
+      "ppl": 38.47028685874723,
+      "nll": 3.6498861734233596,
+      "targets": 288934,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s42/static_w4a8.pt"
+    },
+    {
+      "run": "uniform-ptq-c4-s42",
+      "split": "validation",
+      "dataset": "allenai/c4",
+      "ppl": 81.13316772229233,
+      "nll": 4.396091850662515,
+      "targets": 2096128,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s42/static_w4a8.pt"
+    }
+  ]
+}

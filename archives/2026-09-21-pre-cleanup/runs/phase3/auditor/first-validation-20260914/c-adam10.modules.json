@@ -1,0 +1,14 @@
+{
+  "utils.quant_phase": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/quant_phase.py",
+  "eval_utils.modeling_llama": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/eval_utils/modeling_llama.py",
+  "train_utils.quant_linear": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/train_utils/quant_linear.py",
+  "utils.utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/utils.py",
+  "utils.hadamard_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/hadamard_utils.py",
+  "utils.quant_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/quant_utils.py",
+  "experiments.phase3.quantization": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/quantization.py",
+  "train_utils.modeling_llama_quant": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/train_utils/modeling_llama_quant.py",
+  "utils.fuse_norm_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/fuse_norm_utils.py",
+  "experiments.phase3.common": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/common.py",
+  "utils.model_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/model_utils.py",
+  "utils.eval_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py"
+}

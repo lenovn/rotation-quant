@@ -1,0 +1,20 @@
+{
+  "nll": 3.4921929438908896,
+  "ppl": 32.85792434147792,
+  "predicted_tokens": 12,
+  "token_count": 14,
+  "windows": [
+    {
+      "window": 0,
+      "tokens": 8,
+      "predicted_tokens": 7,
+      "nll": 3.474311351776123
+    },
+    {
+      "window": 1,
+      "tokens": 6,
+      "predicted_tokens": 5,
+      "nll": 3.5172271728515625
+    }
+  ]
+}

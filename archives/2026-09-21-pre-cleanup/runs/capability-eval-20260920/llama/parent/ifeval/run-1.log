@@ -1,0 +1,132 @@
+LlamaForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[Task: ifeval] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+[Task: ifeval] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+Chat template formatting change affects loglikelihood and multiple-choice tasks. See docs/chat-template-readme.md for details.
+  0%|          | 0/541 [00:00<?, ?it/s]100%|██████████| 541/541 [00:00<00:00, 13561.63it/s]
+Running generate_until requests:   0%|          | 0/541 [00:00<?, ?it/s]/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [0,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [1,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [2,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [3,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [4,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [5,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [6,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [7,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [8,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [9,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [10,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [11,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [12,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [13,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [14,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [15,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [16,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [17,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [18,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [19,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [20,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [21,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [22,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [23,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [24,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [25,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [26,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [27,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [28,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [29,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [30,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [354,0,0], thread: [31,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [0,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [1,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [2,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [3,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [4,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [5,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [6,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [7,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [8,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [9,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [10,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [11,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [12,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [13,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [14,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [15,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [16,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [17,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [18,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [19,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [20,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [21,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [22,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [23,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [24,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [25,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [26,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [27,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [28,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [29,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [30,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+../aten/src/ATen/native/cuda/Indexing.cu:1284: indexSelectLargeIndex: block: [355,0,0], thread: [31,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+Traceback (most recent call last):
+  File "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py", line 137, in <module>
+    save(args.output / 'failure.json', dict(type=type(e).__name__, message=str(e), traceback=traceback.format_exc()))
+  File "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py", line 112, in main
+    tok.pad_token_id = tok.eos_token_id
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/utils.py", line 422, in _wrapper
+    return fn(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/evaluator.py", line 308, in simple_evaluate
+    results = evaluate(
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/utils.py", line 422, in _wrapper
+    return fn(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/evaluator.py", line 528, in evaluate
+    resps = getattr(lm, reqtype)(cloned_reqs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/models/huggingface.py", line 1355, in generate_until
+    cont = self._model_generate(
+  File "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/run.py", line 57, in _model_generate
+    output = super()._model_generate(context, max_length, stop, **generation_kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/deps/lm_eval/models/huggingface.py", line 898, in _model_generate
+    return self.model.generate(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/utils.py", line 2465, in generate
+    result = self._sample(
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/utils.py", line 3431, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/eval_utils/modeling_llama.py", line 1388, in forward
+    outputs = self.model(
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/eval_utils/modeling_llama.py", line 1130, in forward
+    causal_mask = self._update_causal_mask(
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/eval_utils/modeling_llama.py", line 1237, in _update_causal_mask
+    if AttentionMaskConverter._ignore_causal_mask_sdpa(
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/modeling_attn_mask_utils.py", line 288, in _ignore_causal_mask_sdpa
+    elif not is_tracing and torch.all(attention_mask == 1):
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Running generate_until requests:   0%|          | 0/541 [00:00<?, ?it/s]

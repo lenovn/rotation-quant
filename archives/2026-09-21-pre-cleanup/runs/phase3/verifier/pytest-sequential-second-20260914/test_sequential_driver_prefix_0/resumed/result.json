@@ -1,0 +1,60 @@
+{
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-sequential-second-20260914/test_sequential_driver_prefix_0/parent.pt",
+  "parent_metadata": {
+    "method": "joint R/SW/SA PTQ",
+    "source_run": "retained-parent",
+    "step": 100,
+    "original_backbone_trained": false
+  },
+  "mode": "round",
+  "initial_train_nll": 3.0,
+  "selected_train_nll": 2.5,
+  "completed_targets": [
+    "model.layers.0.mlp.down_proj",
+    "model.layers.1.mlp.down_proj"
+  ],
+  "new_module_results": [
+    {
+      "module": "model.layers.1.mlp.down_proj",
+      "selected_step": 512,
+      "previous_train_nll": 2.7,
+      "selected_train_nll": 2.5,
+      "trials": [
+        {
+          "step": 0,
+          "fit_mse": 3.0,
+          "heldout_mse": 3.0,
+          "train_nll": 2.7
+        },
+        {
+          "step": 512,
+          "fit_mse": 2.0,
+          "heldout_mse": 2.0,
+          "train_nll": 2.5
+        },
+        {
+          "step": 2048,
+          "fit_mse": 1.0,
+          "heldout_mse": 1.0,
+          "train_nll": 2.8
+        }
+      ]
+    }
+  ],
+  "validation_status": "completed",
+  "validation": {
+    "nll": 4.0,
+    "ppl": 54.598150033144236,
+    "token_count": 252852,
+    "predicted_tokens": 252728,
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-sequential-second-20260914/test_sequential_driver_prefix_0/parent.pt",
+    "parent_metadata": {
+      "method": "joint R/SW/SA PTQ",
+      "source_run": "retained-parent",
+      "step": 100,
+      "original_backbone_trained": false
+    },
+    "method": "sequential frozen-package postprocessing; no gradient training in this stage",
+    "format": "112 W4 /96 static INT8 /16 static SP2; BF16 KV16 prefill"
+  }
+}

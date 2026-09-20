@@ -1,0 +1,8 @@
+{
+  "pid": 3668406,
+  "stage": "mixed_layer_completed",
+  "gpu_seconds": 609.4507924610516,
+  "gpu_budget_seconds": 1800,
+  "peak_reserved_gib": 4.376953125,
+  "full_validation_evaluations": 1
+}

@@ -1,0 +1,6 @@
+{
+  "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s43/checkpoint-0100/state.pt",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s43/static_w4a8.pt",
+  "diagonal_transform": null,
+  "method": "project current-R FP reference into parent INT4 cells; retain parent initial quantized forward"
+}

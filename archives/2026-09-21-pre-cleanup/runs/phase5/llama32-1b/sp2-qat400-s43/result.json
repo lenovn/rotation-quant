@@ -1,0 +1,23 @@
+{
+  "completed_steps": 400,
+  "target_reached": false,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43-r4/static_w4a8.pt",
+  "checkpoints": [
+    {
+      "step": 100,
+      "training_probe": 2.817721366882324
+    },
+    {
+      "step": 200,
+      "training_probe": 2.8163270354270935
+    },
+    {
+      "step": 400,
+      "training_probe": 2.772803783416748,
+      "validation_nll": 2.685741403816717,
+      "validation_ppl": 14.66907305636532,
+      "changed_codes": 47942872
+    }
+  ],
+  "method": "quantization-aware distillation, not frozen-weight PTQ"
+}

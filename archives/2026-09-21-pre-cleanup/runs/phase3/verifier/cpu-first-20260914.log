@@ -1,0 +1,36 @@
+.............................F                                           [100%]
+=================================== FAILURES ===================================
+______________ test_build_from_checkpoint_rejects_wrong_sw_shape _______________
+
+initialized_model = LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32, 8)
+    (layers): ModuleList(
+      (0-15): ...t_features=32, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+  (R1): Rotation()
+)
+tmp_path = PosixPath('/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-first-20260914/test_build_from_checkpoint_rej0')
+
+    def test_build_from_checkpoint_rejects_wrong_sw_shape(initialized_model, tmp_path):
+        path = tmp_path / "state.pt"
+        saved = common.save_state(initialized_model, path)
+        saved["parameters"]["model.layers.0.self_attn.q_proj.module.quantizer.scale"] = torch.ones(1)
+        torch.save(saved, path)
+        with pytest.raises(ValueError):
+>           common.build_training_model(path)
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_phase3_joint.py:259: Failed
+=============================== warnings summary ===============================
+tests/test_phase3_joint.py: 12 warnings
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/cpu-first-20260914.xml -
+=========================== short test summary info ============================
+FAILED tests/test_phase3_joint.py::test_build_from_checkpoint_rejects_wrong_sw_shape
+1 failed, 29 passed, 12 warnings in 6.80s

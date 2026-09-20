@@ -1,0 +1,9 @@
+{
+  "reason": "GPU6 other-process memory spikes plus actual QAT peak reduce headroom; migrate own task to GPU0 at existing resume",
+  "pid": 1389835,
+  "completed_step": 25,
+  "resume": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/initial-sp2-qat400-s42/resume.pt",
+  "signal": "SIGINT",
+  "command": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u /home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/experiments/phase3/distill.py --output /home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/initial-sp2-qat400-s42 --parent /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt --reference-state /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt --steps 400 --schedule-steps 400 --accumulation 8 --warmup 10 --weight-lr 1e-5 --weight-optimizer adam --relative-scale-lr 0.001 --temperature 1 --ce-weight 0.1 --data-start 800 --offload-teacher-body --resume-every 25 --checkpoints 100 200 400 --validation-steps 400 ",
+  "time": 1789669156.444536
+}

@@ -1,0 +1,15 @@
+{
+  "mode": "c-adam10",
+  "pid": 18746,
+  "command": [
+    "runs/phase3/auditor/first-validation-20260914/replicate.py",
+    "c-adam10"
+  ],
+  "cuda_visible_devices": "1",
+  "torch": "2.4.1+cu121",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "started_at": 1789324941.1492872,
+  "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "model_revision": "Revision:master,CreatedAt:1740591574"
+}

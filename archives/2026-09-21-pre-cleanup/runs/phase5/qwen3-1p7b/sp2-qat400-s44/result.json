@@ -1,0 +1,23 @@
+{
+  "completed_steps": 400,
+  "target_reached": false,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s44/static_w4a8.pt",
+  "checkpoints": [
+    {
+      "step": 100,
+      "training_probe": 2.6094488501548767
+    },
+    {
+      "step": 200,
+      "training_probe": 2.584828555583954
+    },
+    {
+      "step": 400,
+      "training_probe": 2.5863624215126038,
+      "validation_nll": 2.6948884891407743,
+      "validation_ppl": 14.803867869217726,
+      "changed_codes": 51514318
+    }
+  ],
+  "method": "quantization-aware distillation, not frozen-weight PTQ"
+}

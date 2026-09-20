@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "scope": "completed intermediate packages only; no GPU or PPL rerun",
+  "results": [
+    {
+      "run": "uniform-down-round-s42",
+      "mode": "round",
+      "initial_train_nll": 6.445073606790942,
+      "selected_train_nll": 5.994491577236984,
+      "ppl": 722.8870870577282,
+      "nll": 6.583253037151634,
+      "actual_formats": {
+        "int8": 112
+      },
+      "changed_layers": 11,
+      "trial_counts": [
+        4,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "summary_model": "meta-llama/Llama-3.2-1B-Instruct",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-initial-s42/static_w4a8.pt"
+    },
+    {
+      "run": "uniform-range-s42",
+      "mode": "range",
+      "initial_train_nll": 5.994491577236984,
+      "selected_train_nll": 3.549447552560451,
+      "ppl": 44.19421129635554,
+      "nll": 3.7885938143610356,
+      "actual_formats": {
+        "int8": 112
+      },
+      "changed_layers": 8,
+      "trial_counts": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "summary_model": "meta-llama/Llama-3.2-1B-Instruct",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-round-s42/static_w4a8.pt"
+    }
+  ],
+  "round_layer1": {
+    "selected_step": 40,
+    "cause": "inherited no-improving-coordinate threshold snapshots current iterate then breaks",
+    "threshold": -1e-15,
+    "snapshot_source_equal_historical": true
+  },
+  "all_w4_scales_fixed": true,
+  "non_down_weight_codes_fixed": true,
+  "non_down_activation_scales_fixed": true,
+  "round_all_activation_scales_fixed": true,
+  "range_all_weight_codes_fixed": true
+}

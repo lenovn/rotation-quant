@@ -1,0 +1,102 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 41.55046463012695,
+      "nll": 3.726908703672796
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 40.654483795166016,
+      "nll": 3.7051091323750587
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 3.7268270182480743,
+  "ppl": 41.5470707013954,
+  "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/eval_utils.py",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-range-s42/static_w4a8.pt",
+  "parent_metadata": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-round-s42/static_w4a8.pt",
+    "mode": "sequential-range",
+    "reference_state": "None",
+    "parent_metadata": {
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-initial-s42/static_w4a8.pt",
+      "mode": "sequential-round",
+      "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+      "parent_metadata": {
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+        "reused_down_int8_overlay": {
+          "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/b100-uniform-calibration-20260918c/down_int8_scales.pt",
+          "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+          "down_format": "int8",
+          "calibration_metadata": {
+            "dataset": "Salesforce/wikitext",
+            "subset": "wikitext-2-raw-v1",
+            "split": "train",
+            "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-train.arrow",
+            "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+            "source_metadata_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/data.json",
+            "seed": 42,
+            "train_tokens": 2435022,
+            "train_windows": 1188,
+            "calibration_window_indices": [
+              182,
+              546,
+              792,
+              281,
+              1030,
+              865,
+              136,
+              18,
+              442,
+              357,
+              248,
+              128,
+              1110,
+              235,
+              621,
+              707,
+              1035,
+              208,
+              531,
+              689,
+              369,
+              424,
+              953,
+              973,
+              131,
+              443,
+              677,
+              1096,
+              731,
+              902,
+              29,
+              859
+            ],
+            "calibration_length": 128,
+            "calibration_tokens": 4096,
+            "add_bos_token": false,
+            "add_eos_token": false,
+            "protocol": "tokenize each raw row without BOS/EOS, concatenate IDs, disjoint 2048 windows, drop tail, fixed order"
+          }
+        },
+        "method": "Joint100 matched INT8 calibration; no discrete postprocessing or QAT yet"
+      },
+      "offline_only": true
+    },
+    "offline_only": true
+  },
+  "method": "sequential frozen-package postprocessing; no gradient training in this stage",
+  "format": "112 W4 / 112 static INT8; BF16 KV16 prefill"
+}

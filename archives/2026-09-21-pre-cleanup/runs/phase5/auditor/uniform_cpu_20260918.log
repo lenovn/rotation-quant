@@ -1,0 +1,71 @@
+.........F                                                               [100%]
+=================================== FAILURES ===================================
+___________ test_fixed_qat400_global_token_budget_and_no_target_stop ___________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f717960d310>
+tmp_path = PosixPath('/tmp/pytest-of-dongpeiyan/pytest-11/test_fixed_qat400_global_token0')
+
+    def test_fixed_qat400_global_token_budget_and_no_target_stop(monkeypatch, tmp_path):
+        model = Tiny('int8')
+        records = records_for(model)
+        train = torch.arange(64).view(-1, 1).expand(-1, 2048)
+        sampled, checkpoints, logs = [], [], []
+        monkeypatch.setattr(distill, 'data_windows', lambda output: (train, [], ['probe'], ['validation'], {}))
+        monkeypatch.setattr(distill, 'load_static', lambda parent: (model, records))
+        monkeypatch.setattr(distill, 'teacher_model', lambda: Tiny('int8'))
+        monkeypatch.setattr(torch.Tensor, 'cuda', lambda self, *a, **k: self)
+        monkeypatch.setattr(distill, 'evaluate', lambda *a: {})
+        def loss(student, teacher, ids, *a, **kwargs):
+            sampled.append(int(ids[0, 0]))
+            value = sum(w.module.weight.square().mean() + w.quantizer.scale.square().mean()
+                        for w in common.wrappers(student).values())
+            return value, value.detach(), value.detach()
+        monkeypatch.setattr(distill, 'distillation_loss', loss)
+        monkeypatch.setattr(distill, 'progress', lambda *a, **k: None)
+        monkeypatch.setattr(distill, 'save_resume', lambda *a: None)
+        monkeypatch.setattr(distill, 'append_json', lambda path, row: logs.append(row))
+        def checkpoint(*args):
+            checkpoints.append(args[4]); return {'validation_ppl': 0.0}
+        monkeypatch.setattr(distill, 'evaluate_checkpoint', checkpoint)
+        args = SimpleNamespace(output=tmp_path, parent=tmp_path/'parent.pt', reference_state=None, resume=None,
+            steps=400, schedule_steps=400, accumulation=8, warmup=10, weight_lr=1e-5, weight_optimizer='adam',
+            relative_scale_lr=.001, data_start=800, temperature=1., ce_weight=.1, checkpoints=[100, 200, 400],
+            resume_every=25, target_ppl=None)
+>       distill.train(args)
+
+tests/test_phase5_uniform.py:210: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+experiments/phase3/distill.py:281: in train
+    write_json(args.output / "placement.json", place_student(student, getattr(args, "layer_devices", 1)))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model = Tiny(
+  (model): Module(
+    (layers): ModuleList(
+      (0): Module(
+        (self_attn): Module(
+          (q_proj):...er): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+        )
+      )
+    )
+  )
+)
+device_count = 1
+
+    def place_student(model, device_count):
+        if device_count < 1 or device_count > torch.cuda.device_count():
+>           raise ValueError("Requested QAT layer devices are not visible")
+E           ValueError: Requested QAT layer devices are not visible
+
+experiments/phase3/placement.py:24: ValueError
+=============================== warnings summary ===============================
+tests/test_phase5_uniform.py::test_fixed_qat400_global_token_budget_and_no_target_stop
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/cuda/__init__.py:654: UserWarning: Can't initialize NVML
+    warnings.warn("Can't initialize NVML")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_phase5_uniform.py::test_fixed_qat400_global_token_budget_and_no_target_stop
+1 failed, 9 passed, 1 warning in 10.27s

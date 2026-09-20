@@ -1,0 +1,15 @@
+...                                                                      [100%]
+=============================== warnings summary ===============================
+tests/test_phase3_joint.py::test_distill_adam_weight_coverage_state_update_and_sgd_default
+tests/test_phase3_joint.py::test_distill_teacher_body_offload_loss_grad_state_equivalence
+tests/test_phase3_joint.py::test_distill_resume_optimizer_method_mismatch_and_legacy_default
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+tests/test_phase3_joint.py::test_distill_teacher_body_offload_loss_grad_state_equivalence
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+    with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/cpu-distill-adam-offload-20260914.xml -
+3 passed, 4 warnings in 11.58s

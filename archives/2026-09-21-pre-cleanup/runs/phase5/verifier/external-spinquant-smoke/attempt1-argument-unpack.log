@@ -1,0 +1,7 @@
+failure {"type": "AttributeError", "message": "'tuple' object has no attribute 'optimized_rotation_path'", "traceback": "Traceback (most recent call last):\n  File \"/home/dongpeiyan/projects/rotation-quant/runs/phase5/verifier/external-spinquant-smoke/smoke.py\", line 177, in <module>\n    main()\n  File \"/home/dongpeiyan/projects/rotation-quant/runs/phase5/verifier/external-spinquant-smoke/smoke.py\", line 65, in main\n    args.optimized_rotation_path = None\nAttributeError: 'tuple' object has no attribute 'optimized_rotation_path'\n"}
+Traceback (most recent call last):
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase5/verifier/external-spinquant-smoke/smoke.py", line 177, in <module>
+    main()
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase5/verifier/external-spinquant-smoke/smoke.py", line 65, in main
+    args.optimized_rotation_path = None
+AttributeError: 'tuple' object has no attribute 'optimized_rotation_path'

@@ -1,0 +1,3502 @@
+[
+  {
+    "line": 14,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335367.237053,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 16.58203125,
+      "peak_allocated_gib": 16.18006992340088,
+      "gpu_time_budget": null,
+      "step": 1,
+      "total": 200,
+      "ce": 2.906501740217209,
+      "elapsed_seconds": 11.707838551956229
+    }
+  },
+  {
+    "line": 15,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335377.6725297,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 2,
+      "total": 200,
+      "ce": 2.667700946331024,
+      "elapsed_seconds": 22.14332143496722
+    }
+  },
+  {
+    "line": 16,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335387.7719631,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 3,
+      "total": 200,
+      "ce": 2.9464944899082184,
+      "elapsed_seconds": 32.24275417800527
+    }
+  },
+  {
+    "line": 17,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335398.3492684,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 4,
+      "total": 200,
+      "ce": 2.6290997862815857,
+      "elapsed_seconds": 42.82005416799802
+    }
+  },
+  {
+    "line": 18,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335408.4406972,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 5,
+      "total": 200,
+      "ce": 3.096533238887787,
+      "elapsed_seconds": 52.91148968494963
+    }
+  },
+  {
+    "line": 19,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335418.129742,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 6,
+      "total": 200,
+      "ce": 2.5071001052856445,
+      "elapsed_seconds": 62.600527653004974
+    }
+  },
+  {
+    "line": 20,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335427.9544106,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 7,
+      "total": 200,
+      "ce": 2.8574205338954926,
+      "elapsed_seconds": 72.42519585997798
+    }
+  },
+  {
+    "line": 21,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335439.4132366,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 8,
+      "total": 200,
+      "ce": 2.8593004643917084,
+      "elapsed_seconds": 83.88402162498096
+    }
+  },
+  {
+    "line": 22,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335449.5267508,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 9,
+      "total": 200,
+      "ce": 2.799499124288559,
+      "elapsed_seconds": 93.99753611395136
+    }
+  },
+  {
+    "line": 23,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335498.9117594,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 10,
+      "total": 200,
+      "ce": 2.710626095533371,
+      "elapsed_seconds": 143.3825309939566
+    }
+  },
+  {
+    "line": 24,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335508.8137488,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 11,
+      "total": 200,
+      "ce": 2.8637225329875946,
+      "elapsed_seconds": 153.28453446697677
+    }
+  },
+  {
+    "line": 25,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335518.9182038,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 12,
+      "total": 200,
+      "ce": 2.8344741761684418,
+      "elapsed_seconds": 163.3889894169988
+    }
+  },
+  {
+    "line": 26,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335528.0536318,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 13,
+      "total": 200,
+      "ce": 2.6831262409687042,
+      "elapsed_seconds": 172.52441631798865
+    }
+  },
+  {
+    "line": 27,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335537.1602955,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 14,
+      "total": 200,
+      "ce": 2.695791095495224,
+      "elapsed_seconds": 181.63108759600436
+    }
+  },
+  {
+    "line": 28,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335546.278128,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 15,
+      "total": 200,
+      "ce": 2.8693262338638306,
+      "elapsed_seconds": 190.7489108860027
+    }
+  },
+  {
+    "line": 29,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335555.8653848,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 16,
+      "total": 200,
+      "ce": 2.8541291654109955,
+      "elapsed_seconds": 200.33616753399838
+    }
+  },
+  {
+    "line": 30,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335565.0769277,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 17,
+      "total": 200,
+      "ce": 2.8445762991905212,
+      "elapsed_seconds": 209.54771956399782
+    }
+  },
+  {
+    "line": 31,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335573.7626448,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 18,
+      "total": 200,
+      "ce": 2.9348218739032745,
+      "elapsed_seconds": 218.2334305959521
+    }
+  },
+  {
+    "line": 32,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335582.6959836,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 19,
+      "total": 200,
+      "ce": 2.885049879550934,
+      "elapsed_seconds": 227.16677540098317
+    }
+  },
+  {
+    "line": 33,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335591.5106068,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 20,
+      "total": 200,
+      "ce": 2.9133993089199066,
+      "elapsed_seconds": 235.98139242699835
+    }
+  },
+  {
+    "line": 34,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335600.6865706,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 21,
+      "total": 200,
+      "ce": 2.8668207228183746,
+      "elapsed_seconds": 245.15736309497152
+    }
+  },
+  {
+    "line": 35,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335609.480596,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 22,
+      "total": 200,
+      "ce": 2.873793601989746,
+      "elapsed_seconds": 253.95138142595533
+    }
+  },
+  {
+    "line": 36,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335618.1576302,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 23,
+      "total": 200,
+      "ce": 3.116551101207733,
+      "elapsed_seconds": 262.62842273700517
+    }
+  },
+  {
+    "line": 37,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335626.8950891,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 24,
+      "total": 200,
+      "ce": 3.220696985721588,
+      "elapsed_seconds": 271.3658805110026
+    }
+  },
+  {
+    "line": 38,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335685.155918,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 25,
+      "total": 200,
+      "ce": 3.0616551637649536,
+      "elapsed_seconds": 329.62668858096004
+    }
+  },
+  {
+    "line": 39,
+    "value": {
+      "stage": "export-for-validation",
+      "pid": 1105455,
+      "time": 1789335685.8723528,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.4765625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 25
+    }
+  },
+  {
+    "line": 42,
+    "value": {
+      "stage": "full-validation",
+      "pid": 1105455,
+      "time": 1789335705.2762966,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 10.063324928283691,
+      "reserved_gib": 10.126953125,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 25
+    }
+  },
+  {
+    "line": 48,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335744.7621958,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 26,
+      "total": 200,
+      "ce": 2.750095844268799,
+      "elapsed_seconds": 389.2329786309856
+    }
+  },
+  {
+    "line": 49,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335754.6623833,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 27,
+      "total": 200,
+      "ce": 2.9831807911396027,
+      "elapsed_seconds": 399.1331755690044
+    }
+  },
+  {
+    "line": 50,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335764.472438,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 28,
+      "total": 200,
+      "ce": 2.717313230037689,
+      "elapsed_seconds": 408.9432217439753
+    }
+  },
+  {
+    "line": 51,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335774.2920432,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 29,
+      "total": 200,
+      "ce": 2.8654567301273346,
+      "elapsed_seconds": 418.7628276979667
+    }
+  },
+  {
+    "line": 52,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335783.499648,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 30,
+      "total": 200,
+      "ce": 2.988712430000305,
+      "elapsed_seconds": 427.9704402839998
+    }
+  },
+  {
+    "line": 53,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335792.552125,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 31,
+      "total": 200,
+      "ce": 2.827482223510742,
+      "elapsed_seconds": 437.0229092160007
+    }
+  },
+  {
+    "line": 54,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335802.0669723,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 32,
+      "total": 200,
+      "ce": 2.778623014688492,
+      "elapsed_seconds": 446.53776372398715
+    }
+  },
+  {
+    "line": 55,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335811.19951,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 33,
+      "total": 200,
+      "ce": 3.0259369015693665,
+      "elapsed_seconds": 455.6702961959527
+    }
+  },
+  {
+    "line": 56,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335820.190173,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 34,
+      "total": 200,
+      "ce": 2.928214192390442,
+      "elapsed_seconds": 464.66096387495054
+    }
+  },
+  {
+    "line": 57,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335829.1985135,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 35,
+      "total": 200,
+      "ce": 2.875841408967972,
+      "elapsed_seconds": 473.66929789999267
+    }
+  },
+  {
+    "line": 58,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335838.4136157,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 36,
+      "total": 200,
+      "ce": 2.770125061273575,
+      "elapsed_seconds": 482.8844065250014
+    }
+  },
+  {
+    "line": 59,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335847.7892168,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 37,
+      "total": 200,
+      "ce": 2.796081304550171,
+      "elapsed_seconds": 492.2600027519511
+    }
+  },
+  {
+    "line": 60,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335856.887086,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 38,
+      "total": 200,
+      "ce": 2.705059140920639,
+      "elapsed_seconds": 501.35787021700526
+    }
+  },
+  {
+    "line": 61,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335865.9149802,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 39,
+      "total": 200,
+      "ce": 2.8971765339374542,
+      "elapsed_seconds": 510.3857704529655
+    }
+  },
+  {
+    "line": 62,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335874.981792,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 40,
+      "total": 200,
+      "ce": 2.7330113649368286,
+      "elapsed_seconds": 519.4525830509956
+    }
+  },
+  {
+    "line": 63,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335884.482602,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 41,
+      "total": 200,
+      "ce": 2.7915119528770447,
+      "elapsed_seconds": 528.9533837909694
+    }
+  },
+  {
+    "line": 64,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335893.5190833,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 42,
+      "total": 200,
+      "ce": 3.151038020849228,
+      "elapsed_seconds": 537.9898754379828
+    }
+  },
+  {
+    "line": 65,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335902.5025826,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 43,
+      "total": 200,
+      "ce": 2.858277678489685,
+      "elapsed_seconds": 546.9733681840007
+    }
+  },
+  {
+    "line": 66,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335911.5098567,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 44,
+      "total": 200,
+      "ce": 3.0256102085113525,
+      "elapsed_seconds": 555.980647030985
+    }
+  },
+  {
+    "line": 67,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335920.8726997,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 45,
+      "total": 200,
+      "ce": 3.0983405113220215,
+      "elapsed_seconds": 565.343491401989
+    }
+  },
+  {
+    "line": 68,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335930.531937,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 46,
+      "total": 200,
+      "ce": 3.2097511291503906,
+      "elapsed_seconds": 575.0027271479485
+    }
+  },
+  {
+    "line": 69,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335939.7047153,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 47,
+      "total": 200,
+      "ce": 2.7089584171772003,
+      "elapsed_seconds": 584.175507418986
+    }
+  },
+  {
+    "line": 70,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335948.8439543,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 48,
+      "total": 200,
+      "ce": 3.006176769733429,
+      "elapsed_seconds": 593.3147465759539
+    }
+  },
+  {
+    "line": 71,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789335957.9552085,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 49,
+      "total": 200,
+      "ce": 2.770488828420639,
+      "elapsed_seconds": 602.4259914239519
+    }
+  },
+  {
+    "line": 72,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336017.586463,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 50,
+      "total": 200,
+      "ce": 2.8300132751464844,
+      "elapsed_seconds": 662.0572294179583
+    }
+  },
+  {
+    "line": 73,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336027.5772905,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 51,
+      "total": 200,
+      "ce": 2.9344284534454346,
+      "elapsed_seconds": 672.0480759709608
+    }
+  },
+  {
+    "line": 74,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336036.633612,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 52,
+      "total": 200,
+      "ce": 2.8687343299388885,
+      "elapsed_seconds": 681.1044033249491
+    }
+  },
+  {
+    "line": 75,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336046.1448812,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 53,
+      "total": 200,
+      "ce": 2.886104851961136,
+      "elapsed_seconds": 690.6156463949592
+    }
+  },
+  {
+    "line": 76,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336055.6197028,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 54,
+      "total": 200,
+      "ce": 2.9254488050937653,
+      "elapsed_seconds": 700.090487502981
+    }
+  },
+  {
+    "line": 77,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336065.053998,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 55,
+      "total": 200,
+      "ce": 2.6226374208927155,
+      "elapsed_seconds": 709.5247683259659
+    }
+  },
+  {
+    "line": 78,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336074.1032362,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 56,
+      "total": 200,
+      "ce": 2.8058890998363495,
+      "elapsed_seconds": 718.5740180219873
+    }
+  },
+  {
+    "line": 79,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336083.4448214,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 57,
+      "total": 200,
+      "ce": 2.8182317316532135,
+      "elapsed_seconds": 727.9156112119672
+    }
+  },
+  {
+    "line": 80,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336092.8639677,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 58,
+      "total": 200,
+      "ce": 2.8083724975585938,
+      "elapsed_seconds": 737.3347592899809
+    }
+  },
+  {
+    "line": 81,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336101.9203992,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 59,
+      "total": 200,
+      "ce": 2.872066408395767,
+      "elapsed_seconds": 746.3911827559932
+    }
+  },
+  {
+    "line": 82,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336111.1093392,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 60,
+      "total": 200,
+      "ce": 2.7184093594551086,
+      "elapsed_seconds": 755.5801298779552
+    }
+  },
+  {
+    "line": 83,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336120.6019044,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 61,
+      "total": 200,
+      "ce": 2.898883730173111,
+      "elapsed_seconds": 765.0726944899652
+    }
+  },
+  {
+    "line": 84,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336130.913,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 62,
+      "total": 200,
+      "ce": 2.6668878495693207,
+      "elapsed_seconds": 775.3837834279984
+    }
+  },
+  {
+    "line": 85,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336141.0942101,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 63,
+      "total": 200,
+      "ce": 2.6941623091697693,
+      "elapsed_seconds": 785.5650021059555
+    }
+  },
+  {
+    "line": 86,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336150.3124435,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 64,
+      "total": 200,
+      "ce": 2.841001272201538,
+      "elapsed_seconds": 794.7832293629763
+    }
+  },
+  {
+    "line": 87,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336159.6622233,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 65,
+      "total": 200,
+      "ce": 2.6055513620376587,
+      "elapsed_seconds": 804.1330152149894
+    }
+  },
+  {
+    "line": 88,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336169.290255,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 66,
+      "total": 200,
+      "ce": 2.7331700921058655,
+      "elapsed_seconds": 813.7610419959528
+    }
+  },
+  {
+    "line": 89,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336178.5332422,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 67,
+      "total": 200,
+      "ce": 2.811932325363159,
+      "elapsed_seconds": 823.0040330409538
+    }
+  },
+  {
+    "line": 90,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336187.5297537,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 68,
+      "total": 200,
+      "ce": 2.7003084421157837,
+      "elapsed_seconds": 832.0005458659725
+    }
+  },
+  {
+    "line": 91,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336196.528675,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 69,
+      "total": 200,
+      "ce": 3.1134000420570374,
+      "elapsed_seconds": 840.9994670249871
+    }
+  },
+  {
+    "line": 92,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336205.7664354,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 70,
+      "total": 200,
+      "ce": 2.6930973678827286,
+      "elapsed_seconds": 850.2372267989558
+    }
+  },
+  {
+    "line": 93,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336215.2419105,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 71,
+      "total": 200,
+      "ce": 2.792062893509865,
+      "elapsed_seconds": 859.7126956110005
+    }
+  },
+  {
+    "line": 94,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336224.4798396,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 72,
+      "total": 200,
+      "ce": 2.804718494415283,
+      "elapsed_seconds": 868.9506247019744
+    }
+  },
+  {
+    "line": 95,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336233.8569257,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 73,
+      "total": 200,
+      "ce": 2.7743760347366333,
+      "elapsed_seconds": 878.3277184219914
+    }
+  },
+  {
+    "line": 96,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336242.941513,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 74,
+      "total": 200,
+      "ce": 3.0380476117134094,
+      "elapsed_seconds": 887.4122978779487
+    }
+  },
+  {
+    "line": 97,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336297.8320935,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 75,
+      "total": 200,
+      "ce": 2.7789971232414246,
+      "elapsed_seconds": 942.3028488979908
+    }
+  },
+  {
+    "line": 98,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336308.3525507,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 76,
+      "total": 200,
+      "ce": 3.022739052772522,
+      "elapsed_seconds": 952.8233421999612
+    }
+  },
+  {
+    "line": 99,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336317.6949258,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 77,
+      "total": 200,
+      "ce": 2.7885543406009674,
+      "elapsed_seconds": 962.1657123269979
+    }
+  },
+  {
+    "line": 100,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336326.7221634,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 78,
+      "total": 200,
+      "ce": 2.8045302033424377,
+      "elapsed_seconds": 971.1929528079927
+    }
+  },
+  {
+    "line": 101,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336336.719876,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 79,
+      "total": 200,
+      "ce": 2.852587401866913,
+      "elapsed_seconds": 981.1906628409633
+    }
+  },
+  {
+    "line": 102,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336346.5766795,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 80,
+      "total": 200,
+      "ce": 2.8875755667686462,
+      "elapsed_seconds": 991.047465881973
+    }
+  },
+  {
+    "line": 103,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336355.8119018,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 81,
+      "total": 200,
+      "ce": 2.7361888885498047,
+      "elapsed_seconds": 1000.2826881079818
+    }
+  },
+  {
+    "line": 104,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336364.7697675,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 82,
+      "total": 200,
+      "ce": 2.762563019990921,
+      "elapsed_seconds": 1009.2405603259685
+    }
+  },
+  {
+    "line": 105,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336374.1700454,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 83,
+      "total": 200,
+      "ce": 2.7695774137973785,
+      "elapsed_seconds": 1018.6408376339823
+    }
+  },
+  {
+    "line": 106,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336383.4212532,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 84,
+      "total": 200,
+      "ce": 2.8253019750118256,
+      "elapsed_seconds": 1027.8920379979536
+    }
+  },
+  {
+    "line": 107,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336392.5025582,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 85,
+      "total": 200,
+      "ce": 2.686119318008423,
+      "elapsed_seconds": 1036.9733489869977
+    }
+  },
+  {
+    "line": 108,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336401.402194,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 86,
+      "total": 200,
+      "ce": 2.722606807947159,
+      "elapsed_seconds": 1045.8729857049766
+    }
+  },
+  {
+    "line": 109,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336411.2629483,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 87,
+      "total": 200,
+      "ce": 2.6065630316734314,
+      "elapsed_seconds": 1055.7337402229896
+    }
+  },
+  {
+    "line": 110,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336420.2196703,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 88,
+      "total": 200,
+      "ce": 2.839637964963913,
+      "elapsed_seconds": 1064.6904627099866
+    }
+  },
+  {
+    "line": 111,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336429.293263,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 89,
+      "total": 200,
+      "ce": 2.723358392715454,
+      "elapsed_seconds": 1073.7640553109813
+    }
+  },
+  {
+    "line": 112,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336438.332557,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 90,
+      "total": 200,
+      "ce": 2.7038261890411377,
+      "elapsed_seconds": 1082.8033428780036
+    }
+  },
+  {
+    "line": 113,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336447.5697327,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 91,
+      "total": 200,
+      "ce": 2.726812094449997,
+      "elapsed_seconds": 1092.0405219550012
+    }
+  },
+  {
+    "line": 114,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336456.9065697,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 92,
+      "total": 200,
+      "ce": 2.5842606127262115,
+      "elapsed_seconds": 1101.3773619249696
+    }
+  },
+  {
+    "line": 115,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336465.8307693,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 93,
+      "total": 200,
+      "ce": 2.929675430059433,
+      "elapsed_seconds": 1110.3015616699704
+    }
+  },
+  {
+    "line": 116,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336474.7909968,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 94,
+      "total": 200,
+      "ce": 2.656201869249344,
+      "elapsed_seconds": 1119.261789149954
+    }
+  },
+  {
+    "line": 117,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336483.743295,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 95,
+      "total": 200,
+      "ce": 2.78286549448967,
+      "elapsed_seconds": 1128.2140869399882
+    }
+  },
+  {
+    "line": 118,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336493.1855805,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 96,
+      "total": 200,
+      "ce": 2.6694889962673187,
+      "elapsed_seconds": 1137.6563726569875
+    }
+  },
+  {
+    "line": 119,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336502.1309338,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 97,
+      "total": 200,
+      "ce": 2.809596449136734,
+      "elapsed_seconds": 1146.601726398978
+    }
+  },
+  {
+    "line": 120,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336511.3684592,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 98,
+      "total": 200,
+      "ce": 2.630035251379013,
+      "elapsed_seconds": 1155.8392512319842
+    }
+  },
+  {
+    "line": 121,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336520.3174434,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 99,
+      "total": 200,
+      "ce": 2.875140517950058,
+      "elapsed_seconds": 1164.7882359659998
+    }
+  },
+  {
+    "line": 122,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336572.7571585,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 100,
+      "total": 200,
+      "ce": 2.7703887820243835,
+      "elapsed_seconds": 1217.227915491967
+    }
+  },
+  {
+    "line": 123,
+    "value": {
+      "stage": "export-for-validation",
+      "pid": 1105455,
+      "time": 1789336573.4696128,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 100
+    }
+  },
+  {
+    "line": 126,
+    "value": {
+      "stage": "full-validation",
+      "pid": 1105455,
+      "time": 1789336596.6580248,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 10.063324928283691,
+      "reserved_gib": 10.12890625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 100
+    }
+  },
+  {
+    "line": 131,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336634.3705304,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 101,
+      "total": 200,
+      "ce": 2.810272693634033,
+      "elapsed_seconds": 1278.8413192079752
+    }
+  },
+  {
+    "line": 132,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336643.4878907,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 102,
+      "total": 200,
+      "ce": 2.6093373894691467,
+      "elapsed_seconds": 1287.9586824569851
+    }
+  },
+  {
+    "line": 133,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336652.4096253,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 103,
+      "total": 200,
+      "ce": 2.7261863350868225,
+      "elapsed_seconds": 1296.8804167159833
+    }
+  },
+  {
+    "line": 134,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336662.127297,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 104,
+      "total": 200,
+      "ce": 2.6907275021076202,
+      "elapsed_seconds": 1306.5980825379957
+    }
+  },
+  {
+    "line": 135,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336671.684868,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 105,
+      "total": 200,
+      "ce": 2.6774320900440216,
+      "elapsed_seconds": 1316.1556508030044
+    }
+  },
+  {
+    "line": 136,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336681.134704,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 106,
+      "total": 200,
+      "ce": 2.9519485235214233,
+      "elapsed_seconds": 1325.6054968279786
+    }
+  },
+  {
+    "line": 137,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336690.4187691,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 107,
+      "total": 200,
+      "ce": 2.719137489795685,
+      "elapsed_seconds": 1334.8895559439552
+    }
+  },
+  {
+    "line": 138,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336699.4617445,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 108,
+      "total": 200,
+      "ce": 2.6630546152591705,
+      "elapsed_seconds": 1343.9325374919572
+    }
+  },
+  {
+    "line": 139,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336708.4369228,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 109,
+      "total": 200,
+      "ce": 2.664807140827179,
+      "elapsed_seconds": 1352.9077155609848
+    }
+  },
+  {
+    "line": 140,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336717.4532025,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 110,
+      "total": 200,
+      "ce": 2.8570254147052765,
+      "elapsed_seconds": 1361.9239898469532
+    }
+  },
+  {
+    "line": 141,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336726.5411267,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 111,
+      "total": 200,
+      "ce": 2.7018328607082367,
+      "elapsed_seconds": 1371.0119176059961
+    }
+  },
+  {
+    "line": 142,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336735.37238,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 112,
+      "total": 200,
+      "ce": 2.8931655883789062,
+      "elapsed_seconds": 1379.8431724289549
+    }
+  },
+  {
+    "line": 143,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336744.3249192,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 113,
+      "total": 200,
+      "ce": 2.742173343896866,
+      "elapsed_seconds": 1388.7957111919532
+    }
+  },
+  {
+    "line": 144,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336753.3969395,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 114,
+      "total": 200,
+      "ce": 2.713790327310562,
+      "elapsed_seconds": 1397.8677317019901
+    }
+  },
+  {
+    "line": 145,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336762.424117,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 115,
+      "total": 200,
+      "ce": 2.7953969538211823,
+      "elapsed_seconds": 1406.8949092839612
+    }
+  },
+  {
+    "line": 146,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336771.2880464,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 116,
+      "total": 200,
+      "ce": 2.38460773229599,
+      "elapsed_seconds": 1415.7588386129937
+    }
+  },
+  {
+    "line": 147,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336780.2310479,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 117,
+      "total": 200,
+      "ce": 2.6289969384670258,
+      "elapsed_seconds": 1424.701832430961
+    }
+  },
+  {
+    "line": 148,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336789.133404,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 118,
+      "total": 200,
+      "ce": 2.5515976548194885,
+      "elapsed_seconds": 1433.6041939039715
+    }
+  },
+  {
+    "line": 149,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336798.0240908,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 119,
+      "total": 200,
+      "ce": 2.9387277960777283,
+      "elapsed_seconds": 1442.4948828149936
+    }
+  },
+  {
+    "line": 150,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336807.0594113,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 120,
+      "total": 200,
+      "ce": 2.7751036286354065,
+      "elapsed_seconds": 1451.530204065959
+    }
+  },
+  {
+    "line": 151,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336816.0108685,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 121,
+      "total": 200,
+      "ce": 2.701032042503357,
+      "elapsed_seconds": 1460.4816598959733
+    }
+  },
+  {
+    "line": 152,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336824.8453453,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 122,
+      "total": 200,
+      "ce": 2.810435026884079,
+      "elapsed_seconds": 1469.3161375529598
+    }
+  },
+  {
+    "line": 153,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336833.8547003,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 123,
+      "total": 200,
+      "ce": 2.670237749814987,
+      "elapsed_seconds": 1478.3254926759982
+    }
+  },
+  {
+    "line": 154,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336842.8703983,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 124,
+      "total": 200,
+      "ce": 2.600636214017868,
+      "elapsed_seconds": 1487.3411888619885
+    }
+  },
+  {
+    "line": 155,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336897.638748,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 125,
+      "total": 200,
+      "ce": 2.372437357902527,
+      "elapsed_seconds": 1542.109519541962
+    }
+  },
+  {
+    "line": 156,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336907.1466,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 126,
+      "total": 200,
+      "ce": 2.7448562383651733,
+      "elapsed_seconds": 1551.6173826759914
+    }
+  },
+  {
+    "line": 157,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336916.3493903,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 127,
+      "total": 200,
+      "ce": 2.781580090522766,
+      "elapsed_seconds": 1560.820176448964
+    }
+  },
+  {
+    "line": 158,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336925.5965827,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 128,
+      "total": 200,
+      "ce": 2.6662363409996033,
+      "elapsed_seconds": 1570.0673704899964
+    }
+  },
+  {
+    "line": 159,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336934.4795744,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 129,
+      "total": 200,
+      "ce": 2.8401824831962585,
+      "elapsed_seconds": 1578.950365734985
+    }
+  },
+  {
+    "line": 160,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336943.4836037,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 130,
+      "total": 200,
+      "ce": 2.825482726097107,
+      "elapsed_seconds": 1587.9543956139823
+    }
+  },
+  {
+    "line": 161,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336952.732168,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 131,
+      "total": 200,
+      "ce": 2.8689118027687073,
+      "elapsed_seconds": 1597.2029604539857
+    }
+  },
+  {
+    "line": 162,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336961.9081378,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 132,
+      "total": 200,
+      "ce": 2.6058108806610107,
+      "elapsed_seconds": 1606.3789229709655
+    }
+  },
+  {
+    "line": 163,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336970.68,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 133,
+      "total": 200,
+      "ce": 2.680061489343643,
+      "elapsed_seconds": 1615.1507922699675
+    }
+  },
+  {
+    "line": 164,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336979.521096,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 134,
+      "total": 200,
+      "ce": 3.0092807710170746,
+      "elapsed_seconds": 1623.9918878359604
+    }
+  },
+  {
+    "line": 165,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336988.5518105,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 135,
+      "total": 200,
+      "ce": 2.211431697010994,
+      "elapsed_seconds": 1633.022602886951
+    }
+  },
+  {
+    "line": 166,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789336997.9411452,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 136,
+      "total": 200,
+      "ce": 2.6133674681186676,
+      "elapsed_seconds": 1642.4119366979576
+    }
+  },
+  {
+    "line": 167,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337006.9597244,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 137,
+      "total": 200,
+      "ce": 2.7436741292476654,
+      "elapsed_seconds": 1651.430516352004
+    }
+  },
+  {
+    "line": 168,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337015.9128175,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 138,
+      "total": 200,
+      "ce": 2.7636093199253082,
+      "elapsed_seconds": 1660.383605306968
+    }
+  },
+  {
+    "line": 169,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337024.720007,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 139,
+      "total": 200,
+      "ce": 2.734177529811859,
+      "elapsed_seconds": 1669.1907977719675
+    }
+  },
+  {
+    "line": 170,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337033.7170234,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 140,
+      "total": 200,
+      "ce": 2.3310416787862778,
+      "elapsed_seconds": 1678.1878162679495
+    }
+  },
+  {
+    "line": 171,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337042.9675796,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 141,
+      "total": 200,
+      "ce": 2.907837986946106,
+      "elapsed_seconds": 1687.4383713909774
+    }
+  },
+  {
+    "line": 172,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337051.943938,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 142,
+      "total": 200,
+      "ce": 2.885578602552414,
+      "elapsed_seconds": 1696.4147302519996
+    }
+  },
+  {
+    "line": 173,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337060.897128,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 143,
+      "total": 200,
+      "ce": 2.5873797833919525,
+      "elapsed_seconds": 1705.3679193729768
+    }
+  },
+  {
+    "line": 174,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337070.0261674,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 144,
+      "total": 200,
+      "ce": 2.527764707803726,
+      "elapsed_seconds": 1714.4969590699766
+    }
+  },
+  {
+    "line": 175,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337079.7079718,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 145,
+      "total": 200,
+      "ce": 2.591067135334015,
+      "elapsed_seconds": 1724.1787645180011
+    }
+  },
+  {
+    "line": 176,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337088.6885026,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 146,
+      "total": 200,
+      "ce": 2.588196814060211,
+      "elapsed_seconds": 1733.1592948389589
+    }
+  },
+  {
+    "line": 177,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337097.5733774,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 147,
+      "total": 200,
+      "ce": 2.724576085805893,
+      "elapsed_seconds": 1742.0441694249748
+    }
+  },
+  {
+    "line": 178,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337106.5808427,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 148,
+      "total": 200,
+      "ce": 2.776916950941086,
+      "elapsed_seconds": 1751.051635079959
+    }
+  },
+  {
+    "line": 179,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337115.9488773,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 149,
+      "total": 200,
+      "ce": 2.7659456729888916,
+      "elapsed_seconds": 1760.419663070992
+    }
+  },
+  {
+    "line": 180,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337167.663267,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 150,
+      "total": 200,
+      "ce": 2.715231269598007,
+      "elapsed_seconds": 1812.1340395069565
+    }
+  },
+  {
+    "line": 181,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337177.414234,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 151,
+      "total": 200,
+      "ce": 2.793055087327957,
+      "elapsed_seconds": 1821.8850184539915
+    }
+  },
+  {
+    "line": 182,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337186.6224444,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 152,
+      "total": 200,
+      "ce": 2.699258476495743,
+      "elapsed_seconds": 1831.0932350920048
+    }
+  },
+  {
+    "line": 183,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337195.8794422,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 153,
+      "total": 200,
+      "ce": 2.7735174894332886,
+      "elapsed_seconds": 1840.35022690997
+    }
+  },
+  {
+    "line": 184,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337205.2918313,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 154,
+      "total": 200,
+      "ce": 2.491105169057846,
+      "elapsed_seconds": 1849.7626236659708
+    }
+  },
+  {
+    "line": 185,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337214.3020098,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 155,
+      "total": 200,
+      "ce": 2.887171298265457,
+      "elapsed_seconds": 1858.772793688986
+    }
+  },
+  {
+    "line": 186,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337223.4278855,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 156,
+      "total": 200,
+      "ce": 2.731738805770874,
+      "elapsed_seconds": 1867.898677582969
+    }
+  },
+  {
+    "line": 187,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337232.6210523,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 157,
+      "total": 200,
+      "ce": 2.611682415008545,
+      "elapsed_seconds": 1877.0918363939854
+    }
+  },
+  {
+    "line": 188,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337241.9074504,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 158,
+      "total": 200,
+      "ce": 2.7876930236816406,
+      "elapsed_seconds": 1886.3782409330015
+    }
+  },
+  {
+    "line": 189,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337251.0727253,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 159,
+      "total": 200,
+      "ce": 2.750750571489334,
+      "elapsed_seconds": 1895.5435172439902
+    }
+  },
+  {
+    "line": 190,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337260.128649,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 160,
+      "total": 200,
+      "ce": 2.752324938774109,
+      "elapsed_seconds": 1904.5994343719794
+    }
+  },
+  {
+    "line": 191,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337269.1885457,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 161,
+      "total": 200,
+      "ce": 2.634401857852936,
+      "elapsed_seconds": 1913.65933640796
+    }
+  },
+  {
+    "line": 192,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337278.6404314,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 162,
+      "total": 200,
+      "ce": 2.694326877593994,
+      "elapsed_seconds": 1923.1112231889856
+    }
+  },
+  {
+    "line": 193,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337287.7516577,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 163,
+      "total": 200,
+      "ce": 2.775583118200302,
+      "elapsed_seconds": 1932.2224494019756
+    }
+  },
+  {
+    "line": 194,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337296.8346875,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 164,
+      "total": 200,
+      "ce": 2.7460232079029083,
+      "elapsed_seconds": 1941.305471509986
+    }
+  },
+  {
+    "line": 195,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337306.1005557,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 165,
+      "total": 200,
+      "ce": 2.9496281147003174,
+      "elapsed_seconds": 1950.5713482159772
+    }
+  },
+  {
+    "line": 196,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337315.2898529,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 166,
+      "total": 200,
+      "ce": 2.6949806213378906,
+      "elapsed_seconds": 1959.7606441579992
+    }
+  },
+  {
+    "line": 197,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337324.6854126,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 167,
+      "total": 200,
+      "ce": 2.8209996819496155,
+      "elapsed_seconds": 1969.1562047579791
+    }
+  },
+  {
+    "line": 198,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337333.5443416,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 168,
+      "total": 200,
+      "ce": 2.670554131269455,
+      "elapsed_seconds": 1978.015133968962
+    }
+  },
+  {
+    "line": 199,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337342.7460742,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 169,
+      "total": 200,
+      "ce": 2.714129626750946,
+      "elapsed_seconds": 1987.2168600679724
+    }
+  },
+  {
+    "line": 200,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337351.6862838,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 170,
+      "total": 200,
+      "ce": 2.843491107225418,
+      "elapsed_seconds": 1996.1570739759482
+    }
+  },
+  {
+    "line": 201,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337361.137098,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 171,
+      "total": 200,
+      "ce": 2.8904126286506653,
+      "elapsed_seconds": 2005.6078893509693
+    }
+  },
+  {
+    "line": 202,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337370.1738765,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 172,
+      "total": 200,
+      "ce": 2.959231674671173,
+      "elapsed_seconds": 2014.6446686019772
+    }
+  },
+  {
+    "line": 203,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337379.1884928,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 173,
+      "total": 200,
+      "ce": 2.7773873805999756,
+      "elapsed_seconds": 2023.6592847569846
+    }
+  },
+  {
+    "line": 204,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337388.276216,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 174,
+      "total": 200,
+      "ce": 2.5313888490200043,
+      "elapsed_seconds": 2032.747007531987
+    }
+  },
+  {
+    "line": 205,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337440.7488415,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 175,
+      "total": 200,
+      "ce": 2.7396071553230286,
+      "elapsed_seconds": 2085.2196074429667
+    }
+  },
+  {
+    "line": 206,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337450.7501183,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 176,
+      "total": 200,
+      "ce": 2.5662218034267426,
+      "elapsed_seconds": 2095.2209042999893
+    }
+  },
+  {
+    "line": 207,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337459.9642332,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 177,
+      "total": 200,
+      "ce": 2.803026109933853,
+      "elapsed_seconds": 2104.4350254900055
+    }
+  },
+  {
+    "line": 208,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337469.049484,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 178,
+      "total": 200,
+      "ce": 2.763976037502289,
+      "elapsed_seconds": 2113.5202701219823
+    }
+  },
+  {
+    "line": 209,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337478.3415854,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 179,
+      "total": 200,
+      "ce": 2.620577424764633,
+      "elapsed_seconds": 2122.8123762439936
+    }
+  },
+  {
+    "line": 210,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337487.8891382,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 180,
+      "total": 200,
+      "ce": 2.827262222766876,
+      "elapsed_seconds": 2132.359921645955
+    }
+  },
+  {
+    "line": 211,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337497.0418158,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 181,
+      "total": 200,
+      "ce": 2.825317859649658,
+      "elapsed_seconds": 2141.5126078499597
+    }
+  },
+  {
+    "line": 212,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337506.0475347,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 182,
+      "total": 200,
+      "ce": 2.7678309082984924,
+      "elapsed_seconds": 2150.5183255719603
+    }
+  },
+  {
+    "line": 213,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337515.2535937,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 183,
+      "total": 200,
+      "ce": 2.676127940416336,
+      "elapsed_seconds": 2159.7243856679997
+    }
+  },
+  {
+    "line": 214,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337524.4759407,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 184,
+      "total": 200,
+      "ce": 2.7570745944976807,
+      "elapsed_seconds": 2168.9467260139645
+    }
+  },
+  {
+    "line": 215,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337533.9859746,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 185,
+      "total": 200,
+      "ce": 2.539836898446083,
+      "elapsed_seconds": 2178.456764706003
+    }
+  },
+  {
+    "line": 216,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337542.8769903,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 186,
+      "total": 200,
+      "ce": 2.598950684070587,
+      "elapsed_seconds": 2187.3477823300054
+    }
+  },
+  {
+    "line": 217,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337551.8291373,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 187,
+      "total": 200,
+      "ce": 2.685212880373001,
+      "elapsed_seconds": 2196.2999283389654
+    }
+  },
+  {
+    "line": 218,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337560.8626208,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 188,
+      "total": 200,
+      "ce": 2.421576902270317,
+      "elapsed_seconds": 2205.333412552951
+    }
+  },
+  {
+    "line": 219,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337570.2592323,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 189,
+      "total": 200,
+      "ce": 2.9214545488357544,
+      "elapsed_seconds": 2214.7300236869487
+    }
+  },
+  {
+    "line": 220,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337579.4262729,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 190,
+      "total": 200,
+      "ce": 3.032494157552719,
+      "elapsed_seconds": 2223.897065197001
+    }
+  },
+  {
+    "line": 221,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337588.3741243,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 191,
+      "total": 200,
+      "ce": 2.683436632156372,
+      "elapsed_seconds": 2232.844916381
+    }
+  },
+  {
+    "line": 222,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337597.6773093,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 192,
+      "total": 200,
+      "ce": 2.9517636597156525,
+      "elapsed_seconds": 2242.148092763964
+    }
+  },
+  {
+    "line": 223,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337606.9508603,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 193,
+      "total": 200,
+      "ce": 3.1775101125240326,
+      "elapsed_seconds": 2251.421650942997
+    }
+  },
+  {
+    "line": 224,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337616.5556056,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 194,
+      "total": 200,
+      "ce": 2.702664166688919,
+      "elapsed_seconds": 2261.026396892965
+    }
+  },
+  {
+    "line": 225,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337625.6687596,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 195,
+      "total": 200,
+      "ce": 2.720205634832382,
+      "elapsed_seconds": 2270.139551977976
+    }
+  },
+  {
+    "line": 226,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337634.6204848,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 196,
+      "total": 200,
+      "ce": 2.795738995075226,
+      "elapsed_seconds": 2279.0912770089926
+    }
+  },
+  {
+    "line": 227,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337643.6346898,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 197,
+      "total": 200,
+      "ce": 2.6410107612609863,
+      "elapsed_seconds": 2288.1054821709986
+    }
+  },
+  {
+    "line": 228,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337653.0935388,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 198,
+      "total": 200,
+      "ce": 2.9000473618507385,
+      "elapsed_seconds": 2297.5643302229582
+    }
+  },
+  {
+    "line": 229,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337662.3474004,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 199,
+      "total": 200,
+      "ce": 2.70703062415123,
+      "elapsed_seconds": 2306.8181921420037
+    }
+  },
+  {
+    "line": 230,
+    "value": {
+      "stage": "distillation-training",
+      "pid": 1105455,
+      "time": 1789337716.201312,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 200,
+      "total": 200,
+      "ce": 2.7911781072616577,
+      "elapsed_seconds": 2360.6720850919955
+    }
+  },
+  {
+    "line": 231,
+    "value": {
+      "stage": "export-for-validation",
+      "pid": 1105455,
+      "time": 1789337716.9054892,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 12.369027137756348,
+      "reserved_gib": 18.46484375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 200
+    }
+  },
+  {
+    "line": 234,
+    "value": {
+      "stage": "full-validation",
+      "pid": 1105455,
+      "time": 1789337738.6332915,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 10.063324928283691,
+      "reserved_gib": 10.130859375,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "step": 200
+    }
+  },
+  {
+    "line": 239,
+    "value": {
+      "stage": "completed",
+      "pid": 1105455,
+      "time": 1789337766.0636797,
+      "cuda_visible_devices": "1",
+      "allocated_gib": 14.671895503997803,
+      "reserved_gib": 14.697265625,
+      "peak_allocated_gib": 18.423856258392334,
+      "gpu_time_budget": null,
+      "steps": 200,
+      "target_reached": false,
+      "elapsed_seconds": 2410.534467624966
+    }
+  }
+]

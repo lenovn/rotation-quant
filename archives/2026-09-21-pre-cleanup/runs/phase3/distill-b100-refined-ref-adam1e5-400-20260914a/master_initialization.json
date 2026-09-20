@@ -1,0 +1,6 @@
+{
+  "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+  "diagonal_transform": null,
+  "method": "project current-R FP reference into parent INT4 cells; retain parent initial quantized forward"
+}

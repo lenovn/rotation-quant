@@ -1,0 +1,17 @@
+{
+  "stage": "completed",
+  "pid": 839770,
+  "time": 1789332709.31696,
+  "cuda_visible_devices": "5",
+  "allocated_gib": 2.8024134635925293,
+  "reserved_gib": 4.19140625,
+  "peak_allocated_gib": 3.9899954795837402,
+  "gpu_time_budget": null,
+  "result": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+    "parent_probe": 2.9698206782341003,
+    "best_probe": 2.9698206782341003,
+    "selected": null,
+    "validation_status": "NOT TESTED: no candidate improved the fixed train probe"
+  }
+}

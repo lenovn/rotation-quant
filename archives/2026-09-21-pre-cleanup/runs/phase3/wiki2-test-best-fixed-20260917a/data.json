@@ -1,0 +1,26 @@
+{
+  "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/wiki2-test-best-fixed-20260917a/input_tokens.pt",
+  "input_metadata": {
+    "dataset": "Salesforce/wikitext",
+    "subset": "wikitext-2-raw-v1",
+    "split": "test",
+    "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-test.arrow",
+    "rows": 4358,
+    "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "add_bos_token": false,
+    "add_eos_token": false,
+    "text_join": "double-newline",
+    "token_count": 289076,
+    "window_length": 2048,
+    "full_windows": 141,
+    "tail_tokens": 308,
+    "windows": 142,
+    "predicted_tokens": 288934,
+    "unscored_tail_tokens": 0,
+    "protocol": "all test rows in original order; disjoint 2048-token windows including partial tail"
+  },
+  "reused_tokens": false,
+  "calibration": false,
+  "training": false,
+  "selection": false
+}

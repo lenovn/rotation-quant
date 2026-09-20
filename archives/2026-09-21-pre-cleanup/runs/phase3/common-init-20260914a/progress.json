@@ -1,0 +1,12 @@
+{
+  "stage": "completed",
+  "pid": 3875669,
+  "time": 1789322052.1413255,
+  "cuda_visible_devices": "1",
+  "allocated_gib": 5.614737510681152,
+  "reserved_gib": 7.58984375,
+  "peak_allocated_gib": 6.766555309295654,
+  "gpu_time_budget": null,
+  "initial": "runs/phase3/common-init-20260914a/initial.pt",
+  "static_probe": 3.7926133275032043
+}

@@ -1,0 +1,7 @@
+{
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/gptq_w4a16_package/w4_gptq_model.pt",
+  "w4_linears": 196,
+  "high_precision_unchanged": true,
+  "high_precision_tensors": 115,
+  "elapsed_seconds": 222.04605078697205
+}

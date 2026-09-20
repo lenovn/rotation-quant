@@ -1,0 +1,7 @@
+{"stage": "loading-data", "pid": 1367237, "time": 1789668335.9899383, "cuda_visible_devices": "5", "allocated_gib": 0.0, "reserved_gib": 0.0, "peak_allocated_gib": 0.0, "gpu_time_budget": null}
+Token indices sequence length is longer than the specified maximum sequence length for this model (262337 > 2048). Running this sequence through the model will result in indexing errors
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.53it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.05it/s]
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+{"stage": "initial-scale-calibration", "pid": 1367237, "time": 1789668349.5989459, "cuda_visible_devices": "5", "allocated_gib": 3.805650234222412, "reserved_gib": 3.814453125, "peak_allocated_gib": 3.805650234222412, "gpu_time_budget": null}
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.00it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.98it/s]
+{"stage": "completed", "pid": 1367237, "time": 1789668553.7500758, "cuda_visible_devices": "5", "allocated_gib": 7.604897499084473, "reserved_gib": 9.345703125, "peak_allocated_gib": 8.485572338104248, "gpu_time_budget": null, "initial": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/init-s42/initial.pt", "static_probe": 4.475957632064819}

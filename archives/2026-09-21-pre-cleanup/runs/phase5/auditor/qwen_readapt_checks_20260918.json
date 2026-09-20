@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "scope": "two completed final readaptation stages and exact PTQ packages; external acceptance pending",
+  "common_seed": 42,
+  "common_calibration_indices": [
+    567,
+    848,
+    140,
+    169,
+    543,
+    76,
+    391,
+    1095,
+    1007,
+    746,
+    794,
+    1165,
+    953,
+    327,
+    950,
+    505,
+    196,
+    548,
+    675,
+    437,
+    556,
+    1097,
+    1032,
+    430,
+    608,
+    1018,
+    222,
+    402,
+    480,
+    624,
+    912,
+    351
+  ],
+  "train_windows": 32,
+  "fit_windows": 24,
+  "selection_windows": 8,
+  "window_length": 2048,
+  "selection_targets": 16376,
+  "candidate_selection_train_only": true,
+  "parent_candidate_always_present": true,
+  "all_w4_scales_and_non_down_weight_codes_unchanged": true,
+  "non_down_activation_scales_unchanged": true,
+  "round_only_down_codes_change": true,
+  "range_only_down_input_scales_change": true,
+  "results": [
+    {
+      "run": "sp2-down-readapt-s42",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-range-s42/static_w4a8.pt",
+      "mode": "round",
+      "formats": {
+        "int8": 168,
+        "sp2": 28
+      },
+      "initial_train_nll": 2.766265582072881,
+      "selected_train_nll": 2.7368355058754466,
+      "validation_ppl": 14.935424095235582,
+      "validation_nll": 2.7037358473302344,
+      "summary_stage": "SP2-PTQ",
+      "targets_covered": 28,
+      "total_trial_records": 112,
+      "changed_weight_layers": [
+        "model.layers.2.mlp.down_proj",
+        "model.layers.4.mlp.down_proj",
+        "model.layers.5.mlp.down_proj",
+        "model.layers.8.mlp.down_proj",
+        "model.layers.16.mlp.down_proj",
+        "model.layers.19.mlp.down_proj",
+        "model.layers.21.mlp.down_proj"
+      ],
+      "changed_ranges": [],
+      "early_convergence": [],
+      "high_precision_tensors_bitwise_unchanged": 154,
+      "qk_norm_tensors_bitwise_unchanged": 56
+    },
+    {
+      "run": "uniform-down-readapt-s42",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-range-s42/static_w4a8.pt",
+      "mode": "round",
+      "formats": {
+        "int8": 196
+      },
+      "initial_train_nll": 2.9303037690963833,
+      "selected_train_nll": 2.907194164907816,
+      "validation_ppl": 17.491760837320335,
+      "validation_nll": 2.861729960767992,
+      "summary_stage": "Uniform-PTQ",
+      "targets_covered": 28,
+      "total_trial_records": 110,
+      "changed_weight_layers": [
+        "model.layers.2.mlp.down_proj",
+        "model.layers.3.mlp.down_proj",
+        "model.layers.5.mlp.down_proj",
+        "model.layers.9.mlp.down_proj",
+        "model.layers.11.mlp.down_proj",
+        "model.layers.12.mlp.down_proj",
+        "model.layers.14.mlp.down_proj",
+        "model.layers.16.mlp.down_proj",
+        "model.layers.18.mlp.down_proj",
+        "model.layers.22.mlp.down_proj",
+        "model.layers.24.mlp.down_proj",
+        "model.layers.26.mlp.down_proj"
+      ],
+      "changed_ranges": [],
+      "early_convergence": [
+        {
+          "module": "model.layers.2.mlp.down_proj",
+          "steps": [
+            0,
+            193
+          ],
+          "selected_step": 193
+        }
+      ],
+      "high_precision_tensors_bitwise_unchanged": 154,
+      "qk_norm_tensors_bitwise_unchanged": 56
+    }
+  ]
+}

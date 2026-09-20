@@ -1,0 +1,23 @@
+{
+  "completed_steps": 400,
+  "target_reached": false,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s44/static_w4a8.pt",
+  "checkpoints": [
+    {
+      "step": 100,
+      "training_probe": 2.761983036994934
+    },
+    {
+      "step": 200,
+      "training_probe": 2.6517048478126526
+    },
+    {
+      "step": 400,
+      "training_probe": 2.649701237678528,
+      "validation_nll": 2.756988819789281,
+      "validation_ppl": 15.752338332216512,
+      "changed_codes": 42802509
+    }
+  ],
+  "method": "quantization-aware distillation, not frozen-weight PTQ"
+}

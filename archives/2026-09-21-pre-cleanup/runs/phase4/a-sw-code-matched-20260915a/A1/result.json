@@ -1,0 +1,54 @@
+{
+  "train_nll": 2.6472935144882825,
+  "choices": [
+    {
+      "module": "model.layers.1.mlp.down_proj",
+      "selected_cycle": 0,
+      "scores": [
+        {
+          "cycle": 1,
+          "train_nll": 2.648921486143531
+        },
+        {
+          "cycle": 2,
+          "train_nll": 2.651027244719207
+        }
+      ]
+    },
+    {
+      "module": "model.layers.8.mlp.down_proj",
+      "selected_cycle": 0,
+      "scores": [
+        {
+          "cycle": 1,
+          "train_nll": 2.6491598968469874
+        },
+        {
+          "cycle": 2,
+          "train_nll": 2.648265310370954
+        }
+      ]
+    },
+    {
+      "module": "model.layers.11.mlp.down_proj",
+      "selected_cycle": 0,
+      "scores": [
+        {
+          "cycle": 1,
+          "train_nll": 2.6493515958234077
+        },
+        {
+          "cycle": 2,
+          "train_nll": 2.6487664718350894
+        }
+      ]
+    }
+  ],
+  "changed_modules": [],
+  "validation": {
+    "reused_parent": true,
+    "ppl": 16.112577060930427,
+    "nll": 2.779600150933802,
+    "predicted_tokens": 252728
+  }
+}

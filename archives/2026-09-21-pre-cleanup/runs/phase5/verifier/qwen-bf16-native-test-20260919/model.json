@@ -1,0 +1,30 @@
+{
+  "model_class": "transformers.models.qwen3.modeling_qwen3.Qwen3ForCausalLM",
+  "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+  "cached_revision": "{\n  \"repo\": \"Qwen/Qwen3-1.7B\",\n  \"revision\": \"70d244cc86ccca08cf5af4e1e306ecf908b1ad5e\"\n}",
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "transformers": "4.51.3",
+  "torch": "2.4.1+cu121",
+  "parameter_dtypes": {
+    "torch.bfloat16": 310
+  },
+  "tied_embeddings": true,
+  "linear_count": 197,
+  "forward_hooks": 0,
+  "rotation_quant_helpers_imported": false,
+  "quantization": false,
+  "calibration": false,
+  "training": false,
+  "use_cache": false,
+  "rotary_buffers": {
+    "model.rotary_emb.inv_freq": "torch.float32"
+  },
+  "dataset": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-test.arrow",
+  "regenerated_test_ids_match": {
+    "bf16-test-s42": true,
+    "sp2-qat400-test-s42": true,
+    "sp2-qat400-test-s43": true,
+    "sp2-qat400-test-s44": true
+  },
+  "cuda_visible_devices": "0"
+}

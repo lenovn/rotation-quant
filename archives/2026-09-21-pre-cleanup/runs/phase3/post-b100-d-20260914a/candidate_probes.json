@@ -1,0 +1,167 @@
+[
+  {
+    "candidate": "range-only-model.layers.1.mlp.down_proj",
+    "changed_modules": [],
+    "changed_alphas": {
+      "model.layers.1.mlp.down_proj": 564.63525390625
+    },
+    "probe": {
+      "nll": 2.957747995853424,
+      "ppl": 19.254561541426234,
+      "predicted_tokens": 8188,
+      "token_count": 8192,
+      "windows": [
+        {
+          "window": 0,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.218787431716919
+        },
+        {
+          "window": 1,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.115220546722412
+        },
+        {
+          "window": 2,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.8875935077667236
+        },
+        {
+          "window": 3,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.6093904972076416
+        }
+      ]
+    }
+  },
+  {
+    "candidate": "local-d-model.layers.1.mlp.down_proj",
+    "changed_modules": [
+      "model.layers.1.mlp.up_proj",
+      "model.layers.1.mlp.down_proj"
+    ],
+    "changed_alphas": {
+      "model.layers.1.mlp.down_proj": 564.63525390625
+    },
+    "probe": {
+      "nll": 2.954445779323578,
+      "ppl": 19.191083676540114,
+      "predicted_tokens": 8188,
+      "token_count": 8192,
+      "windows": [
+        {
+          "window": 0,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.2120420932769775
+        },
+        {
+          "window": 1,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.112539529800415
+        },
+        {
+          "window": 2,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.883392333984375
+        },
+        {
+          "window": 3,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.609809160232544
+        }
+      ]
+    }
+  },
+  {
+    "candidate": "local-d-model.layers.15.mlp.down_proj",
+    "changed_modules": [
+      "model.layers.15.mlp.up_proj",
+      "model.layers.15.mlp.down_proj"
+    ],
+    "changed_alphas": {
+      "model.layers.15.mlp.down_proj": 120.74356842041016
+    },
+    "probe": {
+      "nll": 2.9665750861167908,
+      "ppl": 19.425275640045964,
+      "predicted_tokens": 8188,
+      "token_count": 8192,
+      "windows": [
+        {
+          "window": 0,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.2277398109436035
+        },
+        {
+          "window": 1,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.127340078353882
+        },
+        {
+          "window": 2,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.894723415374756
+        },
+        {
+          "window": 3,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.616497039794922
+        }
+      ]
+    }
+  },
+  {
+    "candidate": "local-d-model.layers.13.mlp.down_proj",
+    "changed_modules": [
+      "model.layers.13.mlp.up_proj",
+      "model.layers.13.mlp.down_proj"
+    ],
+    "changed_alphas": {
+      "model.layers.13.mlp.down_proj": 7.03810453414917
+    },
+    "probe": {
+      "nll": 2.9707968831062317,
+      "ppl": 19.507458568015053,
+      "predicted_tokens": 8188,
+      "token_count": 8192,
+      "windows": [
+        {
+          "window": 0,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.2268800735473633
+        },
+        {
+          "window": 1,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.1260251998901367
+        },
+        {
+          "window": 2,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.904208183288574
+        },
+        {
+          "window": 3,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.6260740756988525
+        }
+      ]
+    }
+  }
+]

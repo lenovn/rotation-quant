@@ -1,0 +1,35 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 548.0335083007812,
+      "nll": 6.306336431612915
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 320.6320495605469,
+      "nll": 5.770294202616804
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 6.304327821601918,
+  "ppl": 546.933827494308,
+  "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/eval_utils.py",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-initial-s44/static_w4a8.pt",
+  "parent_metadata": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s44/checkpoint-0100/static_w4a8.pt",
+    "method": "matched Joint100 down INT8 initialization; no postprocessing or QAT yet"
+  },
+  "method": "sequential frozen-package postprocessing; no gradient training in this stage",
+  "format": "112 W4 / 112 static INT8; BF16 KV16 prefill"
+}

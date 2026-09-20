@@ -1,0 +1,25 @@
+{
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-local-d-third-20260914/test_local_d_driver_matched_co0/ptq-parent.pt",
+  "parent_metadata": {
+    "method": "joint R/SW/SA PTQ then sequential W4/SP2",
+    "original_backbone_trained": false,
+    "source_run": "B100-prefix",
+    "step": 100
+  },
+  "initial_train_nll": 3.0,
+  "identity_rule": {
+    "strength": 0,
+    "channel": 5,
+    "layer": 1,
+    "selected_step": 512,
+    "selected_train_nll": 3.0
+  },
+  "selected": {
+    "strength": 0,
+    "channel": 5,
+    "layer": 1,
+    "selected_step": 512,
+    "selected_train_nll": 3.0
+  },
+  "validation_status": "NOT TESTED: no improvement over untouched parent train selection NLL"
+}

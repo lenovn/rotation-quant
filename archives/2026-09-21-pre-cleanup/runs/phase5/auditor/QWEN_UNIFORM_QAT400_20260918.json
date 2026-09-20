@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "scope": "Qwen Uniform-QAT400 seed42 training and same-package final three-split acceptance; complete seed42 core matching, later seeds pending",
+  "run": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s42",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s42/static_w4a8.pt",
+  "reference": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s42/checkpoint-0100/state.pt",
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-qat400-s42/checkpoint-0400/static_w4a8.pt",
+  "steps": 400,
+  "microbatches": 3200,
+  "input_token_visits": 6553600,
+  "prediction_target_visits": 6550400,
+  "train_window_modulus": 1221,
+  "seed": 42,
+  "paired_sp2_settings_equal_except_parent_and_output": true,
+  "paired_sp2_window_sequence_and_W_LR_equal": true,
+  "native_frozen_teacher_and_cell_initialization_source_equal": true,
+  "optimizer_state_counts": [
+    196,
+    392
+  ],
+  "all_adam_counters": 400,
+  "parameter_tensors": 588,
+  "actual_activation_formats": {
+    "int8": 196
+  },
+  "high_precision_tensors_bitwise_unchanged": 154,
+  "qk_norm_tensors_bitwise_unchanged": 56,
+  "changed_weight_matrices": 196,
+  "changed_weight_scales": 196,
+  "changed_activation_ranges": 196,
+  "legacy_SP2_group": "28 actual INT8 down scales; name does not imply SP2 format",
+  "initialization": {
+    "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s42/checkpoint-0100/state.pt",
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s42/static_w4a8.pt",
+    "diagonal_transform": null,
+    "method": "project current-R FP reference into parent INT4 cells; retain parent initial quantized forward"
+  },
+  "validation": {
+    "ppl": 15.715716054138214,
+    "nll": 2.7546612342218633,
+    "targets": 262208
+  },
+  "summary_validation_exact": true,
+  "external_acceptance": {
+    "status": "PASS",
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/auditor/QWEN_UNIFORM_QAT400_EXTERNAL_20260918.json"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "scales_unchanged": true,
+  "quantizer_calls": {},
+  "backbone_linears": 0,
+  "weight_source": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/w4_gptq_model.pt",
+  "elapsed_seconds": 555.80863904953
+}

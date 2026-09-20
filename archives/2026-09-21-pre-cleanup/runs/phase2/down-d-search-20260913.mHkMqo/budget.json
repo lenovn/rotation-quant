@@ -1,0 +1,7 @@
+{
+  "gpu_seconds": 187.17659803299466,
+  "prior_gpu_seconds": 370.8911193340318,
+  "peak_reserved_gib": 3.994140625,
+  "peak_process_mib": 3748,
+  "full_validation_evaluations": 0
+}

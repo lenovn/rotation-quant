@@ -1,0 +1,280 @@
+....................................FFFFFF.                              [100%]
+=================================== FAILURES ===================================
+__________ test_reload_frozen_rejects_malformed_package[sw_negative] ___________
+
+initialized_model = LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32, 8)
+    (layers): ModuleList(
+      (0-15): ...t_features=32, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+  (R1): Rotation()
+)
+tmp_path = PosixPath('/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-third-20260914/test_reload_frozen_rejects_mal0')
+corruption = 'sw_negative'
+
+    @pytest.mark.parametrize("corruption", ["sw_negative", "sw_shape", "sw_nan", "sa_negative", "missing_head", "format"])
+    def test_reload_frozen_rejects_malformed_package(initialized_model, tmp_path, corruption):
+        common.training_mode(initialized_model, "C", 0, 50)
+        frozen, records = common.frozen_model(initialized_model)
+        path = tmp_path / "frozen.pt"
+        common.save_frozen(frozen, records, path, {})
+        state = torch.load(path, map_location="cpu", weights_only=True)
+        name = "model.layers.0.self_attn.q_proj"
+        if corruption == "sw_negative":
+            state["weights"][name]["scale"].fill_(-1)
+        elif corruption == "sw_shape":
+            state["weights"][name]["scale"] = torch.ones(1)
+        elif corruption == "sw_nan":
+            state["weights"][name]["scale"].fill_(math.nan)
+        elif corruption == "sa_negative":
+            state["activation"][name]["scale"].fill_(-1)
+        elif corruption == "missing_head":
+            state["high_precision"] = {key: value for key, value in state["high_precision"].items()
+                                       if not key.startswith("lm_head.")}
+        else:
+            state["activation"][name]["format"] = "not_int8"
+        torch.save(state, path)
+        with pytest.raises(ValueError):
+>           common.reload_frozen(frozen, path)
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_phase3_joint.py:444: Failed
+____________ test_reload_frozen_rejects_malformed_package[sw_shape] ____________
+
+initialized_model = LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32, 8)
+    (layers): ModuleList(
+      (0-15): ...t_features=32, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+  (R1): Rotation()
+)
+tmp_path = PosixPath('/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-third-20260914/test_reload_frozen_rejects_mal1')
+corruption = 'sw_shape'
+
+    @pytest.mark.parametrize("corruption", ["sw_negative", "sw_shape", "sw_nan", "sa_negative", "missing_head", "format"])
+    def test_reload_frozen_rejects_malformed_package(initialized_model, tmp_path, corruption):
+        common.training_mode(initialized_model, "C", 0, 50)
+        frozen, records = common.frozen_model(initialized_model)
+        path = tmp_path / "frozen.pt"
+        common.save_frozen(frozen, records, path, {})
+        state = torch.load(path, map_location="cpu", weights_only=True)
+        name = "model.layers.0.self_attn.q_proj"
+        if corruption == "sw_negative":
+            state["weights"][name]["scale"].fill_(-1)
+        elif corruption == "sw_shape":
+            state["weights"][name]["scale"] = torch.ones(1)
+        elif corruption == "sw_nan":
+            state["weights"][name]["scale"].fill_(math.nan)
+        elif corruption == "sa_negative":
+            state["activation"][name]["scale"].fill_(-1)
+        elif corruption == "missing_head":
+            state["high_precision"] = {key: value for key, value in state["high_precision"].items()
+                                       if not key.startswith("lm_head.")}
+        else:
+            state["activation"][name]["format"] = "not_int8"
+        torch.save(state, path)
+        with pytest.raises(ValueError):
+>           common.reload_frozen(frozen, path)
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_phase3_joint.py:444: Failed
+_____________ test_reload_frozen_rejects_malformed_package[sw_nan] _____________
+
+initialized_model = LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32, 8)
+    (layers): ModuleList(
+      (0-15): ...t_features=32, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+  (R1): Rotation()
+)
+tmp_path = PosixPath('/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-third-20260914/test_reload_frozen_rejects_mal2')
+corruption = 'sw_nan'
+
+    @pytest.mark.parametrize("corruption", ["sw_negative", "sw_shape", "sw_nan", "sa_negative", "missing_head", "format"])
+    def test_reload_frozen_rejects_malformed_package(initialized_model, tmp_path, corruption):
+        common.training_mode(initialized_model, "C", 0, 50)
+        frozen, records = common.frozen_model(initialized_model)
+        path = tmp_path / "frozen.pt"
+        common.save_frozen(frozen, records, path, {})
+        state = torch.load(path, map_location="cpu", weights_only=True)
+        name = "model.layers.0.self_attn.q_proj"
+        if corruption == "sw_negative":
+            state["weights"][name]["scale"].fill_(-1)
+        elif corruption == "sw_shape":
+            state["weights"][name]["scale"] = torch.ones(1)
+        elif corruption == "sw_nan":
+            state["weights"][name]["scale"].fill_(math.nan)
+        elif corruption == "sa_negative":
+            state["activation"][name]["scale"].fill_(-1)
+        elif corruption == "missing_head":
+            state["high_precision"] = {key: value for key, value in state["high_precision"].items()
+                                       if not key.startswith("lm_head.")}
+        else:
+            state["activation"][name]["format"] = "not_int8"
+        torch.save(state, path)
+        with pytest.raises(ValueError):
+>           common.reload_frozen(frozen, path)
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_phase3_joint.py:444: Failed
+__________ test_reload_frozen_rejects_malformed_package[sa_negative] ___________
+
+initialized_model = LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32, 8)
+    (layers): ModuleList(
+      (0-15): ...t_features=32, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+  (R1): Rotation()
+)
+tmp_path = PosixPath('/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-third-20260914/test_reload_frozen_rejects_mal3')
+corruption = 'sa_negative'
+
+    @pytest.mark.parametrize("corruption", ["sw_negative", "sw_shape", "sw_nan", "sa_negative", "missing_head", "format"])
+    def test_reload_frozen_rejects_malformed_package(initialized_model, tmp_path, corruption):
+        common.training_mode(initialized_model, "C", 0, 50)
+        frozen, records = common.frozen_model(initialized_model)
+        path = tmp_path / "frozen.pt"
+        common.save_frozen(frozen, records, path, {})
+        state = torch.load(path, map_location="cpu", weights_only=True)
+        name = "model.layers.0.self_attn.q_proj"
+        if corruption == "sw_negative":
+            state["weights"][name]["scale"].fill_(-1)
+        elif corruption == "sw_shape":
+            state["weights"][name]["scale"] = torch.ones(1)
+        elif corruption == "sw_nan":
+            state["weights"][name]["scale"].fill_(math.nan)
+        elif corruption == "sa_negative":
+            state["activation"][name]["scale"].fill_(-1)
+        elif corruption == "missing_head":
+            state["high_precision"] = {key: value for key, value in state["high_precision"].items()
+                                       if not key.startswith("lm_head.")}
+        else:
+            state["activation"][name]["format"] = "not_int8"
+        torch.save(state, path)
+        with pytest.raises(ValueError):
+>           common.reload_frozen(frozen, path)
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_phase3_joint.py:444: Failed
+__________ test_reload_frozen_rejects_malformed_package[missing_head] __________
+
+initialized_model = LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32, 8)
+    (layers): ModuleList(
+      (0-15): ...t_features=32, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+  (R1): Rotation()
+)
+tmp_path = PosixPath('/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-third-20260914/test_reload_frozen_rejects_mal4')
+corruption = 'missing_head'
+
+    @pytest.mark.parametrize("corruption", ["sw_negative", "sw_shape", "sw_nan", "sa_negative", "missing_head", "format"])
+    def test_reload_frozen_rejects_malformed_package(initialized_model, tmp_path, corruption):
+        common.training_mode(initialized_model, "C", 0, 50)
+        frozen, records = common.frozen_model(initialized_model)
+        path = tmp_path / "frozen.pt"
+        common.save_frozen(frozen, records, path, {})
+        state = torch.load(path, map_location="cpu", weights_only=True)
+        name = "model.layers.0.self_attn.q_proj"
+        if corruption == "sw_negative":
+            state["weights"][name]["scale"].fill_(-1)
+        elif corruption == "sw_shape":
+            state["weights"][name]["scale"] = torch.ones(1)
+        elif corruption == "sw_nan":
+            state["weights"][name]["scale"].fill_(math.nan)
+        elif corruption == "sa_negative":
+            state["activation"][name]["scale"].fill_(-1)
+        elif corruption == "missing_head":
+            state["high_precision"] = {key: value for key, value in state["high_precision"].items()
+                                       if not key.startswith("lm_head.")}
+        else:
+            state["activation"][name]["format"] = "not_int8"
+        torch.save(state, path)
+        with pytest.raises(ValueError):
+>           common.reload_frozen(frozen, path)
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_phase3_joint.py:444: Failed
+_____________ test_reload_frozen_rejects_malformed_package[format] _____________
+
+initialized_model = LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32, 8)
+    (layers): ModuleList(
+      (0-15): ...t_features=32, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+  (R1): Rotation()
+)
+tmp_path = PosixPath('/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-third-20260914/test_reload_frozen_rejects_mal5')
+corruption = 'format'
+
+    @pytest.mark.parametrize("corruption", ["sw_negative", "sw_shape", "sw_nan", "sa_negative", "missing_head", "format"])
+    def test_reload_frozen_rejects_malformed_package(initialized_model, tmp_path, corruption):
+        common.training_mode(initialized_model, "C", 0, 50)
+        frozen, records = common.frozen_model(initialized_model)
+        path = tmp_path / "frozen.pt"
+        common.save_frozen(frozen, records, path, {})
+        state = torch.load(path, map_location="cpu", weights_only=True)
+        name = "model.layers.0.self_attn.q_proj"
+        if corruption == "sw_negative":
+            state["weights"][name]["scale"].fill_(-1)
+        elif corruption == "sw_shape":
+            state["weights"][name]["scale"] = torch.ones(1)
+        elif corruption == "sw_nan":
+            state["weights"][name]["scale"].fill_(math.nan)
+        elif corruption == "sa_negative":
+            state["activation"][name]["scale"].fill_(-1)
+        elif corruption == "missing_head":
+            state["high_precision"] = {key: value for key, value in state["high_precision"].items()
+                                       if not key.startswith("lm_head.")}
+        else:
+            state["activation"][name]["format"] = "not_int8"
+        torch.save(state, path)
+        with pytest.raises(ValueError):
+>           common.reload_frozen(frozen, path)
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_phase3_joint.py:444: Failed
+=============================== warnings summary ===============================
+tests/test_phase3_joint.py: 25 warnings
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+tests/test_phase3_joint.py::test_training_fp_weights_frozen_and_joint_checkpoint_update
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+    with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+
+tests/test_phase3_joint.py::test_training_fp_weights_frozen_and_joint_checkpoint_update
+  /home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/train_utils/optimizer.py:196: UserWarning: This overload of add_ is deprecated:
+  	add_(Number alpha, Tensor other)
+  Consider using one of the following signatures instead:
+  	add_(Tensor other, *, Number alpha = 1) (Triggered internally at ../torch/csrc/utils/python_arg_parser.cpp:1581.)
+    p.data.add_(-group["lr"], d_p)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/cpu-third-20260914.xml -
+=========================== short test summary info ============================
+FAILED tests/test_phase3_joint.py::test_reload_frozen_rejects_malformed_package[sw_negative]
+FAILED tests/test_phase3_joint.py::test_reload_frozen_rejects_malformed_package[sw_shape]
+FAILED tests/test_phase3_joint.py::test_reload_frozen_rejects_malformed_package[sw_nan]
+FAILED tests/test_phase3_joint.py::test_reload_frozen_rejects_malformed_package[sa_negative]
+FAILED tests/test_phase3_joint.py::test_reload_frozen_rejects_malformed_package[missing_head]
+FAILED tests/test_phase3_joint.py::test_reload_frozen_rejects_malformed_package[format]
+6 failed, 37 passed, 27 warnings in 11.83s

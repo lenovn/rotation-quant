@@ -1,0 +1,58 @@
+--- /home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-adam-20260914a/source/run.py	2026-09-14 02:01:19.000743877 +0800
++++ /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-adam-100-20260914a/source/run.py	2026-09-14 02:02:55.724774109 +0800
+@@ -50,6 +50,18 @@
+     return [rotation_optimizer, scale_optimizer]
+ 
+ 
++def save_resume(model, optimizers, output, step, route):
++    state = dict(parameters={name: parameter.detach().cpu().clone()
++        for values in learned_parameters(model).values() for name, parameter in values},
++        metadata=dict(route=route, update_step=step),
++        optimizers=[optimizer.state_dict() for optimizer in optimizers],
++        python_rng=random.getstate(), torch_rng=torch.get_rng_state(),
++        cuda_rng=torch.cuda.get_rng_state())
++    temporary = output / "resume.pt.tmp"
++    torch.save(state, temporary)
++    temporary.replace(output / "resume.pt")
++
++
+ def progress(output, stage, **details):
+     record = dict(stage=stage, pid=os.getpid(), time=time.time(),
+                   cuda_visible_devices=os.environ.get("CUDA_VISIBLE_DEVICES"),
+@@ -195,8 +207,15 @@
+     optimizers = make_optimizers(groups, args)
+     start_step = 0
+     if args.resume is not None:
+-        state = load_state(model, args.resume / "resume_state.pt")
+-        saved_optimizer = torch.load(args.resume / "optimizer.pt", map_location="cpu", weights_only=False)
++        resume_path = args.resume / "resume.pt"
++        if resume_path.exists():
++            state = load_state(model, resume_path)
++            saved_optimizer = torch.load(resume_path, map_location="cpu", weights_only=False)
++        else:
++            state = load_state(model, args.resume / "resume_state.pt")
++            saved_optimizer = torch.load(args.resume / "optimizer.pt", map_location="cpu", weights_only=False)
++        if state["metadata"]["route"] != args.route:
++            raise ValueError("Resume route differs from checkpoint")
+         saved_states = saved_optimizer.get("optimizers", [saved_optimizer.get("optimizer")])
+         if len(saved_states) != len(optimizers):
+             raise ValueError("Cannot resume with a different optimizer method")
+@@ -266,9 +285,7 @@
+                             for optimizer in optimizers for group in optimizer.param_groups},
+             gradient_norm_before_clip=norm, updates=changes, elapsed_seconds=time.monotonic() - started)
+         append_json(args.output / "training.jsonl", record)
+-        save_state(model, args.output / "resume_state.pt", route=args.route, update_step=step + 1)
+-        torch.save(dict(optimizers=[optimizer.state_dict() for optimizer in optimizers], python_rng=random.getstate(),
+-                        torch_rng=torch.get_rng_state(), cuda_rng=torch.cuda.get_rng_state()), args.output / "optimizer.pt")
++        save_resume(model, optimizers, args.output, step + 1, args.route)
+         progress(args.output, "training", step=step + 1, total=args.steps, loss=record["minibatch_mean_nll"],
+                  elapsed_seconds=time.monotonic() - started)
+         if step + 1 in args.checkpoints:
+@@ -319,6 +336,7 @@
+     write_json(args.output / "settings.json", dict(arguments={name: str(value) if isinstance(value, Path) else value
+         for name, value in vars(args).items()}, source=source_record(), pid=os.getpid()))
+     try:
++        progress(args.output, "loading-data")
+         train_windows, calibration, probe, validation, metadata = data_windows(args.output)
+         if args.initialize:
+             initialize(args.output, calibration, probe)

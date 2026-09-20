@@ -1,0 +1,24 @@
+{
+  "module": "model.layers.1.mlp.down_proj",
+  "selected_factor": 1.0,
+  "previous_train_nll": 3.0,
+  "selected_train_nll": 3.0,
+  "trials": [
+    {
+      "factor": 1.0,
+      "alpha": 0.00799560546875,
+      "train_nll": 3.0,
+      "reused_prefix": true
+    },
+    {
+      "factor": 1.25,
+      "alpha": 0.0099945068359375,
+      "train_nll": 3.5
+    },
+    {
+      "factor": 2,
+      "alpha": 0.0159912109375,
+      "train_nll": 3.5
+    }
+  ]
+}

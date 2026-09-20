@@ -1,0 +1,14 @@
+{
+  "arguments": {
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_postprocess_candidate_iso2/run",
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_postprocess_candidate_iso2/parent.pt",
+    "mode": "round",
+    "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_postprocess_candidate_iso2/state.pt",
+    "top_modules": 1
+  },
+  "source": {},
+  "data": {},
+  "selection": "train-only local fit/heldout and fixed train probe; no validation calibration",
+  "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_postprocess_candidate_iso2/state.pt",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_postprocess_candidate_iso2/parent.pt"
+}

@@ -1,0 +1,25 @@
+--- /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-adam-100-20260914a/source/run.py	2026-09-14 02:02:55.724774109 +0800
++++ /home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/run.py	2026-09-14 02:29:27.169337092 +0800
+@@ -41,9 +41,13 @@
+     rotation_optimizer = SGDG([dict(params=[parameter for _, parameter in groups["R"]],
+         lr=args.r_lr, initial_lr=args.r_lr, stiefel=True, name="R")], lr=args.r_lr)
+     scale_groups = []
++    reference_path = getattr(args, "optimizer_scale_reference", None)
++    reference = (torch.load(reference_path, map_location="cpu", weights_only=True)["parameters"]
++                 if reference_path is not None else None)
+     for name in ("SA", "SW", "SP2"):
+         for parameter_name, parameter in groups[name]:
+-            rate = args.relative_scale_lr * float(parameter.detach().mean())
++            initial_scale = parameter.detach() if reference is None else reference[parameter_name]
++            rate = args.relative_scale_lr * float(initial_scale.mean())
+             scale_groups.append(dict(params=[parameter], lr=rate, initial_lr=rate,
+                                      name=name, parameter_name=parameter_name))
+     scale_optimizer = torch.optim.Adam(scale_groups, eps=1e-12, weight_decay=0.0)
+@@ -317,6 +321,7 @@
+     parser.add_argument("--sp2-lr", type=float, default=1.0)
+     parser.add_argument("--scale-optimizer", choices=("sgd", "adam"), default="sgd")
+     parser.add_argument("--relative-scale-lr", type=float, default=0.001)
++    parser.add_argument("--optimizer-scale-reference", type=Path)
+     parser.add_argument("--checkpoints", type=int, nargs="+", default=[10, 25, 50, 100])
+     parser.add_argument("--validation-steps", type=int, nargs="*", default=[10, 100])
+     parser.add_argument("--scale-only-steps", action="store_true")

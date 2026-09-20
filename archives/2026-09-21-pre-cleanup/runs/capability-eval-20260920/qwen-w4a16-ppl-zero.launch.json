@@ -1,0 +1,24 @@
+{
+  "pid": 2846,
+  "gpu": 0,
+  "command": [
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/scripts/capability_eval/schedule.py",
+    "--jobs",
+    "qwen:w4a16:0",
+    "--tasks",
+    "boolq",
+    "piqa",
+    "social_iqa",
+    "hellaswag",
+    "winogrande",
+    "arc_easy",
+    "arc_challenge",
+    "openbookqa"
+  ],
+  "started": 1789843139.8797486,
+  "log": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen-w4a16-ppl-zero.log",
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/w4a16",
+  "tmux_session": "qwen-w4a16-ppl-zero"
+}

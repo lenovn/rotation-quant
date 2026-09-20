@@ -1,0 +1,125 @@
+{
+  "stage": "completed",
+  "pid": 2586699,
+  "time": 1789353950.7839067,
+  "cuda_visible_devices": "1",
+  "allocated_gib": 0.6232218742370605,
+  "reserved_gib": 2.224609375,
+  "peak_allocated_gib": 7.318084239959717,
+  "gpu_time_budget": null,
+  "elapsed_seconds": 294.45398043096066,
+  "result": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+    "parent_metadata": {
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-rounded-sp2-contract-20260914a/static_w4a8.pt",
+      "mode": "sequential-round",
+      "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+      "parent_metadata": {
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-down-round-20260914b/static_w4a8.pt",
+        "mode": "sequential-sp2",
+        "reference_state": "None",
+        "parent_metadata": {
+          "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+          "mode": "sequential-round",
+          "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+          "parent_metadata": {
+            "route": "B",
+            "step": 100,
+            "initial": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt"
+          },
+          "offline_only": true
+        },
+        "offline_only": true
+      },
+      "offline_only": true
+    },
+    "initial_train_nll": 2.6472935144882825,
+    "identity_rule": {
+      "strength": 0.0,
+      "channel": 1417,
+      "layer": 1,
+      "diagonal_min": 1.0,
+      "diagonal_max": 1.0,
+      "mean_log_diagonal": 0.0,
+      "selected_step": 2048,
+      "selected_train_nll": 2.6512336603283786,
+      "parent_train_nll": 2.6472935144882825,
+      "sp2_alpha": 564.63525390625,
+      "expanded_sw_rows": 1778,
+      "trials": [
+        {
+          "step": 0,
+          "fit_mse": 0.000621301238425076,
+          "heldout_mse": 0.0005131716025061905,
+          "changed_codes": 0,
+          "train_nll": 2.7125287210813775
+        },
+        {
+          "step": 512,
+          "fit_mse": 6.187318649608642e-05,
+          "heldout_mse": 5.411792517406866e-05,
+          "changed_codes": 396321,
+          "train_nll": 2.6544407129027103
+        },
+        {
+          "step": 2048,
+          "fit_mse": 4.990767047274858e-05,
+          "heldout_mse": 4.9915543058887124e-05,
+          "changed_codes": 1291916,
+          "train_nll": 2.6512336603283786
+        },
+        {
+          "step": 8192,
+          "fit_mse": 4.188444290775806e-05,
+          "heldout_mse": 5.0234360969625413e-05,
+          "changed_codes": 2629768,
+          "train_nll": 2.653194199158448
+        }
+      ]
+    },
+    "selected": {
+      "strength": 0.75,
+      "channel": 1417,
+      "layer": 1,
+      "diagonal_min": 0.9998731017112732,
+      "diagonal_max": 2.8280680179595947,
+      "mean_log_diagonal": 1.2690461455519835e-08,
+      "selected_step": 8192,
+      "selected_train_nll": 2.6477348596918286,
+      "parent_train_nll": 2.6472935144882825,
+      "sp2_alpha": 564.63525390625,
+      "expanded_sw_rows": 1815,
+      "trials": [
+        {
+          "step": 0,
+          "fit_mse": 0.0001203394349431619,
+          "heldout_mse": 0.00010126610868610442,
+          "changed_codes": 0,
+          "train_nll": 2.663379728425546
+        },
+        {
+          "step": 512,
+          "fit_mse": 2.8581262085936032e-05,
+          "heldout_mse": 3.0082355806371197e-05,
+          "changed_codes": 335661,
+          "train_nll": 2.650210384865103
+        },
+        {
+          "step": 2048,
+          "fit_mse": 2.5087047106353566e-05,
+          "heldout_mse": 2.9723039915552363e-05,
+          "changed_codes": 989291,
+          "train_nll": 2.648406500422446
+        },
+        {
+          "step": 8192,
+          "fit_mse": 2.1531315724132583e-05,
+          "heldout_mse": 2.947207940451335e-05,
+          "changed_codes": 1829678,
+          "train_nll": 2.6477348596918286
+        }
+      ]
+    },
+    "validation_status": "NOT TESTED: no improvement over untouched parent train selection NLL"
+  }
+}

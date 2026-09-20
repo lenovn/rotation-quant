@@ -1,0 +1,149 @@
+...F                                                                     [100%]
+=================================== FAILURES ===================================
+_____ test_local_d_search_each_diagonal_independent_inputs_rtn_and_all_nll _____
+
+postprocess_toy = (Module(
+  (model): Module(
+    (layers): ModuleList(
+      (0): Module(
+        (mlp): Module(
+          (up_proj): A...ype=torch.uint8), 'scale': tensor([[0.1250],
+        [0.1250],
+        [0.1250],
+        [0.1250]]), 'shape': (4, 2)}})
+local_d_cpu = <module 'experiments.phase3.local_d' from '/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/local_d.py'>
+tmp_path = PosixPath('/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-local-d-second-20260914/test_local_d_search_each_diago0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fe3e650cbe0>
+
+    def test_local_d_search_each_diagonal_independent_inputs_rtn_and_all_nll(postprocess_toy, local_d_cpu, tmp_path, monkeypatch):
+        from experiments.phase3 import sequential_postprocess as sequential
+    
+        local_d = local_d_cpu
+        model, records = postprocess_toy
+        model.to(torch.bfloat16)
+        up_name, down_name = "model.layers.0.mlp.up_proj", "model.layers.0.mlp.down_proj"
+        reference = {up_name: torch.tensor([[0.2, 0.7], [-0.3, 0.4], [0.5, -0.8], [-0.1, 0.2]], dtype=torch.bfloat16),
+                     down_name: torch.tensor([[0.4, 0.3, 0.01, 0.2], [-0.6, -0.2, 0.01, -0.3]], dtype=torch.bfloat16)}
+        before, records_before, reference_before = cloned_state(model), copy.deepcopy(records), copy.deepcopy(reference)
+        windows = [torch.full((1, 2048), index, dtype=torch.long) for index in range(32)]
+        positions = torch.arange(2048).float()
+        captured = dict(up_input=[], gate_output=[], down_input=[])
+        for index in range(32):
+            captured["up_input"].append(torch.stack((torch.sin(positions / 91) + index / 31, torch.cos(positions / 37)), -1)[None].bfloat16())
+            captured["gate_output"].append((torch.sin(positions[:, None] / 51 + torch.arange(4)) + index / 100)[None].bfloat16())
+            raw = torch.ones(1, 2048, 4, dtype=torch.bfloat16)
+            raw[:, :, 2] = 8 if index < 24 else 1
+            raw[:, :, 0] = 1 if index < 24 else 1000
+            captured["down_input"].append(raw)
+        captures = copy.deepcopy(captured)
+        args = SimpleNamespace(layer=0, output=tmp_path, strengths=[0, 0.5, 1], milestones=[512, 2048, 8192])
+        alpha = float(model.get_submodule(down_name).quantizer.alpha)
+        calls, scored = [], []
+        active = dict(index=0)
+    
+        def capture(current, layer, calibration):
+            assert current is model and layer == 0 and calibration is windows
+            return copy.deepcopy(captured)
+    
+        def coordinate(weight, scale, fit, heldout, **kwargs):
+            index = len(calls)
+            active["index"] = index
+            channel, direction = local_d.sparse_direction(torch.tensor([1., 1., 8., 1.]), reference[down_name])
+            assert channel == 2
+            diagonal = (direction * args.strengths[index]).exp()
+            up, down, expected_weight = local_d.transformed_records(reference[up_name], reference[down_name], records[up_name], records[down_name], diagonal)
+            assert torch.equal(weight, expected_weight) and torch.equal(scale, down["scale"])
+            assert kwargs["milestones"] == (512, 2048, 8192) and kwargs["neighbor_search"] is True
+            assert "initial_codes" not in kwargs
+            up_weight = (quantization.unpack_int4(up["packed"], up["shape"]).float() * up["scale"]).bfloat16()
+            expected = torch.cat([oracle_sp2(torch.nn.functional.silu(gate) * torch.nn.functional.linear(inputs, up_weight),
+                alpha, model.get_submodule(down_name).quantizer.levels) for inputs, gate in zip(captured["up_input"], captured["gate_output"])]).reshape(-1, 4)
+            assert fit.shape == (49152, 4) and heldout.shape == (16384, 4)
+            assert torch.equal(fit, expected[:49152]) and torch.equal(heldout, expected[49152:])
+            initial = (weight.float() / scale).round().clamp(-8, 7).to(torch.int8)
+            trials = []
+            for offset, step in enumerate((0, 512, 2048, 8192)):
+                codes = initial.clone()
+                codes[0, 0] = -4 + offset
+                if step == 0:
+                    codes = initial.clone()
+                trials.append(dict(step=step, codes=codes, fit_mse=4.0-offset, heldout_mse=4.0-offset))
+            calls.append(dict(up=copy.deepcopy(up), down=copy.deepcopy(down), trials=copy.deepcopy(trials), fit=fit.clone()))
+            return trials
+    
+        def nll(current, selection):
+            assert current is model and all(torch.equal(actual, expected) for actual, expected in zip(selection, windows[24:]))
+            assert sum(window.numel() - 1 for window in selection) == 16376
+            index, offset = active["index"], len(scored) % 4
+            candidate = calls[index]
+            expected_weight = (candidate["trials"][offset]["codes"].float() * candidate["down"]["scale"]).bfloat16()
+            assert torch.equal(current.get_submodule(down_name).weight, expected_weight)
+            expected_up = (quantization.unpack_int4(candidate["up"]["packed"], candidate["up"]["shape"]).float() * candidate["up"]["scale"]).bfloat16()
+            assert torch.equal(current.get_submodule(up_name).weight, expected_up)
+            assert float(current.get_submodule(down_name).quantizer.alpha) == alpha
+            scored.append((index, candidate["trials"][offset]["step"]))
+            return [3.1, 2.8, 3.3, 3.5][offset] - index * 0.1
+    
+        monkeypatch.setattr(local_d, "capture_pair", capture)
+        monkeypatch.setattr(local_d, "rounding_helper", lambda: coordinate)
+        monkeypatch.setattr(local_d, "progress", lambda *args, **kwargs: None)
+        monkeypatch.setattr(sequential, "selection_score", nll)
+        assert local_d.score_candidate is sequential.score_candidate
+>       candidates = local_d.search_pair(model, records, reference, windows, windows[24:], 3.0, args)
+
+tests/test_phase3_joint.py:2323: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+experiments/phase3/local_d.py:131: in search_pair
+    trials = rounding_helper()(transformed_down, down["scale"].cuda(), fit, heldout,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+weight = tensor([[ 0.4004,  0.3008,  0.0100,  0.2002],
+        [-0.6016, -0.2002,  0.0100, -0.3008]], dtype=torch.bfloat16)
+scale = tensor([[0.1250],
+        [0.1250]])
+fit = tensor([[ 0.0000,  0.2383, -0.4766,  0.0199],
+        [ 0.0099,  0.2383, -0.4766,  0.0199],
+        [ 0.0199,  0.2383,...50],
+        [ 0.1992, -0.0012,  0.0249, -0.0099],
+        [ 0.1992, -0.0025,  0.0298, -0.0099]], dtype=torch.bfloat16)
+heldout = tensor([[ 1.1914e-01,  1.5918e-01, -3.1836e-01,  2.9785e-02],
+        [ 1.1914e-01,  1.5918e-01, -3.1836e-01,  2.9785e... -4.9744e-03, -2.4872e-03],
+        [ 2.3828e-01, -0.0000e+00, -1.2436e-03, -2.4872e-03]],
+       dtype=torch.bfloat16)
+kwargs = {'milestones': (512, 2048, 8192), 'neighbor_search': True, 'progress': <function search_pair.<locals>.<lambda> at 0x7fe3dbca6af0>}
+index = 0, channel = 2, direction = tensor([-0.3466, -0.3466,  1.0397, -0.3466])
+@py_assert2 = None
+@py_assert1 = ['False\n{False = <built-in method equal of type object at 0x7fe4a1e67500>\n{<built-in method equal of type object at ...     [ 0.1992, -0.0012,  0.0249, -0.0099],\\n        [ 0.1992, -0.0025,  0.0298, -0.0099]], dtype=torch.bfloat16))\n}']
+
+    def coordinate(weight, scale, fit, heldout, **kwargs):
+        index = len(calls)
+        active["index"] = index
+        channel, direction = local_d.sparse_direction(torch.tensor([1., 1., 8., 1.]), reference[down_name])
+        assert channel == 2
+        diagonal = (direction * args.strengths[index]).exp()
+        up, down, expected_weight = local_d.transformed_records(reference[up_name], reference[down_name], records[up_name], records[down_name], diagonal)
+        assert torch.equal(weight, expected_weight) and torch.equal(scale, down["scale"])
+        assert kwargs["milestones"] == (512, 2048, 8192) and kwargs["neighbor_search"] is True
+        assert "initial_codes" not in kwargs
+        up_weight = (quantization.unpack_int4(up["packed"], up["shape"]).float() * up["scale"]).bfloat16()
+        expected = torch.cat([oracle_sp2(torch.nn.functional.silu(gate) * torch.nn.functional.linear(inputs, up_weight),
+            alpha, model.get_submodule(down_name).quantizer.levels) for inputs, gate in zip(captured["up_input"], captured["gate_output"])]).reshape(-1, 4)
+        assert fit.shape == (49152, 4) and heldout.shape == (16384, 4)
+>       assert torch.equal(fit, expected[:49152]) and torch.equal(heldout, expected[49152:])
+E       assert (False)
+E        +  where False = <built-in method equal of type object at 0x7fe4a1e67500>(tensor([[ 0.0000,  0.2383, -0.4766,  0.0199],\n        [ 0.0099,  0.2383, -0.4766,  0.0199],\n        [ 0.0199,  0.2383,...50],\n        [ 0.1992, -0.0012,  0.0249, -0.0099],\n        [ 0.1992, -0.0025,  0.0298, -0.0099]], dtype=torch.bfloat16), tensor([[ 0.0000,  0.2383, -0.4766,  0.0199],\n        [ 0.0099,  0.2383, -0.4766,  0.0199],\n        [ 0.0199,  0.2383,...50],\n        [ 0.1992, -0.0012,  0.0249, -0.0099],\n        [ 0.1992, -0.0025,  0.0298, -0.0099]], dtype=torch.bfloat16))
+E        +    where <built-in method equal of type object at 0x7fe4a1e67500> = torch.equal
+
+tests/test_phase3_joint.py:2293: AssertionError
+=============================== warnings summary ===============================
+tests/test_phase3_joint.py::test_local_d_capture_real_112_wrappers_full_windows_and_cleanup
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/cpu-local-d-second-20260914.xml -
+=========================== short test summary info ============================
+FAILED tests/test_phase3_joint.py::test_local_d_search_each_diagonal_independent_inputs_rtn_and_all_nll
+1 failed, 3 passed, 95 deselected, 1 warning in 10.62s

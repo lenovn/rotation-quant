@@ -1,0 +1,18 @@
+{
+  "samples": 128,
+  "kwargs": [
+    "attention_mask",
+    "position_ids",
+    "past_key_value",
+    "output_attentions",
+    "use_cache",
+    "cache_position",
+    "position_embeddings"
+  ],
+  "use_cache": false,
+  "input_shape": [
+    128,
+    2048,
+    2048
+  ]
+}

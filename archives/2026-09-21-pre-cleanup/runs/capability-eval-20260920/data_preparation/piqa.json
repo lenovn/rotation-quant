@@ -1,0 +1,11 @@
+{
+  "task": "piqa",
+  "path": "piqa",
+  "name": null,
+  "splits": {
+    "train": 16113,
+    "test": 3084,
+    "validation": 1838
+  },
+  "status": "ready"
+}

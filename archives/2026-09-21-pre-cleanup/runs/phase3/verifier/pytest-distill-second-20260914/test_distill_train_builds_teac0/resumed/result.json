@@ -1,0 +1,7 @@
+{
+  "completed_steps": 1,
+  "target_reached": false,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-distill-second-20260914/test_distill_train_builds_teac0/parent.pt",
+  "checkpoints": [],
+  "method": "quantization-aware distillation, not frozen-weight PTQ"
+}

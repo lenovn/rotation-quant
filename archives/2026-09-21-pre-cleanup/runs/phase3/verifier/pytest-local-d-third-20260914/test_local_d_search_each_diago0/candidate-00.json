@@ -1,0 +1,39 @@
+{
+  "strength": 0,
+  "channel": 2,
+  "layer": 0,
+  "diagonal_min": 1.0,
+  "diagonal_max": 1.0,
+  "mean_log_diagonal": 0.0,
+  "selected_step": 512,
+  "selected_train_nll": 2.8,
+  "parent_train_nll": 3.0,
+  "sp2_alpha": 2.5399999618530273,
+  "expanded_sw_rows": 0,
+  "trials": [
+    {
+      "step": 0,
+      "fit_mse": 4.0,
+      "heldout_mse": 4.0,
+      "train_nll": 3.1
+    },
+    {
+      "step": 512,
+      "fit_mse": 3.0,
+      "heldout_mse": 3.0,
+      "train_nll": 2.8
+    },
+    {
+      "step": 2048,
+      "fit_mse": 2.0,
+      "heldout_mse": 2.0,
+      "train_nll": 3.3
+    },
+    {
+      "step": 8192,
+      "fit_mse": 1.0,
+      "heldout_mse": 1.0,
+      "train_nll": 3.5
+    }
+  ]
+}

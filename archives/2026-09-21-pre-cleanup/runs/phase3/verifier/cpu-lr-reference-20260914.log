@@ -1,0 +1,9 @@
+.                                                                        [100%]
+=============================== warnings summary ===============================
+tests/test_phase3_joint.py::test_optimizer_scale_reference_fixes_rates_without_loading_parameters
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/cpu-lr-reference-20260914.xml -
+1 passed, 1 warning in 9.06s

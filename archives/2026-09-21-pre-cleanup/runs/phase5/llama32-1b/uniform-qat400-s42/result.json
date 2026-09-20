@@ -1,0 +1,23 @@
+{
+  "completed_steps": 400,
+  "target_reached": false,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s42/static_w4a8.pt",
+  "checkpoints": [
+    {
+      "step": 100,
+      "training_probe": 2.9824108481407166
+    },
+    {
+      "step": 200,
+      "training_probe": 2.9672849774360657
+    },
+    {
+      "step": 400,
+      "training_probe": 2.968394935131073,
+      "validation_nll": 2.8961850924602586,
+      "validation_ppl": 18.104944766122504,
+      "changed_codes": 52627136
+    }
+  ],
+  "method": "quantization-aware distillation, not frozen-weight PTQ"
+}

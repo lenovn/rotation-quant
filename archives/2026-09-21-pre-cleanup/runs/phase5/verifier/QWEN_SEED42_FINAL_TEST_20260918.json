@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "independent_run": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-test-independent-s42",
+  "primary_run": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-test-s42",
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/static_w4a8.pt",
+  "package_metadata": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/static_w4a8.pt",
+    "method": "quantization-aware distillation; original backbone weights trained",
+    "step": 400,
+    "teacher": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+    "temperature": 1.0,
+    "ce_weight": 0.1
+  },
+  "ppl": 14.151216160997155,
+  "nll": 2.649800568169599,
+  "ppl_difference": 0.0,
+  "nll_difference": 0.0,
+  "all_segments_identical": true,
+  "input_token_count": 299078,
+  "targets": 298931,
+  "full_windows": 146,
+  "tail_tokens": 70,
+  "tail_targets": 69,
+  "unscored_tail_tokens": 0,
+  "independently_tokenized_ids_identical": true,
+  "packed_W4_matrices": 196,
+  "activation_formats": {
+    "int8": 168,
+    "sp2": 28
+  },
+  "qparams_match_saved_package": true,
+  "all_196_quantizer_states_unchanged": true,
+  "qk_norm_high_precision_tensors": 56,
+  "tie_word_embeddings": false,
+  "source_snapshots_equal": {
+    "architecture.py": true,
+    "common.py": true,
+    "postprocess.py": true,
+    "quantization.py": true,
+    "external_eval.py": true,
+    "validation_acceptance.py": true
+  },
+  "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL",
+  "calibration": false,
+  "training": false,
+  "candidate_selection": false,
+  "scope": "Independent cold process and full test execution using same accepted evaluator; no validation/C4/other-seed rerun"
+}

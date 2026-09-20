@@ -1,0 +1,432 @@
+{
+  "status": "PASS: bounded committed-prefix recovery audit; final PTQ acceptance not assessed",
+  "time": "2026-09-18T04:07:10.574344+00:00",
+  "old_run": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43",
+  "new_run": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43-r4",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-range-s43/static_w4a8.pt",
+  "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s43/checkpoint-0100/state.pt",
+  "settings_differences": {
+    "resume_prefix": [
+      null,
+      "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43/prefix.pt"
+    ],
+    "output": [
+      "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43",
+      "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43-r4"
+    ]
+  },
+  "data_equal": true,
+  "data": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "dataset_cache": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3",
+    "train_protocol": "tokenize each raw row without BOS/EOS, concatenate IDs, disjoint 2048 windows, drop tail, fixed order",
+    "validation_protocol": "double-newline joined raw validation; independent 2048 windows including tail; token-weighted NLL",
+    "train_windows": 1188,
+    "train_tokens": 2435022,
+    "dropped_train_tail": 1998,
+    "calibration_window_indices": [
+      1088,
+      40,
+      1087,
+      252,
+      281,
+      790,
+      290,
+      547,
+      517,
+      0,
+      401,
+      754,
+      746,
+      317,
+      1103,
+      612,
+      243,
+      218,
+      786,
+      562,
+      439,
+      458,
+      1035,
+      963,
+      618,
+      322,
+      984,
+      287,
+      10,
+      965,
+      1122,
+      753
+    ],
+    "calibration_length": 2048,
+    "probe_indices": [
+      1180,
+      1181,
+      1182,
+      1183
+    ],
+    "validation_tokens": 252852,
+    "validation_targets": 252728,
+    "seed": 43,
+    "fit_window_indices": [
+      1088,
+      40,
+      1087,
+      252,
+      281,
+      790,
+      290,
+      547,
+      517,
+      0,
+      401,
+      754,
+      746,
+      317,
+      1103,
+      612,
+      243,
+      218,
+      786,
+      562,
+      439,
+      458,
+      1035,
+      963
+    ],
+    "selection_window_indices": [
+      618,
+      322,
+      984,
+      287,
+      10,
+      965,
+      1122,
+      753
+    ],
+    "fit_rows": 49152,
+    "heldout_rows": 16384,
+    "selection_predicted_tokens": 16376
+  },
+  "source_byte_equal": {
+    "sequential_postprocess.py": true,
+    "postprocess.py": true,
+    "common.py": true,
+    "quantization.py": true,
+    "fixed_grid_rounding.py": true,
+    "architecture.py": true
+  },
+  "old_prefix": {
+    "completed_targets": [
+      "model.layers.0.mlp.down_proj",
+      "model.layers.1.mlp.down_proj",
+      "model.layers.2.mlp.down_proj",
+      "model.layers.3.mlp.down_proj"
+    ],
+    "targets": [
+      "model.layers.0.mlp.down_proj",
+      "model.layers.1.mlp.down_proj",
+      "model.layers.2.mlp.down_proj",
+      "model.layers.3.mlp.down_proj",
+      "model.layers.4.mlp.down_proj",
+      "model.layers.5.mlp.down_proj",
+      "model.layers.6.mlp.down_proj",
+      "model.layers.7.mlp.down_proj",
+      "model.layers.8.mlp.down_proj",
+      "model.layers.9.mlp.down_proj",
+      "model.layers.10.mlp.down_proj",
+      "model.layers.11.mlp.down_proj",
+      "model.layers.12.mlp.down_proj",
+      "model.layers.13.mlp.down_proj",
+      "model.layers.14.mlp.down_proj",
+      "model.layers.15.mlp.down_proj"
+    ],
+    "weight_updates": 0,
+    "activation_scales": 16,
+    "activation_scales_exact_parent": true,
+    "initial_train_nll": 2.7589552842354874,
+    "selected_train_nll": 2.7589552842354874
+  },
+  "preserved_old_module_records": [
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43/model.layers.0.mlp.down_proj.json",
+      "module": "model.layers.0.mlp.down_proj",
+      "selected_step": 0,
+      "previous_train_nll": 2.7589552842354874,
+      "selected_train_nll": 2.7589552842354874,
+      "trials": [
+        {
+          "step": 0,
+          "fit_mse": 9.989653335651383e-06,
+          "heldout_mse": 1.2663337656704243e-05,
+          "changed_codes": 0,
+          "train_nll": 2.7589552842354874
+        },
+        {
+          "step": 512,
+          "fit_mse": 9.637503353587817e-06,
+          "heldout_mse": 1.2622828762687277e-05,
+          "changed_codes": 185382,
+          "train_nll": 2.7659811635192795
+        },
+        {
+          "step": 2048,
+          "fit_mse": 8.930323929234874e-06,
+          "heldout_mse": 1.2504029655246995e-05,
+          "changed_codes": 603564,
+          "train_nll": 2.76526691100066
+        },
+        {
+          "step": 8192,
+          "fit_mse": 7.80492428020807e-06,
+          "heldout_mse": 1.2095259080524556e-05,
+          "changed_codes": 1312188,
+          "train_nll": 2.7641214818856543
+        }
+      ]
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43/model.layers.1.mlp.down_proj.json",
+      "module": "model.layers.1.mlp.down_proj",
+      "selected_step": 0,
+      "previous_train_nll": 2.7589552842354874,
+      "selected_train_nll": 2.7589552842354874,
+      "trials": [
+        {
+          "step": 0,
+          "fit_mse": 0.00010041574569186196,
+          "heldout_mse": 0.0001235923991771415,
+          "changed_codes": 0,
+          "train_nll": 2.7589552842354874
+        },
+        {
+          "step": 512,
+          "fit_mse": 8.40074208099395e-05,
+          "heldout_mse": 0.00010519836359890178,
+          "changed_codes": 455739,
+          "train_nll": 2.761643866177076
+        },
+        {
+          "step": 2048,
+          "fit_mse": 6.740412209182978e-05,
+          "heldout_mse": 9.840011625783518e-05,
+          "changed_codes": 1413526,
+          "train_nll": 2.7644265010947633
+        },
+        {
+          "step": 8192,
+          "fit_mse": 5.4444361012429e-05,
+          "heldout_mse": 9.870351641438901e-05,
+          "changed_codes": 3018508,
+          "train_nll": 2.7652928490935182
+        }
+      ]
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43/model.layers.2.mlp.down_proj.json",
+      "module": "model.layers.2.mlp.down_proj",
+      "selected_step": 0,
+      "previous_train_nll": 2.7589552842354874,
+      "selected_train_nll": 2.7589552842354874,
+      "trials": [
+        {
+          "step": 0,
+          "fit_mse": 5.6003038480412215e-05,
+          "heldout_mse": 5.575533214141615e-05,
+          "changed_codes": 0,
+          "train_nll": 2.7589552842354874
+        },
+        {
+          "step": 512,
+          "fit_mse": 3.9533628296339884e-05,
+          "heldout_mse": 4.162011464359239e-05,
+          "changed_codes": 349238,
+          "train_nll": 2.7666142008925023
+        },
+        {
+          "step": 2048,
+          "fit_mse": 3.407839176361449e-05,
+          "heldout_mse": 3.922421456081793e-05,
+          "changed_codes": 1007840,
+          "train_nll": 2.7659873434785536
+        },
+        {
+          "step": 8192,
+          "fit_mse": 2.8732645660056733e-05,
+          "heldout_mse": 3.706482675625011e-05,
+          "changed_codes": 1742367,
+          "train_nll": 2.7680502143075008
+        }
+      ]
+    },
+    {
+      "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43/model.layers.3.mlp.down_proj.json",
+      "module": "model.layers.3.mlp.down_proj",
+      "selected_step": 0,
+      "previous_train_nll": 2.7589552842354874,
+      "selected_train_nll": 2.7589552842354874,
+      "trials": [
+        {
+          "step": 0,
+          "fit_mse": 4.060889841639437e-05,
+          "heldout_mse": 5.156189217814244e-05,
+          "changed_codes": 0,
+          "train_nll": 2.7589552842354874
+        },
+        {
+          "step": 512,
+          "fit_mse": 4.0180206269724295e-05,
+          "heldout_mse": 5.1342969527468085e-05,
+          "changed_codes": 88339,
+          "train_nll": 2.7627911720496097
+        },
+        {
+          "step": 2048,
+          "fit_mse": 3.930769889848307e-05,
+          "heldout_mse": 5.0939292123075575e-05,
+          "changed_codes": 272806,
+          "train_nll": 2.7631878756835615
+        },
+        {
+          "step": 8192,
+          "fit_mse": 3.730416938196868e-05,
+          "heldout_mse": 4.9854123062686995e-05,
+          "changed_codes": 632808,
+          "train_nll": 2.762386784027747
+        }
+      ]
+    }
+  ],
+  "new_first_work_event": {
+    "stage": "sequential-round-fit",
+    "pid": 3869795,
+    "time": 1789704065.5279295,
+    "cuda_visible_devices": "0",
+    "allocated_gib": 2.802405834197998,
+    "reserved_gib": 3.34375,
+    "peak_allocated_gib": 3.2404255867004395,
+    "gpu_time_budget": null,
+    "module": "model.layers.4.mlp.down_proj",
+    "fit_rows": 49152,
+    "heldout_rows": 16384
+  },
+  "new_first_coordinate": {
+    "stage": "sequential-round-coordinate",
+    "pid": 3869795,
+    "time": 1789704066.5284135,
+    "cuda_visible_devices": "0",
+    "allocated_gib": 4.771234035491943,
+    "reserved_gib": 7.59375,
+    "peak_allocated_gib": 7.271163463592529,
+    "gpu_time_budget": null,
+    "module": "model.layers.4.mlp.down_proj",
+    "step": 128
+  },
+  "new_layer4_result": {
+    "module": "model.layers.4.mlp.down_proj",
+    "selected_step": 0,
+    "previous_train_nll": 2.7589552842354874,
+    "selected_train_nll": 2.7589552842354874,
+    "trials": [
+      {
+        "step": 0,
+        "fit_mse": 9.62530612014234e-05,
+        "heldout_mse": 9.512528777122498e-05,
+        "changed_codes": 0,
+        "train_nll": 2.7589552842354874
+      },
+      {
+        "step": 512,
+        "fit_mse": 6.610942364204675e-05,
+        "heldout_mse": 7.089450082276016e-05,
+        "changed_codes": 397667,
+        "train_nll": 2.764063352400497
+      },
+      {
+        "step": 2048,
+        "fit_mse": 5.520906415767968e-05,
+        "heldout_mse": 6.551425758516416e-05,
+        "changed_codes": 1093429,
+        "train_nll": 2.763173074339262
+      },
+      {
+        "step": 8192,
+        "fit_mse": 4.6158835175447166e-05,
+        "heldout_mse": 6.077949365135282e-05,
+        "changed_codes": 1691724,
+        "train_nll": 2.759903472925039
+      }
+    ]
+  },
+  "new_completed_targets_snapshot": [
+    "model.layers.0.mlp.down_proj",
+    "model.layers.1.mlp.down_proj",
+    "model.layers.2.mlp.down_proj",
+    "model.layers.3.mlp.down_proj",
+    "model.layers.4.mlp.down_proj",
+    "model.layers.5.mlp.down_proj",
+    "model.layers.6.mlp.down_proj",
+    "model.layers.7.mlp.down_proj",
+    "model.layers.8.mlp.down_proj",
+    "model.layers.9.mlp.down_proj"
+  ],
+  "old_progress": {
+    "stage": "sequential-round-coordinate",
+    "pid": 3816753,
+    "time": 1789703575.4692519,
+    "cuda_visible_devices": "0",
+    "allocated_gib": 4.833749294281006,
+    "reserved_gib": 7.859375,
+    "peak_allocated_gib": 7.521224498748779,
+    "gpu_time_budget": null,
+    "module": "model.layers.4.mlp.down_proj",
+    "step": 384
+  },
+  "new_progress_snapshot": {
+    "stage": "sequential-round-coordinate",
+    "pid": 3869795,
+    "time": 1789704429.7491126,
+    "cuda_visible_devices": "0",
+    "allocated_gib": 4.833749294281006,
+    "reserved_gib": 7.73828125,
+    "peak_allocated_gib": 7.521224498748779,
+    "gpu_time_budget": null,
+    "module": "model.layers.10.mlp.down_proj",
+    "step": 7936
+  },
+  "old_failure_json_exists": false,
+  "old_final_package_exists": false,
+  "new_failure_json_exists": false,
+  "launcher": {
+    "pid": 3869795,
+    "gpu": 0,
+    "python": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+    "seed": "43",
+    "resume_prefix": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/sp2-down-readapt-s43/prefix.pt"
+  },
+  "budget": {
+    "milestones": [
+      512,
+      2048,
+      8192
+    ],
+    "candidates_with_parent": [
+      0,
+      512,
+      2048,
+      8192
+    ],
+    "old_committed_layers_skipped": 4,
+    "restarted_layer": 4,
+    "old_uncommitted_logged_coordinate_step": 384,
+    "extra_discarded_compute": "At least 384 logged coordinate iterations plus capture/fit; exact physical work after last log is unknown. No increase in accepted candidate budget.",
+    "gradient_updates": 0
+  },
+  "limits": [
+    "No GPU or new forward/tokenization/test run.",
+    "No claim that interruption cause is established; host disappearance reported by coordinator, kernel journal unavailable.",
+    "Sandbox ps has no host visibility and is not exit evidence; live progress log used here.",
+    "New result new_module_results contains resumed layers only; complete choice evidence must combine old layer0..3 JSON with new layer4..15 JSON.",
+    "No uninterrupted replay performed; trajectory-equivalence beyond saved-prefix restoration is not empirically established."
+  ]
+}

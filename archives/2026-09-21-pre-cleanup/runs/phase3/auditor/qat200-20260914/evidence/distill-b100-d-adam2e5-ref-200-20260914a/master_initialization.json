@@ -1,0 +1,16 @@
+{
+  "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/post-b100-d-20260914a/static_w4a8.pt",
+  "diagonal_transform": {
+    "name": "model.layers.1.mlp.down_proj",
+    "factor": 2.0,
+    "channels": [
+      1417
+    ],
+    "alpha": 564.63525390625,
+    "range_exponent": -1,
+    "fit_mse": 0.03864921256899834,
+    "heldout_mse": 0.029458677396178246
+  },
+  "method": "project current-R FP reference into parent INT4 cells; retain parent initial quantized forward"
+}

@@ -1,0 +1,47 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 17.6385440826416,
+      "nll": 2.870086512174803
+    },
+    {
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 18.69806480407715,
+      "nll": 2.928420032092466
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.8703050943792365,
+  "ppl": 17.64239997588965,
+  "input_model": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "mode": "w4a8",
+  "split": "validation",
+  "window_length": 2048,
+  "seed": 42,
+  "dtype": "bfloat16",
+  "kv_bits": 16,
+  "use_cache": false,
+  "evaluation": "prefill teacher-forced next-token; disjoint windows including partial tail",
+  "nll_precision": "log of original evaluator float32 PPL, token-weighted across segments",
+  "weight_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rtn/w4_rtn_model.pt",
+  "weight_method": "RTN",
+  "rotation_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rotation/R.bin",
+  "non_down_scale_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rotation/quant_scales.pt",
+  "down_scale_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/down-codebooks-c-20260909.6YRIty/results/down_scales.json",
+  "quantized_linear_count": 112,
+  "non_down_int8_count": 96,
+  "down_sp2_count": 16,
+  "weights_match_checkpoint": true,
+  "weight_granularity": "per output channel",
+  "activation_granularity": "fixed per tensor",
+  "high_precision": "embedding, lm_head, norms; BF16 fake-quant GEMM",
+  "elapsed_seconds": 24.578121687998646,
+  "activation_scales_unchanged": true
+}

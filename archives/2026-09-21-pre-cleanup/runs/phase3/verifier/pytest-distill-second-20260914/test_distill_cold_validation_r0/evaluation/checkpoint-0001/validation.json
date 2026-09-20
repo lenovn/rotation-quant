@@ -1,0 +1,24 @@
+{
+  "nll": 3.4921929438908896,
+  "ppl": 32.85792434147792,
+  "predicted_tokens": 12,
+  "token_count": 14,
+  "windows": [
+    {
+      "window": 0,
+      "tokens": 8,
+      "predicted_tokens": 7,
+      "nll": 3.474311351776123
+    },
+    {
+      "window": 1,
+      "tokens": 6,
+      "predicted_tokens": 5,
+      "nll": 3.5172271728515625
+    }
+  ],
+  "method": "full-backbone quantization-aware distillation, not frozen-weight PTQ",
+  "update_step": 1,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-distill-second-20260914/test_distill_cold_validation_r0/parent.pt",
+  "format": "112 W4 / 96 static INT8 / 16 static SP2; BF16 KV16 prefill"
+}

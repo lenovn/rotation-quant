@@ -1,0 +1,33 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 17.280128479003906,
+      "nll": 2.84955719847581
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 18.959308624267578,
+      "nll": 2.9422950311972227
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.849904697477057,
+  "ppl": 17.286134349848403,
+  "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+  "route": "C",
+  "update_step": 100,
+  "format": "112 W4 / 96 static INT8 / 16 static SP2; BF16 KV16 prefill",
+  "scale_initialization": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt",
+  "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint"
+}

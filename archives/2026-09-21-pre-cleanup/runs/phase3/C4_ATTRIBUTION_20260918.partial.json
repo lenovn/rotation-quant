@@ -1,0 +1,87 @@
+{
+  "results": {
+    "bf16": {
+      "ppl": 21.843397624525274,
+      "nll": 3.0838987076656394,
+      "reused": true,
+      "result": "runs/phase3/c4-bf16-fixed-20260915a/result.json"
+    },
+    "b100_sp2": {
+      "ppl": 29.18423776720624,
+      "nll": 3.373628761035482,
+      "reused": false,
+      "result": "runs/phase3/c4-b100-sp2-fixed-20260918a/result.json"
+    },
+    "ptq_parent": {
+      "ppl": 27.43961641336637,
+      "nll": 3.311987823655252,
+      "reused": false,
+      "result": "runs/phase3/c4-ptq-parent-fixed-20260918a/result.json"
+    },
+    "qat400": {
+      "ppl": 26.98478050458106,
+      "nll": 3.295273022058687,
+      "reused": true,
+      "result": "runs/phase3/c4-best-fixed-20260915a/result.json"
+    }
+  },
+  "comparisons": {
+    "postprocess": {
+      "before": "b100_sp2",
+      "after": "ptq_parent",
+      "ppl_delta": -1.7446213538398716,
+      "nll_delta": -0.06164093738023002,
+      "relative_ppl_percent": -5.977957580239657,
+      "segment_nll_deltas": [
+        -0.06424612878502778,
+        -0.06327049473805113,
+        -0.06343220604120425,
+        -0.06373144012537457,
+        -0.055433339323297304,
+        -0.060146292374970045,
+        -0.05941395674976446,
+        -0.06345364090415284
+      ],
+      "improved_segments": 8
+    },
+    "qat": {
+      "before": "ptq_parent",
+      "after": "qat400",
+      "ppl_delta": -0.45483590878530933,
+      "nll_delta": -0.016714801596564577,
+      "relative_ppl_percent": -1.6575884368549287,
+      "segment_nll_deltas": [
+        -0.010760373275684909,
+        -0.014912835991089057,
+        -0.02137270579595496,
+        -0.014359015544728404,
+        -0.026272452849584127,
+        -0.017846843002812474,
+        -0.013483022317900772,
+        -0.014711163994758802
+      ],
+      "improved_segments": 8
+    },
+    "total_after_b100": {
+      "before": "b100_sp2",
+      "after": "qat400",
+      "ppl_delta": -2.199457262625181,
+      "nll_delta": -0.0783557389767946,
+      "relative_ppl_percent": -7.536456083484444,
+      "segment_nll_deltas": [
+        -0.07500650206071269,
+        -0.07818333072914019,
+        -0.08480491183715921,
+        -0.07809045567010298,
+        -0.08170579217288143,
+        -0.07799313537778252,
+        -0.07289697906766524,
+        -0.07816480489891164
+      ],
+      "improved_segments": 8
+    }
+  },
+  "matched_tokens": 2096128,
+  "immutable_scales": true,
+  "same_quantization_and_metric_source": true
+}

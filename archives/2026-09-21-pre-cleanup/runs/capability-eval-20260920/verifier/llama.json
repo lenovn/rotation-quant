@@ -1,0 +1,586 @@
+{
+  "model": "llama",
+  "selected": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/distill-b100-refined-ref-adam1e5-400-20260914a/checkpoint-0400/static_w4a8.pt",
+    "seed": 42
+  },
+  "gpu": "6",
+  "score_finite": true,
+  "scales_unchanged": true,
+  "calls": {
+    "model.layers.0.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.0.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.0.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.0.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.0.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.0.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.0.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.1.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.1.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.1.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.1.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.1.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.1.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.1.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.2.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.2.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.2.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.2.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.2.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.2.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.2.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.3.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.3.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.3.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.3.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.3.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.3.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.3.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.4.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.4.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.4.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.4.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.4.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.4.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.4.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.5.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.5.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.5.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.5.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.5.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.5.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.5.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.6.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.6.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.6.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.6.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.6.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.6.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.6.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.7.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.7.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.7.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.7.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.7.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.7.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.7.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.8.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.8.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.8.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.8.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.8.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.8.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.8.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.9.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.9.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.9.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.9.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.9.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.9.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.9.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.10.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.10.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.10.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.10.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.10.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.10.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.10.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.11.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.11.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.11.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.11.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.11.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.11.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.11.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.12.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.12.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.12.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.12.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.12.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.12.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.12.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.13.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.13.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.13.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.13.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.13.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.13.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.13.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.14.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.14.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.14.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.14.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.14.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.14.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.14.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.15.self_attn.q_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.15.self_attn.k_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.15.self_attn.v_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.15.self_attn.o_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.15.mlp.gate_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.15.mlp.up_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    },
+    "model.layers.15.mlp.down_proj": {
+      "score_prefill": 1,
+      "generate_prefill": 1,
+      "generate_decode": 1
+    }
+  },
+  "num_quantizers": 112,
+  "output_tokens": [
+    [
+      791,
+      6864,
+      315,
+      9822,
+      374,
+      12366,
+      11
+    ]
+  ],
+  "pass": true
+}

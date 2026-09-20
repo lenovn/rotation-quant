@@ -1,0 +1,31 @@
+A FAIL failed: ['learning_rates_match']
+B FAIL failed: ['learning_rates_match']
+C FAIL failed: ['learning_rates_match']
+{
+  "paired_checks": {
+    "all_100_recorded_lrs_equal": true,
+    "all_800_windows_equal": true
+  },
+  "ranking": [
+    "B",
+    "C",
+    "A"
+  ],
+  "target": {
+    "status": "FAIL",
+    "scope": "three-route100 stage, not entire goal",
+    "reused_bf16": 13.634657725643203,
+    "threshold": 14.634657725643203,
+    "delta_ppl": 3.4824571842899363,
+    "delta_nll": 0.22746392154346395,
+    "gap": 2.4824571842899363
+  },
+  "scope": {
+    "gpu_evaluations": 0,
+    "training_updates": 0,
+    "recalibrations": 0,
+    "pytest_runs": 0,
+    "model_forwards": 0,
+    "algorithm_searches": 0
+  }
+}

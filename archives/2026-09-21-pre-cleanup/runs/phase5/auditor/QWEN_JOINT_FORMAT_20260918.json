@@ -1,0 +1,316 @@
+{
+  "status": "PASS",
+  "scope": "Joint100 plus initial matched down-format control and completed frozen C4; not full postprocessed PTQ or Uniform-QAT400",
+  "training": {
+    "steps": 100,
+    "global_microbatches_per_update": 8,
+    "input_token_visits": 1638400,
+    "prediction_targets": 1637600,
+    "seed": 42,
+    "rotation_tensors": 29,
+    "all_rotations_changed_from_initial": true,
+    "R_gradients_per_step": 29,
+    "SA_gradients_per_step": 168,
+    "SW_gradients_per_step": 196,
+    "SP2_gradients_per_step": 0,
+    "route": "B"
+  },
+  "matching": {
+    "weight_records_bitwise_equal": 196,
+    "high_precision_tensors_bitwise_equal": 154,
+    "qk_norm_tensors_bitwise_equal": 56,
+    "non_down_activation_scales_equal": 168,
+    "sp2_formats": {
+      "int8": 168,
+      "sp2": 28
+    },
+    "int8_formats": {
+      "int8": 196
+    },
+    "config_equal": true,
+    "common_joint_parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s42/checkpoint-0100/static_w4a8.pt",
+    "identical_nan_placeholder_buffers": [
+      "lm_head.quantizer.prefill_scale",
+      "lm_head.quantizer.prefill_zero",
+      "lm_head.quantizer.prefill_clip_min",
+      "lm_head.quantizer.prefill_clip_max",
+      "lm_head.quantizer.decode_scale",
+      "lm_head.quantizer.decode_zero",
+      "lm_head.quantizer.decode_clip_min",
+      "lm_head.quantizer.decode_clip_max",
+      "lm_head.out_quantizer.prefill_scale",
+      "lm_head.out_quantizer.prefill_zero",
+      "lm_head.out_quantizer.prefill_clip_min",
+      "lm_head.out_quantizer.prefill_clip_max",
+      "lm_head.out_quantizer.decode_scale",
+      "lm_head.out_quantizer.decode_zero",
+      "lm_head.out_quantizer.decode_clip_min",
+      "lm_head.out_quantizer.decode_clip_max"
+    ],
+    "rotation_equivalence": "R is fused into identical frozen W and high_precision tensors; no independent R tensors in frozen package."
+  },
+  "calibration": {
+    "indices": [
+      567,
+      848,
+      140,
+      169,
+      543,
+      76,
+      391,
+      1095,
+      1007,
+      746,
+      794,
+      1165,
+      953,
+      327,
+      950,
+      505,
+      196,
+      548,
+      675,
+      437,
+      556,
+      1097,
+      1032,
+      430,
+      608,
+      1018,
+      222,
+      402,
+      480,
+      624,
+      912,
+      351
+    ],
+    "window_length": 128,
+    "tokens": 4096,
+    "sampled_rows_per_layer": 512,
+    "layers": 28,
+    "candidates_per_layer": 50,
+    "coarse_log2_bounds": [
+      -16,
+      1
+    ],
+    "coarse_count": 33,
+    "refinement_count": 17,
+    "all_candidates_and_minima_checked": true,
+    "full_absmax_exactly_equal": true,
+    "parent_quantizer_states_unchanged": true,
+    "capture_evidence_limit": "Same source capture algorithm/layout, indices, rows, bounds; arrays not saved, no elementwise capture equality claim.",
+    "layers_alpha": [
+      {
+        "module": "model.layers.0.mlp.down_proj",
+        "absmax": 9.8125,
+        "sp2_alpha": 6.5019422805024805,
+        "int8_alpha": 4.499051086972918
+      },
+      {
+        "module": "model.layers.1.mlp.down_proj",
+        "absmax": 77.5,
+        "sp2_alpha": 74.21425425413946,
+        "int8_alpha": 37.207734755034046
+      },
+      {
+        "module": "model.layers.2.mlp.down_proj",
+        "absmax": 16256.0,
+        "sp2_alpha": 24666.18857371818,
+        "int8_alpha": 16300.074487216092
+      },
+      {
+        "module": "model.layers.3.mlp.down_proj",
+        "absmax": 23.25,
+        "sp2_alpha": 14.050955262159011,
+        "int8_alpha": 8.86753925120263
+      },
+      {
+        "module": "model.layers.4.mlp.down_proj",
+        "absmax": 25.0,
+        "sp2_alpha": 15.820243932235078,
+        "int8_alpha": 10.94689595644924
+      },
+      {
+        "module": "model.layers.5.mlp.down_proj",
+        "absmax": 19.25,
+        "sp2_alpha": 11.633586614905848,
+        "int8_alpha": 8.049917739525183
+      },
+      {
+        "module": "model.layers.6.mlp.down_proj",
+        "absmax": 21.875,
+        "sp2_alpha": 15.177553587640162,
+        "int8_alpha": 8.736118113562805
+      },
+      {
+        "module": "model.layers.7.mlp.down_proj",
+        "absmax": 45.75,
+        "sp2_alpha": 21.964566000552356,
+        "int8_alpha": 13.238220842186028
+      },
+      {
+        "module": "model.layers.8.mlp.down_proj",
+        "absmax": 29.375,
+        "sp2_alpha": 15.46286447850545,
+        "int8_alpha": 9.758593287137478
+      },
+      {
+        "module": "model.layers.9.mlp.down_proj",
+        "absmax": 51.5,
+        "sp2_alpha": 27.10936240486913,
+        "int8_alpha": 14.902040948034546
+      },
+      {
+        "module": "model.layers.10.mlp.down_proj",
+        "absmax": 95.0,
+        "sp2_alpha": 45.60948131262238,
+        "int8_alpha": 15.110838977749157
+      },
+      {
+        "module": "model.layers.11.mlp.down_proj",
+        "absmax": 74.5,
+        "sp2_alpha": 49.36506495770036,
+        "int8_alpha": 15.619347387228993
+      },
+      {
+        "module": "model.layers.12.mlp.down_proj",
+        "absmax": 38.0,
+        "sp2_alpha": 20.0030246870879,
+        "int8_alpha": 11.513633293129612
+      },
+      {
+        "module": "model.layers.13.mlp.down_proj",
+        "absmax": 39.5,
+        "sp2_alpha": 20.79261776684137,
+        "int8_alpha": 11.429720727133292
+      },
+      {
+        "module": "model.layers.14.mlp.down_proj",
+        "absmax": 158.0,
+        "sp2_alpha": 27.555138971832456,
+        "int8_alpha": 13.814924266315824
+      },
+      {
+        "module": "model.layers.15.mlp.down_proj",
+        "absmax": 122.0,
+        "sp2_alpha": 35.30192224582941,
+        "int8_alpha": 18.53252223970215
+      },
+      {
+        "module": "model.layers.16.mlp.down_proj",
+        "absmax": 89.5,
+        "sp2_alpha": 49.33162060302588,
+        "int8_alpha": 31.13312040789685
+      },
+      {
+        "module": "model.layers.17.mlp.down_proj",
+        "absmax": 134.0,
+        "sp2_alpha": 97.35287572188652,
+        "int8_alpha": 56.03579101799349
+      },
+      {
+        "module": "model.layers.18.mlp.down_proj",
+        "absmax": 204.0,
+        "sp2_alpha": 117.73966290020202,
+        "int8_alpha": 67.77031593450367
+      },
+      {
+        "module": "model.layers.19.mlp.down_proj",
+        "absmax": 286.0,
+        "sp2_alpha": 198.43567204868967,
+        "int8_alpha": 109.0802677782345
+      },
+      {
+        "module": "model.layers.20.mlp.down_proj",
+        "absmax": 486.0,
+        "sp2_alpha": 387.1335427761709,
+        "int8_alpha": 255.82815784012422
+      },
+      {
+        "module": "model.layers.21.mlp.down_proj",
+        "absmax": 564.0,
+        "sp2_alpha": 540.0882503139956,
+        "int8_alpha": 283.53123211381035
+      },
+      {
+        "module": "model.layers.22.mlp.down_proj",
+        "absmax": 716.0,
+        "sp2_alpha": 597.2110409167485,
+        "int8_alpha": 376.89909673565626
+      },
+      {
+        "module": "model.layers.23.mlp.down_proj",
+        "absmax": 704.0,
+        "sp2_alpha": 488.45703888908224,
+        "int8_alpha": 322.7854232080443
+      },
+      {
+        "module": "model.layers.24.mlp.down_proj",
+        "absmax": 812.0,
+        "sp2_alpha": 513.8415229189953,
+        "int8_alpha": 295.7644135434931
+      },
+      {
+        "module": "model.layers.25.mlp.down_proj",
+        "absmax": 712.0,
+        "sp2_alpha": 517.2779665222628,
+        "int8_alpha": 297.7424119762042
+      },
+      {
+        "module": "model.layers.26.mlp.down_proj",
+        "absmax": 804.0,
+        "sp2_alpha": 464.0327890772668,
+        "int8_alpha": 292.8504784346902
+      },
+      {
+        "module": "model.layers.27.mlp.down_proj",
+        "absmax": 3440.0,
+        "sp2_alpha": 3294.1552856030935,
+        "int8_alpha": 3145.9643340164234
+      }
+    ]
+  },
+  "validation": {
+    "ppl": 16.340940643824144,
+    "nll": 2.793673654716446,
+    "targets": 262208
+  },
+  "c4": {
+    "status": "PASS",
+    "frozen_quantizers_before_after_all_equal": true,
+    "package_scales_equal": true,
+    "non_down_quantizer_states_equal_across_formats": true,
+    "input_cache_same_as_qwen_bf16": true,
+    "metadata_equal": true,
+    "segment_structure_equal_to_bf16": true,
+    "segment_metrics_exactly_recomputed": true,
+    "results": [
+      {
+        "run": "b100-sp2-c4-s42",
+        "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s42/checkpoint-0100/static_w4a8.pt",
+        "ppl": 27.18323240302331,
+        "nll": 3.3026003274437667,
+        "targets": 2096128,
+        "activation_formats": {
+          "int8": 168,
+          "sp2": 28
+        },
+        "summary_present": true,
+        "summary_stage": "B100-initial-SP2"
+      },
+      {
+        "run": "b100-int8-c4-s42",
+        "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-initial-s42/static_w4a8.pt",
+        "ppl": 33.33932032786121,
+        "nll": 3.5067374910279026,
+        "targets": 2096128,
+        "activation_formats": {
+          "int8": 196
+        },
+        "summary_present": true,
+        "summary_stage": "B100-initial-INT8"
+      }
+    ],
+    "delta_nll_sp2_minus_int8": -0.2041371635841358
+  }
+}

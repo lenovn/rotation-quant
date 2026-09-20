@@ -1,0 +1,14 @@
+{
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/down-d-search-20260913.bpL0NE",
+  "hypothesis": "Layer MSE strength selection can differ from train end-to-end NLL preference",
+  "controls": [
+    "identity_recomputed",
+    "search_recomputed"
+  ],
+  "new_strengths": [
+    0.25,
+    1.0
+  ],
+  "selection_split": "train",
+  "additional_full_validation": 0
+}

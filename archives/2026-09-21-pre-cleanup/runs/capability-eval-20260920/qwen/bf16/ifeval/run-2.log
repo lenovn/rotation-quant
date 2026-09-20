@@ -1,0 +1,14 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.69it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.36it/s]
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[Task: ifeval] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+[Task: ifeval] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+Chat template formatting change affects loglikelihood and multiple-choice tasks. See docs/chat-template-readme.md for details.
+  0%|          | 0/541 [00:00<?, ?it/s]100%|██████████| 541/541 [00:00<00:00, 13447.27it/s]
+Running generate_until requests:   0%|          | 0/541 [00:00<?, ?it/s]/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/configuration_utils.py:636: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.95` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/lib/python3.9/site-packages/transformers/generation/configuration_utils.py:653: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+Running generate_until requests:   0%|          | 1/541 [01:30<13:31:55, 90.21s/it]Running generate_until requests:  12%|█▏        | 65/541 [02:37<16:02,  2.02s/it]  Running generate_until requests:  24%|██▍       | 129/541 [03:45<09:58,  1.45s/it]Running generate_until requests:  36%|███▌      | 193/541 [04:51<07:19,  1.26s/it]Running generate_until requests:  48%|████▊     | 257/541 [05:57<05:32,  1.17s/it]Running generate_until requests:  59%|█████▉    | 321/541 [07:02<04:05,  1.12s/it]Running generate_until requests:  71%|███████   | 385/541 [08:07<02:48,  1.08s/it]Running generate_until requests:  83%|████████▎ | 449/541 [09:13<01:37,  1.06s/it]Running generate_until requests:  95%|█████████▍| 513/541 [09:51<00:25,  1.09it/s]Running generate_until requests: 100%|██████████| 541/541 [09:51<00:00,  1.09s/it]

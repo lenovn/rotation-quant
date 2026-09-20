@@ -1,0 +1,36 @@
+{
+  "module": "model.layers.5.mlp.down_proj",
+  "selected_step": 2048,
+  "previous_train_nll": 2.9138169828369245,
+  "selected_train_nll": 2.9120324599484313,
+  "trials": [
+    {
+      "step": 0,
+      "fit_mse": 0.005171574652194977,
+      "heldout_mse": 0.005213449243456125,
+      "changed_codes": 0,
+      "train_nll": 2.9138169828369245
+    },
+    {
+      "step": 512,
+      "fit_mse": 0.0038116693031042814,
+      "heldout_mse": 0.004052933305501938,
+      "changed_codes": 400341,
+      "train_nll": 2.9125772195277855
+    },
+    {
+      "step": 2048,
+      "fit_mse": 0.003288391511887312,
+      "heldout_mse": 0.0037601846270263195,
+      "changed_codes": 874824,
+      "train_nll": 2.9120324599484313
+    },
+    {
+      "step": 8192,
+      "fit_mse": 0.0028450838290154934,
+      "heldout_mse": 0.003532073926180601,
+      "changed_codes": 1267270,
+      "train_nll": 2.913944910991985
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+--- distill-b100-d-adam2e5-200-20260914a/source/distill.py
++++ distill-b100-d-adam2e5-ref-200-20260914a/source/distill.py
+@@ -1,5 +1,6 @@
+ import argparse
+ import gc
++import json
+ import math
+ import os
+ from pathlib import Path
+@@ -21,7 +22,7 @@
+     MODEL_PATH, append_json, backbone, data_windows, evaluate, full_validation,
+     save_frozen, wrappers, write_json,
+ )
+-from experiments.phase3.postprocess import load_static
++from experiments.phase3.postprocess import load_static, reference_weights
+ from experiments.phase3.quantization import Phase3WeightQuantizer, int4_codes, pack_int4, unpack_int4
+ from experiments.phase3.run import progress, schedule, source_record
+ 
+@@ -43,10 +44,41 @@
+         return functional.linear(inputs, weight)
+ 
+ 
+-def prepare_student(model, records):
++def cell_reference_initialization(record, reference):
++    if tuple(reference.shape) != tuple(record["shape"]):
++        raise ValueError("Master reference shape differs from parent weight")
++    device = reference.device
++    codes = unpack_int4(record["packed"], record["shape"]).to(device).float()
++    scale = record["scale"].to(device)
++    normalized = reference.float() / scale
++    lower = torch.where(codes == -8, -torch.inf, codes - 0.49)
++    upper = torch.where(codes == 7, torch.inf, codes + 0.49)
++    return normalized.clamp(min=lower, max=upper) * scale
++
++
++@torch.no_grad()
++def reference_for_parent(reference_state, parent_path):
++    weights = reference_weights(reference_state)
++    metadata = torch.load(parent_path, map_location="cpu", weights_only=True, mmap=True)["metadata"]
++    transform = None
++    candidate = metadata.get("candidate", "")
++    if metadata.get("mode") == "d" and candidate.startswith("local-d-"):
++        name = candidate[len("local-d-"):]
++        diagnostic = json.loads((parent_path.parent / "diagonal_candidates.json").read_text())
++        transform = dict(name=name, **diagnostic[name]["selected"])
++        channels = transform["channels"]
++        factor = transform["factor"]
++        weights[name.replace("down_proj", "up_proj")][channels] /= factor
++        weights[name][:, channels] *= factor
++    return weights, transform
++
++
++def prepare_student(model, records, master_reference=None):
+     model.requires_grad_(False)
+     for name, wrapper in wrappers(model).items():
+-        replacement = TrainableQuantLinear(wrapper.module.weight, records[name]["scale"])
++        initial = (wrapper.module.weight if master_reference is None else
++                   cell_reference_initialization(records[name], master_reference[name].to(wrapper.module.weight.device)))
++        replacement = TrainableQuantLinear(initial, records[name]["scale"])
+         wrapper.module = replacement
+         wrapper.weight = replacement.weight
+         wrapper.bias = None
+@@ -144,6 +176,7 @@
+         metadata=dict(step=step, parent=str(args.parent), method="full-backbone W4A8 quantization-aware distillation",
+                       data_start=args.data_start, accumulation=args.accumulation,
+                       temperature=args.temperature, ce_weight=args.ce_weight,
++                      reference_state=str(getattr(args, "reference_state", None)),
+                       weight_optimizer=getattr(args, "weight_optimizer", "sgd")),
+         python_rng=random.getstate(), torch_rng=torch.get_rng_state(), cuda_rng=torch.cuda.get_rng_state())
+     temporary = path.with_suffix(".pt.tmp")
+@@ -234,7 +267,15 @@
+ def train(args):
+     train_windows, _, probe, validation, data = data_windows(args.output)
+     student, parent_records = load_static(args.parent)
+-    prepare_student(student, parent_records)
++    reference = None
++    reference_state = getattr(args, "reference_state", None)
++    if reference_state is not None:
++        reference, transform = reference_for_parent(reference_state, args.parent)
++        write_json(args.output / "master_initialization.json", dict(reference_state=str(reference_state),
++            parent=str(args.parent), diagonal_transform=transform,
++            method="project current-R FP reference into parent INT4 cells; retain parent initial quantized forward"))
++    prepare_student(student, parent_records, reference)
++    del reference
+     groups = parameter_groups(student)
+     optimizers = make_optimizers(groups, args)
+     teacher = teacher_model().cuda()
+@@ -318,6 +359,7 @@
+     parser.add_argument("--output", type=Path, required=True)
+     parser.add_argument("--parent", type=Path, required=True)
+     parser.add_argument("--resume", type=Path)
++    parser.add_argument("--reference-state", type=Path)
+     parser.add_argument("--steps", type=int, default=100)
+     parser.add_argument("--schedule-steps", type=int)
+     parser.add_argument("--accumulation", type=int, default=8)

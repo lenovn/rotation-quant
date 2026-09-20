@@ -1,0 +1,10 @@
+{
+  "task": "gsm8k_cot",
+  "path": "gsm8k",
+  "name": "main",
+  "splits": {
+    "train": 7473,
+    "test": 1319
+  },
+  "status": "ready"
+}

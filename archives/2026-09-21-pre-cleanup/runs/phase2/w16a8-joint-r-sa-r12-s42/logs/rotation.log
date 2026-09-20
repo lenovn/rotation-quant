@@ -1,0 +1,314 @@
+W0826 18:43:05.078029 140303976101696 torch/distributed/run.py:779] 
+W0826 18:43:05.078029 140303976101696 torch/distributed/run.py:779] *****************************************
+W0826 18:43:05.078029 140303976101696 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0826 18:43:05.078029 140303976101696 torch/distributed/run.py:779] *****************************************
+2026-08-26 18:43:11,927 - spinquant - INFO - the rank is 0
+2026-08-26 18:43:12,170 - spinquant - INFO - the rank is 1
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+  warnings.warn(
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+  warnings.warn(
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+2026-08-26 18:43:27,607 - spinquant - INFO - Model init completed for training LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(128256, 2048)
+    (layers): ModuleList(
+      (0-15): 16 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (k_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=512, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (v_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=512, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (o_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (rotary_emb): LlamaRotaryEmbedding()
+          (R2): RotateModule()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (up_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (down_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=8192, out_features=2048, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((2048,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): ActQuantWrapper(
+    Input Quantizer Bits: 16
+    Output Quantizer Bits: 16
+    (module): Linear(in_features=2048, out_features=128256, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+  (R1): RotateModule()
+)
+INFO:spinquant:Model init completed for training LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(128256, 2048)
+    (layers): ModuleList(
+      (0-15): 16 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (k_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=512, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (v_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=512, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (o_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (rotary_emb): LlamaRotaryEmbedding()
+          (R2): RotateModule()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (up_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (down_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): QuantizeLinear(in_features=8192, out_features=2048, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((2048,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): ActQuantWrapper(
+    Input Quantizer Bits: 16
+    Output Quantizer Bits: 16
+    (module): Linear(in_features=2048, out_features=128256, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+  (R1): RotateModule()
+)
+2026-08-26 18:43:27,607 - spinquant - INFO - Start to load tokenizer...
+INFO:spinquant:Start to load tokenizer...
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+2026-08-26 18:43:27,953 - spinquant - INFO - Complete tokenizer loading...
+INFO:spinquant:Complete tokenizer loading...
+2026-08-26 18:43:27,957 - spinquant - INFO - Complete tokenizer loading...
+INFO:spinquant:Complete tokenizer loading...
+Token indices sequence length is longer than the specified maximum sequence length for this model (2436213 > 2048). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (2436213 > 2048). Running this sequence through the model will result in indexing errors
+2026-08-26 18:44:03,855 - spinquant - INFO - Joint R+SA training: 96 learned activation scales, 16 A16 down_proj inputs, R lr=1.5, SA lr=1
+INFO:spinquant:Joint R+SA training: 96 learned activation scales, 16 A16 down_proj inputs, R lr=1.5, SA lr=1
+max_steps is given, it will override any value given in num_train_epochs
+max_steps is given, it will override any value given in num_train_epochs
+WARNING:train_utils.modeling_llama_quant:Starting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+WARNING:train_utils.modeling_llama_quant:Starting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+2026-08-26 18:45:50,781 - spinquant - INFO - rotation-static calibration: {'update_step': 0, 'kind': 'initial', 'activation_scale_mean': 0.03659738972783089, 'weight_scale_mean': None, 'activation_relative_drift': None, 'weight_relative_drift': None}
+INFO:spinquant:rotation-static calibration: {'update_step': 0, 'kind': 'initial', 'activation_scale_mean': 0.03659738972783089, 'weight_scale_mean': None, 'activation_relative_drift': None, 'weight_relative_drift': None}
+2026-08-26 18:45:50,844 - spinquant - INFO - rotation-static calibration: {'update_step': 0, 'kind': 'initial', 'activation_scale_mean': 0.03659738972783089, 'weight_scale_mean': None, 'activation_relative_drift': None, 'weight_relative_drift': None}
+INFO:spinquant:rotation-static calibration: {'update_step': 0, 'kind': 'initial', 'activation_scale_mean': 0.03659738972783089, 'weight_scale_mean': None, 'activation_relative_drift': None, 'weight_relative_drift': None}
+  0%|          | 0/100 [00:00<?, ?it/s]/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/_dynamo/eval_frame.py:600: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/_dynamo/eval_frame.py:600: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+/home/dongpeiyan/projects/rotation-quant/repos/SpinQuant/train_utils/optimizer.py:196: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha = 1) (Triggered internally at ../torch/csrc/utils/python_arg_parser.cpp:1581.)
+  p.data.add_(-group["lr"], d_p)
+/home/dongpeiyan/projects/rotation-quant/repos/SpinQuant/train_utils/optimizer.py:196: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha = 1) (Triggered internally at ../torch/csrc/utils/python_arg_parser.cpp:1581.)
+  p.data.add_(-group["lr"], d_p)
+  1%|          | 1/100 [00:40<1:06:37, 40.38s/it]                                                 {'loss': 2.721, 'grad_norm': 10.270085334777832, 'learning_rate': 1.4996299202742986, 'epoch': 0.01}
+  1%|          | 1/100 [00:40<1:06:37, 40.38s/it]  2%|▏         | 2/100 [01:20<1:05:49, 40.30s/it]                                                 {'loss': 2.5644, 'grad_norm': 12.990913391113281, 'learning_rate': 1.4985200463212036, 'epoch': 0.01}
+  2%|▏         | 2/100 [01:20<1:05:49, 40.30s/it]  3%|▎         | 3/100 [02:00<1:05:08, 40.30s/it]                                                 {'loss': 2.8252, 'grad_norm': 12.232028007507324, 'learning_rate': 1.4966714734523099, 'epoch': 0.02}
+  3%|▎         | 3/100 [02:00<1:05:08, 40.30s/it]  4%|▍         | 4/100 [02:41<1:04:25, 40.27s/it]                                                 {'loss': 2.6423, 'grad_norm': 10.521607398986816, 'learning_rate': 1.4940860259858586, 'epoch': 0.03}
+  4%|▍         | 4/100 [02:41<1:04:25, 40.27s/it]  5%|▌         | 5/100 [03:21<1:03:43, 40.25s/it]                                                 {'loss': 2.6985, 'grad_norm': 9.759303092956543, 'learning_rate': 1.4907662554463532, 'epoch': 0.03}
+  5%|▌         | 5/100 [03:21<1:03:43, 40.25s/it]  6%|▌         | 6/100 [04:01<1:03:02, 40.24s/it]                                                 {'loss': 2.634, 'grad_norm': 11.314607620239258, 'learning_rate': 1.4867154380465166, 'epoch': 0.04}
+  6%|▌         | 6/100 [04:01<1:03:02, 40.24s/it]  7%|▋         | 7/100 [04:41<1:02:22, 40.25s/it]                                                 {'loss': 2.6987, 'grad_norm': 10.1445894241333, 'learning_rate': 1.4819375714540606, 'epoch': 0.05}
+  7%|▋         | 7/100 [04:41<1:02:22, 40.25s/it]  8%|▊         | 8/100 [05:22<1:01:45, 40.28s/it]                                                 {'loss': 2.4091, 'grad_norm': 12.279470443725586, 'learning_rate': 1.4764373708464733, 'epoch': 0.05}
+  8%|▊         | 8/100 [05:22<1:01:45, 40.28s/it]  9%|▉         | 9/100 [06:02<1:01:07, 40.30s/it]                                                 {'loss': 2.609, 'grad_norm': 11.147758483886719, 'learning_rate': 1.4702202642577074, 'epoch': 0.06}
+  9%|▉         | 9/100 [06:02<1:01:07, 40.30s/it] 10%|█         | 10/100 [06:42<1:00:29, 40.33s/it]                                                  {'loss': 2.6541, 'grad_norm': 11.503487586975098, 'learning_rate': 1.4632923872213652, 'epoch': 0.07}
+ 10%|█         | 10/100 [06:42<1:00:29, 40.33s/it] 11%|█         | 11/100 [07:23<59:49, 40.34s/it]                                                  {'loss': 2.5273, 'grad_norm': 10.748392105102539, 'learning_rate': 1.4556605767156692, 'epoch': 0.07}
+ 11%|█         | 11/100 [07:23<59:49, 40.34s/it] 12%|█▏        | 12/100 [08:03<59:10, 40.34s/it]                                                {'loss': 2.7007, 'grad_norm': 11.146728515625, 'learning_rate': 1.4473323644161886, 'epoch': 0.08}
+ 12%|█▏        | 12/100 [08:03<59:10, 40.34s/it] 13%|█▎        | 13/100 [08:43<58:29, 40.33s/it]                                                {'loss': 2.5354, 'grad_norm': 9.127883911132812, 'learning_rate': 1.4383159692629857, 'epoch': 0.09}
+ 13%|█▎        | 13/100 [08:43<58:29, 40.33s/it] 14%|█▍        | 14/100 [09:24<57:49, 40.35s/it]                                                {'loss': 2.6664, 'grad_norm': 9.669692993164062, 'learning_rate': 1.4286202893495146, 'epoch': 0.09}
+ 14%|█▍        | 14/100 [09:24<57:49, 40.35s/it] 15%|█▌        | 15/100 [10:04<57:08, 40.34s/it]                                                {'loss': 2.3712, 'grad_norm': 11.103129386901855, 'learning_rate': 1.4182548931412757, 'epoch': 0.1}
+ 15%|█▌        | 15/100 [10:04<57:08, 40.34s/it] 16%|█▌        | 16/100 [10:44<56:25, 40.31s/it]                                                {'loss': 2.7501, 'grad_norm': 10.596504211425781, 'learning_rate': 1.4072300100328976, 'epoch': 0.11}
+ 16%|█▌        | 16/100 [10:44<56:25, 40.31s/it] 17%|█▋        | 17/100 [11:25<55:43, 40.28s/it]                                                {'loss': 2.5383, 'grad_norm': 9.51553726196289, 'learning_rate': 1.3955565202529576, 'epoch': 0.11}
+ 17%|█▋        | 17/100 [11:25<55:43, 40.28s/it] 18%|█▊        | 18/100 [12:05<55:01, 40.27s/it]                                                {'loss': 2.4512, 'grad_norm': 9.870257377624512, 'learning_rate': 1.3832459441265113, 'epoch': 0.12}
+ 18%|█▊        | 18/100 [12:05<55:01, 40.27s/it] 19%|█▉        | 19/100 [12:45<54:20, 40.26s/it]                                                {'loss': 2.5811, 'grad_norm': 8.766409873962402, 'learning_rate': 1.3703104307059213, 'epoch': 0.13}
+ 19%|█▉        | 19/100 [12:45<54:20, 40.26s/it] 20%|██        | 20/100 [13:25<53:39, 40.25s/it]                                                {'loss': 2.6798, 'grad_norm': 8.269868850708008, 'learning_rate': 1.3567627457812106, 'epoch': 0.13}
+ 20%|██        | 20/100 [13:25<53:39, 40.25s/it] 21%|██        | 21/100 [14:06<52:58, 40.24s/it]                                                {'loss': 2.6339, 'grad_norm': 9.64208984375, 'learning_rate': 1.3426162592817679, 'epoch': 0.14}
+ 21%|██        | 21/100 [14:06<52:58, 40.24s/it] 22%|██▏       | 22/100 [14:46<52:18, 40.24s/it]                                                {'loss': 2.9271, 'grad_norm': 9.212726593017578, 'learning_rate': 1.327884932081842, 'epoch': 0.15}
+ 22%|██▏       | 22/100 [14:46<52:18, 40.24s/it] 23%|██▎       | 23/100 [15:26<51:39, 40.26s/it]                                                {'loss': 2.3692, 'grad_norm': 9.87869930267334, 'learning_rate': 1.3125833022228446, 'epoch': 0.15}
+ 23%|██▎       | 23/100 [15:26<51:39, 40.26s/it] 24%|██▍       | 24/100 [16:06<51:01, 40.28s/it]                                                {'loss': 2.7169, 'grad_norm': 8.629427909851074, 'learning_rate': 1.2967264705660586, 'epoch': 0.16}
+ 24%|██▍       | 24/100 [16:06<51:01, 40.28s/it] 25%|██▌       | 25/100 [16:47<50:23, 40.32s/it]                                                {'loss': 2.5106, 'grad_norm': 8.058658599853516, 'learning_rate': 1.2803300858899105, 'epoch': 0.17}
+ 25%|██▌       | 25/100 [16:47<50:23, 40.32s/it] 26%|██▌       | 26/100 [17:27<49:46, 40.36s/it]                                                {'loss': 2.7636, 'grad_norm': 11.981621742248535, 'learning_rate': 1.2634103294465167, 'epoch': 0.18}
+ 26%|██▌       | 26/100 [17:27<49:46, 40.36s/it] 27%|██▋       | 27/100 [18:08<49:08, 40.39s/it]                                                {'loss': 2.7604, 'grad_norm': 9.921553611755371, 'learning_rate': 1.2459838989927388, 'epoch': 0.18}
+ 27%|██▋       | 27/100 [18:08<49:08, 40.39s/it] 28%|██▊       | 28/100 [18:48<48:27, 40.38s/it]                                                {'loss': 2.7278, 'grad_norm': 10.93669605255127, 'learning_rate': 1.2280679923115172, 'epoch': 0.19}
+ 28%|██▊       | 28/100 [18:48<48:27, 40.38s/it] 29%|██▉       | 29/100 [19:28<47:45, 40.36s/it]                                                {'loss': 2.8989, 'grad_norm': 10.063690185546875, 'learning_rate': 1.2096802902397323, 'epoch': 0.2}
+ 29%|██▉       | 29/100 [19:28<47:45, 40.36s/it] 30%|███       | 30/100 [20:09<47:03, 40.34s/it]                                                {'loss': 2.5012, 'grad_norm': 9.077678680419922, 'learning_rate': 1.1908389392193548, 'epoch': 0.2}
+ 30%|███       | 30/100 [20:09<47:03, 40.34s/it] 31%|███       | 31/100 [20:49<46:20, 40.30s/it]                                                {'loss': 2.8768, 'grad_norm': 10.37392520904541, 'learning_rate': 1.171562533389098, 'epoch': 0.21}
+ 31%|███       | 31/100 [20:49<46:20, 40.30s/it] 32%|███▏      | 32/100 [21:29<45:39, 40.28s/it]                                                {'loss': 2.6787, 'grad_norm': 13.112257957458496, 'learning_rate': 1.1518700962342474, 'epoch': 0.22}
+ 32%|███▏      | 32/100 [21:29<45:39, 40.28s/it] 33%|███▎      | 33/100 [22:09<44:57, 40.27s/it]                                                {'loss': 2.6682, 'grad_norm': 10.328575134277344, 'learning_rate': 1.1317810618127786, 'epoch': 0.22}
+ 33%|███▎      | 33/100 [22:09<44:57, 40.27s/it] 34%|███▍      | 34/100 [22:50<44:16, 40.25s/it]                                                {'loss': 2.6, 'grad_norm': 12.785812377929688, 'learning_rate': 1.1113152555762864, 'epoch': 0.23}
+ 34%|███▍      | 34/100 [22:50<44:16, 40.25s/it] 35%|███▌      | 35/100 [23:30<43:37, 40.27s/it]                                                {'loss': 2.6242, 'grad_norm': 9.656075477600098, 'learning_rate': 1.09049287480466, 'epoch': 0.24}
+ 35%|███▌      | 35/100 [23:30<43:37, 40.27s/it] 36%|███▌      | 36/100 [24:10<42:58, 40.30s/it]                                                {'loss': 2.5345, 'grad_norm': 9.143651008605957, 'learning_rate': 1.0693344686738044, 'epoch': 0.24}
+ 36%|███▌      | 36/100 [24:10<42:58, 40.30s/it] 37%|███▋      | 37/100 [24:51<42:19, 40.31s/it]                                                {'loss': 2.6118, 'grad_norm': 11.828083038330078, 'learning_rate': 1.0478609179760854, 'epoch': 0.25}
+ 37%|███▋      | 37/100 [24:51<42:19, 40.31s/it] 38%|███▊      | 38/100 [25:31<41:37, 40.28s/it]                                                {'loss': 2.7038, 'grad_norm': 10.635259628295898, 'learning_rate': 1.0260934145135086, 'epoch': 0.26}
+ 38%|███▊      | 38/100 [25:31<41:37, 40.28s/it] 39%|███▉      | 39/100 [26:11<40:56, 40.27s/it]                                                {'loss': 2.5062, 'grad_norm': 8.80836009979248, 'learning_rate': 1.0040534401839687, 'epoch': 0.26}
+ 39%|███▉      | 39/100 [26:11<40:56, 40.27s/it] 40%|████      | 40/100 [26:51<40:15, 40.25s/it]                                                {'loss': 2.5126, 'grad_norm': 9.531296730041504, 'learning_rate': 0.9817627457812106, 'epoch': 0.27}
+ 40%|████      | 40/100 [26:51<40:15, 40.25s/it] 41%|████      | 41/100 [27:31<39:34, 40.24s/it]                                                {'loss': 2.6103, 'grad_norm': 8.4453763961792, 'learning_rate': 0.959243329529422, 'epoch': 0.28}
+ 41%|████      | 41/100 [27:31<39:34, 40.24s/it] 42%|████▏     | 42/100 [28:12<38:53, 40.23s/it]                                                {'loss': 2.734, 'grad_norm': 11.2313871383667, 'learning_rate': 0.9365174153736413, 'epoch': 0.28}
+ 42%|████▏     | 42/100 [28:12<38:53, 40.23s/it] 43%|████▎     | 43/100 [28:52<38:13, 40.23s/it]                                                {'loss': 2.5239, 'grad_norm': 11.093822479248047, 'learning_rate': 0.913607431047407, 'epoch': 0.29}
+ 43%|████▎     | 43/100 [28:52<38:13, 40.23s/it] 44%|████▍     | 44/100 [29:32<37:32, 40.23s/it]                                                {'loss': 2.6928, 'grad_norm': 10.529668807983398, 'learning_rate': 0.8905359859392936, 'epoch': 0.3}
+ 44%|████▍     | 44/100 [29:32<37:32, 40.23s/it] 45%|████▌     | 45/100 [30:12<36:52, 40.23s/it]                                                {'loss': 2.4645, 'grad_norm': 9.082135200500488, 'learning_rate': 0.8673258487801732, 'epoch': 0.3}
+ 45%|████▌     | 45/100 [30:12<36:52, 40.23s/it] 46%|████▌     | 46/100 [30:53<36:12, 40.22s/it]                                                {'loss': 2.6459, 'grad_norm': 10.37753963470459, 'learning_rate': 0.8439999251732282, 'epoch': 0.31}
+ 46%|████▌     | 46/100 [30:53<36:12, 40.22s/it] 47%|████▋     | 47/100 [31:33<35:31, 40.22s/it]                                                {'loss': 2.7508, 'grad_norm': 9.29699993133545, 'learning_rate': 0.8205812349888859, 'epoch': 0.32}
+ 47%|████▋     | 47/100 [31:33<35:31, 40.22s/it] 48%|████▊     | 48/100 [32:13<34:51, 40.22s/it]                                                {'loss': 2.4599, 'grad_norm': 9.039947509765625, 'learning_rate': 0.7970928896469851, 'epoch': 0.32}
+ 48%|████▊     | 48/100 [32:13<34:51, 40.22s/it] 49%|████▉     | 49/100 [32:53<34:11, 40.22s/it]                                                {'loss': 2.6048, 'grad_norm': 9.123779296875, 'learning_rate': 0.7735580693085962, 'epoch': 0.33}
+ 49%|████▉     | 49/100 [32:53<34:11, 40.22s/it] 50%|█████     | 50/100 [33:33<33:30, 40.22s/it]                                                {'loss': 2.6586, 'grad_norm': 8.884124755859375, 'learning_rate': 0.75, 'epoch': 0.34}
+ 50%|█████     | 50/100 [33:33<33:30, 40.22s/it] 51%|█████     | 51/100 [34:14<32:50, 40.22s/it]                                                {'loss': 2.5769, 'grad_norm': 9.222111701965332, 'learning_rate': 0.7264419306914038, 'epoch': 0.34}
+ 51%|█████     | 51/100 [34:14<32:50, 40.22s/it] 52%|█████▏    | 52/100 [34:54<32:10, 40.22s/it]                                                {'loss': 2.6745, 'grad_norm': 10.264398574829102, 'learning_rate': 0.702907110353015, 'epoch': 0.35}
+ 52%|█████▏    | 52/100 [34:54<32:10, 40.22s/it] 53%|█████▎    | 53/100 [35:34<31:30, 40.22s/it]                                                {'loss': 2.6561, 'grad_norm': 11.206419944763184, 'learning_rate': 0.6794187650111143, 'epoch': 0.36}
+ 53%|█████▎    | 53/100 [35:34<31:30, 40.22s/it] 54%|█████▍    | 54/100 [36:14<30:50, 40.22s/it]                                                {'loss': 2.616, 'grad_norm': 9.340433120727539, 'learning_rate': 0.6560000748267717, 'epoch': 0.36}
+ 54%|█████▍    | 54/100 [36:14<30:50, 40.22s/it] 55%|█████▌    | 55/100 [36:55<30:09, 40.22s/it]                                                {'loss': 2.5766, 'grad_norm': 9.531633377075195, 'learning_rate': 0.6326741512198267, 'epoch': 0.37}
+ 55%|█████▌    | 55/100 [36:55<30:09, 40.22s/it] 56%|█████▌    | 56/100 [37:35<29:29, 40.22s/it]                                                {'loss': 2.4856, 'grad_norm': 10.293784141540527, 'learning_rate': 0.6094640140607064, 'epoch': 0.38}
+ 56%|█████▌    | 56/100 [37:35<29:29, 40.22s/it] 57%|█████▋    | 57/100 [38:15<28:49, 40.22s/it]                                                {'loss': 2.6759, 'grad_norm': 10.454350471496582, 'learning_rate': 0.5863925689525933, 'epoch': 0.38}
+ 57%|█████▋    | 57/100 [38:15<28:49, 40.22s/it] 58%|█████▊    | 58/100 [38:55<28:09, 40.22s/it]                                                {'loss': 2.6058, 'grad_norm': 10.341012001037598, 'learning_rate': 0.563482584626359, 'epoch': 0.39}
+ 58%|█████▊    | 58/100 [38:55<28:09, 40.22s/it] 59%|█████▉    | 59/100 [39:35<27:29, 40.22s/it]                                                {'loss': 2.7466, 'grad_norm': 9.843498229980469, 'learning_rate': 0.5407566704705782, 'epoch': 0.4}
+ 59%|█████▉    | 59/100 [39:35<27:29, 40.22s/it] 60%|██████    | 60/100 [40:16<26:48, 40.22s/it]                                                {'loss': 2.5776, 'grad_norm': 8.199983596801758, 'learning_rate': 0.5182372542187895, 'epoch': 0.4}
+ 60%|██████    | 60/100 [40:16<26:48, 40.22s/it] 61%|██████    | 61/100 [40:56<26:08, 40.22s/it]                                                {'loss': 2.533, 'grad_norm': 9.308509826660156, 'learning_rate': 0.4959465598160315, 'epoch': 0.41}
+ 61%|██████    | 61/100 [40:56<26:08, 40.22s/it] 62%|██████▏   | 62/100 [41:36<25:28, 40.22s/it]                                                {'loss': 2.6388, 'grad_norm': 10.77705192565918, 'learning_rate': 0.47390658548649156, 'epoch': 0.42}
+ 62%|██████▏   | 62/100 [41:36<25:28, 40.22s/it] 63%|██████▎   | 63/100 [42:16<24:48, 40.22s/it]                                                {'loss': 2.6189, 'grad_norm': 10.66467571258545, 'learning_rate': 0.4521390820239146, 'epoch': 0.42}
+ 63%|██████▎   | 63/100 [42:16<24:48, 40.22s/it] 64%|██████▍   | 64/100 [42:57<24:07, 40.22s/it]                                                {'loss': 2.7069, 'grad_norm': 12.033306121826172, 'learning_rate': 0.4306655313261955, 'epoch': 0.43}
+ 64%|██████▍   | 64/100 [42:57<24:07, 40.22s/it] 65%|██████▌   | 65/100 [43:37<23:27, 40.22s/it]                                                {'loss': 2.6209, 'grad_norm': 11.869647026062012, 'learning_rate': 0.40950712519533994, 'epoch': 0.44}
+ 65%|██████▌   | 65/100 [43:37<23:27, 40.22s/it] 66%|██████▌   | 66/100 [44:17<22:47, 40.22s/it]                                                {'loss': 2.6547, 'grad_norm': 8.997217178344727, 'learning_rate': 0.3886847444237134, 'epoch': 0.44}
+ 66%|██████▌   | 66/100 [44:17<22:47, 40.22s/it] 67%|██████▋   | 67/100 [44:57<22:07, 40.21s/it]                                                {'loss': 2.5468, 'grad_norm': 7.824093341827393, 'learning_rate': 0.3682189381872215, 'epoch': 0.45}
+ 67%|██████▋   | 67/100 [44:57<22:07, 40.21s/it] 68%|██████▊   | 68/100 [45:37<21:26, 40.21s/it]                                                {'loss': 2.6347, 'grad_norm': 9.195085525512695, 'learning_rate': 0.34812990376575237, 'epoch': 0.46}
+ 68%|██████▊   | 68/100 [45:37<21:26, 40.21s/it] 69%|██████▉   | 69/100 [46:18<20:46, 40.21s/it]                                                {'loss': 2.288, 'grad_norm': 9.044157028198242, 'learning_rate': 0.32843746661090223, 'epoch': 0.46}
+ 69%|██████▉   | 69/100 [46:18<20:46, 40.21s/it] 70%|███████   | 70/100 [46:58<20:07, 40.24s/it]                                                {'loss': 2.522, 'grad_norm': 13.081299781799316, 'learning_rate': 0.3091610607806452, 'epoch': 0.47}
+ 70%|███████   | 70/100 [46:58<20:07, 40.24s/it] 71%|███████   | 71/100 [47:38<19:27, 40.26s/it]                                                {'loss': 2.5623, 'grad_norm': 10.827427864074707, 'learning_rate': 0.2903197097602678, 'epoch': 0.48}
+ 71%|███████   | 71/100 [47:38<19:27, 40.26s/it] 72%|███████▏  | 72/100 [48:19<18:47, 40.28s/it]                                                {'loss': 2.6963, 'grad_norm': 10.04719352722168, 'learning_rate': 0.2719320076884827, 'epoch': 0.48}
+ 72%|███████▏  | 72/100 [48:19<18:47, 40.28s/it] 73%|███████▎  | 73/100 [48:59<18:07, 40.29s/it]                                                {'loss': 2.6851, 'grad_norm': 10.36227035522461, 'learning_rate': 0.25401610100726124, 'epoch': 0.49}
+ 73%|███████▎  | 73/100 [48:59<18:07, 40.29s/it] 74%|███████▍  | 74/100 [49:39<17:27, 40.29s/it]                                                {'loss': 2.6475, 'grad_norm': 10.404763221740723, 'learning_rate': 0.23658967055348346, 'epoch': 0.5}
+ 74%|███████▍  | 74/100 [49:39<17:27, 40.29s/it] 75%|███████▌  | 75/100 [50:19<16:46, 40.28s/it]                                                {'loss': 2.5931, 'grad_norm': 11.234709739685059, 'learning_rate': 0.2196699141100894, 'epoch': 0.51}
+ 75%|███████▌  | 75/100 [50:19<16:46, 40.28s/it] 76%|███████▌  | 76/100 [51:00<16:06, 40.26s/it]                                                {'loss': 2.5901, 'grad_norm': 8.927165031433105, 'learning_rate': 0.2032735294339415, 'epoch': 0.51}
+ 76%|███████▌  | 76/100 [51:00<16:06, 40.26s/it] 77%|███████▋  | 77/100 [51:40<15:25, 40.25s/it]                                                {'loss': 2.3774, 'grad_norm': 9.496476173400879, 'learning_rate': 0.1874166977771553, 'epoch': 0.52}
+ 77%|███████▋  | 77/100 [51:40<15:25, 40.25s/it] 78%|███████▊  | 78/100 [52:20<14:46, 40.28s/it]                                                {'loss': 2.4191, 'grad_norm': 8.144559860229492, 'learning_rate': 0.17211506791815814, 'epoch': 0.53}
+ 78%|███████▊  | 78/100 [52:20<14:46, 40.28s/it] 79%|███████▉  | 79/100 [53:01<14:06, 40.30s/it]                                                {'loss': 2.7923, 'grad_norm': 9.724316596984863, 'learning_rate': 0.1573837407182322, 'epoch': 0.53}
+ 79%|███████▉  | 79/100 [53:01<14:06, 40.30s/it] 80%|████████  | 80/100 [53:41<13:25, 40.27s/it]                                                {'loss': 2.4979, 'grad_norm': 8.967117309570312, 'learning_rate': 0.1432372542187895, 'epoch': 0.54}
+ 80%|████████  | 80/100 [53:41<13:25, 40.27s/it] 81%|████████  | 81/100 [54:21<12:44, 40.26s/it]                                                {'loss': 2.6247, 'grad_norm': 10.979538917541504, 'learning_rate': 0.12968956929407854, 'epoch': 0.55}
+ 81%|████████  | 81/100 [54:21<12:44, 40.26s/it] 82%|████████▏ | 82/100 [55:01<12:04, 40.25s/it]                                                {'loss': 2.7466, 'grad_norm': 9.537148475646973, 'learning_rate': 0.11675405587348886, 'epoch': 0.55}
+ 82%|████████▏ | 82/100 [55:01<12:04, 40.25s/it] 83%|████████▎ | 83/100 [55:41<11:23, 40.23s/it]                                                {'loss': 2.6676, 'grad_norm': 9.76218318939209, 'learning_rate': 0.10444347974704235, 'epoch': 0.56}
+ 83%|████████▎ | 83/100 [55:41<11:23, 40.23s/it] 84%|████████▍ | 84/100 [56:22<10:43, 40.23s/it]                                                {'loss': 2.7515, 'grad_norm': 10.278849601745605, 'learning_rate': 0.09276998996710248, 'epoch': 0.57}
+ 84%|████████▍ | 84/100 [56:22<10:43, 40.23s/it] 85%|████████▌ | 85/100 [57:02<10:03, 40.23s/it]                                                {'loss': 2.3933, 'grad_norm': 9.771711349487305, 'learning_rate': 0.08174510685872416, 'epoch': 0.57}
+ 85%|████████▌ | 85/100 [57:02<10:03, 40.23s/it] 86%|████████▌ | 86/100 [57:42<09:23, 40.22s/it]                                                {'loss': 2.7582, 'grad_norm': 14.849969863891602, 'learning_rate': 0.07137971065048548, 'epoch': 0.58}
+ 86%|████████▌ | 86/100 [57:42<09:23, 40.22s/it] 87%|████████▋ | 87/100 [58:22<08:42, 40.22s/it]                                                {'loss': 2.4717, 'grad_norm': 12.40056324005127, 'learning_rate': 0.061684030737014145, 'epoch': 0.59}
+ 87%|████████▋ | 87/100 [58:22<08:42, 40.22s/it] 88%|████████▊ | 88/100 [59:02<08:02, 40.22s/it]                                                {'loss': 2.2735, 'grad_norm': 8.853008270263672, 'learning_rate': 0.05266763558381149, 'epoch': 0.59}
+ 88%|████████▊ | 88/100 [59:02<08:02, 40.22s/it] 89%|████████▉ | 89/100 [59:43<07:22, 40.22s/it]                                                {'loss': 2.433, 'grad_norm': 9.76806926727295, 'learning_rate': 0.04433942328433091, 'epoch': 0.6}
+ 89%|████████▉ | 89/100 [59:43<07:22, 40.22s/it] 90%|█████████ | 90/100 [1:00:23<06:42, 40.22s/it]                                                  {'loss': 2.7323, 'grad_norm': 8.29509162902832, 'learning_rate': 0.03670761277863485, 'epoch': 0.61}
+ 90%|█████████ | 90/100 [1:00:23<06:42, 40.22s/it] 91%|█████████ | 91/100 [1:01:03<06:01, 40.22s/it]                                                  {'loss': 2.648, 'grad_norm': 9.013102531433105, 'learning_rate': 0.0297797357422927, 'epoch': 0.61}
+ 91%|█████████ | 91/100 [1:01:03<06:01, 40.22s/it] 92%|█████████▏| 92/100 [1:01:43<05:21, 40.21s/it]                                                  {'loss': 2.3373, 'grad_norm': 8.990262985229492, 'learning_rate': 0.023562629153526693, 'epoch': 0.62}
+ 92%|█████████▏| 92/100 [1:01:43<05:21, 40.21s/it] 93%|█████████▎| 93/100 [1:02:24<04:41, 40.21s/it]                                                  {'loss': 2.5812, 'grad_norm': 11.336336135864258, 'learning_rate': 0.018062428545939424, 'epoch': 0.63}
+ 93%|█████████▎| 93/100 [1:02:24<04:41, 40.21s/it] 94%|█████████▍| 94/100 [1:03:04<04:01, 40.21s/it]                                                  {'loss': 2.8214, 'grad_norm': 10.197397232055664, 'learning_rate': 0.013284561953483542, 'epoch': 0.63}
+ 94%|█████████▍| 94/100 [1:03:04<04:01, 40.21s/it] 95%|█████████▌| 95/100 [1:03:44<03:21, 40.21s/it]                                                  {'loss': 2.5714, 'grad_norm': 8.967659950256348, 'learning_rate': 0.009233744553646756, 'epoch': 0.64}
+ 95%|█████████▌| 95/100 [1:03:44<03:21, 40.21s/it] 96%|█████████▌| 96/100 [1:04:24<02:40, 40.21s/it]                                                  {'loss': 2.5679, 'grad_norm': 8.805526733398438, 'learning_rate': 0.005913974014141676, 'epoch': 0.65}
+ 96%|█████████▌| 96/100 [1:04:24<02:40, 40.21s/it] 97%|█████████▋| 97/100 [1:05:04<02:00, 40.22s/it]                                                  {'loss': 2.2909, 'grad_norm': 10.562698364257812, 'learning_rate': 0.0033285265476900028, 'epoch': 0.65}
+ 97%|█████████▋| 97/100 [1:05:04<02:00, 40.22s/it] 98%|█████████▊| 98/100 [1:05:45<01:20, 40.22s/it]                                                  {'loss': 2.5267, 'grad_norm': 9.431292533874512, 'learning_rate': 0.0014799536787963308, 'epoch': 0.66}
+ 98%|█████████▊| 98/100 [1:05:45<01:20, 40.22s/it] 99%|█████████▉| 99/100 [1:06:25<00:40, 40.23s/it]                                                  {'loss': 2.5512, 'grad_norm': 9.324654579162598, 'learning_rate': 0.0003700797257013, 'epoch': 0.67}
+ 99%|█████████▉| 99/100 [1:06:25<00:40, 40.23s/it]100%|██████████| 100/100 [1:07:05<00:00, 40.27s/it]                                                   {'loss': 2.6231, 'grad_norm': 8.432479858398438, 'learning_rate': 0.0, 'epoch': 0.67}
+100%|██████████| 100/100 [1:07:05<00:00, 40.27s/it]                                                   {'train_runtime': 4025.7221, 'train_samples_per_second': 0.199, 'train_steps_per_second': 0.025, 'train_loss': 2.6071890377998352, 'epoch': 0.67}
+100%|██████████| 100/100 [1:07:05<00:00, 40.27s/it]100%|██████████| 100/100 [1:07:05<00:00, 40.26s/it]

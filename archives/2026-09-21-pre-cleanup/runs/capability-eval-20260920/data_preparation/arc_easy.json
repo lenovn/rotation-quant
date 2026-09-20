@@ -1,0 +1,11 @@
+{
+  "task": "arc_easy",
+  "path": "allenai/ai2_arc",
+  "name": "ARC-Easy",
+  "splits": {
+    "train": 2251,
+    "test": 2376,
+    "validation": 570
+  },
+  "status": "ready"
+}

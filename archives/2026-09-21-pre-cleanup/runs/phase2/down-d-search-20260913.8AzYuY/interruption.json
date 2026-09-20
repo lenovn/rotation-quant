@@ -1,0 +1,5 @@
+{
+  "status": "interrupted",
+  "evidence": "Detached launch was cleaned up before Python started; only GPU selection output.",
+  "restarted_as": "down-d-search-20260913.iyIuSM"
+}

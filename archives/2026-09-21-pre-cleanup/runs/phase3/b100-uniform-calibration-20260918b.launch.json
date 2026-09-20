@@ -1,0 +1,102 @@
+{
+  "pid": 1019026,
+  "gpu": 5,
+  "started": 1789662711.3155768,
+  "command": [
+    "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/uniform_baseline.py",
+    "--output",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase3/b100-uniform-calibration-20260918b",
+    "--parent",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+    "--calibration-data",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/data.json",
+    "--sp2-calibration",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/sp2_calibration.json"
+  ],
+  "backend": "tmux",
+  "tmux_socket": "rotation-quant-phase3",
+  "tmux_session": "phase3-b100-uniform-calibration-20260918b",
+  "attach_command": "tmux -L rotation-quant-phase3 attach -t phase3-b100-uniform-calibration-20260918b",
+  "child_environment": {
+    "CUDA_VISIBLE_DEVICES": "5",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "HF_HUB_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "HF_HOME": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface",
+    "GIT_OPTIONAL_LOCKS": "0",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4"
+  },
+  "shell_command": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u /home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/experiments/phase3/uniform_baseline.py --output /home/dongpeiyan/projects/rotation-quant/runs/phase3/b100-uniform-calibration-20260918b --parent /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt --calibration-data /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/data.json --sp2-calibration /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/sp2_calibration.json",
+  "selected_gpu": {
+    "index": 5,
+    "uuid": "GPU-e888b579-a41b-5892-0c5d-f3145ddd6327",
+    "memory_used_mib": 569,
+    "memory_total_mib": 24564,
+    "utilization": 11
+  },
+  "gpu_snapshot": [
+    {
+      "index": 0,
+      "uuid": "GPU-2980e015-2725-bf9e-f4f9-b0e905dee75b",
+      "memory_used_mib": 1757,
+      "memory_total_mib": 24564,
+      "utilization": 0
+    },
+    {
+      "index": 1,
+      "uuid": "GPU-75f32c85-75f6-07fa-f335-6e1cc84aacf9",
+      "memory_used_mib": 10681,
+      "memory_total_mib": 24564,
+      "utilization": 20
+    },
+    {
+      "index": 2,
+      "uuid": "GPU-835451b2-a7e7-335e-2968-fd188801cf61",
+      "memory_used_mib": 1853,
+      "memory_total_mib": 24564,
+      "utilization": 42
+    },
+    {
+      "index": 3,
+      "uuid": "GPU-b46f451f-cbbf-cb05-ec58-d124e7dbb743",
+      "memory_used_mib": 649,
+      "memory_total_mib": 24564,
+      "utilization": 8
+    },
+    {
+      "index": 4,
+      "uuid": "GPU-34587165-f7a3-9c6e-e4f0-a431b17af503",
+      "memory_used_mib": 23619,
+      "memory_total_mib": 24564,
+      "utilization": 0
+    },
+    {
+      "index": 5,
+      "uuid": "GPU-e888b579-a41b-5892-0c5d-f3145ddd6327",
+      "memory_used_mib": 569,
+      "memory_total_mib": 24564,
+      "utilization": 11
+    },
+    {
+      "index": 6,
+      "uuid": "GPU-268df8cd-d4ff-6179-5702-d6173f63cac2",
+      "memory_used_mib": 6405,
+      "memory_total_mib": 24564,
+      "utilization": 41
+    },
+    {
+      "index": 7,
+      "uuid": "GPU-ed81f3c7-cf0c-01fd-e758-6e512ee3a0b9",
+      "memory_used_mib": 1268,
+      "memory_total_mib": 24564,
+      "utilization": 76
+    }
+  ],
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/b100-uniform-calibration-20260918b",
+  "log": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/b100-uniform-calibration-20260918b.log",
+  "policy": "latest user authorization: actual headroom, parallel independent jobs, no hard ratio/memory/time cap, never terminate others"
+}

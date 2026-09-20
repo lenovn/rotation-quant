@@ -1,0 +1,153 @@
+{
+  "arguments": {
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/local-d-b100-refined-20260914a",
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+    "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+    "layer": 1,
+    "strengths": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "milestones": [
+      512,
+      2048,
+      8192
+    ]
+  },
+  "source": {
+    "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint",
+    "project_root": "/home/dongpeiyan/projects/rotation-quant",
+    "quant_linear": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/train_utils/quant_linear.py",
+    "quant_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/quant_utils.py",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase3/joint-r-sw-sa-sp2",
+    "pytorch": "2.4.1+cu121",
+    "cuda": "12.1",
+    "device": "NVIDIA GeForce RTX 4090",
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "model_cache_revision": "Revision:master,CreatedAt:1740591574"
+  },
+  "parent_metadata": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-rounded-sp2-contract-20260914a/static_w4a8.pt",
+    "mode": "sequential-round",
+    "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+    "parent_metadata": {
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-down-round-20260914b/static_w4a8.pt",
+      "mode": "sequential-sp2",
+      "reference_state": "None",
+      "parent_metadata": {
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+        "mode": "sequential-round",
+        "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+        "parent_metadata": {
+          "route": "B",
+          "step": 100,
+          "initial": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt"
+        },
+        "offline_only": true
+      },
+      "offline_only": true
+    },
+    "offline_only": true
+  },
+  "data": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "dataset_cache": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3",
+    "train_protocol": "tokenize each raw row without BOS/EOS, concatenate IDs, disjoint 2048 windows, drop tail, fixed order",
+    "validation_protocol": "double-newline joined raw validation; independent 2048 windows including tail; token-weighted NLL",
+    "train_windows": 1188,
+    "train_tokens": 2435022,
+    "dropped_train_tail": 1998,
+    "calibration_window_indices": [
+      182,
+      546,
+      792,
+      281,
+      1030,
+      865,
+      136,
+      18,
+      442,
+      357,
+      248,
+      128,
+      1110,
+      235,
+      621,
+      707,
+      1035,
+      208,
+      531,
+      689,
+      369,
+      424,
+      953,
+      973,
+      131,
+      443,
+      677,
+      1096,
+      731,
+      902,
+      29,
+      859
+    ],
+    "calibration_length": 2048,
+    "probe_indices": [
+      1180,
+      1181,
+      1182,
+      1183
+    ],
+    "validation_tokens": 252852,
+    "validation_targets": 252728,
+    "seed": 42,
+    "fit_window_indices": [
+      182,
+      546,
+      792,
+      281,
+      1030,
+      865,
+      136,
+      18,
+      442,
+      357,
+      248,
+      128,
+      1110,
+      235,
+      621,
+      707,
+      1035,
+      208,
+      531,
+      689,
+      369,
+      424,
+      953,
+      973
+    ],
+    "selection_window_indices": [
+      131,
+      443,
+      677,
+      1096,
+      731,
+      902,
+      29,
+      859
+    ],
+    "fit_rows": 49152,
+    "heldout_rows": 16384,
+    "selection_predicted_tokens": 16376
+  },
+  "selection": "actual8 full train-window NLL across all D/rounding checkpoints, including identity rule",
+  "sw_up": "parent SW / D; independently quantized transformed current-R FP up",
+  "sw_down": "max(parent SW, transformed BF16 row absmax /7); independent RTN then neighbor rounding for each D",
+  "constraints": "parent16 SP2 alphas and96 non-down SA fixed; gate/unrelated weights/HP unchanged; offline-only D",
+  "identity": "D=I with identical SW rule and rounding search; not assumed equal to untouched parent"
+}

@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=1 /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u runs/phase3/auditor/final-best-20260914/replicate.py bf16
+CUDA_VISIBLE_DEVICES=1 /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python -u runs/phase3/auditor/final-best-20260914/replicate.py final

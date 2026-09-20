@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "scope": "Qwen SP2-QAT400 seed42 training, validation and same-package final test/C4 acceptance",
+  "run": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/static_w4a8.pt",
+  "reference": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s42/checkpoint-0100/state.pt",
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/static_w4a8.pt",
+  "steps": 400,
+  "microbatches": 3200,
+  "input_token_visits": 6553600,
+  "prediction_target_visits": 6550400,
+  "train_window_modulus": 1221,
+  "train_start_window": 800,
+  "seed": 42,
+  "all_step_gradient_coverage": {
+    "W": 196,
+    "SA": 168,
+    "SW": 196,
+    "SP2": 28
+  },
+  "optimizer_state_counts": [
+    196,
+    392
+  ],
+  "all_adam_counters": 400,
+  "parameter_tensors": 588,
+  "model_parallel_layer_placement": {
+    "layer_devices": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 1,
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "20": 1,
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "24": 1,
+      "25": 1,
+      "26": 1,
+      "27": 1
+    },
+    "embedding_head_norm_device": 0,
+    "global_batch_unchanged": true,
+    "tensor_parallel": false
+  },
+  "actual_activation_formats": {
+    "int8": 168,
+    "sp2": 28
+  },
+  "high_precision_tensors_bitwise_unchanged": 154,
+  "qk_norm_tensors_bitwise_unchanged": 56,
+  "changed_weight_matrices": 196,
+  "changed_weight_scales": 196,
+  "changed_activation_ranges": 196,
+  "native_teacher_evidence": "Saved code uses architecture.load_model default untie=False/training=False -> native AutoModelForCausalLM qwen3, BF16 SDPA, unrotated, no norm fusion, requires_grad_(False). No teacher optimizer parameters; same local revision. Teacher checkpoint itself is not separately saved.",
+  "initialization_evidence": {
+    "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s42/checkpoint-0100/state.pt",
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/static_w4a8.pt",
+    "diagonal_transform": null,
+    "method": "project current-R FP reference into parent INT4 cells; retain parent initial quantized forward"
+  },
+  "validation": {
+    "ppl": 14.813941218960903,
+    "nll": 2.6955687116448495,
+    "targets": 262208
+  },
+  "summary_validation_exact": true,
+  "external_acceptance": {
+    "status": "PASS",
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/auditor/QWEN_SP2_QAT400_EXTERNAL_20260918.json"
+  }
+}

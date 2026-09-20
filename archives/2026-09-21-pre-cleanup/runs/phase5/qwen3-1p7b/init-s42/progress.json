@@ -1,0 +1,12 @@
+{
+  "stage": "completed",
+  "pid": 1367237,
+  "time": 1789668553.7500758,
+  "cuda_visible_devices": "5",
+  "allocated_gib": 7.604897499084473,
+  "reserved_gib": 9.345703125,
+  "peak_allocated_gib": 8.485572338104248,
+  "gpu_time_budget": null,
+  "initial": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/init-s42/initial.pt",
+  "static_probe": 4.475957632064819
+}

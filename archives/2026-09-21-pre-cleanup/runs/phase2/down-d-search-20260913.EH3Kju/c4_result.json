@@ -1,0 +1,118 @@
+{
+  "token_count": 2097152,
+  "predicted_tokens": 2096128,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 26.790664672851562,
+      "nll": 3.28805349373219
+    },
+    {
+      "start_token": 262144,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 27.151561737060547,
+      "nll": 3.301434567269253
+    },
+    {
+      "start_token": 524288,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 28.057600021362305,
+      "nll": 3.3342595407727136
+    },
+    {
+      "start_token": 786432,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 25.01545524597168,
+      "nll": 3.2194938436940856
+    },
+    {
+      "start_token": 1048576,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 28.480871200561523,
+      "nll": 3.34923267598327
+    },
+    {
+      "start_token": 1310720,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 25.557043075561523,
+      "nll": 3.240912937197578
+    },
+    {
+      "start_token": 1572864,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 26.99156951904297,
+      "nll": 3.2955245772118142
+    },
+    {
+      "start_token": 1835008,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 28.683000564575195,
+      "nll": 3.356304632454687
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 3.2981520335394494,
+  "ppl": 27.062581939332095,
+  "dataset": "allenai/c4",
+  "subset": "en",
+  "split": "validation",
+  "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt",
+  "input_metadata": {
+    "dataset": "allenai/c4",
+    "subset": "en",
+    "split": "validation",
+    "source_files": [
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"
+    ],
+    "source_document_count": 364608,
+    "seed": 42,
+    "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix",
+    "selected_document_count": 4480,
+    "concatenated_token_count": 2150947,
+    "discarded_suffix_tokens": 53795,
+    "token_count": 2097152,
+    "window_length": 2048,
+    "windows": 1024,
+    "predicted_tokens": 2096128,
+    "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "tokenizer_class": "LlamaTokenizerFast",
+    "add_bos_token": false,
+    "add_eos_token": false,
+    "text_separator": "\n\n",
+    "purpose": "external evaluation only; no calibration or selection"
+  },
+  "kv_bits": 16,
+  "use_cache": false,
+  "frozen_checks_pass": true,
+  "original_c_ppl": 29.539535457544623,
+  "original_c_nll": 3.385729551100929,
+  "bf16_ppl": 21.843397624525274,
+  "delta_c_ppl": -2.476953518212529,
+  "delta_c_nll": -0.08757751756147947,
+  "delta_bf16_ppl": 5.219184314806821,
+  "external_evaluations": 1
+}

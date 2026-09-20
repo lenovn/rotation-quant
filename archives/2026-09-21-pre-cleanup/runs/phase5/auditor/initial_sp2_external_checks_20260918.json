@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/initial-sp2-qat400-s42-r25/checkpoint-0400/static_w4a8.pt",
+  "same_package_all_splits": true,
+  "activation_formats": {
+    "int8": 96,
+    "sp2": 16
+  },
+  "before_after_all_quantizer_tensors_equal": true,
+  "test_c4_quantizer_states_equal": true,
+  "package_activation_scales_match": true,
+  "historical_bf16_and_full_qat_token_ids_and_metadata_equal": true,
+  "historical_full_qat_segment_structure_equal": true,
+  "summary_three_rows_exact": true,
+  "results": [
+    {
+      "split": "validation",
+      "ppl": 14.756133058231322,
+      "nll": 2.6916587969227876,
+      "targets": 252728,
+      "full_method_ppl": 14.581654675328117,
+      "full_method_nll": 2.6797642095325815,
+      "delta_nll_full_minus_direct": -0.011894587390206102,
+      "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/initial-sp2-qat400-s42-r25/checkpoint-0400/validation.json",
+      "historical_evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/distill-b100-refined-ref-adam1e5-400-20260914a/checkpoint-0400/validation.json"
+    },
+    {
+      "split": "test",
+      "ppl": 14.320253706327318,
+      "nll": 2.6616748782978554,
+      "targets": 288934,
+      "full_method_ppl": 14.154416405154963,
+      "full_method_nll": 2.650026688830493,
+      "delta_nll_full_minus_direct": -0.011648189467362347,
+      "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/initial-sp2-qat400-test-s42/result.json",
+      "historical_evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/wiki2-test-best-fixed-20260917a/result.json"
+    },
+    {
+      "split": "C4",
+      "ppl": 26.730584258553062,
+      "nll": 3.285808387695454,
+      "targets": 2096128,
+      "full_method_ppl": 26.98478050458106,
+      "full_method_nll": 3.295273022058687,
+      "delta_nll_full_minus_direct": 0.009464634363233415,
+      "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/initial-sp2-qat400-c4-s42/result.json",
+      "historical_evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-best-fixed-20260915a/result.json"
+    }
+  ]
+}

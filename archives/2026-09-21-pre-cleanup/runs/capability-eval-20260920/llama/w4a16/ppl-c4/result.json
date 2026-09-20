@@ -1,0 +1,115 @@
+{
+  "token_count": 2097152,
+  "predicted_tokens": 2096128,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 26.32175636291504,
+      "nll": 3.270395835344488
+    },
+    {
+      "start_token": 262144,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 26.844181060791016,
+      "nll": 3.2900490771991517
+    },
+    {
+      "start_token": 524288,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 27.75428581237793,
+      "nll": 3.3233902719565394
+    },
+    {
+      "start_token": 786432,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 24.680553436279297,
+      "nll": 3.2060156232703365
+    },
+    {
+      "start_token": 1048576,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 28.01010513305664,
+      "nll": 3.332565342676492
+    },
+    {
+      "start_token": 1310720,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 25.147390365600586,
+      "nll": 3.224754128362835
+    },
+    {
+      "start_token": 1572864,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 26.601490020751953,
+      "nll": 3.280967230036569
+    },
+    {
+      "start_token": 1835008,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 28.014272689819336,
+      "nll": 3.332714119224571
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 3.282606453508873,
+  "ppl": 26.64513156694342,
+  "input_metadata": {
+    "dataset": "allenai/c4",
+    "subset": "en",
+    "split": "validation",
+    "source_files": [
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"
+    ],
+    "source_document_count": 364608,
+    "seed": 42,
+    "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix",
+    "selected_document_count": 4480,
+    "concatenated_token_count": 2150947,
+    "discarded_suffix_tokens": 53795,
+    "token_count": 2097152,
+    "window_length": 2048,
+    "windows": 1024,
+    "predicted_tokens": 2096128,
+    "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "tokenizer_class": "LlamaTokenizerFast",
+    "add_bos_token": false,
+    "add_eos_token": false,
+    "text_separator": "\n\n",
+    "purpose": "external evaluation only; no calibration or selection"
+  },
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/w4_gptq_model.pt",
+  "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "loading": {
+    "backbone_w4_linears": 112,
+    "activation_bits": 16,
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/w4_gptq_model.pt",
+    "loading": "exact saved weights, embedding/head/norm; no rotation recomputation; no requantization"
+  },
+  "calibration": false,
+  "training": false,
+  "elapsed_seconds": 161.8888714313507
+}

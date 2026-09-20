@@ -1,0 +1,199 @@
+{
+  "device": "5",
+  "torch": "2.4.1+cu121",
+  "checks": {
+    "native_vs_adapted_unquantized": {
+      "max_abs": 0.0,
+      "rms": 0.0,
+      "relative_rms": 0.0
+    },
+    "centering_effect_separate": {
+      "max_abs": 0.31640625,
+      "rms": 0.05681903287768364,
+      "relative_rms": 0.011968735605478287
+    },
+    "norm_fusion_after_same_centering": {
+      "max_abs": 0.5625,
+      "rms": 0.053826842457056046,
+      "relative_rms": 0.011352911591529846
+    },
+    "rotation_same_preprocessing_unquantized": {
+      "max_abs": 1.375,
+      "rms": 0.11984183639287949,
+      "relative_rms": 0.025200525298714638
+    },
+    "real_W4_A8_checkpoint_backward": {
+      "loss": 5.097129821777344,
+      "coverage": {
+        "R": 29,
+        "SA": 168,
+        "SW": 196,
+        "SP2": 28
+      },
+      "rotation_gradients": {
+        "model.layers.0.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.4957984983921051
+        },
+        "model.layers.1.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.18720264732837677
+        },
+        "model.layers.2.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.20531508326530457
+        },
+        "model.layers.3.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.18248215317726135
+        },
+        "model.layers.4.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.1530996561050415
+        },
+        "model.layers.5.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.1902863085269928
+        },
+        "model.layers.6.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.18397922813892365
+        },
+        "model.layers.7.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.16643330454826355
+        },
+        "model.layers.8.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.1376497447490692
+        },
+        "model.layers.9.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.1345452219247818
+        },
+        "model.layers.10.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.12229219079017639
+        },
+        "model.layers.11.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.1955294907093048
+        },
+        "model.layers.12.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.1416173130273819
+        },
+        "model.layers.13.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.08672839403152466
+        },
+        "model.layers.14.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.1036868691444397
+        },
+        "model.layers.15.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.13523265719413757
+        },
+        "model.layers.16.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.07301004976034164
+        },
+        "model.layers.17.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.08770390599966049
+        },
+        "model.layers.18.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.13251657783985138
+        },
+        "model.layers.19.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.09114833921194077
+        },
+        "model.layers.20.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.06245965510606766
+        },
+        "model.layers.21.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.044582732021808624
+        },
+        "model.layers.22.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.05029067397117615
+        },
+        "model.layers.23.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.0550537072122097
+        },
+        "model.layers.24.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.04828064143657684
+        },
+        "model.layers.25.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.040870897471904755
+        },
+        "model.layers.26.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.05741141736507416
+        },
+        "model.layers.27.self_attn.R2.weight": {
+          "finite": true,
+          "max_abs": 0.045216284692287445
+        },
+        "R1.weight": {
+          "finite": true,
+          "max_abs": 6.356405735015869
+        }
+      }
+    },
+    "static_export_cold_load": {
+      "difference": {
+        "max_abs": 0.0,
+        "rms": 0.0,
+        "relative_rms": 0.0
+      },
+      "coverage": 196,
+      "qparams_unchanged": true,
+      "qk_norms_preserved": true
+    },
+    "tied_teacher_gpu_offload": {
+      "loss": 9.343750953674316,
+      "tied": true,
+      "body_on_cpu": true,
+      "head_on_cuda": true
+    }
+  },
+  "input_ids": [
+    [
+      785,
+      3840,
+      315,
+      8038,
+      374,
+      264,
+      3364,
+      315,
+      16585,
+      21930,
+      323,
+      11504,
+      21204,
+      13,
+      362,
+      2613,
+      1614,
+      646,
+      4009,
+      5390,
+      12624,
+      304,
+      4128,
+      13
+    ]
+  ],
+  "status": "PASS",
+  "max_allocated_gib": 8.493507862091064
+}

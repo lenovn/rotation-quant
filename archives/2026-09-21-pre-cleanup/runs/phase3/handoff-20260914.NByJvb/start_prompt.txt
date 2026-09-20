@@ -1,0 +1,7 @@
+你是用户明确要求启动的全新 Phase 3 主执行对话，模型必须 GPT-6 Astra、reasoning effort xhigh。不要 fork/resume 旧对话，也不要另起一个主对话代替自己执行。先读取 /home/dongpeiyan/projects/rotation-quant/runs/phase3/handoff-20260914.NByJvb/HANDOFF.md 和项目适用规则；其中包含用户最新请求原文、明确实施与GPU授权、完整证据路径及已创建的新分支。
+
+用户明确要求你在本新对话建立并持续执行 goal：比较分阶段 R+非downSA 后加W4/SW、从起点 R+非downSA+W4SW、从起点再加downSP2 SA三条路线；测尺度初始化与10/100步；证据驱动loop；优胜路线加离散W4/SP2范围/局部D；仍未到原BF16+1时尝试已授权fine-tuning或蒸馏。若已有本Phase3 goal则get_goal后沿用，否则调用 create_goal（不指定token budget），然后必要实现、独立验证、正式实验直到给出实测答案及达到目标或明确真实阻塞。不要只给计划、不要停在烟测等批准。旧禁止梯度/冻结R/禁止蒸馏/30分钟预算已被用户相应新授权替代。
+
+源码必须在 /home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint，分支 phase3/joint-r-sw-sa-sp2；原 repos/SpinQuant 和 Phase2产物保留。已按字节继承5个tracked改动+2个测试。最新用户纠正资源授权：GPU1/3/5/6/7可调度，允许多卡或并行独立实验，取消单卡/12GiB/35%硬限制，无GPU时间预算；启动前实测余量合理分配，绝不终止他人进程。其它操作按Phase3实际必要性与普通项目权限处理，不沿用上一版附加的整体禁令。新训练与实验数据写项目runs/phase3，进度写runs/phase3/STATUS.md，每轮分析后调整并执行下一步。应用代码必须有独立verifier，允许按AGENTS委派独立验证。不要重复已完成结果或将历史/复用称为新测。
+
+第一条进度说明确认新对话接手、已建分支、三条问题和预算控制；随后读handoff、建goal、开始必要工作。保持本thread运行，长任务持续落盘，让用户可以从服务器新版Codex恢复查看；不要用旧VSCode加载原thread。

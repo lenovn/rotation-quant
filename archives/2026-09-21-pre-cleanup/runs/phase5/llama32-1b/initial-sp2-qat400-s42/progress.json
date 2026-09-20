@@ -1,0 +1,14 @@
+{
+  "stage": "distillation-training",
+  "pid": 1389835,
+  "time": 1789669155.704853,
+  "cuda_visible_devices": "6",
+  "allocated_gib": 12.369027137756348,
+  "reserved_gib": 18.46484375,
+  "peak_allocated_gib": 18.423856258392334,
+  "gpu_time_budget": null,
+  "step": 25,
+  "total": 400,
+  "ce": 2.917111039161682,
+  "elapsed_seconds": 442.6283223539358
+}

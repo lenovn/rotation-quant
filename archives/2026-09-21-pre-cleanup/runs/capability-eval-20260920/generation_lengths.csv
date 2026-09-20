@@ -1,0 +1,15 @@
+model,method,task,samples,budget_exhausted_no_eos_or_stop,budget_exhausted_percent,eos_present,stop_present,raw_source
+llama,bf16,gsm8k_cot,1319,75,5.686125852918878,954,1244,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/bf16/gsm8k_cot/generation_batches-001.jsonl
+llama,bf16,ifeval,541,43,7.948243992606285,498,498,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/bf16/ifeval/generation_batches-001.jsonl
+llama,firon,gsm8k_cot,1319,86,6.520090978013647,1138,1233,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/firon/gsm8k_cot/generation_batches-001.jsonl
+llama,firon,ifeval,541,180,33.271719038817004,361,361,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/firon/ifeval/generation_batches-001.jsonl
+llama,parent,gsm8k_cot,1319,555,42.0773313115997,202,764,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/parent/gsm8k_cot/generation_batches-001.jsonl
+llama,parent,ifeval,541,176,32.53234750462107,365,365,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/parent/ifeval/generation_batches-001.jsonl
+llama,w4a16,gsm8k_cot,1319,278,21.076573161485975,322,1041,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/w4a16/gsm8k_cot/generation_batches-001.jsonl
+llama,w4a16,ifeval,541,84,15.526802218114602,457,457,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/w4a16/ifeval/generation_batches-001.jsonl
+qwen,bf16,gsm8k_cot,1319,303,22.97194844579227,1016,1016,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/bf16/gsm8k_cot/generation_batches-001.jsonl
+qwen,bf16,ifeval,541,34,6.284658040665434,507,507,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/bf16/ifeval/generation_batches-002.jsonl
+qwen,firon,gsm8k_cot,1319,576,43.669446550416986,739,743,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/firon/gsm8k_cot/generation_batches-001.jsonl
+qwen,firon,ifeval,541,346,63.95563770794824,195,195,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/firon/ifeval/generation_batches-001.jsonl
+qwen,parent,gsm8k_cot,1319,116,8.794541319181198,1203,1203,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/parent/gsm8k_cot/generation_batches-001.jsonl
+qwen,parent,ifeval,541,354,65.4343807763401,187,187,/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/parent/ifeval/generation_batches-001.jsonl

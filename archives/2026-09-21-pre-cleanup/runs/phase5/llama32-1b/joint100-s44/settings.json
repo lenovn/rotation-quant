@@ -1,0 +1,44 @@
+{
+  "arguments": {
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s44",
+    "initialize": false,
+    "initial": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/init-s44/initial.pt",
+    "resume": null,
+    "route": "B",
+    "steps": 100,
+    "schedule_steps": 100,
+    "switch_step": 50,
+    "accumulation": 8,
+    "warmup": 10,
+    "r_lr": 1.5,
+    "sa_lr": 1.0,
+    "sw_lr": 0.01,
+    "sp2_lr": 1.0,
+    "scale_optimizer": "adam",
+    "relative_scale_lr": 0.001,
+    "optimizer_scale_reference": null,
+    "checkpoints": [
+      100
+    ],
+    "validation_steps": [
+      100
+    ],
+    "scale_only_steps": false
+  },
+  "source": {
+    "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel",
+    "project_root": "/home/dongpeiyan/projects/rotation-quant",
+    "quant_linear": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/train_utils/quant_linear.py",
+    "quant_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/quant_utils.py",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase5/multimodel",
+    "pytorch": "2.4.1+cu121",
+    "cuda": "12.1",
+    "device": "NVIDIA GeForce RTX 4090",
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "model_cache_revision": "Revision:master,CreatedAt:1740591574",
+    "transformers": "4.44.2",
+    "seed": 44
+  },
+  "pid": 3100833
+}

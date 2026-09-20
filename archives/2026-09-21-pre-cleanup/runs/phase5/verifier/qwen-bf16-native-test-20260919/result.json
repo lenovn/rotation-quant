@@ -1,0 +1,51 @@
+{
+  "token_count": 299078,
+  "predicted_tokens": 298931,
+  "windows": 147,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 16.75585174560547,
+      "nll": 2.8187475552063925
+    },
+    {
+      "start_token": 262144,
+      "seqlen": 2048,
+      "windows": 18,
+      "predicted_tokens": 36846,
+      "ppl": 16.38153076171875,
+      "nll": 2.7961545271548376
+    },
+    {
+      "start_token": 299008,
+      "seqlen": 70,
+      "windows": 1,
+      "predicted_tokens": 69,
+      "ppl": 90.57254791259766,
+      "nll": 4.506151163961986
+    }
+  ],
+  "historical_bf16_ce_protocol": {
+    "ppl": 16.715764347250076,
+    "nll": 2.816352247049716,
+    "reference_ppl": 16.715764347250076,
+    "difference_from_reference": 0.0
+  },
+  "native_hf_fp32_loss_protocol": {
+    "ppl": 16.718019331842846,
+    "nll": 2.8164871396253117,
+    "note": "Separate diagnostic protocol; does not replace historical results."
+  },
+  "regenerated_test_ids_match": {
+    "bf16-test-s42": true,
+    "sp2-qat400-test-s42": true,
+    "sp2-qat400-test-s43": true,
+    "sp2-qat400-test-s44": true
+  },
+  "elapsed_seconds": 34.06977275700774,
+  "peak_allocated_gib": 6.121561527252197,
+  "scope": "Native unquantized HF checkpoint; one full test pass; no project model/evaluator helpers."
+}

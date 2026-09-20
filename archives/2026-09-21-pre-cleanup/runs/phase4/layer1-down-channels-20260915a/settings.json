@@ -1,0 +1,22 @@
+{
+  "parent": "runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+  "reference_state": "runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+  "target": "model.layers.1.mlp.down_proj",
+  "source": {
+    "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase4-w4",
+    "project_root": "/home/dongpeiyan/projects/rotation-quant",
+    "quant_linear": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase4-w4/train_utils/quant_linear.py",
+    "quant_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase4-w4/utils/quant_utils.py",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase4/w4-per-channel",
+    "pytorch": "2.4.1+cu121",
+    "cuda": "12.1",
+    "device": "NVIDIA GeForce RTX 4090",
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "model_cache_revision": "Revision:master,CreatedAt:1740591574"
+  },
+  "scope": "one down matrix only; no model forward/calibration/optimization/evaluation/export",
+  "reference": "original norm-fused BF16 weights, same saved B100 R via existing rotated_weight; never dequantized W4",
+  "quantized": "original packed INT4 and SW; same existing BF16 dequant_record",
+  "statistics": "rows are output channels; columns are 8192 input weights; relative RMSE=sqrt(mean(error^2)/mean(reference^2)); weight-only, not task saliency"
+}

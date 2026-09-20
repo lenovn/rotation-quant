@@ -1,0 +1,8 @@
+{
+  "nll": 100.0,
+  "ppl": 1e+20,
+  "format": "112 W4 / 96 static INT8 / 16 static SP2; BF16 KV16 prefill",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-postprocess-first-20260914/test_postprocess_candidate_iso0/parent.pt",
+  "candidate": "second",
+  "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint"
+}

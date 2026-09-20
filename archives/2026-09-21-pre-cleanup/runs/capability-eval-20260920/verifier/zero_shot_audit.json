@@ -1,0 +1,1009 @@
+{
+  "checks": [
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "boolq",
+      "score": 77.52293577981652,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "boolq",
+      "score": 76.72782874617738,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "boolq",
+      "score": 70.97859327217125,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "piqa",
+      "score": 71.9804134929271,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "piqa",
+      "score": 71.10990206746463,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "piqa",
+      "score": 69.36887921653971,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "social_iqa",
+      "score": 44.98464687819857,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "social_iqa",
+      "score": 43.091095189355165,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "social_iqa",
+      "score": 40.83930399181167,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "hellaswag",
+      "score": 60.466042620991836,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "hellaswag",
+      "score": 57.34913363871739,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "hellaswag",
+      "score": 55.36745668193587,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "winogrande",
+      "score": 60.93133385951065,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "winogrande",
+      "score": 60.37884767166535,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "winogrande",
+      "score": 58.32675611681136,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "arc_easy",
+      "score": 69.73905723905723,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "arc_easy",
+      "score": 65.9090909090909,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "arc_easy",
+      "score": 66.24579124579124,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "arc_challenge",
+      "score": 42.74744027303754,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "arc_challenge",
+      "score": 40.1877133105802,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "arc_challenge",
+      "score": 38.395904436860064,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "openbookqa",
+      "score": 37.4,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "openbookqa",
+      "score": 36.199999999999996,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "openbookqa",
+      "score": 33.800000000000004,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "boolq",
+      "score": 69.2354740061162,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "boolq",
+      "score": 66.26911314984709,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "boolq",
+      "score": 62.99694189602446,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "boolq",
+      "score": 66.72782874617737,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "piqa",
+      "score": 74.26550598476605,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "piqa",
+      "score": 70.620239390642,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "piqa",
+      "score": 68.82480957562568,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "piqa",
+      "score": 68.49836779107726,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "social_iqa",
+      "score": 41.606960081883315,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "social_iqa",
+      "score": 40.276356192425794,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "social_iqa",
+      "score": 40.68577277379734,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "social_iqa",
+      "score": 40.634595701125896,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "hellaswag",
+      "score": 60.84445329615614,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "hellaswag",
+      "score": 56.04461262696674,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "hellaswag",
+      "score": 54.86954789882493,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "hellaswag",
+      "score": 56.343357896833304,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "winogrande",
+      "score": 60.22099447513812,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "winogrande",
+      "score": 56.51144435674822,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "winogrande",
+      "score": 56.590370955011835,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "winogrande",
+      "score": 56.432517758484614,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "arc_easy",
+      "score": 63.25757575757576,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "arc_easy",
+      "score": 59.890572390572395,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "arc_easy",
+      "score": 57.36531986531986,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "arc_easy",
+      "score": 56.56565656565656,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "arc_challenge",
+      "score": 37.96928327645051,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "arc_challenge",
+      "score": 34.55631399317406,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "arc_challenge",
+      "score": 33.78839590443686,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "arc_challenge",
+      "score": 33.105802047781566,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "openbookqa",
+      "score": 34.8,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "openbookqa",
+      "score": 33.4,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "openbookqa",
+      "score": 32.800000000000004,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "openbookqa",
+      "score": 32.0,
+      "checks": {
+        "full_sample_count": true,
+        "unique_doc_ids": true,
+        "matched_actual_prompts": true,
+        "raw_accuracy": true,
+        "zero_shot": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true,
+        "appendix_score": true,
+        "appendix_delta": true
+      }
+    }
+  ],
+  "averages": [
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "recomputed": 58.221483767942416,
+      "main": "58.221483767942416",
+      "pass_check": true
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "recomputed": 56.36920144163138,
+      "main": "56.36920144163138",
+      "pass_check": true
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "recomputed": 54.16533562024014,
+      "main": "54.16533562024014",
+      "pass_check": true
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "recomputed": 55.27503085976077,
+      "main": "55.27503085976077",
+      "pass_check": true
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "recomputed": 52.19608151254703,
+      "main": "52.19608151254703",
+      "pass_check": true
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "recomputed": 50.990144858630124,
+      "main": "50.990144858630124",
+      "pass_check": true
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "recomputed": 51.28851581339208,
+      "main": "51.28851581339208",
+      "pass_check": true
+    }
+  ],
+  "missing": [],
+  "pass": true
+}

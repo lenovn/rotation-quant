@@ -1,0 +1,30 @@
+{
+  "sw_same_state_and_b100_and_parent": true,
+  "sw_count": 112,
+  "high_precision_same": false,
+  "parent_metadata": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-rounded-sp2-contract-20260914a/static_w4a8.pt",
+    "mode": "sequential-round",
+    "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+    "parent_metadata": {
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-down-round-20260914b/static_w4a8.pt",
+      "mode": "sequential-sp2",
+      "reference_state": "None",
+      "parent_metadata": {
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+        "mode": "sequential-round",
+        "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/state.pt",
+        "parent_metadata": {
+          "route": "B",
+          "step": 100,
+          "initial": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/common-init-20260914a/initial.pt"
+        },
+        "offline_only": true
+      },
+      "offline_only": true
+    },
+    "offline_only": true
+  },
+  "high_precision_same_nan_aware": true,
+  "high_precision_false_explanation": "torch.equal reports false for NaN sentinels in unused lm_head quantizer buffers; nan-aware exact comparison checks all finite values and NaN positions"
+}

@@ -1,0 +1,38 @@
+{
+  "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt",
+  "input_metadata": {
+    "dataset": "allenai/c4",
+    "subset": "en",
+    "split": "validation",
+    "source_files": [
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz",
+      "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"
+    ],
+    "source_document_count": 364608,
+    "seed": 42,
+    "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix",
+    "selected_document_count": 4480,
+    "concatenated_token_count": 2150947,
+    "discarded_suffix_tokens": 53795,
+    "token_count": 2097152,
+    "window_length": 2048,
+    "windows": 1024,
+    "predicted_tokens": 2096128,
+    "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "tokenizer_class": "LlamaTokenizerFast",
+    "add_bos_token": false,
+    "add_eos_token": false,
+    "text_separator": "\n\n",
+    "purpose": "external evaluation only; no calibration or selection"
+  },
+  "reused_tokens": true,
+  "calibration": false,
+  "training": false,
+  "selection": false
+}

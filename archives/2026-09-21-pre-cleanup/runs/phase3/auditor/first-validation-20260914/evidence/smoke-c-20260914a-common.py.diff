@@ -1,0 +1,50 @@
+--- /home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-20260914a/source/common.py	2026-09-14 01:53:05.740537258 +0800
++++ /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-adam-100-20260914a/source/common.py	2026-09-14 02:01:18.524743722 +0800
+@@ -198,7 +198,13 @@
+     if initial_state is not None:
+         saved = torch.load(initial_state, map_location="cpu", weights_only=True)["parameters"]
+         for name, wrapper in wrappers(model).items():
+-            wrapper.module.quantizer.load_scale(saved[name + ".module.quantizer.scale"])
++            weight_scale = saved[name + ".module.quantizer.scale"]
++            activation_scale = saved[name + ".quantizer.scale"]
++            if weight_scale.shape != (wrapper.module.out_features, 1):
++                raise ValueError(f"Saved SW must be per-output-channel: {name}")
++            if activation_scale.shape != (1,):
++                raise ValueError(f"Saved activation scale must be per-tensor: {name}")
++            wrapper.module.quantizer.load_scale(weight_scale)
+             wrapper.module.quantizer.enable_scale_learning()
+             if name.endswith("down_proj"):
+                 wrapper.quantizer = SP2Quantizer(float(saved[name + ".quantizer.scale"]) * 127, learnable=True)
+@@ -399,6 +405,32 @@
+     expected = set(wrappers(model))
+     if set(state["weights"]) != expected or set(state["activation"]) != expected:
+         raise ValueError("Frozen model coverage mismatch")
++    high_precision = {name: tensor for name, tensor in model.state_dict().items()
++                      if not any(name.startswith(prefix + ".") for prefix in expected)}
++    if set(state["high_precision"]) != set(high_precision):
++        raise ValueError("Frozen high-precision boundary coverage mismatch")
++    for name, tensor in state["high_precision"].items():
++        if tensor.shape != high_precision[name].shape:
++            raise ValueError(f"Frozen high-precision shape mismatch: {name}")
++    for name, record in state["weights"].items():
++        weight = model.get_submodule(name).module.weight
++        if tuple(record["shape"]) != tuple(weight.shape):
++            raise ValueError(f"Frozen weight shape mismatch: {name}")
++        scale = record["scale"]
++        if scale.shape != (weight.shape[0], 1) or not torch.isfinite(scale).all() or not (scale > 0).all():
++            raise ValueError(f"Invalid frozen weight scale: {name}")
++        if record["packed"].dtype != torch.uint8 or record["packed"].numel() * 2 != weight.numel():
++            raise ValueError(f"Invalid packed weight: {name}")
++        activation = state["activation"][name]
++        if name.endswith("down_proj"):
++            if activation["format"] != "sp2" or not math.isfinite(float(activation["alpha"])) or activation["alpha"] <= 0:
++                raise ValueError(f"Invalid frozen SP2 range: {name}")
++        else:
++            if activation["format"] != "int8":
++                raise ValueError(f"Invalid frozen activation format: {name}")
++            scale = activation["scale"]
++            if scale.shape != (1,) or not torch.isfinite(scale).all() or not (scale > 0).all():
++                raise ValueError(f"Invalid frozen activation scale: {name}")
+     device = next(model.parameters()).device
+     model.load_state_dict(state["high_precision"], strict=False)
+     for name, record in state["weights"].items():

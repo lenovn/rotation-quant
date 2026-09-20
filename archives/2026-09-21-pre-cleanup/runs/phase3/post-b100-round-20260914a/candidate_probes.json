@@ -1,0 +1,98 @@
+[
+  {
+    "candidate": "round-top4",
+    "changed_modules": [
+      "model.layers.9.self_attn.o_proj",
+      "model.layers.6.self_attn.o_proj",
+      "model.layers.10.self_attn.o_proj",
+      "model.layers.8.self_attn.o_proj"
+    ],
+    "changed_alphas": {},
+    "probe": {
+      "nll": 2.9715616106987,
+      "ppl": 19.52238216535699,
+      "predicted_tokens": 8188,
+      "token_count": 8192,
+      "windows": [
+        {
+          "window": 0,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.2341411113739014
+        },
+        {
+          "window": 1,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.1293766498565674
+        },
+        {
+          "window": 2,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.9038593769073486
+        },
+        {
+          "window": 3,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.6188693046569824
+        }
+      ]
+    }
+  },
+  {
+    "candidate": "round-top-selected",
+    "changed_modules": [
+      "model.layers.9.self_attn.o_proj",
+      "model.layers.6.self_attn.o_proj",
+      "model.layers.10.self_attn.o_proj",
+      "model.layers.8.self_attn.o_proj",
+      "model.layers.7.self_attn.o_proj",
+      "model.layers.1.self_attn.o_proj",
+      "model.layers.5.self_attn.o_proj",
+      "model.layers.15.self_attn.o_proj",
+      "model.layers.11.self_attn.o_proj",
+      "model.layers.4.self_attn.o_proj",
+      "model.layers.14.self_attn.o_proj",
+      "model.layers.12.mlp.down_proj",
+      "model.layers.3.self_attn.o_proj",
+      "model.layers.9.mlp.down_proj",
+      "model.layers.8.mlp.down_proj",
+      "model.layers.11.mlp.down_proj"
+    ],
+    "changed_alphas": {},
+    "probe": {
+      "nll": 2.9846782088279724,
+      "ppl": 19.780136138957275,
+      "predicted_tokens": 8188,
+      "token_count": 8192,
+      "windows": [
+        {
+          "window": 0,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.242750644683838
+        },
+        {
+          "window": 1,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 3.137294292449951
+        },
+        {
+          "window": 2,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.922156810760498
+        },
+        {
+          "window": 3,
+          "tokens": 2048,
+          "predicted_tokens": 2047,
+          "nll": 2.6365110874176025
+        }
+      ]
+    }
+  }
+]

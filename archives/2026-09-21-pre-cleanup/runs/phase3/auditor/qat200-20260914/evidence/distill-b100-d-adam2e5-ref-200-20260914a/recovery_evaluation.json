@@ -1,0 +1,167 @@
+{
+  "original_driver": {
+    "pid": 1254098,
+    "completed_training_updates": 200,
+    "failed_at": "creating checkpoint-0200/code_changes.json.tmp after package export, before full validation",
+    "error": "OSError: [Errno 28] No space left on device",
+    "original_run_completed_without_failure": false
+  },
+  "recovery": {
+    "preflight": {
+      "event": "recovery-evaluation-preflight",
+      "gpu": 7,
+      "gpu_snapshot": "0, 12742 MiB, 24564 MiB, 0 %\n1, 1757 MiB, 24564 MiB, 0 %\n2, 12224 MiB, 24564 MiB, 27 %\n3, 2832 MiB, 24564 MiB, 11 %\n4, 23619 MiB, 24564 MiB, 0 %\n5, 3304 MiB, 24564 MiB, 13 %\n6, 3694 MiB, 24564 MiB, 100 %\n7, 3846 MiB, 24564 MiB, 0 %\n",
+      "command": [
+        "env",
+        "CUDA_VISIBLE_DEVICES=7",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "TOKENIZERS_PARALLELISM=false",
+        "HF_HUB_OFFLINE=1",
+        "HF_DATASETS_OFFLINE=1",
+        "HF_HOME=/home/dongpeiyan/projects/rotation-quant/cache/huggingface",
+        "GIT_OPTIONAL_LOCKS=0",
+        "OMP_NUM_THREADS=4",
+        "MKL_NUM_THREADS=4",
+        "PYTHONPATH=/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint",
+        "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+        "-u",
+        "-c",
+        "import json,os,sys,time\nfrom pathlib import Path\nimport torch\nfrom transformers import set_seed\nfrom experiments.phase3.common import data_windows,full_validation\nfrom experiments.phase3.postprocess import load_static\nfrom experiments.phase3.run import source_record\nroot=Path(\"/home/dongpeiyan/projects/rotation-quant\")\nrun=root/\"runs/phase3/distill-b100-d-adam2e5-ref-200-20260914a\"\nsource=root/\"worktrees/SpinQuant-phase3-joint\"\nset_seed(42)\ntorch.set_num_threads(4)\ntorch.backends.cuda.matmul.allow_tf32=False\ntorch.backends.cudnn.allow_tf32=False\nprint(json.dumps(dict(event=\"recovery-evaluation-start\",pid=os.getpid(),time=time.time(),command=Path(\"/proc/self/cmdline\").read_bytes().decode().split(\"\\0\")[:-1],source=source_record(),source_snapshot_equal={name:(source/\"experiments/phase3\"/name).read_bytes()==(run/\"source\"/name).read_bytes() for name in [\"common.py\",\"postprocess.py\",\"quantization.py\"]},gpu=os.environ[\"CUDA_VISIBLE_DEVICES\"],package=str(run/\"checkpoint-0200/static_w4a8.pt\"),kind=\"main recovery: training already200; original driver failed before full validation; no training or calibration\")),flush=True)\nstarted=time.monotonic()\n_,_,_,validation,data=data_windows()\nmodel,records=load_static(run/\"checkpoint-0200/static_w4a8.pt\")\nmeasured=full_validation(model,validation)\nmeasured.update(method=\"full-backbone quantization-aware distillation, not frozen-weight PTQ\",update_step=200,parent=str(root/\"runs/phase3/post-b100-d-20260914a/static_w4a8.pt\"),format=\"112 W4 /96 static INT8 /16 static SP2; BF16 KV16 prefill\")\nprint(json.dumps(dict(event=\"recovery-evaluation-completed\",pid=os.getpid(),result=measured,data=data,elapsed_seconds=time.monotonic()-started,peak_allocated_gib=torch.cuda.max_memory_allocated()/1024**3)),flush=True)\n"
+      ],
+      "backend": "tmux",
+      "tmux_socket": "rotation-quant-phase3",
+      "tmux_session": "phase3-ref200-recovery-eval"
+    },
+    "start": {
+      "event": "recovery-evaluation-start",
+      "pid": 1493471,
+      "time": 1789339439.157473,
+      "command": [
+        "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+        "-u",
+        "-c",
+        "import json,os,sys,time\nfrom pathlib import Path\nimport torch\nfrom transformers import set_seed\nfrom experiments.phase3.common import data_windows,full_validation\nfrom experiments.phase3.postprocess import load_static\nfrom experiments.phase3.run import source_record\nroot=Path(\"/home/dongpeiyan/projects/rotation-quant\")\nrun=root/\"runs/phase3/distill-b100-d-adam2e5-ref-200-20260914a\"\nsource=root/\"worktrees/SpinQuant-phase3-joint\"\nset_seed(42)\ntorch.set_num_threads(4)\ntorch.backends.cuda.matmul.allow_tf32=False\ntorch.backends.cudnn.allow_tf32=False\nprint(json.dumps(dict(event=\"recovery-evaluation-start\",pid=os.getpid(),time=time.time(),command=Path(\"/proc/self/cmdline\").read_bytes().decode().split(\"\\0\")[:-1],source=source_record(),source_snapshot_equal={name:(source/\"experiments/phase3\"/name).read_bytes()==(run/\"source\"/name).read_bytes() for name in [\"common.py\",\"postprocess.py\",\"quantization.py\"]},gpu=os.environ[\"CUDA_VISIBLE_DEVICES\"],package=str(run/\"checkpoint-0200/static_w4a8.pt\"),kind=\"main recovery: training already200; original driver failed before full validation; no training or calibration\")),flush=True)\nstarted=time.monotonic()\n_,_,_,validation,data=data_windows()\nmodel,records=load_static(run/\"checkpoint-0200/static_w4a8.pt\")\nmeasured=full_validation(model,validation)\nmeasured.update(method=\"full-backbone quantization-aware distillation, not frozen-weight PTQ\",update_step=200,parent=str(root/\"runs/phase3/post-b100-d-20260914a/static_w4a8.pt\"),format=\"112 W4 /96 static INT8 /16 static SP2; BF16 KV16 prefill\")\nprint(json.dumps(dict(event=\"recovery-evaluation-completed\",pid=os.getpid(),result=measured,data=data,elapsed_seconds=time.monotonic()-started,peak_allocated_gib=torch.cuda.max_memory_allocated()/1024**3)),flush=True)\n"
+      ],
+      "source": {
+        "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint",
+        "project_root": "/home/dongpeiyan/projects/rotation-quant",
+        "quant_linear": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/train_utils/quant_linear.py",
+        "quant_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/quant_utils.py",
+        "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+        "branch": "phase3/joint-r-sw-sa-sp2",
+        "pytorch": "2.4.1+cu121",
+        "cuda": "12.1",
+        "device": "NVIDIA GeForce RTX 4090",
+        "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+        "model_cache_revision": "Revision:master,CreatedAt:1740591574"
+      },
+      "source_snapshot_equal": {
+        "common.py": true,
+        "postprocess.py": true,
+        "quantization.py": true
+      },
+      "gpu": "7",
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/distill-b100-d-adam2e5-ref-200-20260914a/checkpoint-0200/static_w4a8.pt",
+      "kind": "main recovery: training already200; original driver failed before full validation; no training or calibration"
+    },
+    "completed": {
+      "event": "recovery-evaluation-completed",
+      "pid": 1493471,
+      "result": {
+        "token_count": 252852,
+        "predicted_tokens": 252728,
+        "segments": [
+          {
+            "start_token": 0,
+            "seqlen": 2048,
+            "windows": 123,
+            "predicted_tokens": 251781,
+            "ppl": 15.573535919189453,
+            "nll": 2.745573058276849
+          },
+          {
+            "start_token": 251904,
+            "seqlen": 948,
+            "windows": 1,
+            "predicted_tokens": 947,
+            "ppl": 17.07912826538086,
+            "nll": 2.8378571487312767
+          }
+        ],
+        "unscored_tail_tokens": 0,
+        "nll": 2.7459188570552207,
+        "ppl": 15.578922160109332,
+        "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+        "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+        "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+        "method": "full-backbone quantization-aware distillation, not frozen-weight PTQ",
+        "update_step": 200,
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/post-b100-d-20260914a/static_w4a8.pt",
+        "format": "112 W4 /96 static INT8 /16 static SP2; BF16 KV16 prefill"
+      },
+      "data": {
+        "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+        "dataset_cache": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3",
+        "train_protocol": "tokenize each raw row without BOS/EOS, concatenate IDs, disjoint 2048 windows, drop tail, fixed order",
+        "validation_protocol": "double-newline joined raw validation; independent 2048 windows including tail; token-weighted NLL",
+        "train_windows": 1188,
+        "train_tokens": 2435022,
+        "dropped_train_tail": 1998,
+        "calibration_window_indices": [
+          182,
+          546,
+          792,
+          281,
+          1030,
+          865,
+          136,
+          18,
+          442,
+          357,
+          248,
+          128,
+          1110,
+          235,
+          621,
+          707,
+          1035,
+          208,
+          531,
+          689,
+          369,
+          424,
+          953,
+          973,
+          131,
+          443,
+          677,
+          1096,
+          731,
+          902,
+          29,
+          859
+        ],
+        "calibration_length": 128,
+        "probe_indices": [
+          1180,
+          1181,
+          1182,
+          1183
+        ],
+        "validation_tokens": 252852,
+        "validation_targets": 252728,
+        "seed": 42
+      },
+      "elapsed_seconds": 40.91183801100124,
+      "peak_allocated_gib": 4.6500020027160645
+    }
+  },
+  "evidence_log": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/distill-b100-d-adam2e5-ref-200-20260914a.log",
+  "notes": [
+    "Reconstructed from existing durable log; not a new GPU measurement.",
+    "No repeated training or recalibration.",
+    "Original checkpoints.json/progress.json and failure log preserved; this document does not rewrite original process exit as success.",
+    "This recovery was main execution, not independent auditor reproduction.",
+    "checkpoint-0200/code_changes.json was subsequently recovered on CPU by exact INT4 unpack-and-compare of the parent and saved final package; it is not an original driver emission or a new GPU validation."
+  ]
+}

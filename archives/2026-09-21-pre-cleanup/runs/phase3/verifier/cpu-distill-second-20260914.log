@@ -1,0 +1,16 @@
+.....                                                                    [100%]
+=============================== warnings summary ===============================
+tests/test_phase3_joint.py::test_distill_parent_grid_aliases_real_checkpoint_backward
+tests/test_phase3_joint.py::test_distill_export_coldload_exact_forward_codes_and_hp
+tests/test_phase3_joint.py::test_distill_cold_validation_rng_and_optimizer_identity_cpu_mock
+tests/test_phase3_joint.py::test_distill_train_builds_teacher_before_restoring_rng
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+tests/test_phase3_joint.py::test_distill_parent_grid_aliases_real_checkpoint_backward
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+    with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/cpu-distill-second-20260914.xml -
+5 passed, 5 warnings in 9.60s

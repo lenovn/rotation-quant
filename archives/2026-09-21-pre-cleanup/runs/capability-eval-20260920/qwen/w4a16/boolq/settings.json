@@ -1,0 +1,34 @@
+{
+  "arguments": {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "boolq",
+    "batch_size": 4,
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/w4a16/boolq"
+  },
+  "effective_batch_size": 4,
+  "selected": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/gptq_w4a16_package/w4_gptq_model.pt",
+    "seed": 42,
+    "method_label": "GPTQ (original BF16)",
+    "activation_bits": 16,
+    "note": "Independent original BF16 -> GPTQ; train-only calibration 128x2048 seed42; symmetric per-output-channel W4 groupsize=-1; no rotation or distillation."
+  },
+  "seed": 42,
+  "harness_version": "0.4.8",
+  "generation_chat_template": false,
+  "enable_thinking": false,
+  "fewshot_as_multiturn": false,
+  "num_fewshot": 0,
+  "max_length": 8192,
+  "generation_max_new_tokens": null,
+  "scoring_use_cache": false,
+  "generation_use_cache": true,
+  "kv_bits": 16,
+  "calibration": false,
+  "training": false,
+  "cuda_allocator": "expandable_segments:True",
+  "source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel",
+  "generation_log": null
+}

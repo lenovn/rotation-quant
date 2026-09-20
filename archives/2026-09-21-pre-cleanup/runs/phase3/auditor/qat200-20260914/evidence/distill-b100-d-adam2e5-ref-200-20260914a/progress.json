@@ -1,0 +1,11 @@
+{
+  "stage": "export-for-validation",
+  "pid": 1254098,
+  "time": 1789339224.76386,
+  "cuda_visible_devices": "7",
+  "allocated_gib": 12.369027137756348,
+  "reserved_gib": 18.4609375,
+  "peak_allocated_gib": 18.423856258392334,
+  "gpu_time_budget": null,
+  "step": 200
+}

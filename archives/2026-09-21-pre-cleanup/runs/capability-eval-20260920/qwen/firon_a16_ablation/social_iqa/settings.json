@@ -1,0 +1,34 @@
+{
+  "arguments": {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "social_iqa",
+    "batch_size": 4,
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/w4a16/social_iqa"
+  },
+  "effective_batch_size": 4,
+  "selected": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s42/checkpoint-0400/static_w4a8.pt",
+    "seed": 42,
+    "method_label": "FIRON weights / A16",
+    "activation_bits": 16,
+    "note": "Final FIRON W4 weights unchanged; fixed A16 execution without input quantization. No training, calibration or requantization. Not GPTQ."
+  },
+  "seed": 42,
+  "harness_version": "0.4.8",
+  "generation_chat_template": false,
+  "enable_thinking": false,
+  "fewshot_as_multiturn": false,
+  "num_fewshot": 0,
+  "max_length": 8192,
+  "generation_max_new_tokens": null,
+  "scoring_use_cache": false,
+  "generation_use_cache": true,
+  "kv_bits": 16,
+  "calibration": false,
+  "training": false,
+  "cuda_allocator": "expandable_segments:True",
+  "source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel",
+  "generation_log": null
+}

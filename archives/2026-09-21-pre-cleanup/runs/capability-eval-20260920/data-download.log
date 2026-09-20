@@ -1,0 +1,203 @@
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 7.02kB [00:00, 11.8MB/s]
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 1.02kB [00:00, 3.08kB/s]Downloading readme: 19.7kB [00:00, 59.0kB/s]
+Downloading builder script: 0.00B [00:00, ?B/s]Downloading builder script: 5.36kB [00:00, 5.86MB/s]
+Downloading builder script: 0.00B [00:00, ?B/s]Downloading builder script: 4.67kB [00:00, 10.8MB/s]
+Downloading data:   0%|          | 0.00/24.4M [00:00<?, ?B/s]
+Downloading readme: 0.00B [00:00, ?B/s][ADownloading readme: 8.41kB [00:00, 12.9MB/s]
+
+Downloading readme: 0.00B [00:00, ?B/s][ADownloading readme: 6.69kB [00:00, 2.55MB/s]
+
+Downloading data:   0%|          | 0.00/3.85M [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/2.20M [00:00<?, ?B/s][A[A
+
+Downloading data:   1%|          | 22.5k/2.20M [00:00<00:34, 63.9kB/s][A[A
+
+Downloading data:   6%|▌         | 127k/2.20M [00:00<00:07, 268kB/s]  [A[A
+
+Downloading data:   8%|▊         | 168k/2.20M [00:00<00:11, 175kB/s][A[A
+
+
+Downloading data:   0%|          | 0.00/1.82M [00:00<?, ?B/s][A[A[A
+
+Downloading data:  11%|█         | 246k/2.20M [00:01<00:09, 207kB/s][A[A
+
+Downloading data:  14%|█▎        | 302k/2.20M [00:01<00:08, 218kB/s][A[A
+
+Downloading data:  25%|██▌       | 560k/2.20M [00:01<00:03, 487kB/s][A[A
+
+
+Downloading data:   1%|          | 15.4k/1.82M [00:00<01:42, 17.6kB/s][A[A[A
+
+Downloading data:  28%|██▊       | 615k/2.20M [00:02<00:04, 362kB/s][A[A
+
+Downloading data:  32%|███▏      | 708k/2.20M [00:02<00:03, 429kB/s][A[A
+
+Downloading data:  36%|███▋      | 799k/2.20M [00:02<00:03, 389kB/s][A[A
+
+
+Downloading data:   8%|▊         | 140k/1.82M [00:01<00:17, 95.6kB/s] [A[A[A
+
+Downloading data:  62%|██████▏   | 1.35M/2.20M [00:02<00:01, 762kB/s][A[A
+
+Downloading data:  88%|████████▊ | 1.94M/2.20M [00:03<00:00, 1.39MB/s][A[ADownloading data: 100%|██████████| 2.20M/2.20M [00:03<00:00, 724kB/s] 
+
+
+Generating train split:   0%|          | 0/33410 [00:00<?, ? examples/s][A[A
+
+Generating train split:   7%|▋         | 2255/33410 [00:00<00:01, 21461.18 examples/s][A[A
+
+Generating train split:  15%|█▍        | 5000/33410 [00:00<00:01, 24751.41 examples/s][A[A
+
+Generating train split:  24%|██▎       | 7920/33410 [00:00<00:00, 26751.76 examples/s][A[ADownloading data:  43%|████▎     | 10.5M/24.4M [00:07<00:09, 1.47MB/s]
+
+
+Downloading data:   9%|▊         | 157k/1.82M [00:02<00:24, 66.9kB/s][A[A[A
+
+Generating train split:  36%|███▌      | 12000/33410 [00:00<00:00, 25706.78 examples/s][A[A
+
+Generating train split:  46%|████▋     | 15499/33410 [00:00<00:00, 24749.64 examples/s][A[A
+
+Generating train split:  57%|█████▋    | 18896/33410 [00:00<00:00, 23979.72 examples/s][A[A
+
+
+Downloading data:  14%|█▍        | 261k/1.82M [00:02<00:13, 115kB/s] [A[A[A
+
+Generating train split:  67%|██████▋   | 22459/33410 [00:00<00:00, 23693.92 examples/s][A[A
+
+Generating train split:  75%|███████▌  | 25155/33410 [00:01<00:00, 24490.28 examples/s][A[A
+
+Generating train split:  84%|████████▍ | 28000/33410 [00:01<00:00, 25438.37 examples/s][A[A
+
+
+Downloading data:  17%|█▋        | 309k/1.82M [00:03<00:13, 116kB/s][A[A[A
+
+Generating train split:  92%|█████████▏| 30857/33410 [00:01<00:00, 26279.02 examples/s][A[AGenerating train split: 100%|██████████| 33410/33410 [00:01<00:00, 25138.99 examples/s]
+
+
+Generating validation split:   0%|          | 0/1954 [00:00<?, ? examples/s][A[AGenerating validation split: 100%|██████████| 1954/1954 [00:00<00:00, 25864.62 examples/s]
+
+
+
+Downloading data:  22%|██▏       | 406k/1.82M [00:03<00:08, 161kB/s][A[A[A{'task': 'social_iqa', 'path': 'social_i_qa', 'name': None, 'splits': {'train': 33410, 'validation': 1954}, 'status': 'ready'}
+Downloading data:  86%|████████▌ | 21.0M/24.4M [00:08<00:01, 2.67MB/s]
+
+
+Downloading data:  24%|██▎       | 430k/1.82M [00:04<00:14, 96.3kB/s][A[A[A
+
+
+Downloading data:  39%|███▉      | 712k/1.82M [00:04<00:04, 252kB/s] [A[A[ADownloading data: 100%|██████████| 24.4M/24.4M [00:09<00:00, 2.96MB/s]Downloading data: 100%|██████████| 24.4M/24.4M [00:09<00:00, 2.56MB/s]
+Downloading data:   0%|          | 0.00/6.11M [00:00<?, ?B/s]
+
+
+Downloading data:  41%|████      | 750k/1.82M [00:05<00:05, 205kB/s][A[A[A
+Downloading data: 100%|██████████| 3.85M/3.85M [00:09<00:00, 427kB/s][ADownloading data: 100%|██████████| 3.85M/3.85M [00:09<00:00, 426kB/s]
+
+Downloading data:   0%|          | 0.00/1.31M [00:00<?, ?B/s][A
+
+
+Downloading data:  53%|█████▎    | 962k/1.82M [00:05<00:03, 228kB/s][A[A[A
+
+
+Downloading data:  67%|██████▋   | 1.23M/1.82M [00:06<00:01, 327kB/s][A[A[A
+
+
+Downloading data:  80%|███████▉  | 1.46M/1.82M [00:06<00:01, 361kB/s][A[A[A
+
+
+Downloading data:  94%|█████████▍| 1.72M/1.82M [00:07<00:00, 504kB/s][A[A[ADownloading data: 100%|██████████| 6.11M/6.11M [00:02<00:00, 2.30MB/s]Downloading data: 100%|██████████| 6.11M/6.11M [00:02<00:00, 2.28MB/s]
+Downloading data:   0%|          | 0.00/6.32M [00:00<?, ?B/s]
+
+
+Downloading data:  99%|█████████▉| 1.80M/1.82M [00:07<00:00, 408kB/s][A[A[ADownloading data: 100%|██████████| 1.82M/1.82M [00:07<00:00, 243kB/s]
+
+Downloading data: 100%|██████████| 1.31M/1.31M [00:03<00:00, 376kB/s][ADownloading data: 100%|██████████| 1.31M/1.31M [00:03<00:00, 375kB/s]
+
+Downloading data:   0%|          | 0.00/1.31M [00:00<?, ?B/s][ADownloading data: 100%|██████████| 6.32M/6.32M [00:03<00:00, 1.63MB/s]Downloading data: 100%|██████████| 6.32M/6.32M [00:03<00:00, 1.63MB/s]
+Generating train split:   0%|          | 0/39905 [00:00<?, ? examples/s]Generating train split:  38%|███▊      | 15000/39905 [00:00<00:00, 140134.62 examples/s]Generating train split:  83%|████████▎ | 33000/39905 [00:00<00:00, 95425.57 examples/s] Generating train split: 100%|██████████| 39905/39905 [00:00<00:00, 93922.47 examples/s]
+Generating test split:   0%|          | 0/10003 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 10003/10003 [00:00<00:00, 89389.96 examples/s]Generating test split: 100%|██████████| 10003/10003 [00:00<00:00, 88810.76 examples/s]
+Generating validation split:   0%|          | 0/10042 [00:00<?, ? examples/s]
+Downloading data: 100%|██████████| 1.31M/1.31M [00:02<00:00, 533kB/s][ADownloading data: 100%|██████████| 1.31M/1.31M [00:02<00:00, 531kB/s]
+
+Generating train split:   0%|          | 0/9427 [00:00<?, ? examples/s][AGenerating train split: 100%|██████████| 9427/9427 [00:00<00:00, 164350.90 examples/s]
+
+Generating validation split:   0%|          | 0/3270 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 10042/10042 [00:00<00:00, 96051.60 examples/s]Generating validation split: 100%|██████████| 10042/10042 [00:00<00:00, 95575.58 examples/s]
+Generating validation split: 100%|██████████| 3270/3270 [00:00<00:00, 102085.37 examples/s]
+{'task': 'hellaswag', 'path': 'hellaswag', 'name': None, 'splits': {'train': 39905, 'test': 10003, 'validation': 10042}, 'status': 'ready'}
+Generating test split:   0%|          | 0/3245 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 3245/3245 [00:00<00:00, 134050.18 examples/s]
+{'task': 'boolq', 'path': 'super_glue', 'name': 'boolq', 'splits': {'train': 9427, 'validation': 3270, 'test': 3245}, 'status': 'ready'}
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 11.2kB [00:00, 15.9MB/s]
+Downloading data:   0%|          | 0.00/220k [00:00<?, ?B/s]Downloading data: 420kB [00:00, 1.90MB/s]                   Downloading data: 815kB [00:00, 3.29MB/s]
+Generating train split:   0%|          | 0/16113 [00:00<?, ? examples/s]Generating train split:  19%|█▊        | 3000/16113 [00:00<00:00, 27217.71 examples/s]Generating train split:  43%|████▎     | 6893/16113 [00:00<00:00, 33826.34 examples/s]Generating train split:  66%|██████▌   | 10611/16113 [00:00<00:00, 35317.84 examples/s]Generating train split:  99%|█████████▉| 16000/16113 [00:00<00:00, 35399.62 examples/s]Generating train split: 100%|██████████| 16113/16113 [00:00<00:00, 34410.86 examples/s]
+Generating test split:   0%|          | 0/3084 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 3084/3084 [00:00<00:00, 35902.28 examples/s]
+Generating validation split:   0%|          | 0/1838 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 1838/1838 [00:00<00:00, 34731.92 examples/s]
+{'task': 'piqa', 'path': 'piqa', 'name': None, 'splits': {'train': 16113, 'test': 3084, 'validation': 1838}, 'status': 'ready'}
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 1.02kB [00:00, 2.60kB/s]Downloading readme: 9.00kB [00:00, 22.8kB/s]
+Downloading data:   0%|          | 0.00/2.06M [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/190k [00:00<?, ?B/s][A
+
+Downloading data:   0%|          | 0.00/331k [00:00<?, ?B/s][A[A
+
+
+Downloading readme: 0.00B [00:00, ?B/s][A[A[ADownloading readme: 9.06kB [00:00, 15.1MB/s]
+
+Downloading data: 100%|██████████| 190k/190k [00:01<00:00, 126kB/s][ADownloading data: 100%|██████████| 190k/190k [00:01<00:00, 126kB/s]
+
+Downloading data:   0%|          | 0.00/204k [00:00<?, ?B/s][A
+
+Downloading data: 100%|██████████| 331k/331k [00:01<00:00, 298kB/s][A[ADownloading data: 100%|██████████| 331k/331k [00:01<00:00, 297kB/s]
+
+
+Downloading data:   0%|          | 0.00/346k [00:00<?, ?B/s][A[ADownloading data: 100%|██████████| 2.06M/2.06M [00:04<00:00, 462kB/s]Downloading data: 100%|██████████| 2.06M/2.06M [00:04<00:00, 461kB/s]
+Downloading data:   0%|          | 0.00/118k [00:00<?, ?B/s]
+Downloading data: 100%|██████████| 204k/204k [00:01<00:00, 181kB/s][ADownloading data: 100%|██████████| 204k/204k [00:01<00:00, 181kB/s]
+
+Downloading data:   0%|          | 0.00/55.7k [00:00<?, ?B/s][A
+
+Downloading data: 100%|██████████| 346k/346k [00:01<00:00, 291kB/s][A[ADownloading data: 100%|██████████| 346k/346k [00:01<00:00, 291kB/s]
+
+
+Downloading data:   0%|          | 0.00/86.1k [00:00<?, ?B/s][A[A
+Downloading data: 100%|██████████| 55.7k/55.7k [00:01<00:00, 45.9kB/s][ADownloading data: 100%|██████████| 55.7k/55.7k [00:01<00:00, 45.7kB/s]
+
+Generating train split:   0%|          | 0/1119 [00:00<?, ? examples/s][AGenerating train split: 100%|██████████| 1119/1119 [00:00<00:00, 80439.89 examples/s]
+
+Generating test split:   0%|          | 0/1172 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 1172/1172 [00:00<00:00, 154146.26 examples/s]
+
+Generating validation split:   0%|          | 0/299 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 299/299 [00:00<00:00, 32774.85 examples/s]
+
+
+Downloading data: 100%|██████████| 86.1k/86.1k [00:00<00:00, 110kB/s][A[ADownloading data: 100%|██████████| 86.1k/86.1k [00:00<00:00, 109kB/s]
+{'task': 'arc_challenge', 'path': 'allenai/ai2_arc', 'name': 'ARC-Challenge', 'splits': {'train': 1119, 'test': 1172, 'validation': 299}, 'status': 'ready'}
+Downloading data: 100%|██████████| 118k/118k [00:01<00:00, 75.9kB/s]
+Generating train split:   0%|          | 0/2251 [00:00<?, ? examples/s][ADownloading data: 100%|██████████| 118k/118k [00:01<00:00, 75.7kB/s]
+Downloading data:   0%|          | 0.00/85.9k [00:00<?, ?B/s]Generating train split: 100%|██████████| 2251/2251 [00:00<00:00, 125200.61 examples/s]
+
+Generating test split:   0%|          | 0/2376 [00:00<?, ? examples/s][AGenerating test split: 100%|██████████| 2376/2376 [00:00<00:00, 145758.67 examples/s]
+
+Generating validation split:   0%|          | 0/570 [00:00<?, ? examples/s][AGenerating validation split: 100%|██████████| 570/570 [00:00<00:00, 159298.59 examples/s]
+{'task': 'arc_easy', 'path': 'allenai/ai2_arc', 'name': 'ARC-Easy', 'splits': {'train': 2251, 'test': 2376, 'validation': 570}, 'status': 'ready'}
+Downloading data: 100%|██████████| 85.9k/85.9k [00:01<00:00, 57.7kB/s]Downloading data: 100%|██████████| 85.9k/85.9k [00:01<00:00, 57.6kB/s]
+Generating train split:   0%|          | 0/40398 [00:00<?, ? examples/s]Generating train split:  62%|██████▏   | 25000/40398 [00:00<00:00, 234496.30 examples/s]Generating train split: 100%|██████████| 40398/40398 [00:00<00:00, 245302.17 examples/s]
+Generating test split:   0%|          | 0/1767 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1767/1767 [00:00<00:00, 223839.78 examples/s]
+Generating validation split:   0%|          | 0/1267 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 1267/1267 [00:00<00:00, 134359.40 examples/s]
+{'task': 'winogrande', 'path': 'winogrande', 'name': 'winogrande_xl', 'splits': {'train': 40398, 'test': 1767, 'validation': 1267}, 'status': 'ready'}
+Downloading data:   0%|          | 0.00/496k [00:00<?, ?B/s]Downloading data: 100%|██████████| 496k/496k [00:04<00:00, 101kB/s]Downloading data: 100%|██████████| 496k/496k [00:04<00:00, 101kB/s]
+Downloading data:   0%|          | 0.00/58.2k [00:00<?, ?B/s]
+Downloading readme: 0.00B [00:00, ?B/s][ADownloading readme: 5.52kB [00:00, 10.6MB/s]
+Downloading data: 100%|██████████| 58.2k/58.2k [00:02<00:00, 21.2kB/s]Downloading data: 100%|██████████| 58.2k/58.2k [00:02<00:00, 21.1kB/s]
+Downloading data:   0%|          | 0.00/55.5k [00:00<?, ?B/s]
+Downloading readme: 0.00B [00:00, ?B/s][ADownloading readme: 7.93kB [00:00, 3.68MB/s]
+Downloading data: 100%|██████████| 55.5k/55.5k [00:02<00:00, 23.1kB/s]Downloading data: 100%|██████████| 55.5k/55.5k [00:02<00:00, 23.1kB/s]
+Generating train split:   0%|          | 0/4957 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 4957/4957 [00:00<00:00, 192384.31 examples/s]
+Generating validation split:   0%|          | 0/500 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 500/500 [00:00<00:00, 52576.01 examples/s]
+Generating test split:   0%|          | 0/500 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 500/500 [00:00<00:00, 58367.72 examples/s]
+{'task': 'openbookqa', 'path': 'openbookqa', 'name': 'main', 'splits': {'train': 4957, 'validation': 500, 'test': 500}, 'status': 'ready'}
+Downloading data:   0%|          | 0.00/207k [00:00<?, ?B/s]Downloading data: 100%|██████████| 207k/207k [00:00<00:00, 363kB/s]Downloading data: 100%|██████████| 207k/207k [00:00<00:00, 360kB/s]
+Generating train split:   0%|          | 0/541 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 541/541 [00:00<00:00, 28566.09 examples/s]
+{'task': 'ifeval', 'path': 'google/IFEval', 'name': None, 'splits': {'train': 541}, 'status': 'ready'}
+Downloading data:   0%|          | 0.00/2.31M [00:00<?, ?B/s]Downloading data: 100%|██████████| 2.31M/2.31M [00:02<00:00, 836kB/s]Downloading data: 100%|██████████| 2.31M/2.31M [00:02<00:00, 833kB/s]
+Downloading data:   0%|          | 0.00/419k [00:00<?, ?B/s]Downloading data: 100%|██████████| 419k/419k [00:01<00:00, 225kB/s]Downloading data: 100%|██████████| 419k/419k [00:01<00:00, 224kB/s]
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 180143.30 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 110213.70 examples/s]
+{'task': 'gsm8k_cot', 'path': 'gsm8k', 'name': 'main', 'splits': {'train': 7473, 'test': 1319}, 'status': 'ready'}

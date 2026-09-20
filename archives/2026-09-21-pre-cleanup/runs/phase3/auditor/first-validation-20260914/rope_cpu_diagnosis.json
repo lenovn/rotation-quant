@@ -1,0 +1,11 @@
+{
+  "original_dtype": "torch.float32",
+  "whole_model_bf16_cast_dtype": "torch.bfloat16",
+  "native_bf16_construction_dtype": "torch.float32",
+  "cast_changed_entries": 31,
+  "entries": 32,
+  "max_absolute_error": 0.0009135007858276367,
+  "native_equals_original": true,
+  "state_dict_keys": [],
+  "reason": "RoPE inv_freq is nonpersistent and omitted from saved state; module-wide .to(bfloat16) rounds it, unlike from_pretrained(torch_dtype=bfloat16) or _from_config(torch_dtype=bfloat16)"
+}

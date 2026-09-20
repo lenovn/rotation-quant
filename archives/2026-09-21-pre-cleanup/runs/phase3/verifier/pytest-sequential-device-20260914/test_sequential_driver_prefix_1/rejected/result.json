@@ -1,0 +1,67 @@
+{
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/pytest-sequential-device-20260914/test_sequential_driver_prefix_1/parent.pt",
+  "parent_metadata": {
+    "method": "quantization-aware distillation",
+    "source_run": "retained-parent",
+    "step": 100,
+    "original_backbone_trained": true
+  },
+  "mode": "sp2",
+  "initial_train_nll": 3.0,
+  "selected_train_nll": 3.0,
+  "completed_targets": [
+    "model.layers.0.mlp.down_proj",
+    "model.layers.1.mlp.down_proj"
+  ],
+  "new_module_results": [
+    {
+      "module": "model.layers.0.mlp.down_proj",
+      "selected_factor": 1.0,
+      "previous_train_nll": 3.0,
+      "selected_train_nll": 3.0,
+      "trials": [
+        {
+          "factor": 1.0,
+          "alpha": 0.005340576171875,
+          "train_nll": 3.0,
+          "reused_prefix": true
+        },
+        {
+          "factor": 1.25,
+          "alpha": 0.00667572021484375,
+          "train_nll": 3.5
+        },
+        {
+          "factor": 2,
+          "alpha": 0.01068115234375,
+          "train_nll": 3.5
+        }
+      ]
+    },
+    {
+      "module": "model.layers.1.mlp.down_proj",
+      "selected_factor": 1.0,
+      "previous_train_nll": 3.0,
+      "selected_train_nll": 3.0,
+      "trials": [
+        {
+          "factor": 1.0,
+          "alpha": 0.00799560546875,
+          "train_nll": 3.0,
+          "reused_prefix": true
+        },
+        {
+          "factor": 1.25,
+          "alpha": 0.0099945068359375,
+          "train_nll": 3.5
+        },
+        {
+          "factor": 2,
+          "alpha": 0.0159912109375,
+          "train_nll": 3.5
+        }
+      ]
+    }
+  ],
+  "validation_status": "NOT TESTED: no improvement over initial train selection NLL"
+}

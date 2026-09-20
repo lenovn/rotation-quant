@@ -1,0 +1,12 @@
+{
+  "stage": "sequential-round-coordinate",
+  "pid": 3816753,
+  "time": 1789703575.4692519,
+  "cuda_visible_devices": "0",
+  "allocated_gib": 4.833749294281006,
+  "reserved_gib": 7.859375,
+  "peak_allocated_gib": 7.521224498748779,
+  "gpu_time_budget": null,
+  "module": "model.layers.4.mlp.down_proj",
+  "step": 384
+}

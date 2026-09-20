@@ -1,0 +1,59 @@
+[
+  {
+    "arm": "A",
+    "rtn_a16": {
+      "ppl": 27.14908218383789,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/a-rtn-supplement-20260909.tTem5c/a16/result.json"
+    },
+    "rtn_a8": {
+      "ppl": 27.502443313598633,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/a-rtn-supplement-20260909.tTem5c/a8/result.json"
+    },
+    "gptq_a16": {
+      "ppl": 16.46660041809082,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/w4aware-ab-20260909.6jhGG9/A/eval-w4a16/result.json"
+    },
+    "gptq_a8": {
+      "ppl": 16.584644317626953,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/w4aware-ab-20260909.6jhGG9/A/gptq/result.json"
+    }
+  },
+  {
+    "arm": "B",
+    "rtn_a16": {
+      "ppl": 14.96245002746582,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/B/rtn-w4a16/result.json"
+    },
+    "rtn_a8": {
+      "ppl": 15.026538848876953,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/B/rtn/result.json"
+    },
+    "gptq_a16": {
+      "ppl": 15.062803268432617,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/w4aware-ab-20260909.6jhGG9/B/eval-w4a16/result.json"
+    },
+    "gptq_a8": {
+      "ppl": 15.15180778503418,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/w4aware-ab-20260909.6jhGG9/B/gptq/result.json"
+    }
+  },
+  {
+    "arm": "C",
+    "rtn_a16": {
+      "ppl": 14.62489128112793,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rtn-w4a16/result.json"
+    },
+    "rtn_a8": {
+      "ppl": 14.655250549316406,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rtn/result.json"
+    },
+    "gptq_a16": {
+      "ppl": 15.238767623901367,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/eval-w4a16/result.json"
+    },
+    "gptq_a8": {
+      "ppl": 15.314295768737793,
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/result.json"
+    }
+  }
+]

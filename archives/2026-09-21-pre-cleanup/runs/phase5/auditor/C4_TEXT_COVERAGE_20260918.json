@@ -1,0 +1,526 @@
+{
+  "status": "PASS with explicit Llama raw-offset limitation and independently resolved source-prefix boundary",
+  "source_documents": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/documents.jsonl",
+  "same_source_document_list": true,
+  "new_document_sampling": false,
+  "existing_token_and_metadata_files_modified": false,
+  "new_hashes": false,
+  "coverage_unit": "Unicode code points (not bytes or grapheme clusters); input prefix coverage, not loss-assigned character coverage",
+  "source_totals": {
+    "documents": 4480,
+    "document_characters": 10089434,
+    "separator_characters": 8958,
+    "joined_characters": 10098392
+  },
+  "models": {
+    "llama": {
+      "family": "llama",
+      "python": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+      "transformers": "4.44.2",
+      "tokenizers": "0.19.1",
+      "tokenizer_class": "LlamaTokenizerFast",
+      "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+      "source_documents": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/documents.jsonl",
+      "source_document_count": 4480,
+      "cached_input_tokens": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt",
+      "cached_prefix_ids_exactly_equal": true,
+      "tokenization": {
+        "separator": "\n\n",
+        "add_special_tokens": false,
+        "add_bos_token": false,
+        "add_eos_token": false,
+        "retained_tokens": 2097152,
+        "full_tokens": 2150947,
+        "discarded_tokens": 53795
+      },
+      "character_unit": "Python Unicode code points, not UTF-8 bytes or grapheme clusters; zero-based half-open spans",
+      "total_source_document_characters": 10089434,
+      "total_separator_characters": 8958,
+      "total_joined_characters": 10098392,
+      "boundary": {
+        "last_retained_offset": [
+          9840837,
+          9840837
+        ],
+        "first_discarded_offset": [
+          9840845,
+          9840845
+        ],
+        "overlap_character_count": 0,
+        "endpoint_inside_separator": false,
+        "endpoint_at_document_end": false,
+        "endpoint_at_document_start": false,
+        "unicode_partial_character_possible": false,
+        "token_neighborhood": [
+          {
+            "token_index_zero_based": 2097148,
+            "retained": true,
+            "token_id": 13440,
+            "tokenizer_piece": "ĠWhether",
+            "offset": [
+              9840822,
+              9840822
+            ],
+            "source_span": "",
+            "source_codepoints": [],
+            "source_utf8_hex": ""
+          },
+          {
+            "token_index_zero_based": 2097149,
+            "retained": true,
+            "token_id": 499,
+            "tokenizer_piece": "Ġyou",
+            "offset": [
+              9840830,
+              9840830
+            ],
+            "source_span": "",
+            "source_codepoints": [],
+            "source_utf8_hex": ""
+          },
+          {
+            "token_index_zero_based": 2097150,
+            "retained": true,
+            "token_id": 3207,
+            "tokenizer_piece": "âĢĻre",
+            "offset": [
+              9840834,
+              9840834
+            ],
+            "source_span": "",
+            "source_codepoints": [],
+            "source_utf8_hex": ""
+          },
+          {
+            "token_index_zero_based": 2097151,
+            "retained": true,
+            "token_id": 20543,
+            "tokenizer_piece": "Ġfishing",
+            "offset": [
+              9840837,
+              9840837
+            ],
+            "source_span": "",
+            "source_codepoints": [],
+            "source_utf8_hex": ""
+          },
+          {
+            "token_index_zero_based": 2097152,
+            "retained": false,
+            "token_id": 477,
+            "tokenizer_piece": "Ġor",
+            "offset": [
+              9840845,
+              9840845
+            ],
+            "source_span": "",
+            "source_codepoints": [],
+            "source_utf8_hex": ""
+          },
+          {
+            "token_index_zero_based": 2097153,
+            "retained": false,
+            "token_id": 1120,
+            "tokenizer_piece": "Ġjust",
+            "offset": [
+              9840848,
+              9840848
+            ],
+            "source_span": "",
+            "source_codepoints": [],
+            "source_utf8_hex": ""
+          },
+          {
+            "token_index_zero_based": 2097154,
+            "retained": false,
+            "token_id": 22128,
+            "tokenizer_piece": "Ġenjoying",
+            "offset": [
+              9840853,
+              9840853
+            ],
+            "source_span": "",
+            "source_codepoints": [],
+            "source_utf8_hex": ""
+          },
+          {
+            "token_index_zero_based": 2097155,
+            "retained": false,
+            "token_id": 264,
+            "tokenizer_piece": "Ġa",
+            "offset": [
+              9840862,
+              9840862
+            ],
+            "source_span": "",
+            "source_codepoints": [],
+            "source_utf8_hex": ""
+          }
+        ],
+        "raw_offsets_are_not_coverage_evidence": true,
+        "confirmed_source_endpoint": 9840845,
+        "unicode_boundary_evidence": "Exact no-cleanup decoded prefix equals source prefix, final retained token is ASCII fishing; first discarded token is ASCII or with leading space. Raw zero-width offsets cannot establish Unicode boundary on their own.",
+        "source_before_endpoint": "oat every giant BIGS® Seed. Whether you’re fishing",
+        "source_after_endpoint": " or just enjoying a snack, you can’t be crabby wit"
+      },
+      "retained_offsets": {
+        "adjacent_overlap_pairs": 395,
+        "identical_adjacent_pairs": 226,
+        "zero_length_spans": 1839926
+      },
+      "interpretation": "Offset-span coverage is not proof of complete Unicode decoding if retained/discarded offsets overlap. These are input-prefix spans, not the subset of characters assigned a prediction loss.",
+      "offset_mapping_reliable_for_coverage": false,
+      "offset_mapping_limitation": "Formal LlamaTokenizerFast 4.44.2 returns many zero-width spans (including terminal tokens); raw union/end values cannot establish source-prefix coverage.",
+      "raw_offset_diagnostics": {
+        "retained_offset_union_character_count": 912650,
+        "retained_offset_span_endpoint": 9840815,
+        "conservative_complete_character_prefix_endpoint": 9840815,
+        "document_characters_in_offset_span": 9832051,
+        "conservative_complete_document_characters": 9832051,
+        "complete_documents_conservative": 4382,
+        "complete_documents_by_offset_span": 4382,
+        "last_touched_document": {
+          "ordinal_one_based": 4383,
+          "ordinal_zero_based": 4382,
+          "row_index": 171371,
+          "global_character_span": [
+            9839849,
+            9844418
+          ],
+          "total_characters": 4569,
+          "covered_characters_by_offset_span": 966,
+          "conservative_complete_characters": 966
+        },
+        "union_interval_count": 98285
+      },
+      "coverage_method": "Fallback: decode existing cached token prefix with the formal tokenizer, skip_special_tokens=False, clean_up_tokenization_spaces=False; exact equality to source text[:endpoint]. No second full tokenization.",
+      "source_prefix_exactly_equal_to_decoded_cached_ids": true,
+      "joined_character_prefix_endpoint": 9840845,
+      "joined_prefix_utf8_bytes": 9891960,
+      "source_document_characters_covered": 9832081,
+      "separator_characters_covered": 8764,
+      "complete_documents": 4382,
+      "last_touched_document": {
+        "ordinal_one_based": 4383,
+        "ordinal_zero_based": 4382,
+        "row_index": 171371,
+        "global_character_span": [
+          9839849,
+          9844418
+        ],
+        "total_characters": 4569,
+        "covered_characters": 996
+      },
+      "formal_backend_processing": {
+        "normalizer": null,
+        "pre_tokenizer": {
+          "type": "Sequence",
+          "pretokenizers": [
+            {
+              "type": "Split",
+              "pattern": {
+                "Regex": "(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\\r\\n\\p{L}\\p{N}]?\\p{L}+|\\p{N}{1,3}| ?[^\\s\\p{L}\\p{N}]+[\\r\\n]*|\\s*[\\r\\n]+|\\s+(?!\\S)|\\s+"
+              },
+              "behavior": "Isolated",
+              "invert": false
+            },
+            {
+              "type": "ByteLevel",
+              "add_prefix_space": false,
+              "trim_offsets": true,
+              "use_regex": false
+            }
+          ]
+        },
+        "post_processor": {
+          "type": "TemplateProcessing",
+          "single": [
+            {
+              "Sequence": {
+                "id": "A",
+                "type_id": 0
+              }
+            }
+          ],
+          "pair": [
+            {
+              "Sequence": {
+                "id": "A",
+                "type_id": 0
+              }
+            },
+            {
+              "Sequence": {
+                "id": "B",
+                "type_id": 1
+              }
+            }
+          ],
+          "special_tokens": {}
+        },
+        "decoder": {
+          "type": "ByteLevel",
+          "add_prefix_space": true,
+          "trim_offsets": true,
+          "use_regex": true
+        }
+      },
+      "evaluation_accounting": {
+        "input_tokens": 2097152,
+        "predicted_targets": 2096128,
+        "window_length": 2048,
+        "windows": 1024,
+        "partial_tail_tokens": 0,
+        "window_initial_tokens_excluded_from_loss": 1024
+      },
+      "full_source_list_used_in_order": true
+    },
+    "qwen": {
+      "family": "qwen",
+      "python": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+      "transformers": "4.51.3",
+      "tokenizers": "0.21.4",
+      "tokenizer_class": "Qwen2TokenizerFast",
+      "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+      "source_documents": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/documents.jsonl",
+      "source_document_count": 4480,
+      "cached_input_tokens": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/c4-data/input_tokens.pt",
+      "cached_prefix_ids_exactly_equal": true,
+      "tokenization": {
+        "separator": "\n\n",
+        "add_special_tokens": false,
+        "add_bos_token": false,
+        "add_eos_token": false,
+        "retained_tokens": 2097152,
+        "full_tokens": 2191766,
+        "discarded_tokens": 94614
+      },
+      "character_unit": "Python Unicode code points, not UTF-8 bytes or grapheme clusters; zero-based half-open spans",
+      "total_source_document_characters": 10089434,
+      "total_separator_characters": 8958,
+      "total_joined_characters": 10098392,
+      "retained_offset_union_character_count": 9659562,
+      "retained_offset_union_intervals": [
+        [
+          0,
+          9659562
+        ]
+      ],
+      "retained_offset_span_endpoint": 9659562,
+      "conservative_complete_character_prefix_endpoint": 9659562,
+      "document_characters_in_offset_span": 9650912,
+      "conservative_complete_document_characters": 9650912,
+      "complete_documents_conservative": 4325,
+      "complete_documents_by_offset_span": 4325,
+      "last_touched_document": {
+        "ordinal_one_based": 4326,
+        "ordinal_zero_based": 4325,
+        "row_index": 230792,
+        "global_character_span": [
+          9619395,
+          9686734
+        ],
+        "total_characters": 67339,
+        "covered_characters_by_offset_span": 40167,
+        "conservative_complete_characters": 40167,
+        "covered_characters": 40167
+      },
+      "boundary": {
+        "last_retained_offset": [
+          9659554,
+          9659562
+        ],
+        "first_discarded_offset": [
+          9659562,
+          9659567
+        ],
+        "overlap_character_count": 0,
+        "endpoint_inside_separator": false,
+        "endpoint_at_document_end": false,
+        "endpoint_at_document_start": false,
+        "unicode_partial_character_possible": false,
+        "token_neighborhood": [
+          {
+            "token_index_zero_based": 2097148,
+            "retained": true,
+            "token_id": 6884,
+            "tokenizer_piece": "Ġwide",
+            "offset": [
+              9659541,
+              9659546
+            ],
+            "source_span": " wide",
+            "source_codepoints": [
+              "U+0020",
+              "U+0077",
+              "U+0069",
+              "U+0064",
+              "U+0065"
+            ],
+            "source_utf8_hex": "2077696465"
+          },
+          {
+            "token_index_zero_based": 2097149,
+            "retained": true,
+            "token_id": 3482,
+            "tokenizer_piece": "Ġweb",
+            "offset": [
+              9659546,
+              9659550
+            ],
+            "source_span": " web",
+            "source_codepoints": [
+              "U+0020",
+              "U+0077",
+              "U+0065",
+              "U+0062"
+            ],
+            "source_utf8_hex": "20776562"
+          },
+          {
+            "token_index_zero_based": 2097150,
+            "retained": true,
+            "token_id": 323,
+            "tokenizer_piece": "Ġand",
+            "offset": [
+              9659550,
+              9659554
+            ],
+            "source_span": " and",
+            "source_codepoints": [
+              "U+0020",
+              "U+0061",
+              "U+006E",
+              "U+0064"
+            ],
+            "source_utf8_hex": "20616e64"
+          },
+          {
+            "token_index_zero_based": 2097151,
+            "retained": true,
+            "token_id": 3709,
+            "tokenizer_piece": "Ġgetting",
+            "offset": [
+              9659554,
+              9659562
+            ],
+            "source_span": " getting",
+            "source_codepoints": [
+              "U+0020",
+              "U+0067",
+              "U+0065",
+              "U+0074",
+              "U+0074",
+              "U+0069",
+              "U+006E",
+              "U+0067"
+            ],
+            "source_utf8_hex": "2067657474696e67"
+          },
+          {
+            "token_index_zero_based": 2097152,
+            "retained": false,
+            "token_id": 10414,
+            "tokenizer_piece": "Ġtips",
+            "offset": [
+              9659562,
+              9659567
+            ],
+            "source_span": " tips",
+            "source_codepoints": [
+              "U+0020",
+              "U+0074",
+              "U+0069",
+              "U+0070",
+              "U+0073"
+            ],
+            "source_utf8_hex": "2074697073"
+          },
+          {
+            "token_index_zero_based": 2097153,
+            "retained": false,
+            "token_id": 429,
+            "tokenizer_piece": "Ġthat",
+            "offset": [
+              9659567,
+              9659572
+            ],
+            "source_span": " that",
+            "source_codepoints": [
+              "U+0020",
+              "U+0074",
+              "U+0068",
+              "U+0061",
+              "U+0074"
+            ],
+            "source_utf8_hex": "2074686174"
+          },
+          {
+            "token_index_zero_based": 2097154,
+            "retained": false,
+            "token_id": 1033,
+            "tokenizer_piece": "Ġwere",
+            "offset": [
+              9659572,
+              9659577
+            ],
+            "source_span": " were",
+            "source_codepoints": [
+              "U+0020",
+              "U+0077",
+              "U+0065",
+              "U+0072",
+              "U+0065"
+            ],
+            "source_utf8_hex": "2077657265"
+          },
+          {
+            "token_index_zero_based": 2097155,
+            "retained": false,
+            "token_id": 537,
+            "tokenizer_piece": "Ġnot",
+            "offset": [
+              9659577,
+              9659581
+            ],
+            "source_span": " not",
+            "source_codepoints": [
+              "U+0020",
+              "U+006E",
+              "U+006F",
+              "U+0074"
+            ],
+            "source_utf8_hex": "206e6f74"
+          }
+        ]
+      },
+      "retained_offsets": {
+        "adjacent_overlap_pairs": 343,
+        "identical_adjacent_pairs": 173,
+        "zero_length_spans": 0
+      },
+      "interpretation": "Offset-span coverage is not proof of complete Unicode decoding if retained/discarded offsets overlap. These are input-prefix spans, not the subset of characters assigned a prediction loss.",
+      "offset_mapping_reliable_for_coverage": true,
+      "coverage_method": "Formal Qwen2TokenizerFast offsets: retained nonempty spans form exactly [0,9659562); last/next token spans are adjacent and do not overlap.",
+      "joined_character_prefix_endpoint": 9659562,
+      "complete_documents": 4325,
+      "source_document_characters_covered": 9650912,
+      "separator_characters_covered": 8650,
+      "evaluation_accounting": {
+        "input_tokens": 2097152,
+        "predicted_targets": 2096128,
+        "window_length": 2048,
+        "windows": 1024,
+        "partial_tail_tokens": 0,
+        "window_initial_tokens_excluded_from_loss": 1024
+      },
+      "full_source_list_used_in_order": true
+    }
+  },
+  "comparison": {
+    "llama_minus_qwen_joined_prefix_characters": 181283,
+    "llama_minus_qwen_document_characters": 181169,
+    "llama_minus_qwen_complete_documents": 57,
+    "absolute_per_token_ppl_is_not_a_cross_tokenizer_ranking": true
+  }
+}

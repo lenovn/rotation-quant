@@ -1,0 +1,32 @@
+{
+  "mode": "quantized",
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s44/checkpoint-0400/static_w4a8.pt",
+  "backbone_weight_bits": 4,
+  "activation_formats": {
+    "int8": 112
+  },
+  "rotary_buffer_dtypes": {
+    "model.layers.0.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.1.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.2.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.3.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.4.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.5.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.6.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.7.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.8.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.9.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.10.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.11.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.12.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.13.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.14.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.layers.15.self_attn.rotary_emb.inv_freq": "torch.float32",
+    "model.rotary_emb.inv_freq": "torch.float32"
+  },
+  "kv_bits": 16,
+  "use_cache": false,
+  "training": false,
+  "calibration": false,
+  "down_int8_overlay": null
+}

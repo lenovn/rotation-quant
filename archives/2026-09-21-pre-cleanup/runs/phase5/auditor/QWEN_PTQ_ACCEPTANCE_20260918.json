@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "scope": "Qwen seed42 exact SP2/Uniform PTQ final external acceptance; QAT and later seeds not covered",
+  "no_gpu_or_forward": true,
+  "no_postprocess_chain_recheck": true,
+  "methods": [
+    {
+      "method": "sp2",
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/static_w4a8.pt",
+      "formats": {
+        "int8": 168,
+        "sp2": 28
+      },
+      "same_package_validation_test_c4": true,
+      "all_196_quantizer_states_before_after_equal": true,
+      "test_c4_initial_quantizer_states_equal": true,
+      "package_scales_equal": true
+    },
+    {
+      "method": "uniform",
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s42/static_w4a8.pt",
+      "formats": {
+        "int8": 196
+      },
+      "same_package_validation_test_c4": true,
+      "all_196_quantizer_states_before_after_equal": true,
+      "test_c4_initial_quantizer_states_equal": true,
+      "package_scales_equal": true
+    }
+  ],
+  "summary_six_rows_exact": true,
+  "metrics_exactly_recomputed": true,
+  "external_input_ids_and_metadata_equal_bf16": true,
+  "all_segment_structures_equal_corresponding_bf16": true,
+  "validation_evidence_limit": "No separate saved validation IDs or before/after quantizer snapshot in postprocess stage; source cold-load, metadata and segment checks, not fresh tokenization or tensor-ID equality",
+  "delta_nll_sp2_minus_uniform": {
+    "validation": -0.15799411343775738,
+    "test": -0.16009723395145103,
+    "c4": -0.16334093111462034
+  },
+  "results": [
+    {
+      "method": "sp2",
+      "split": "validation",
+      "ppl": 14.935424095235582,
+      "nll": 2.7037358473302344,
+      "targets": 262208,
+      "input_tokens": 262337,
+      "bf16_ppl": 17.7149122731184,
+      "bf16_nll": 2.8744067861808946,
+      "delta_nll_from_bf16": -0.1706709388506602,
+      "ppl_ratio_from_bf16": 0.8430989589431629,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/validation.json",
+      "token_evidence": "same saved data/tokenizer/protocol metadata and segment structure; stage did not save validation input IDs for independent tensor equality"
+    },
+    {
+      "method": "sp2",
+      "split": "test",
+      "ppl": 14.302163393485294,
+      "nll": 2.6604108120809626,
+      "targets": 298931,
+      "input_tokens": 299078,
+      "bf16_ppl": 16.715764347250076,
+      "bf16_nll": 2.816352247049716,
+      "delta_nll_from_bf16": -0.15594143496875335,
+      "ppl_ratio_from_bf16": 0.85560929768899,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-ptq-test-s42/result.json",
+      "token_evidence": "saved input IDs and complete metadata exactly equal corresponding Qwen BF16"
+    },
+    {
+      "method": "sp2",
+      "split": "c4",
+      "ppl": 24.903332773203157,
+      "nll": 3.215001640827423,
+      "targets": 2096128,
+      "input_tokens": 2097152,
+      "bf16_ppl": 23.136144236064272,
+      "bf16_nll": 3.1413960802266425,
+      "delta_nll_from_bf16": 0.0736055606007806,
+      "ppl_ratio_from_bf16": 1.076382154221887,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-ptq-c4-s42/result.json",
+      "token_evidence": "saved input IDs and complete metadata exactly equal corresponding Qwen BF16"
+    },
+    {
+      "method": "uniform",
+      "split": "validation",
+      "ppl": 17.491760837320335,
+      "nll": 2.861729960767992,
+      "targets": 262208,
+      "input_tokens": 262337,
+      "bf16_ppl": 17.7149122731184,
+      "bf16_nll": 2.8744067861808946,
+      "delta_nll_from_bf16": -0.012676825412902826,
+      "ppl_ratio_from_bf16": 0.9874031870800349,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s42/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s42/validation.json",
+      "token_evidence": "same saved data/tokenizer/protocol metadata and segment structure; stage did not save validation input IDs for independent tensor equality"
+    },
+    {
+      "method": "uniform",
+      "split": "test",
+      "ppl": 16.78537625006989,
+      "nll": 2.8205080460324137,
+      "targets": 298931,
+      "input_tokens": 299078,
+      "bf16_ppl": 16.715764347250076,
+      "bf16_nll": 2.816352247049716,
+      "delta_nll_from_bf16": 0.004155798982697689,
+      "ppl_ratio_from_bf16": 1.004164446289964,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s42/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-ptq-test-s42/result.json",
+      "token_evidence": "saved input IDs and complete metadata exactly equal corresponding Qwen BF16"
+    },
+    {
+      "method": "uniform",
+      "split": "c4",
+      "ppl": 29.322131492633147,
+      "nll": 3.3783425719420435,
+      "targets": 2096128,
+      "input_tokens": 2097152,
+      "bf16_ppl": 23.136144236064272,
+      "bf16_nll": 3.1413960802266425,
+      "delta_nll_from_bf16": 0.23694649171540094,
+      "ppl_ratio_from_bf16": 1.2673733009896373,
+      "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s42/static_w4a8.pt",
+      "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-ptq-c4-s42/result.json",
+      "token_evidence": "saved input IDs and complete metadata exactly equal corresponding Qwen BF16"
+    }
+  ]
+}

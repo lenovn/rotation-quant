@@ -1,0 +1,33 @@
+{
+  "selected": {
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/w4_gptq_model.pt",
+    "seed": 42,
+    "note": "Historical Phase2 learned-SW-C GPTQ W4A16; distinct recipe, not same-final-weight activation ablation"
+  },
+  "gpu": "7",
+  "loading": {
+    "backbone_w4_linears": 112,
+    "activation_bits": 16,
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/gptq/w4_gptq_model.pt",
+    "loading": "exact saved weights, embedding/head/norm; no rotation recomputation; no requantization"
+  },
+  "exact_w4_names": true,
+  "all_state_tensors_equal": true,
+  "model_state_tensor_count": 147,
+  "all_linear_count": 113,
+  "activation_wrappers": 0,
+  "finite_logits": true,
+  "output_tokens": [
+    [
+      791,
+      6864,
+      315,
+      9822,
+      374,
+      12366,
+      13
+    ]
+  ],
+  "pass": true
+}

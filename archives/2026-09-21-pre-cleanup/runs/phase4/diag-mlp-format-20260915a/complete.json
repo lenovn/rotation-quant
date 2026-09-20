@@ -1,0 +1,7 @@
+{
+  "cases": [
+    "all16:mlp:rtn4c",
+    "all16:mlp:rtn4g128",
+    "all16:mlp:rtn8c"
+  ]
+}

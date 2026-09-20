@@ -1,0 +1,190 @@
+{
+  "dataset": "allenai/c4",
+  "subset": "en",
+  "split": "validation",
+  "fixed_subset_not_full_c4": true,
+  "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt",
+  "token_count": 2097152,
+  "predicted_tokens": 2096128,
+  "windows": 1024,
+  "window_length": 2048,
+  "chunk_windows": 128,
+  "results": {
+    "bf16": {
+      "ppl": 21.843397624525274,
+      "nll": 3.0838987076656394,
+      "reused": true,
+      "activation_formats": {},
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-bf16-fixed-20260915a/result.json",
+      "elapsed_seconds": 187.2671272980515,
+      "peak_allocated_gib": 7.976351737976074
+    },
+    "b100_uniform_int8": {
+      "ppl": 1330.1567504736056,
+      "nll": 7.193052071770102,
+      "reused": false,
+      "activation_formats": {
+        "int8": 112
+      },
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-b100-int8-fixed-20260918a/result.json",
+      "elapsed_seconds": 210.96799856703728,
+      "peak_allocated_gib": 7.976369857788086
+    },
+    "b100_sp2": {
+      "ppl": 29.18423776720624,
+      "nll": 3.373628761035482,
+      "reused": false,
+      "activation_formats": {
+        "int8": 96,
+        "sp2": 16
+      },
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-b100-sp2-fixed-20260918a/result.json",
+      "elapsed_seconds": 230.09369091899134,
+      "peak_allocated_gib": 6.976354598999023
+    },
+    "ptq_parent": {
+      "ppl": 27.43961641336637,
+      "nll": 3.311987823655252,
+      "reused": false,
+      "activation_formats": {
+        "int8": 96,
+        "sp2": 16
+      },
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-ptq-parent-fixed-20260918a/result.json",
+      "elapsed_seconds": 228.4187190849334,
+      "peak_allocated_gib": 6.976354598999023
+    },
+    "qat400": {
+      "ppl": 26.98478050458106,
+      "nll": 3.295273022058687,
+      "reused": true,
+      "activation_formats": {
+        "int8": 96,
+        "sp2": 16
+      },
+      "result_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-best-fixed-20260915a/result.json",
+      "elapsed_seconds": 222.78488296899013,
+      "peak_allocated_gib": 6.976354598999023
+    }
+  },
+  "comparisons": {
+    "sp2_vs_matched_uniform": {
+      "before": "b100_uniform_int8",
+      "after": "b100_sp2",
+      "ppl_delta": -1300.9725127063994,
+      "nll_delta": -3.81942331073462,
+      "relative_ppl_percent": -97.80595499313783,
+      "segment_nll_deltas": [
+        -3.7599796990242558,
+        -3.9377937743507863,
+        -3.817287773673003,
+        -3.849067097121424,
+        -3.811430894996951,
+        -3.7736241568254916,
+        -3.8108520241645825,
+        -3.7953510657204625
+      ],
+      "improved_segments": 8
+    },
+    "postprocess": {
+      "before": "b100_sp2",
+      "after": "ptq_parent",
+      "ppl_delta": -1.7446213538398716,
+      "nll_delta": -0.06164093738023002,
+      "relative_ppl_percent": -5.977957580239657,
+      "segment_nll_deltas": [
+        -0.06424612878502778,
+        -0.06327049473805113,
+        -0.06343220604120425,
+        -0.06373144012537457,
+        -0.055433339323297304,
+        -0.060146292374970045,
+        -0.05941395674976446,
+        -0.06345364090415284
+      ],
+      "improved_segments": 8
+    },
+    "qat": {
+      "before": "ptq_parent",
+      "after": "qat400",
+      "ppl_delta": -0.45483590878530933,
+      "nll_delta": -0.016714801596564577,
+      "relative_ppl_percent": -1.6575884368549287,
+      "segment_nll_deltas": [
+        -0.010760373275684909,
+        -0.014912835991089057,
+        -0.02137270579595496,
+        -0.014359015544728404,
+        -0.026272452849584127,
+        -0.017846843002812474,
+        -0.013483022317900772,
+        -0.014711163994758802
+      ],
+      "improved_segments": 8
+    },
+    "total_after_b100": {
+      "before": "b100_sp2",
+      "after": "qat400",
+      "ppl_delta": -2.199457262625181,
+      "nll_delta": -0.0783557389767946,
+      "relative_ppl_percent": -7.536456083484444,
+      "segment_nll_deltas": [
+        -0.07500650206071269,
+        -0.07818333072914019,
+        -0.08480491183715921,
+        -0.07809045567010298,
+        -0.08170579217288143,
+        -0.07799313537778252,
+        -0.07289697906766524,
+        -0.07816480489891164
+      ],
+      "improved_segments": 8
+    },
+    "final_vs_bf16": {
+      "before": "bf16",
+      "after": "qat400",
+      "ppl_delta": 5.141382880055787,
+      "nll_delta": 0.21137431439304777,
+      "relative_ppl_percent": 23.53746870534077,
+      "segment_nll_deltas": [
+        0.2071841120550677,
+        0.20512653995171437,
+        0.2093868953015039,
+        0.20742393575353768,
+        0.20496361340428804,
+        0.21135498243925088,
+        0.20331814370591195,
+        0.2422362925331094
+      ],
+      "improved_segments": 0
+    }
+  },
+  "qat_repaired_parent_excess_nll_percent": 7.328189038764044,
+  "pair_checks": {
+    "same_tokens_metadata_segments": true,
+    "same_metric_and_core_quantization_source": true,
+    "immutable_activation_states": true,
+    "exact_b100_parent_shared_by_uniform_and_sp2": true,
+    "non_down_quantizers_unchanged": 96,
+    "all_uniform_down_scales_match_saved_train_overlay": true,
+    "calibrated_only_on_original_4096_wikitext_train_tokens": true,
+    "all_16_historical_capture_absmax_and_row_counts_exact": true
+  },
+  "uniform_calibration": {
+    "directory": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/b100-uniform-calibration-20260918c",
+    "overlay_bytes": 6618,
+    "candidates_per_layer": 50,
+    "local_mse_sp2_better_layers": 14,
+    "failed_attempts_retained": [
+      "b100-uniform-calibration-20260918a",
+      "b100-uniform-calibration-20260918b"
+    ],
+    "layout_fix": "capture-only V column-major; original storage/stride restored; C4 layout unchanged"
+  },
+  "verification_report": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/verifier/c4_uniform_cpu_20260918.md",
+  "interpretation": "QAT partially repairs C4 loss; SP2 wins this matched static-per-tensor INT8 control; not an original SpinQuant/SOTA or equal-QAT-budget baseline; no C4-driven tuning",
+  "new_complete_c4_evaluations": 3,
+  "reused_complete_c4_evaluations": 2,
+  "independent_gpu_reruns": 0,
+  "training_runs": 0
+}

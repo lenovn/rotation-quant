@@ -1,0 +1,156 @@
+[
+  {
+    "model": "llama",
+    "method": "bf16",
+    "task": "gsm8k_cot",
+    "samples": 1319,
+    "budget_exhausted_no_eos_or_stop": 75,
+    "budget_exhausted_percent": 5.686125852918878,
+    "eos_present": 954,
+    "stop_present": 1244,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/bf16/gsm8k_cot/generation_batches-001.jsonl"
+  },
+  {
+    "model": "llama",
+    "method": "bf16",
+    "task": "ifeval",
+    "samples": 541,
+    "budget_exhausted_no_eos_or_stop": 43,
+    "budget_exhausted_percent": 7.948243992606285,
+    "eos_present": 498,
+    "stop_present": 498,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/bf16/ifeval/generation_batches-001.jsonl"
+  },
+  {
+    "model": "llama",
+    "method": "firon",
+    "task": "gsm8k_cot",
+    "samples": 1319,
+    "budget_exhausted_no_eos_or_stop": 86,
+    "budget_exhausted_percent": 6.520090978013647,
+    "eos_present": 1138,
+    "stop_present": 1233,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/firon/gsm8k_cot/generation_batches-001.jsonl"
+  },
+  {
+    "model": "llama",
+    "method": "firon",
+    "task": "ifeval",
+    "samples": 541,
+    "budget_exhausted_no_eos_or_stop": 180,
+    "budget_exhausted_percent": 33.271719038817004,
+    "eos_present": 361,
+    "stop_present": 361,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/firon/ifeval/generation_batches-001.jsonl"
+  },
+  {
+    "model": "llama",
+    "method": "parent",
+    "task": "gsm8k_cot",
+    "samples": 1319,
+    "budget_exhausted_no_eos_or_stop": 555,
+    "budget_exhausted_percent": 42.0773313115997,
+    "eos_present": 202,
+    "stop_present": 764,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/parent/gsm8k_cot/generation_batches-001.jsonl"
+  },
+  {
+    "model": "llama",
+    "method": "parent",
+    "task": "ifeval",
+    "samples": 541,
+    "budget_exhausted_no_eos_or_stop": 176,
+    "budget_exhausted_percent": 32.53234750462107,
+    "eos_present": 365,
+    "stop_present": 365,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/parent/ifeval/generation_batches-001.jsonl"
+  },
+  {
+    "model": "llama",
+    "method": "w4a16",
+    "task": "gsm8k_cot",
+    "samples": 1319,
+    "budget_exhausted_no_eos_or_stop": 278,
+    "budget_exhausted_percent": 21.076573161485975,
+    "eos_present": 322,
+    "stop_present": 1041,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/w4a16/gsm8k_cot/generation_batches-001.jsonl"
+  },
+  {
+    "model": "llama",
+    "method": "w4a16",
+    "task": "ifeval",
+    "samples": 541,
+    "budget_exhausted_no_eos_or_stop": 84,
+    "budget_exhausted_percent": 15.526802218114602,
+    "eos_present": 457,
+    "stop_present": 457,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/llama/w4a16/ifeval/generation_batches-001.jsonl"
+  },
+  {
+    "model": "qwen",
+    "method": "bf16",
+    "task": "gsm8k_cot",
+    "samples": 1319,
+    "budget_exhausted_no_eos_or_stop": 303,
+    "budget_exhausted_percent": 22.97194844579227,
+    "eos_present": 1016,
+    "stop_present": 1016,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/bf16/gsm8k_cot/generation_batches-001.jsonl"
+  },
+  {
+    "model": "qwen",
+    "method": "bf16",
+    "task": "ifeval",
+    "samples": 541,
+    "budget_exhausted_no_eos_or_stop": 34,
+    "budget_exhausted_percent": 6.284658040665434,
+    "eos_present": 507,
+    "stop_present": 507,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/bf16/ifeval/generation_batches-002.jsonl"
+  },
+  {
+    "model": "qwen",
+    "method": "firon",
+    "task": "gsm8k_cot",
+    "samples": 1319,
+    "budget_exhausted_no_eos_or_stop": 576,
+    "budget_exhausted_percent": 43.669446550416986,
+    "eos_present": 739,
+    "stop_present": 743,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/firon/gsm8k_cot/generation_batches-001.jsonl"
+  },
+  {
+    "model": "qwen",
+    "method": "firon",
+    "task": "ifeval",
+    "samples": 541,
+    "budget_exhausted_no_eos_or_stop": 346,
+    "budget_exhausted_percent": 63.95563770794824,
+    "eos_present": 195,
+    "stop_present": 195,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/firon/ifeval/generation_batches-001.jsonl"
+  },
+  {
+    "model": "qwen",
+    "method": "parent",
+    "task": "gsm8k_cot",
+    "samples": 1319,
+    "budget_exhausted_no_eos_or_stop": 116,
+    "budget_exhausted_percent": 8.794541319181198,
+    "eos_present": 1203,
+    "stop_present": 1203,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/parent/gsm8k_cot/generation_batches-001.jsonl"
+  },
+  {
+    "model": "qwen",
+    "method": "parent",
+    "task": "ifeval",
+    "samples": 541,
+    "budget_exhausted_no_eos_or_stop": 354,
+    "budget_exhausted_percent": 65.4343807763401,
+    "eos_present": 187,
+    "stop_present": 187,
+    "raw_source": "/home/dongpeiyan/projects/rotation-quant/runs/capability-eval-20260920/qwen/parent/ifeval/generation_batches-001.jsonl"
+  }
+]

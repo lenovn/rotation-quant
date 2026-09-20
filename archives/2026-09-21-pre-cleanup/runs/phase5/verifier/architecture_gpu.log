@@ -1,0 +1,20 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.75it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.04it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.53it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.04it/s]
+native_vs_adapted_unquantized {"max_abs": 0.0, "rms": 0.0, "relative_rms": 0.0}
+centering_effect_separate {"max_abs": 0.31640625, "rms": 0.05681903287768364, "relative_rms": 0.011968735605478287}
+norm_fusion_after_same_centering {"max_abs": 0.5625, "rms": 0.053826842457056046, "relative_rms": 0.011352911591529846}
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.95it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.88it/s]
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+rotation_same_preprocessing_unquantized {"max_abs": 1.375, "rms": 0.11984183639287949, "relative_rms": 0.025200525298714638}
+Traceback (most recent call last):
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase5/verifier/architecture_gpu.py", line 83, in <module>
+    common.initialize_scales(model, [ids])
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/experiments/phase3/common.py", line 235, in initialize_scales
+    wrapper.module.quantizer.refresh_current_weight(weight)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/quant_utils.py", line 1061, in refresh_current_weight
+    raise ValueError("W4-aware training requires unclipped symmetric per-channel W4")
+ValueError: W4-aware training requires unclipped symmetric per-channel W4

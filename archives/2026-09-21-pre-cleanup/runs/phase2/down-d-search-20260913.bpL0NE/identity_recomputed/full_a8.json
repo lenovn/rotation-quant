@@ -1,0 +1,33 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 1745.966552734375,
+      "nll": 7.465063579706538
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 1851.5721435546875,
+      "nll": 7.523790364517421
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 7.465283635518382,
+  "ppl": 1746.350805098523,
+  "mode": "full_a8",
+  "frozen_buffers_unchanged": true,
+  "frozen_weights_unchanged": true,
+  "split": "validation",
+  "seed": 42,
+  "window_length": 2048,
+  "use_cache": false,
+  "kv_bits": 16
+}

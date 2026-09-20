@@ -1,0 +1,11 @@
+{
+  "mode": "w4a8-downa16",
+  "gptq_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/B/rtn/w4_rtn_model.pt",
+  "rotation_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/w4aware-ab-20260909.6jhGG9/B/rotation/R.bin",
+  "scale_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/w4aware-ab-20260909.6jhGG9/B/rotation/quant_scales.pt",
+  "seed": 42,
+  "eval_nsamples": 8,
+  "log_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/B/rtn/wikitext2_8x2048.log",
+  "ppl": 15.026538848876953,
+  "eval_seqlen": 2048
+}

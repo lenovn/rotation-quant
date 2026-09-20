@@ -1,0 +1,12 @@
+{
+  "ppl": 14.655250549316406,
+  "weights": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rtn/w4_rtn_model.pt",
+  "rotation": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rotation/R.bin",
+  "scales": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rotation/quant_scales.pt",
+  "precision": "C RTN W4/static non-down A8/down A16/KV16",
+  "activation_hook": "before each input quantizer, actual quantized upstream trajectory",
+  "windows": 128,
+  "seqlen": 2048,
+  "seed": 42,
+  "split": "train"
+}

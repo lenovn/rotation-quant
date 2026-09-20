@@ -1,0 +1,80 @@
+[
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "WikiText-2",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "C4",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "boolq",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "piqa",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "social_iqa",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "hellaswag",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "winogrande",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "arc_easy",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "arc_challenge",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "openbookqa",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "mmlu",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "gsm8k_cot",
+    "reason": "No existing matching model package found"
+  },
+  {
+    "model": "qwen",
+    "method": "w4a16",
+    "task": "ifeval",
+    "reason": "No existing matching model package found"
+  }
+]

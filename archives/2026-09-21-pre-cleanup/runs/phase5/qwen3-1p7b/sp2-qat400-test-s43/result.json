@@ -1,0 +1,75 @@
+{
+  "token_count": 299078,
+  "predicted_tokens": 298931,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 128,
+      "predicted_tokens": 262016,
+      "ppl": 14.142322540283203,
+      "nll": 2.649171900182836
+    },
+    {
+      "start_token": 262144,
+      "seqlen": 2048,
+      "windows": 18,
+      "predicted_tokens": 36846,
+      "ppl": 14.164484977722168,
+      "nll": 2.6507377738302487
+    },
+    {
+      "start_token": 299008,
+      "seqlen": 70,
+      "windows": 1,
+      "predicted_tokens": 69,
+      "ppl": 86.00650787353516,
+      "nll": 4.454422966338538
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 2.6497816010970188,
+  "ppl": 14.150947756398566,
+  "dataset": "Salesforce/wikitext",
+  "subset": "wikitext-2-raw-v1",
+  "split": "test",
+  "mode": "quantized",
+  "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-test-s43/input_tokens.pt",
+  "input_metadata": {
+    "dataset": "Salesforce/wikitext",
+    "subset": "wikitext-2-raw-v1",
+    "split": "test",
+    "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-test.arrow",
+    "rows": 4358,
+    "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+    "add_bos_token": false,
+    "add_eos_token": false,
+    "text_join": "double-newline",
+    "token_count": 299078,
+    "window_length": 2048,
+    "full_windows": 146,
+    "tail_tokens": 70,
+    "windows": 147,
+    "predicted_tokens": 298931,
+    "unscored_tail_tokens": 0,
+    "protocol": "all test rows in original order; disjoint 2048-token windows including partial tail"
+  },
+  "reused_tokens": false,
+  "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-qat400-s43/checkpoint-0400/static_w4a8.pt",
+  "chunk_windows": 128,
+  "down_int8_overlay": null,
+  "activation_formats": {
+    "int8": 168,
+    "sp2": 28
+  },
+  "calibration": false,
+  "training": false,
+  "candidate_selection": false,
+  "activation_scales_unchanged": true,
+  "elapsed_seconds": 50.46923724201042,
+  "peak_allocated_gib": 5.543839454650879,
+  "evaluation_precision": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL",
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/experiments/phase3/architecture.py",
+  "scope": "complete WikiText-2 test, including partial tail; frozen model; not native kernels or decode"
+}

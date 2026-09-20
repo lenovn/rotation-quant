@@ -1,0 +1,23 @@
+[
+  {
+    "step": 100,
+    "training_probe": 2.889348268508911,
+    "validation_nll": 2.835877919517959,
+    "validation_ppl": 17.045358186167775,
+    "changed_codes": 39986505
+  },
+  {
+    "step": 200,
+    "training_probe": 2.8689762353897095,
+    "validation_nll": 2.822069819947534,
+    "validation_ppl": 16.811611694436404,
+    "changed_codes": 54043866
+  },
+  {
+    "step": 400,
+    "training_probe": 2.7849950790405273,
+    "validation_nll": 2.7248632191015845,
+    "validation_ppl": 15.254327283565368,
+    "changed_codes": 58819095
+  }
+]

@@ -1,0 +1,325 @@
+{
+  "status": "PASS",
+  "scope": "All six completed postprocessing stages, exact SP2/Uniform PTQ package identities, and completed fixed-package test/C4 evidence for seed42; QAT and later seeds not covered",
+  "common_seed": 42,
+  "common_calibration_indices": [
+    567,
+    848,
+    140,
+    169,
+    543,
+    76,
+    391,
+    1095,
+    1007,
+    746,
+    794,
+    1165,
+    953,
+    327,
+    950,
+    505,
+    196,
+    548,
+    675,
+    437,
+    556,
+    1097,
+    1032,
+    430,
+    608,
+    1018,
+    222,
+    402,
+    480,
+    624,
+    912,
+    351
+  ],
+  "train_windows": 32,
+  "fit_windows": 24,
+  "selection_windows": 8,
+  "window_length": 2048,
+  "selection_targets": 16376,
+  "candidate_selection_train_only": true,
+  "parent_candidate_always_present": true,
+  "all_w4_scales_and_non_down_weight_codes_unchanged": true,
+  "non_down_activation_scales_unchanged": true,
+  "round_only_down_codes_change": true,
+  "range_only_down_input_scales_change": true,
+  "results": [
+    {
+      "run": "sp2-down-round-s42",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s42/checkpoint-0100/static_w4a8.pt",
+      "mode": "round",
+      "formats": {
+        "int8": 168,
+        "sp2": 28
+      },
+      "initial_train_nll": 2.8335653562108885,
+      "selected_train_nll": 2.8035783728731345,
+      "validation_ppl": 15.930924848715014,
+      "validation_nll": 2.768262179280969,
+      "summary_stage": "SP2-down-round",
+      "targets_covered": 28,
+      "total_trial_records": 112,
+      "changed_weight_layers": [
+        "model.layers.0.mlp.down_proj",
+        "model.layers.2.mlp.down_proj",
+        "model.layers.3.mlp.down_proj",
+        "model.layers.4.mlp.down_proj",
+        "model.layers.10.mlp.down_proj",
+        "model.layers.11.mlp.down_proj",
+        "model.layers.12.mlp.down_proj",
+        "model.layers.14.mlp.down_proj",
+        "model.layers.16.mlp.down_proj",
+        "model.layers.18.mlp.down_proj",
+        "model.layers.19.mlp.down_proj",
+        "model.layers.21.mlp.down_proj",
+        "model.layers.26.mlp.down_proj"
+      ],
+      "changed_ranges": [],
+      "early_convergence": [],
+      "high_precision_tensors_bitwise_unchanged": 154,
+      "qk_norm_tensors_bitwise_unchanged": 56
+    },
+    {
+      "run": "sp2-range-s42",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-round-s42/static_w4a8.pt",
+      "mode": "range",
+      "formats": {
+        "int8": 168,
+        "sp2": 28
+      },
+      "initial_train_nll": 2.8035783728731345,
+      "selected_train_nll": 2.766265582072881,
+      "validation_ppl": 15.384419587171699,
+      "validation_nll": 2.7333552821716736,
+      "summary_stage": "SP2-range",
+      "targets_covered": 28,
+      "total_trial_records": 168,
+      "changed_weight_layers": [],
+      "changed_ranges": [
+        {
+          "module": "model.layers.1.mlp.down_proj",
+          "factor": 0.125
+        },
+        {
+          "module": "model.layers.2.mlp.down_proj",
+          "factor": 0.25
+        },
+        {
+          "module": "model.layers.6.mlp.down_proj",
+          "factor": 0.75
+        },
+        {
+          "module": "model.layers.9.mlp.down_proj",
+          "factor": 0.75
+        },
+        {
+          "module": "model.layers.12.mlp.down_proj",
+          "factor": 0.875
+        },
+        {
+          "module": "model.layers.23.mlp.down_proj",
+          "factor": 0.75
+        },
+        {
+          "module": "model.layers.24.mlp.down_proj",
+          "factor": 0.875
+        },
+        {
+          "module": "model.layers.27.mlp.down_proj",
+          "factor": 0.5
+        }
+      ],
+      "early_convergence": [],
+      "high_precision_tensors_bitwise_unchanged": 154,
+      "qk_norm_tensors_bitwise_unchanged": 56
+    },
+    {
+      "run": "uniform-down-round-s42",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-initial-s42/static_w4a8.pt",
+      "mode": "round",
+      "formats": {
+        "int8": 196
+      },
+      "initial_train_nll": 3.0333426037460383,
+      "selected_train_nll": 3.0204473088695813,
+      "validation_ppl": 19.521916498772708,
+      "validation_nll": 2.9715377574550645,
+      "summary_stage": "Uniform-down-round",
+      "targets_covered": 28,
+      "total_trial_records": 110,
+      "changed_weight_layers": [
+        "model.layers.1.mlp.down_proj",
+        "model.layers.2.mlp.down_proj",
+        "model.layers.3.mlp.down_proj",
+        "model.layers.11.mlp.down_proj",
+        "model.layers.19.mlp.down_proj",
+        "model.layers.22.mlp.down_proj",
+        "model.layers.24.mlp.down_proj"
+      ],
+      "changed_ranges": [],
+      "early_convergence": [
+        {
+          "module": "model.layers.2.mlp.down_proj",
+          "steps": [
+            0,
+            14
+          ],
+          "selected_step": 14
+        }
+      ],
+      "high_precision_tensors_bitwise_unchanged": 154,
+      "qk_norm_tensors_bitwise_unchanged": 56
+    },
+    {
+      "run": "uniform-range-s42",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-round-s42/static_w4a8.pt",
+      "mode": "range",
+      "formats": {
+        "int8": 196
+      },
+      "initial_train_nll": 3.0204473088695813,
+      "selected_train_nll": 2.9303037690963833,
+      "validation_ppl": 17.887933411651215,
+      "validation_nll": 2.884126374450734,
+      "summary_stage": "Uniform-range",
+      "targets_covered": 28,
+      "total_trial_records": 168,
+      "changed_weight_layers": [],
+      "changed_ranges": [
+        {
+          "module": "model.layers.1.mlp.down_proj",
+          "factor": 0.125
+        },
+        {
+          "module": "model.layers.2.mlp.down_proj",
+          "factor": 0.25
+        },
+        {
+          "module": "model.layers.3.mlp.down_proj",
+          "factor": 0.75
+        },
+        {
+          "module": "model.layers.4.mlp.down_proj",
+          "factor": 0.75
+        },
+        {
+          "module": "model.layers.5.mlp.down_proj",
+          "factor": 0.75
+        },
+        {
+          "module": "model.layers.16.mlp.down_proj",
+          "factor": 0.875
+        },
+        {
+          "module": "model.layers.20.mlp.down_proj",
+          "factor": 0.875
+        },
+        {
+          "module": "model.layers.23.mlp.down_proj",
+          "factor": 0.875
+        },
+        {
+          "module": "model.layers.25.mlp.down_proj",
+          "factor": 0.75
+        },
+        {
+          "module": "model.layers.26.mlp.down_proj",
+          "factor": 0.75
+        },
+        {
+          "module": "model.layers.27.mlp.down_proj",
+          "factor": 0.125
+        }
+      ],
+      "early_convergence": [],
+      "high_precision_tensors_bitwise_unchanged": 154,
+      "qk_norm_tensors_bitwise_unchanged": 56
+    },
+    {
+      "run": "sp2-down-readapt-s42",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-range-s42/static_w4a8.pt",
+      "mode": "round",
+      "formats": {
+        "int8": 168,
+        "sp2": 28
+      },
+      "initial_train_nll": 2.766265582072881,
+      "selected_train_nll": 2.7368355058754466,
+      "validation_ppl": 14.935424095235582,
+      "validation_nll": 2.7037358473302344,
+      "summary_stage": "SP2-PTQ",
+      "targets_covered": 28,
+      "total_trial_records": 112,
+      "changed_weight_layers": [
+        "model.layers.2.mlp.down_proj",
+        "model.layers.4.mlp.down_proj",
+        "model.layers.5.mlp.down_proj",
+        "model.layers.8.mlp.down_proj",
+        "model.layers.16.mlp.down_proj",
+        "model.layers.19.mlp.down_proj",
+        "model.layers.21.mlp.down_proj"
+      ],
+      "changed_ranges": [],
+      "early_convergence": [],
+      "high_precision_tensors_bitwise_unchanged": 154,
+      "qk_norm_tensors_bitwise_unchanged": 56
+    },
+    {
+      "run": "uniform-down-readapt-s42",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-range-s42/static_w4a8.pt",
+      "mode": "round",
+      "formats": {
+        "int8": 196
+      },
+      "initial_train_nll": 2.9303037690963833,
+      "selected_train_nll": 2.907194164907816,
+      "validation_ppl": 17.491760837320335,
+      "validation_nll": 2.861729960767992,
+      "summary_stage": "Uniform-PTQ",
+      "targets_covered": 28,
+      "total_trial_records": 110,
+      "changed_weight_layers": [
+        "model.layers.2.mlp.down_proj",
+        "model.layers.3.mlp.down_proj",
+        "model.layers.5.mlp.down_proj",
+        "model.layers.9.mlp.down_proj",
+        "model.layers.11.mlp.down_proj",
+        "model.layers.12.mlp.down_proj",
+        "model.layers.14.mlp.down_proj",
+        "model.layers.16.mlp.down_proj",
+        "model.layers.18.mlp.down_proj",
+        "model.layers.22.mlp.down_proj",
+        "model.layers.24.mlp.down_proj",
+        "model.layers.26.mlp.down_proj"
+      ],
+      "changed_ranges": [],
+      "early_convergence": [
+        {
+          "module": "model.layers.2.mlp.down_proj",
+          "steps": [
+            0,
+            193
+          ],
+          "selected_step": 193
+        }
+      ],
+      "high_precision_tensors_bitwise_unchanged": 154,
+      "qk_norm_tensors_bitwise_unchanged": 56
+    }
+  ],
+  "readaptation_followup_evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/auditor/qwen_readapt_checks_20260918.json",
+  "earlier_four_stages_rechecked": false,
+  "final_packages": {
+    "SP2-PTQ": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/sp2-down-readapt-s42/static_w4a8.pt",
+    "Uniform-PTQ": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s42/static_w4a8.pt"
+  },
+  "final_external_acceptance": {
+    "status": "PASS",
+    "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/auditor/QWEN_PTQ_ACCEPTANCE_20260918.json",
+    "postprocess_chain_rechecked": false
+  }
+}

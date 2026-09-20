@@ -1,0 +1,47 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 22.058584213256836,
+      "nll": 3.0937018328563206
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 24.254817962646484,
+      "nll": 3.188615276521479
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 3.0940574841143964,
+  "ppl": 22.066430771720142,
+  "mode": "c-adam10",
+  "pid": 32275,
+  "command": [
+    "runs/phase3/auditor/first-validation-20260914/replicate.py",
+    "c-adam10"
+  ],
+  "cuda_visible_devices": "1",
+  "torch": "2.4.1+cu121",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "started_at": 1789325064.5498288,
+  "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "model_revision": "Revision:master,CreatedAt:1740591574",
+  "evaluation_seconds": 77.07105279201642,
+  "total_seconds": 105.36008386599133,
+  "peak_allocated_gib": 4.6500020027160645,
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-phase3-joint/utils/eval_utils.py",
+  "precision": "BF16 logits CE reduction none; losses to FP32; float32 segment PPL then log; target-weighted NLL",
+  "activation_scales_unchanged": true,
+  "input_tokens": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/auditor/first-validation-20260914/validation_input_tokens.pt",
+  "status": "PASS"
+}

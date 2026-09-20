@@ -1,0 +1,35 @@
+{
+  "token_count": 252852,
+  "predicted_tokens": 252728,
+  "segments": [
+    {
+      "start_token": 0,
+      "seqlen": 2048,
+      "windows": 123,
+      "predicted_tokens": 251781,
+      "ppl": 30.007427215576172,
+      "nll": 3.4014449248733456
+    },
+    {
+      "start_token": 251904,
+      "seqlen": 948,
+      "windows": 1,
+      "predicted_tokens": 947,
+      "ppl": 36.2568244934082,
+      "nll": 3.5906276254687612
+    }
+  ],
+  "unscored_tail_tokens": 0,
+  "nll": 3.402153813549962,
+  "ppl": 30.02870668243912,
+  "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+  "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+  "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/eval_utils.py",
+  "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+  "step": 0,
+  "arm": "joint",
+  "schedule_horizon": 512,
+  "down": "signed INT16",
+  "evaluation": "BF16 fakequant prefill; KV BF16",
+  "reused_validation_source": "/home/dongpeiyan/projects/rotation-quant/runs/phase6/llama1b-joint512-s42/checkpoint-0000/validation.json"
+}

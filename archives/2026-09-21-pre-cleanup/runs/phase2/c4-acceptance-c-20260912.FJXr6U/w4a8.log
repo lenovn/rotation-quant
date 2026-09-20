@@ -1,0 +1,191 @@
+2026-09-12 16:36:57,485 - spinquant - INFO - the rank is 0
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/dongpeiyan/projects/rotation-quant/repos/SpinQuant/eval_utils/rotation_utils.py:128: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  R1 = torch.load(R_cpk)["R1"].cuda().to(torch.float64)
+Rotating:   0%|          | 0/16 [00:00<?, ?layer/s]/home/dongpeiyan/projects/rotation-quant/repos/SpinQuant/eval_utils/rotation_utils.py:142: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  R2 = torch.load(R_cpk)[key].cuda().to(torch.float64)
+Rotating:   6%|▋         | 1/16 [00:00<00:06,  2.47layer/s]Rotating:  12%|█▎        | 2/16 [00:00<00:05,  2.56layer/s]Rotating:  19%|█▉        | 3/16 [00:01<00:04,  2.65layer/s]Rotating:  25%|██▌       | 4/16 [00:01<00:04,  2.72layer/s]Rotating:  31%|███▏      | 5/16 [00:01<00:03,  2.76layer/s]Rotating:  38%|███▊      | 6/16 [00:02<00:03,  2.77layer/s]Rotating:  44%|████▍     | 7/16 [00:02<00:03,  2.75layer/s]Rotating:  50%|█████     | 8/16 [00:02<00:02,  2.71layer/s]Rotating:  56%|█████▋    | 9/16 [00:03<00:02,  2.70layer/s]Rotating:  62%|██████▎   | 10/16 [00:03<00:02,  2.69layer/s]Rotating:  69%|██████▉   | 11/16 [00:04<00:01,  2.67layer/s]Rotating:  75%|███████▌  | 12/16 [00:04<00:01,  2.65layer/s]Rotating:  81%|████████▏ | 13/16 [00:04<00:01,  2.65layer/s]Rotating:  88%|████████▊ | 14/16 [00:05<00:00,  2.65layer/s]Rotating:  94%|█████████▍| 15/16 [00:05<00:00,  2.67layer/s]Rotating: 100%|██████████| 16/16 [00:05<00:00,  2.65layer/s]Rotating: 100%|██████████| 16/16 [00:05<00:00,  2.68layer/s]
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+  warnings.warn(
+Load quantized model from  /home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rtn/w4_rtn_model.pt
+/home/dongpeiyan/projects/rotation-quant/repos/SpinQuant/eval_utils/main.py:85: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  save_dict = torch.load(args.load_qmodel_path)
+2026-09-12 16:37:24,990 - spinquant - INFO - Model PTQ completed LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(128256, 2048)
+    (layers): ModuleList(
+      (0-15): 16 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (k_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=512, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (v_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=512, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (o_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (up_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (down_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=8192, out_features=2048, bias=False)
+            (quantizer): FrozenCodebookQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((2048,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): ActQuantWrapper(
+    Input Quantizer Bits: 16
+    Output Quantizer Bits: 16
+    (module): Linear(in_features=2048, out_features=128256, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+)
+INFO:spinquant:Model PTQ completed LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(128256, 2048)
+    (layers): ModuleList(
+      (0-15): 16 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (k_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=512, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (v_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=512, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (o_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=2048, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (up_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=2048, out_features=8192, bias=False)
+            (quantizer): RotationStaticActQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (down_proj): ActQuantWrapper(
+            Input Quantizer Bits: 8 (Symmetric Per-Token)
+            Output Quantizer Bits: 16
+            (module): Linear(in_features=8192, out_features=2048, bias=False)
+            (quantizer): FrozenCodebookQuantizer()
+            (out_quantizer): ActQuantizer()
+          )
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((2048,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): ActQuantWrapper(
+    Input Quantizer Bits: 16
+    Output Quantizer Bits: 16
+    (module): Linear(in_features=2048, out_features=128256, bias=False)
+    (quantizer): ActQuantizer()
+    (out_quantizer): ActQuantizer()
+  )
+)
+2026-09-12 16:37:24,990 - spinquant - INFO - Start to load tokenizer...
+INFO:spinquant:Start to load tokenizer...
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'PreTrainedTokenizerFast'. 
+The class this function is called from is 'LlamaTokenizerFast'.
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+2026-09-12 16:37:25,244 - spinquant - INFO - Complete tokenizer loading...
+INFO:spinquant:Complete tokenizer loading...
+Evaluation segment 1/8: start=0, windows=128, seqlen=2048
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s]WARNING:eval_utils.modeling_llama:The attention layers in this model are transitioning from computing the RoPE embeddings internally through `position_ids` (2D tensor with the indexes of the tokens), to using externally computed `position_embeddings` (Tuple of tensors, containing cos and sin). In v4.46 `position_ids` will be removed and `position_embeddings` will be mandatory.
+(Eval) Layers:   6%|▋         | 1/16 [00:00<00:11,  1.29it/s](Eval) Layers:  12%|█▎        | 2/16 [00:01<00:10,  1.38it/s](Eval) Layers:  19%|█▉        | 3/16 [00:02<00:09,  1.40it/s](Eval) Layers:  25%|██▌       | 4/16 [00:02<00:08,  1.40it/s](Eval) Layers:  31%|███▏      | 5/16 [00:03<00:07,  1.40it/s](Eval) Layers:  38%|███▊      | 6/16 [00:04<00:07,  1.41it/s](Eval) Layers:  44%|████▍     | 7/16 [00:04<00:06,  1.42it/s](Eval) Layers:  50%|█████     | 8/16 [00:05<00:05,  1.42it/s](Eval) Layers:  56%|█████▋    | 9/16 [00:06<00:04,  1.42it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:07<00:04,  1.43it/s](Eval) Layers:  69%|██████▉   | 11/16 [00:07<00:03,  1.41it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:08<00:02,  1.42it/s](Eval) Layers:  81%|████████▏ | 13/16 [00:09<00:02,  1.40it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:09<00:01,  1.41it/s](Eval) Layers:  94%|█████████▍| 15/16 [00:10<00:00,  1.41it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.40it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.41it/s]
+Evaluation segment 2/8: start=262144, windows=128, seqlen=2048
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s](Eval) Layers:   6%|▋         | 1/16 [00:00<00:10,  1.37it/s](Eval) Layers:  12%|█▎        | 2/16 [00:01<00:09,  1.41it/s](Eval) Layers:  19%|█▉        | 3/16 [00:02<00:09,  1.43it/s](Eval) Layers:  25%|██▌       | 4/16 [00:02<00:08,  1.42it/s](Eval) Layers:  31%|███▏      | 5/16 [00:03<00:07,  1.41it/s](Eval) Layers:  38%|███▊      | 6/16 [00:04<00:07,  1.40it/s](Eval) Layers:  44%|████▍     | 7/16 [00:04<00:06,  1.40it/s](Eval) Layers:  50%|█████     | 8/16 [00:05<00:05,  1.40it/s](Eval) Layers:  56%|█████▋    | 9/16 [00:06<00:05,  1.39it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:07<00:04,  1.38it/s](Eval) Layers:  69%|██████▉   | 11/16 [00:07<00:03,  1.39it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:08<00:02,  1.39it/s](Eval) Layers:  81%|████████▏ | 13/16 [00:09<00:02,  1.39it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:10<00:01,  1.39it/s](Eval) Layers:  94%|█████████▍| 15/16 [00:10<00:00,  1.39it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.39it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.40it/s]
+Evaluation segment 3/8: start=524288, windows=128, seqlen=2048
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s](Eval) Layers:   6%|▋         | 1/16 [00:00<00:10,  1.38it/s](Eval) Layers:  12%|█▎        | 2/16 [00:01<00:10,  1.39it/s](Eval) Layers:  19%|█▉        | 3/16 [00:02<00:09,  1.42it/s](Eval) Layers:  25%|██▌       | 4/16 [00:02<00:08,  1.43it/s](Eval) Layers:  31%|███▏      | 5/16 [00:03<00:07,  1.44it/s](Eval) Layers:  38%|███▊      | 6/16 [00:04<00:06,  1.45it/s](Eval) Layers:  44%|████▍     | 7/16 [00:04<00:06,  1.45it/s](Eval) Layers:  50%|█████     | 8/16 [00:05<00:05,  1.46it/s](Eval) Layers:  56%|█████▋    | 9/16 [00:06<00:04,  1.45it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:06<00:04,  1.45it/s](Eval) Layers:  69%|██████▉   | 11/16 [00:07<00:03,  1.45it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:08<00:02,  1.45it/s](Eval) Layers:  81%|████████▏ | 13/16 [00:09<00:02,  1.44it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:09<00:01,  1.45it/s](Eval) Layers:  94%|█████████▍| 15/16 [00:10<00:00,  1.46it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.46it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.45it/s]
+Evaluation segment 4/8: start=786432, windows=128, seqlen=2048
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s](Eval) Layers:   6%|▋         | 1/16 [00:00<00:10,  1.49it/s](Eval) Layers:  12%|█▎        | 2/16 [00:01<00:08,  1.56it/s](Eval) Layers:  19%|█▉        | 3/16 [00:01<00:08,  1.59it/s](Eval) Layers:  25%|██▌       | 4/16 [00:02<00:07,  1.60it/s](Eval) Layers:  31%|███▏      | 5/16 [00:03<00:06,  1.61it/s](Eval) Layers:  38%|███▊      | 6/16 [00:03<00:06,  1.60it/s](Eval) Layers:  44%|████▍     | 7/16 [00:04<00:05,  1.52it/s](Eval) Layers:  50%|█████     | 8/16 [00:05<00:05,  1.45it/s](Eval) Layers:  56%|█████▋    | 9/16 [00:06<00:04,  1.41it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:06<00:04,  1.39it/s](Eval) Layers:  69%|██████▉   | 11/16 [00:07<00:03,  1.37it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:08<00:02,  1.36it/s](Eval) Layers:  81%|████████▏ | 13/16 [00:08<00:02,  1.38it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:09<00:01,  1.38it/s](Eval) Layers:  94%|█████████▍| 15/16 [00:10<00:00,  1.33it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.31it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.42it/s]
+Evaluation segment 5/8: start=1048576, windows=128, seqlen=2048
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s](Eval) Layers:   6%|▋         | 1/16 [00:00<00:10,  1.37it/s](Eval) Layers:  12%|█▎        | 2/16 [00:01<00:10,  1.39it/s](Eval) Layers:  19%|█▉        | 3/16 [00:02<00:09,  1.40it/s](Eval) Layers:  25%|██▌       | 4/16 [00:02<00:08,  1.40it/s](Eval) Layers:  31%|███▏      | 5/16 [00:03<00:07,  1.40it/s](Eval) Layers:  38%|███▊      | 6/16 [00:04<00:07,  1.41it/s](Eval) Layers:  44%|████▍     | 7/16 [00:04<00:06,  1.41it/s](Eval) Layers:  50%|█████     | 8/16 [00:05<00:05,  1.41it/s](Eval) Layers:  56%|█████▋    | 9/16 [00:06<00:04,  1.41it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:07<00:04,  1.41it/s](Eval) Layers:  69%|██████▉   | 11/16 [00:07<00:03,  1.41it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:08<00:02,  1.41it/s](Eval) Layers:  81%|████████▏ | 13/16 [00:09<00:02,  1.40it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:09<00:01,  1.40it/s](Eval) Layers:  94%|█████████▍| 15/16 [00:10<00:00,  1.41it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.41it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.40it/s]
+Evaluation segment 6/8: start=1310720, windows=128, seqlen=2048
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s](Eval) Layers:   6%|▋         | 1/16 [00:00<00:10,  1.40it/s](Eval) Layers:  12%|█▎        | 2/16 [00:01<00:11,  1.22it/s](Eval) Layers:  19%|█▉        | 3/16 [00:02<00:11,  1.18it/s](Eval) Layers:  25%|██▌       | 4/16 [00:03<00:09,  1.26it/s](Eval) Layers:  31%|███▏      | 5/16 [00:03<00:08,  1.30it/s](Eval) Layers:  38%|███▊      | 6/16 [00:04<00:07,  1.34it/s](Eval) Layers:  44%|████▍     | 7/16 [00:05<00:06,  1.37it/s](Eval) Layers:  50%|█████     | 8/16 [00:06<00:05,  1.39it/s](Eval) Layers:  56%|█████▋    | 9/16 [00:06<00:05,  1.40it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:07<00:04,  1.41it/s](Eval) Layers:  69%|██████▉   | 11/16 [00:08<00:03,  1.43it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:08<00:02,  1.43it/s](Eval) Layers:  81%|████████▏ | 13/16 [00:09<00:02,  1.44it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:10<00:01,  1.40it/s](Eval) Layers:  94%|█████████▍| 15/16 [00:11<00:00,  1.35it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.32it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.35it/s]
+Evaluation segment 7/8: start=1572864, windows=128, seqlen=2048
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s](Eval) Layers:   6%|▋         | 1/16 [00:00<00:10,  1.49it/s](Eval) Layers:  12%|█▎        | 2/16 [00:01<00:09,  1.54it/s](Eval) Layers:  19%|█▉        | 3/16 [00:01<00:08,  1.55it/s](Eval) Layers:  25%|██▌       | 4/16 [00:02<00:07,  1.55it/s](Eval) Layers:  31%|███▏      | 5/16 [00:03<00:07,  1.55it/s](Eval) Layers:  38%|███▊      | 6/16 [00:03<00:06,  1.54it/s](Eval) Layers:  44%|████▍     | 7/16 [00:04<00:06,  1.49it/s](Eval) Layers:  50%|█████     | 8/16 [00:05<00:05,  1.47it/s](Eval) Layers:  56%|█████▋    | 9/16 [00:06<00:04,  1.44it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:06<00:04,  1.43it/s](Eval) Layers:  69%|██████▉   | 11/16 [00:07<00:03,  1.43it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:08<00:02,  1.44it/s](Eval) Layers:  81%|████████▏ | 13/16 [00:08<00:02,  1.43it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:09<00:01,  1.41it/s](Eval) Layers:  94%|█████████▍| 15/16 [00:10<00:00,  1.41it/s](Eval) Layers: 100%|██████████| 16/16 [00:10<00:00,  1.41it/s](Eval) Layers: 100%|██████████| 16/16 [00:10<00:00,  1.46it/s]
+Evaluation segment 8/8: start=1835008, windows=128, seqlen=2048
+(Eval) Layers:   0%|          | 0/16 [00:00<?, ?it/s](Eval) Layers:   6%|▋         | 1/16 [00:00<00:10,  1.37it/s](Eval) Layers:  12%|█▎        | 2/16 [00:01<00:10,  1.40it/s](Eval) Layers:  19%|█▉        | 3/16 [00:02<00:09,  1.40it/s](Eval) Layers:  25%|██▌       | 4/16 [00:02<00:08,  1.41it/s](Eval) Layers:  31%|███▏      | 5/16 [00:03<00:07,  1.41it/s](Eval) Layers:  38%|███▊      | 6/16 [00:04<00:07,  1.41it/s](Eval) Layers:  44%|████▍     | 7/16 [00:04<00:06,  1.40it/s](Eval) Layers:  50%|█████     | 8/16 [00:05<00:05,  1.40it/s](Eval) Layers:  56%|█████▋    | 9/16 [00:06<00:05,  1.40it/s](Eval) Layers:  62%|██████▎   | 10/16 [00:07<00:04,  1.40it/s](Eval) Layers:  69%|██████▉   | 11/16 [00:07<00:03,  1.41it/s](Eval) Layers:  75%|███████▌  | 12/16 [00:08<00:02,  1.43it/s](Eval) Layers:  81%|████████▏ | 13/16 [00:09<00:02,  1.44it/s](Eval) Layers:  88%|████████▊ | 14/16 [00:09<00:01,  1.44it/s](Eval) Layers:  94%|█████████▍| 15/16 [00:10<00:00,  1.44it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.45it/s](Eval) Layers: 100%|██████████| 16/16 [00:11<00:00,  1.42it/s]
+VALIDATION_ACCEPTANCE {"token_count": 2097152, "predicted_tokens": 2096128, "segments": [{"start_token": 0, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 29.16539764404297, "nll": 3.3729829944018017}, {"start_token": 262144, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 29.64955711364746, "nll": 3.3894471881870634}, {"start_token": 524288, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 30.67150115966797, "nll": 3.4233339224669375}, {"start_token": 786432, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 27.444438934326172, "nll": 3.3121635585181974}, {"start_token": 1048576, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 31.0723819732666, "nll": 3.436319385199761}, {"start_token": 1310720, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 27.863515853881836, "nll": 3.327318157585509}, {"start_token": 1572864, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 29.291160583496094, "nll": 3.3772857839363746}, {"start_token": 1835008, "seqlen": 2048, "windows": 128, "predicted_tokens": 262016, "ppl": 31.405574798583984, "nll": 3.446985418511784}], "unscored_tail_tokens": 0, "nll": 3.385729551100929, "ppl": 29.539535457544623, "input_model": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "mode": "w4a8", "dataset": "allenai/c4", "subset": "en", "split": "validation", "window_length": 2048, "seed": 42, "dtype": "bfloat16", "kv_bits": 16, "use_cache": false, "evaluation": "prefill teacher-forced next-token; disjoint windows including partial tail", "nll_precision": "log of original evaluator float32 PPL, token-weighted across segments", "input_token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt", "input_metadata": {"dataset": "allenai/c4", "subset": "en", "split": "validation", "source_files": ["https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz", "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"], "source_document_count": 364608, "seed": 42, "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix", "selected_document_count": 4480, "concatenated_token_count": 2150947, "discarded_suffix_tokens": 53795, "token_count": 2097152, "window_length": 2048, "windows": 1024, "predicted_tokens": 2096128, "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "tokenizer_class": "LlamaTokenizerFast", "add_bos_token": false, "add_eos_token": false, "text_separator": "\n\n", "purpose": "external evaluation only; no calibration or selection"}, "chunk_windows": 128, "weight_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rtn/w4_rtn_model.pt", "weight_method": "RTN", "rotation_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rotation/R.bin", "non_down_scale_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/learned-sw-c-20260909.ByFYAM/C/rotation/quant_scales.pt", "down_scale_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/down-codebooks-c-20260909.6YRIty/results/down_scales.json", "quantized_linear_count": 112, "non_down_int8_count": 96, "down_sp2_count": 16, "weights_match_checkpoint": true, "weight_granularity": "per output channel", "activation_granularity": "fixed per tensor", "high_precision": "embedding, lm_head, norms; BF16 fake-quant GEMM", "elapsed_seconds": 209.75123508897377, "activation_scales_unchanged": true}
+2026-09-12 16:40:54,998 - spinquant - INFO - wiki2 ppl is: 29.539535457544623
+INFO:spinquant:wiki2 ppl is: 29.539535457544623

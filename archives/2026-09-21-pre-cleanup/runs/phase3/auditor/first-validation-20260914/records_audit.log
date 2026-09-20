@@ -1,0 +1,52 @@
+{
+  "route-a-adam-100-20260914a": {
+    "status": "PASS",
+    "failed_checks": []
+  },
+  "route-b-adam-100-20260914a": {
+    "status": "PASS",
+    "failed_checks": []
+  },
+  "route-c-adam-100-20260914a": {
+    "status": "PASS",
+    "failed_checks": []
+  },
+  "route-c-sgd-10-20260914a": {
+    "status": "PASS",
+    "failed_checks": []
+  }
+}
+{
+  "route-a-adam-100-20260914a vs route-b-adam-100-20260914a": {
+    "argument_differences": {
+      "output": [
+        "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-a-adam-100-20260914a",
+        "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a"
+      ],
+      "route": [
+        "A",
+        "B"
+      ]
+    },
+    "all_recorded_learning_rates_equal": true,
+    "identical_sample_sequence": true
+  },
+  "route-b-adam-100-20260914a vs route-c-adam-100-20260914a": {
+    "argument_differences": {
+      "output": [
+        "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a",
+        "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-adam-100-20260914a"
+      ],
+      "resume": [
+        null,
+        "/home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-adam-20260914a"
+      ],
+      "route": [
+        "B",
+        "C"
+      ]
+    },
+    "all_recorded_learning_rates_equal": true,
+    "identical_sample_sequence": true
+  }
+}

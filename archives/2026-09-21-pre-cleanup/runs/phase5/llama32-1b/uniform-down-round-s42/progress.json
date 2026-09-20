@@ -1,0 +1,749 @@
+{
+  "stage": "completed",
+  "pid": 1398552,
+  "time": 1789669790.7806232,
+  "cuda_visible_devices": "3",
+  "allocated_gib": 1.4631338119506836,
+  "reserved_gib": 2.51953125,
+  "peak_allocated_gib": 7.458747386932373,
+  "gpu_time_budget": null,
+  "elapsed_seconds": 971.201549443067,
+  "result": {
+    "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-initial-s42/static_w4a8.pt",
+    "parent_metadata": {
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+      "reused_down_int8_overlay": {
+        "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/b100-uniform-calibration-20260918c/down_int8_scales.pt",
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+        "down_format": "int8",
+        "calibration_metadata": {
+          "dataset": "Salesforce/wikitext",
+          "subset": "wikitext-2-raw-v1",
+          "split": "train",
+          "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-train.arrow",
+          "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+          "source_metadata_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/data.json",
+          "seed": 42,
+          "train_tokens": 2435022,
+          "train_windows": 1188,
+          "calibration_window_indices": [
+            182,
+            546,
+            792,
+            281,
+            1030,
+            865,
+            136,
+            18,
+            442,
+            357,
+            248,
+            128,
+            1110,
+            235,
+            621,
+            707,
+            1035,
+            208,
+            531,
+            689,
+            369,
+            424,
+            953,
+            973,
+            131,
+            443,
+            677,
+            1096,
+            731,
+            902,
+            29,
+            859
+          ],
+          "calibration_length": 128,
+          "calibration_tokens": 4096,
+          "add_bos_token": false,
+          "add_eos_token": false,
+          "protocol": "tokenize each raw row without BOS/EOS, concatenate IDs, disjoint 2048 windows, drop tail, fixed order"
+        }
+      },
+      "method": "Joint100 matched INT8 calibration; no discrete postprocessing or QAT yet"
+    },
+    "mode": "round",
+    "initial_train_nll": 6.445073606790942,
+    "selected_train_nll": 5.994491577236984,
+    "completed_targets": [
+      "model.layers.0.mlp.down_proj",
+      "model.layers.1.mlp.down_proj",
+      "model.layers.2.mlp.down_proj",
+      "model.layers.3.mlp.down_proj",
+      "model.layers.4.mlp.down_proj",
+      "model.layers.5.mlp.down_proj",
+      "model.layers.6.mlp.down_proj",
+      "model.layers.7.mlp.down_proj",
+      "model.layers.8.mlp.down_proj",
+      "model.layers.9.mlp.down_proj",
+      "model.layers.10.mlp.down_proj",
+      "model.layers.11.mlp.down_proj",
+      "model.layers.12.mlp.down_proj",
+      "model.layers.13.mlp.down_proj",
+      "model.layers.14.mlp.down_proj",
+      "model.layers.15.mlp.down_proj"
+    ],
+    "new_module_results": [
+      {
+        "module": "model.layers.0.mlp.down_proj",
+        "selected_step": 2048,
+        "previous_train_nll": 6.445073606790942,
+        "selected_train_nll": 6.399005847232703,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 1.1334057489875704e-05,
+            "heldout_mse": 1.1298521712888032e-05,
+            "changed_codes": 0,
+            "train_nll": 6.445073606790942
+          },
+          {
+            "step": 512,
+            "fit_mse": 6.2644721765536815e-06,
+            "heldout_mse": 6.9955181061232e-06,
+            "changed_codes": 360171,
+            "train_nll": 6.404338361114619
+          },
+          {
+            "step": 2048,
+            "fit_mse": 5.4143474699230865e-06,
+            "heldout_mse": 7.132309747248655e-06,
+            "changed_codes": 1348172,
+            "train_nll": 6.399005847232703
+          },
+          {
+            "step": 8192,
+            "fit_mse": 4.549277946352959e-06,
+            "heldout_mse": 8.093191354419105e-06,
+            "changed_codes": 3907969,
+            "train_nll": 6.406656266191051
+          }
+        ]
+      },
+      {
+        "module": "model.layers.1.mlp.down_proj",
+        "selected_step": 40,
+        "previous_train_nll": 6.399005847232703,
+        "selected_train_nll": 6.177020119016253,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 0.0006563315982930362,
+            "heldout_mse": 0.0004981785314157605,
+            "changed_codes": 0,
+            "train_nll": 6.399005847232703
+          },
+          {
+            "step": 40,
+            "fit_mse": 9.338690142612904e-05,
+            "heldout_mse": 7.694208761677146e-05,
+            "changed_codes": 6696,
+            "train_nll": 6.177020119016253
+          }
+        ]
+      },
+      {
+        "module": "model.layers.2.mlp.down_proj",
+        "selected_step": 8192,
+        "previous_train_nll": 6.177020119016253,
+        "selected_train_nll": 6.064123612655266,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 6.75505943945609e-05,
+            "heldout_mse": 6.49186476948671e-05,
+            "changed_codes": 0,
+            "train_nll": 6.177020119016253
+          },
+          {
+            "step": 512,
+            "fit_mse": 2.2053642169339582e-05,
+            "heldout_mse": 3.019399446202442e-05,
+            "changed_codes": 462181,
+            "train_nll": 6.075876194832902
+          },
+          {
+            "step": 2048,
+            "fit_mse": 1.7615879187360406e-05,
+            "heldout_mse": 2.792808663798496e-05,
+            "changed_codes": 1312237,
+            "train_nll": 6.078264160547737
+          },
+          {
+            "step": 8192,
+            "fit_mse": 1.4628159078711178e-05,
+            "heldout_mse": 2.606740963528864e-05,
+            "changed_codes": 1807396,
+            "train_nll": 6.064123612655266
+          }
+        ]
+      },
+      {
+        "module": "model.layers.3.mlp.down_proj",
+        "selected_step": 0,
+        "previous_train_nll": 6.064123612655266,
+        "selected_train_nll": 6.064123612655266,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 7.237309182528406e-05,
+            "heldout_mse": 6.844235758762807e-05,
+            "changed_codes": 0,
+            "train_nll": 6.064123612655266
+          },
+          {
+            "step": 512,
+            "fit_mse": 2.9291764803929254e-05,
+            "heldout_mse": 3.940746682928875e-05,
+            "changed_codes": 460423,
+            "train_nll": 6.075686507198778
+          },
+          {
+            "step": 2048,
+            "fit_mse": 2.417064933979418e-05,
+            "heldout_mse": 3.7035064451629296e-05,
+            "changed_codes": 1219700,
+            "train_nll": 6.077757307596865
+          },
+          {
+            "step": 8192,
+            "fit_mse": 2.0563920770655386e-05,
+            "heldout_mse": 3.467729038675316e-05,
+            "changed_codes": 1657621,
+            "train_nll": 6.073225021551305
+          }
+        ]
+      },
+      {
+        "module": "model.layers.4.mlp.down_proj",
+        "selected_step": 0,
+        "previous_train_nll": 6.064123612655266,
+        "selected_train_nll": 6.064123612655266,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 7.963499228935689e-05,
+            "heldout_mse": 7.550400914624333e-05,
+            "changed_codes": 0,
+            "train_nll": 6.064123612655266
+          },
+          {
+            "step": 512,
+            "fit_mse": 3.5832235880661756e-05,
+            "heldout_mse": 4.570872988551855e-05,
+            "changed_codes": 446252,
+            "train_nll": 6.083721155375439
+          },
+          {
+            "step": 2048,
+            "fit_mse": 2.952852810267359e-05,
+            "heldout_mse": 4.237551911501214e-05,
+            "changed_codes": 1151180,
+            "train_nll": 6.08253142285319
+          },
+          {
+            "step": 8192,
+            "fit_mse": 2.5165656552417204e-05,
+            "heldout_mse": 3.972361810156144e-05,
+            "changed_codes": 1568010,
+            "train_nll": 6.086040509686888
+          }
+        ]
+      },
+      {
+        "module": "model.layers.5.mlp.down_proj",
+        "selected_step": 0,
+        "previous_train_nll": 6.064123612655266,
+        "selected_train_nll": 6.064123612655266,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 9.154742292594165e-05,
+            "heldout_mse": 9.180327469948679e-05,
+            "changed_codes": 0,
+            "train_nll": 6.064123612655266
+          },
+          {
+            "step": 512,
+            "fit_mse": 4.2837593355216086e-05,
+            "heldout_mse": 5.3683379519497976e-05,
+            "changed_codes": 461747,
+            "train_nll": 6.109035497016224
+          },
+          {
+            "step": 2048,
+            "fit_mse": 3.5166944144293666e-05,
+            "heldout_mse": 4.9286853027297184e-05,
+            "changed_codes": 1264920,
+            "train_nll": 6.107649830801241
+          },
+          {
+            "step": 8192,
+            "fit_mse": 2.967736145365052e-05,
+            "heldout_mse": 4.612165503203869e-05,
+            "changed_codes": 1852215,
+            "train_nll": 6.117614715716956
+          }
+        ]
+      },
+      {
+        "module": "model.layers.6.mlp.down_proj",
+        "selected_step": 8192,
+        "previous_train_nll": 6.064123612655266,
+        "selected_train_nll": 6.0617036611618405,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 9.374232467962429e-05,
+            "heldout_mse": 9.181730274576694e-05,
+            "changed_codes": 0,
+            "train_nll": 6.064123612655266
+          },
+          {
+            "step": 512,
+            "fit_mse": 4.1971121390815824e-05,
+            "heldout_mse": 5.152700032340363e-05,
+            "changed_codes": 463474,
+            "train_nll": 6.063423616476911
+          },
+          {
+            "step": 2048,
+            "fit_mse": 3.40720871463418e-05,
+            "heldout_mse": 4.657156387111172e-05,
+            "changed_codes": 1302543,
+            "train_nll": 6.065179811721342
+          },
+          {
+            "step": 8192,
+            "fit_mse": 2.87207276414847e-05,
+            "heldout_mse": 4.3136558815604076e-05,
+            "changed_codes": 1895648,
+            "train_nll": 6.0617036611618405
+          }
+        ]
+      },
+      {
+        "module": "model.layers.7.mlp.down_proj",
+        "selected_step": 2048,
+        "previous_train_nll": 6.0617036611618405,
+        "selected_train_nll": 6.034057116789208,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 0.00012128421076340601,
+            "heldout_mse": 0.00011779010674217716,
+            "changed_codes": 0,
+            "train_nll": 6.0617036611618405
+          },
+          {
+            "step": 512,
+            "fit_mse": 4.813685882254504e-05,
+            "heldout_mse": 6.0550300986506045e-05,
+            "changed_codes": 484735,
+            "train_nll": 6.044425022448894
+          },
+          {
+            "step": 2048,
+            "fit_mse": 3.843598460662179e-05,
+            "heldout_mse": 5.448177398648113e-05,
+            "changed_codes": 1417779,
+            "train_nll": 6.034057116789208
+          },
+          {
+            "step": 8192,
+            "fit_mse": 3.221555016352795e-05,
+            "heldout_mse": 5.021272227168083e-05,
+            "changed_codes": 2009078,
+            "train_nll": 6.037930496617355
+          }
+        ]
+      },
+      {
+        "module": "model.layers.8.mlp.down_proj",
+        "selected_step": 512,
+        "previous_train_nll": 6.034057116789208,
+        "selected_train_nll": 6.032237077514283,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 0.0001404035574523732,
+            "heldout_mse": 0.00014096521772444248,
+            "changed_codes": 0,
+            "train_nll": 6.034057116789208
+          },
+          {
+            "step": 512,
+            "fit_mse": 5.884787969989702e-05,
+            "heldout_mse": 7.433980499627069e-05,
+            "changed_codes": 470716,
+            "train_nll": 6.032237077514283
+          },
+          {
+            "step": 2048,
+            "fit_mse": 4.7299894504249096e-05,
+            "heldout_mse": 6.668239075224847e-05,
+            "changed_codes": 1408825,
+            "train_nll": 6.0386623884702555
+          },
+          {
+            "step": 8192,
+            "fit_mse": 3.9815680793253705e-05,
+            "heldout_mse": 6.179712363518775e-05,
+            "changed_codes": 2043310,
+            "train_nll": 6.038358281214859
+          }
+        ]
+      },
+      {
+        "module": "model.layers.9.mlp.down_proj",
+        "selected_step": 8192,
+        "previous_train_nll": 6.032237077514283,
+        "selected_train_nll": 6.013202642801267,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 0.00018411452765576541,
+            "heldout_mse": 0.00019323696324136108,
+            "changed_codes": 0,
+            "train_nll": 6.032237077514283
+          },
+          {
+            "step": 512,
+            "fit_mse": 7.304399332497269e-05,
+            "heldout_mse": 9.514233533991501e-05,
+            "changed_codes": 488955,
+            "train_nll": 6.01666645024324
+          },
+          {
+            "step": 2048,
+            "fit_mse": 5.779224738944322e-05,
+            "heldout_mse": 8.42606314108707e-05,
+            "changed_codes": 1452697,
+            "train_nll": 6.017304408892464
+          },
+          {
+            "step": 8192,
+            "fit_mse": 4.832289050682448e-05,
+            "heldout_mse": 7.743318565189838e-05,
+            "changed_codes": 2103473,
+            "train_nll": 6.013202642801267
+          }
+        ]
+      },
+      {
+        "module": "model.layers.10.mlp.down_proj",
+        "selected_step": 512,
+        "previous_train_nll": 6.013202642801267,
+        "selected_train_nll": 6.008983604471008,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 0.0001964522962225601,
+            "heldout_mse": 0.00020266417413949966,
+            "changed_codes": 0,
+            "train_nll": 6.013202642801267
+          },
+          {
+            "step": 512,
+            "fit_mse": 9.613728616386652e-05,
+            "heldout_mse": 0.00011539293336682022,
+            "changed_codes": 481540,
+            "train_nll": 6.008983604471008
+          },
+          {
+            "step": 2048,
+            "fit_mse": 7.807865040376782e-05,
+            "heldout_mse": 0.00010459836630616337,
+            "changed_codes": 1386497,
+            "train_nll": 6.009225350231881
+          },
+          {
+            "step": 8192,
+            "fit_mse": 6.55131007079035e-05,
+            "heldout_mse": 9.68314561760053e-05,
+            "changed_codes": 2027609,
+            "train_nll": 6.010230086329732
+          }
+        ]
+      },
+      {
+        "module": "model.layers.11.mlp.down_proj",
+        "selected_step": 8192,
+        "previous_train_nll": 6.008983604471008,
+        "selected_train_nll": 6.007236501276572,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 0.00017355423187837005,
+            "heldout_mse": 0.00017893740732688457,
+            "changed_codes": 0,
+            "train_nll": 6.008983604471008
+          },
+          {
+            "step": 512,
+            "fit_mse": 9.173052967526019e-05,
+            "heldout_mse": 0.00010986125562340021,
+            "changed_codes": 437976,
+            "train_nll": 6.012825049498215
+          },
+          {
+            "step": 2048,
+            "fit_mse": 7.643273420399055e-05,
+            "heldout_mse": 0.00010150363959837705,
+            "changed_codes": 1177485,
+            "train_nll": 6.010695404769095
+          },
+          {
+            "step": 8192,
+            "fit_mse": 6.439763819798827e-05,
+            "heldout_mse": 9.499384032096714e-05,
+            "changed_codes": 1829297,
+            "train_nll": 6.007236501276572
+          }
+        ]
+      },
+      {
+        "module": "model.layers.12.mlp.down_proj",
+        "selected_step": 8192,
+        "previous_train_nll": 6.007236501276572,
+        "selected_train_nll": 6.001870724793635,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 0.00018438886036165059,
+            "heldout_mse": 0.00019342362065799534,
+            "changed_codes": 0,
+            "train_nll": 6.007236501276572
+          },
+          {
+            "step": 512,
+            "fit_mse": 8.941037231124938e-05,
+            "heldout_mse": 0.00010490472777746618,
+            "changed_codes": 432287,
+            "train_nll": 6.004559056862082
+          },
+          {
+            "step": 2048,
+            "fit_mse": 7.484334491891786e-05,
+            "heldout_mse": 9.83703212114051e-05,
+            "changed_codes": 1201749,
+            "train_nll": 6.004107974899831
+          },
+          {
+            "step": 8192,
+            "fit_mse": 6.258070789044723e-05,
+            "heldout_mse": 9.40031313803047e-05,
+            "changed_codes": 1982266,
+            "train_nll": 6.001870724793635
+          }
+        ]
+      },
+      {
+        "module": "model.layers.13.mlp.down_proj",
+        "selected_step": 2048,
+        "previous_train_nll": 6.001870724793635,
+        "selected_train_nll": 5.994491577236984,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 0.0003783077117986977,
+            "heldout_mse": 0.0003879797295667231,
+            "changed_codes": 0,
+            "train_nll": 6.001870724793635
+          },
+          {
+            "step": 512,
+            "fit_mse": 0.00014599916175939143,
+            "heldout_mse": 0.00017704162746667862,
+            "changed_codes": 455947,
+            "train_nll": 5.996858603364877
+          },
+          {
+            "step": 2048,
+            "fit_mse": 0.00012193232396384701,
+            "heldout_mse": 0.0001676238316576928,
+            "changed_codes": 1272782,
+            "train_nll": 5.994491577236984
+          },
+          {
+            "step": 8192,
+            "fit_mse": 0.00010253116488456726,
+            "heldout_mse": 0.0001618237583898008,
+            "changed_codes": 2105644,
+            "train_nll": 5.994624146869034
+          }
+        ]
+      },
+      {
+        "module": "model.layers.14.mlp.down_proj",
+        "selected_step": 0,
+        "previous_train_nll": 5.994491577236984,
+        "selected_train_nll": 5.994491577236984,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 0.0007334817200899124,
+            "heldout_mse": 0.0007167469011619687,
+            "changed_codes": 0,
+            "train_nll": 5.994491577236984
+          },
+          {
+            "step": 512,
+            "fit_mse": 0.00021493167150765657,
+            "heldout_mse": 0.00027147019864059985,
+            "changed_codes": 340674,
+            "train_nll": 6.006475974036717
+          },
+          {
+            "step": 2048,
+            "fit_mse": 0.0001897581241792068,
+            "heldout_mse": 0.00027000217232853174,
+            "changed_codes": 1145892,
+            "train_nll": 6.004408442668413
+          },
+          {
+            "step": 8192,
+            "fit_mse": 0.00016352102102246135,
+            "heldout_mse": 0.000279090425465256,
+            "changed_codes": 2590053,
+            "train_nll": 6.0054445859418735
+          }
+        ]
+      },
+      {
+        "module": "model.layers.15.mlp.down_proj",
+        "selected_step": 0,
+        "previous_train_nll": 5.994491577236984,
+        "selected_train_nll": 5.994491577236984,
+        "trials": [
+          {
+            "step": 0,
+            "fit_mse": 0.004271666519343853,
+            "heldout_mse": 0.0043123341165483,
+            "changed_codes": 0,
+            "train_nll": 5.994491577236984
+          },
+          {
+            "step": 512,
+            "fit_mse": 0.001248766202479601,
+            "heldout_mse": 0.0016277262475341558,
+            "changed_codes": 283685,
+            "train_nll": 5.997362191344972
+          },
+          {
+            "step": 2048,
+            "fit_mse": 0.0011370162246748805,
+            "heldout_mse": 0.0016304331365972757,
+            "changed_codes": 1287799,
+            "train_nll": 5.997386461551247
+          },
+          {
+            "step": 8192,
+            "fit_mse": 0.0010388214141130447,
+            "heldout_mse": 0.0017240020679309964,
+            "changed_codes": 6014013,
+            "train_nll": 5.998765936712327
+          }
+        ]
+      }
+    ],
+    "validation_status": "completed",
+    "validation": {
+      "token_count": 252852,
+      "predicted_tokens": 252728,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 723.6605834960938,
+          "nll": 6.584322475135368
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 543.983642578125,
+          "nll": 6.298919177613656
+        }
+      ],
+      "unscored_tail_tokens": 0,
+      "nll": 6.583253037151634,
+      "ppl": 722.8870870577282,
+      "evaluation_precision": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+      "acceptance_source": "/home/dongpeiyan/projects/rotation-quant/scripts/phase2/validation_acceptance.py",
+      "evaluator_source": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/eval_utils.py",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-initial-s42/static_w4a8.pt",
+      "parent_metadata": {
+        "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+        "reused_down_int8_overlay": {
+          "path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/b100-uniform-calibration-20260918c/down_int8_scales.pt",
+          "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+          "down_format": "int8",
+          "calibration_metadata": {
+            "dataset": "Salesforce/wikitext",
+            "subset": "wikitext-2-raw-v1",
+            "split": "train",
+            "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-train.arrow",
+            "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+            "source_metadata_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/data.json",
+            "seed": 42,
+            "train_tokens": 2435022,
+            "train_windows": 1188,
+            "calibration_window_indices": [
+              182,
+              546,
+              792,
+              281,
+              1030,
+              865,
+              136,
+              18,
+              442,
+              357,
+              248,
+              128,
+              1110,
+              235,
+              621,
+              707,
+              1035,
+              208,
+              531,
+              689,
+              369,
+              424,
+              953,
+              973,
+              131,
+              443,
+              677,
+              1096,
+              731,
+              902,
+              29,
+              859
+            ],
+            "calibration_length": 128,
+            "calibration_tokens": 4096,
+            "add_bos_token": false,
+            "add_eos_token": false,
+            "protocol": "tokenize each raw row without BOS/EOS, concatenate IDs, disjoint 2048 windows, drop tail, fixed order"
+          }
+        },
+        "method": "Joint100 matched INT8 calibration; no discrete postprocessing or QAT yet"
+      },
+      "method": "sequential frozen-package postprocessing; no gradient training in this stage",
+      "format": "112 W4 / 112 static INT8; BF16 KV16 prefill"
+    }
+  }
+}

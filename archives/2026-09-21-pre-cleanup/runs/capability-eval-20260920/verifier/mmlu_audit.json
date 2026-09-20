@@ -1,0 +1,5691 @@
+{
+  "subjects": [
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_abstract_algebra",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_anatomy",
+      "n": 135,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_astronomy",
+      "n": 152,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_business_ethics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_clinical_knowledge",
+      "n": 265,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_college_biology",
+      "n": 144,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_college_chemistry",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_college_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_college_mathematics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_college_medicine",
+      "n": 173,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_college_physics",
+      "n": 102,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_computer_security",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_conceptual_physics",
+      "n": 235,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_econometrics",
+      "n": 114,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_electrical_engineering",
+      "n": 145,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_elementary_mathematics",
+      "n": 378,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_formal_logic",
+      "n": 126,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_global_facts",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_biology",
+      "n": 310,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_chemistry",
+      "n": 203,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_european_history",
+      "n": 165,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_geography",
+      "n": 198,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_government_and_politics",
+      "n": 193,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_macroeconomics",
+      "n": 390,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_mathematics",
+      "n": 270,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_microeconomics",
+      "n": 238,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_physics",
+      "n": 151,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_psychology",
+      "n": 545,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_statistics",
+      "n": 216,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_us_history",
+      "n": 204,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_high_school_world_history",
+      "n": 237,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_human_aging",
+      "n": 223,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_human_sexuality",
+      "n": 131,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_international_law",
+      "n": 121,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_jurisprudence",
+      "n": 108,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_logical_fallacies",
+      "n": 163,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_machine_learning",
+      "n": 112,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_management",
+      "n": 103,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_marketing",
+      "n": 234,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_medical_genetics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_miscellaneous",
+      "n": 783,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_moral_disputes",
+      "n": 346,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_moral_scenarios",
+      "n": 895,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_nutrition",
+      "n": 306,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_philosophy",
+      "n": 311,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_prehistory",
+      "n": 324,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_professional_accounting",
+      "n": 282,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_professional_law",
+      "n": 1534,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_professional_medicine",
+      "n": 272,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_professional_psychology",
+      "n": 612,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_public_relations",
+      "n": 110,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_security_studies",
+      "n": 245,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_sociology",
+      "n": 201,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_us_foreign_policy",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_virology",
+      "n": 166,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "task": "mmlu_world_religions",
+      "n": 171,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_abstract_algebra",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_anatomy",
+      "n": 135,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_astronomy",
+      "n": 152,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_business_ethics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_clinical_knowledge",
+      "n": 265,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_college_biology",
+      "n": 144,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_college_chemistry",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_college_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_college_mathematics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_college_medicine",
+      "n": 173,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_college_physics",
+      "n": 102,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_computer_security",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_conceptual_physics",
+      "n": 235,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_econometrics",
+      "n": 114,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_electrical_engineering",
+      "n": 145,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_elementary_mathematics",
+      "n": 378,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_formal_logic",
+      "n": 126,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_global_facts",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_biology",
+      "n": 310,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_chemistry",
+      "n": 203,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_european_history",
+      "n": 165,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_geography",
+      "n": 198,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_government_and_politics",
+      "n": 193,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_macroeconomics",
+      "n": 390,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_mathematics",
+      "n": 270,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_microeconomics",
+      "n": 238,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_physics",
+      "n": 151,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_psychology",
+      "n": 545,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_statistics",
+      "n": 216,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_us_history",
+      "n": 204,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_high_school_world_history",
+      "n": 237,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_human_aging",
+      "n": 223,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_human_sexuality",
+      "n": 131,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_international_law",
+      "n": 121,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_jurisprudence",
+      "n": 108,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_logical_fallacies",
+      "n": 163,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_machine_learning",
+      "n": 112,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_management",
+      "n": 103,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_marketing",
+      "n": 234,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_medical_genetics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_miscellaneous",
+      "n": 783,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_moral_disputes",
+      "n": 346,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_moral_scenarios",
+      "n": 895,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_nutrition",
+      "n": 306,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_philosophy",
+      "n": 311,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_prehistory",
+      "n": 324,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_professional_accounting",
+      "n": 282,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_professional_law",
+      "n": 1534,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_professional_medicine",
+      "n": 272,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_professional_psychology",
+      "n": 612,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_public_relations",
+      "n": 110,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_security_studies",
+      "n": 245,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_sociology",
+      "n": 201,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_us_foreign_policy",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_virology",
+      "n": 166,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "task": "mmlu_world_religions",
+      "n": 171,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_abstract_algebra",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_anatomy",
+      "n": 135,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_astronomy",
+      "n": 152,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_business_ethics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_clinical_knowledge",
+      "n": 265,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_college_biology",
+      "n": 144,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_college_chemistry",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_college_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_college_mathematics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_college_medicine",
+      "n": 173,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_college_physics",
+      "n": 102,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_computer_security",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_conceptual_physics",
+      "n": 235,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_econometrics",
+      "n": 114,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_electrical_engineering",
+      "n": 145,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_elementary_mathematics",
+      "n": 378,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_formal_logic",
+      "n": 126,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_global_facts",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_biology",
+      "n": 310,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_chemistry",
+      "n": 203,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_european_history",
+      "n": 165,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_geography",
+      "n": 198,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_government_and_politics",
+      "n": 193,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_macroeconomics",
+      "n": 390,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_mathematics",
+      "n": 270,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_microeconomics",
+      "n": 238,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_physics",
+      "n": 151,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_psychology",
+      "n": 545,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_statistics",
+      "n": 216,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_us_history",
+      "n": 204,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_high_school_world_history",
+      "n": 237,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_human_aging",
+      "n": 223,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_human_sexuality",
+      "n": 131,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_international_law",
+      "n": 121,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_jurisprudence",
+      "n": 108,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_logical_fallacies",
+      "n": 163,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_machine_learning",
+      "n": 112,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_management",
+      "n": 103,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_marketing",
+      "n": 234,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_medical_genetics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_miscellaneous",
+      "n": 783,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_moral_disputes",
+      "n": 346,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_moral_scenarios",
+      "n": 895,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_nutrition",
+      "n": 306,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_philosophy",
+      "n": 311,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_prehistory",
+      "n": 324,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_professional_accounting",
+      "n": 282,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_professional_law",
+      "n": 1534,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_professional_medicine",
+      "n": 272,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_professional_psychology",
+      "n": 612,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_public_relations",
+      "n": 110,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_security_studies",
+      "n": 245,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_sociology",
+      "n": 201,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_us_foreign_policy",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_virology",
+      "n": 166,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "task": "mmlu_world_religions",
+      "n": 171,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_abstract_algebra",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_anatomy",
+      "n": 135,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_astronomy",
+      "n": 152,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_business_ethics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_clinical_knowledge",
+      "n": 265,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_college_biology",
+      "n": 144,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_college_chemistry",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_college_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_college_mathematics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_college_medicine",
+      "n": 173,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_college_physics",
+      "n": 102,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_computer_security",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_conceptual_physics",
+      "n": 235,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_econometrics",
+      "n": 114,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_electrical_engineering",
+      "n": 145,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_elementary_mathematics",
+      "n": 378,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_formal_logic",
+      "n": 126,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_global_facts",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_biology",
+      "n": 310,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_chemistry",
+      "n": 203,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_european_history",
+      "n": 165,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_geography",
+      "n": 198,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_government_and_politics",
+      "n": 193,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_macroeconomics",
+      "n": 390,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_mathematics",
+      "n": 270,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_microeconomics",
+      "n": 238,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_physics",
+      "n": 151,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_psychology",
+      "n": 545,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_statistics",
+      "n": 216,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_us_history",
+      "n": 204,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_high_school_world_history",
+      "n": 237,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_human_aging",
+      "n": 223,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_human_sexuality",
+      "n": 131,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_international_law",
+      "n": 121,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_jurisprudence",
+      "n": 108,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_logical_fallacies",
+      "n": 163,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_machine_learning",
+      "n": 112,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_management",
+      "n": 103,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_marketing",
+      "n": 234,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_medical_genetics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_miscellaneous",
+      "n": 783,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_moral_disputes",
+      "n": 346,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_moral_scenarios",
+      "n": 895,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_nutrition",
+      "n": 306,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_philosophy",
+      "n": 311,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_prehistory",
+      "n": 324,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_professional_accounting",
+      "n": 282,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_professional_law",
+      "n": 1534,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_professional_medicine",
+      "n": 272,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_professional_psychology",
+      "n": 612,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_public_relations",
+      "n": 110,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_security_studies",
+      "n": 245,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_sociology",
+      "n": 201,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_us_foreign_policy",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_virology",
+      "n": 166,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "task": "mmlu_world_religions",
+      "n": 171,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_abstract_algebra",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_anatomy",
+      "n": 135,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_astronomy",
+      "n": 152,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_business_ethics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_clinical_knowledge",
+      "n": 265,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_college_biology",
+      "n": 144,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_college_chemistry",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_college_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_college_mathematics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_college_medicine",
+      "n": 173,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_college_physics",
+      "n": 102,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_computer_security",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_conceptual_physics",
+      "n": 235,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_econometrics",
+      "n": 114,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_electrical_engineering",
+      "n": 145,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_elementary_mathematics",
+      "n": 378,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_formal_logic",
+      "n": 126,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_global_facts",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_biology",
+      "n": 310,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_chemistry",
+      "n": 203,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_european_history",
+      "n": 165,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_geography",
+      "n": 198,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_government_and_politics",
+      "n": 193,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_macroeconomics",
+      "n": 390,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_mathematics",
+      "n": 270,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_microeconomics",
+      "n": 238,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_physics",
+      "n": 151,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_psychology",
+      "n": 545,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_statistics",
+      "n": 216,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_us_history",
+      "n": 204,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_high_school_world_history",
+      "n": 237,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_human_aging",
+      "n": 223,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_human_sexuality",
+      "n": 131,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_international_law",
+      "n": 121,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_jurisprudence",
+      "n": 108,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_logical_fallacies",
+      "n": 163,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_machine_learning",
+      "n": 112,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_management",
+      "n": 103,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_marketing",
+      "n": 234,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_medical_genetics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_miscellaneous",
+      "n": 783,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_moral_disputes",
+      "n": 346,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_moral_scenarios",
+      "n": 895,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_nutrition",
+      "n": 306,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_philosophy",
+      "n": 311,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_prehistory",
+      "n": 324,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_professional_accounting",
+      "n": 282,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_professional_law",
+      "n": 1534,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_professional_medicine",
+      "n": 272,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_professional_psychology",
+      "n": 612,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_public_relations",
+      "n": 110,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_security_studies",
+      "n": 245,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_sociology",
+      "n": 201,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_us_foreign_policy",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_virology",
+      "n": 166,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "task": "mmlu_world_religions",
+      "n": 171,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_abstract_algebra",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_anatomy",
+      "n": 135,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_astronomy",
+      "n": 152,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_business_ethics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_clinical_knowledge",
+      "n": 265,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_college_biology",
+      "n": 144,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_college_chemistry",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_college_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_college_mathematics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_college_medicine",
+      "n": 173,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_college_physics",
+      "n": 102,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_computer_security",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_conceptual_physics",
+      "n": 235,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_econometrics",
+      "n": 114,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_electrical_engineering",
+      "n": 145,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_elementary_mathematics",
+      "n": 378,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_formal_logic",
+      "n": 126,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_global_facts",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_biology",
+      "n": 310,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_chemistry",
+      "n": 203,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_european_history",
+      "n": 165,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_geography",
+      "n": 198,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_government_and_politics",
+      "n": 193,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_macroeconomics",
+      "n": 390,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_mathematics",
+      "n": 270,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_microeconomics",
+      "n": 238,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_physics",
+      "n": 151,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_psychology",
+      "n": 545,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_statistics",
+      "n": 216,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_us_history",
+      "n": 204,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_high_school_world_history",
+      "n": 237,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_human_aging",
+      "n": 223,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_human_sexuality",
+      "n": 131,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_international_law",
+      "n": 121,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_jurisprudence",
+      "n": 108,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_logical_fallacies",
+      "n": 163,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_machine_learning",
+      "n": 112,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_management",
+      "n": 103,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_marketing",
+      "n": 234,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_medical_genetics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_miscellaneous",
+      "n": 783,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_moral_disputes",
+      "n": 346,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_moral_scenarios",
+      "n": 895,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_nutrition",
+      "n": 306,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_philosophy",
+      "n": 311,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_prehistory",
+      "n": 324,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_professional_accounting",
+      "n": 282,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_professional_law",
+      "n": 1534,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_professional_medicine",
+      "n": 272,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_professional_psychology",
+      "n": 612,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_public_relations",
+      "n": 110,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_security_studies",
+      "n": 245,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_sociology",
+      "n": 201,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_us_foreign_policy",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_virology",
+      "n": 166,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "task": "mmlu_world_religions",
+      "n": 171,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_abstract_algebra",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_anatomy",
+      "n": 135,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_astronomy",
+      "n": 152,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_business_ethics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_clinical_knowledge",
+      "n": 265,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_college_biology",
+      "n": 144,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_college_chemistry",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_college_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_college_mathematics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_college_medicine",
+      "n": 173,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_college_physics",
+      "n": 102,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_computer_security",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_conceptual_physics",
+      "n": 235,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_econometrics",
+      "n": 114,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_electrical_engineering",
+      "n": 145,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_elementary_mathematics",
+      "n": 378,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_formal_logic",
+      "n": 126,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_global_facts",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_biology",
+      "n": 310,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_chemistry",
+      "n": 203,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_computer_science",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_european_history",
+      "n": 165,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_geography",
+      "n": 198,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_government_and_politics",
+      "n": 193,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_macroeconomics",
+      "n": 390,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_mathematics",
+      "n": 270,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_microeconomics",
+      "n": 238,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_physics",
+      "n": 151,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_psychology",
+      "n": 545,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_statistics",
+      "n": 216,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_us_history",
+      "n": 204,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_high_school_world_history",
+      "n": 237,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_human_aging",
+      "n": 223,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_human_sexuality",
+      "n": 131,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_international_law",
+      "n": 121,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_jurisprudence",
+      "n": 108,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_logical_fallacies",
+      "n": 163,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_machine_learning",
+      "n": 112,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_management",
+      "n": 103,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_marketing",
+      "n": 234,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_medical_genetics",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_miscellaneous",
+      "n": 783,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_moral_disputes",
+      "n": 346,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_moral_scenarios",
+      "n": 895,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_nutrition",
+      "n": 306,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_philosophy",
+      "n": 311,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_prehistory",
+      "n": 324,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_professional_accounting",
+      "n": 282,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_professional_law",
+      "n": 1534,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_professional_medicine",
+      "n": 272,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_professional_psychology",
+      "n": 612,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_public_relations",
+      "n": 110,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_security_studies",
+      "n": 245,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_sociology",
+      "n": 201,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_us_foreign_policy",
+      "n": 100,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_virology",
+      "n": 166,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "task": "mmlu_world_religions",
+      "n": 171,
+      "checks": {
+        "full_count": true,
+        "unique_ids": true,
+        "matched_actual_prompts": true,
+        "five_shot": true,
+        "six_answer_markers": true,
+        "sample_accuracy": true
+      }
+    }
+  ],
+  "aggregates": [
+    {
+      "model": "qwen",
+      "method": "bf16",
+      "n": 14042,
+      "accuracy_percent": 60.14812704742914,
+      "checks": {
+        "subject_count": true,
+        "total_count": true,
+        "weighted_result": true,
+        "main_table": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "firon",
+      "n": 14042,
+      "accuracy_percent": 54.401082466885065,
+      "checks": {
+        "subject_count": true,
+        "total_count": true,
+        "weighted_result": true,
+        "main_table": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true
+      }
+    },
+    {
+      "model": "qwen",
+      "method": "parent",
+      "n": 14042,
+      "accuracy_percent": 45.76983335707164,
+      "checks": {
+        "subject_count": true,
+        "total_count": true,
+        "weighted_result": true,
+        "main_table": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "bf16",
+      "n": 14042,
+      "accuracy_percent": 45.54194559179604,
+      "checks": {
+        "subject_count": true,
+        "total_count": true,
+        "weighted_result": true,
+        "main_table": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "firon",
+      "n": 14042,
+      "accuracy_percent": 37.85785500640934,
+      "checks": {
+        "subject_count": true,
+        "total_count": true,
+        "weighted_result": true,
+        "main_table": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "parent",
+      "n": 14042,
+      "accuracy_percent": 33.734510753453925,
+      "checks": {
+        "subject_count": true,
+        "total_count": true,
+        "weighted_result": true,
+        "main_table": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true
+      }
+    },
+    {
+      "model": "llama",
+      "method": "w4a16",
+      "n": 14042,
+      "accuracy_percent": 37.316621563879785,
+      "checks": {
+        "subject_count": true,
+        "total_count": true,
+        "weighted_result": true,
+        "main_table": true,
+        "scales_unchanged": true,
+        "quantizer_coverage": true
+      }
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,122 @@
+{
+  "ppl": 182.7207794189453,
+  "nll": 5.20795919210514,
+  "split": "train",
+  "windows": 32,
+  "predicted_tokens": 65504,
+  "frozen_unchanged": true,
+  "down_statistics": {
+    "model.layers.0.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 196,
+      "quantized_zero": 509215712,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.9484878107905388
+    },
+    "model.layers.1.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 418,
+      "quantized_zero": 536870752,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.9999989233911037
+    },
+    "model.layers.2.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 145,
+      "quantized_zero": 99519694,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.18536960519850254
+    },
+    "model.layers.3.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 136,
+      "quantized_zero": 106414261,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.19821175374090672
+    },
+    "model.layers.4.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 152,
+      "quantized_zero": 103090820,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.19202133268117905
+    },
+    "model.layers.5.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 162,
+      "quantized_zero": 130895918,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.24381234496831894
+    },
+    "model.layers.6.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 153,
+      "quantized_zero": 120996325,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.22537293285131454
+    },
+    "model.layers.7.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 165,
+      "quantized_zero": 98216621,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.18294240534305573
+    },
+    "model.layers.8.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 165,
+      "quantized_zero": 123258072,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.22958574257791042
+    },
+    "model.layers.9.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 152,
+      "quantized_zero": 134528749,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.2505790386348963
+    },
+    "model.layers.10.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 318,
+      "quantized_zero": 164706216,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.3067886419594288
+    },
+    "model.layers.11.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 189,
+      "quantized_zero": 163318324,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.3042037319391966
+    },
+    "model.layers.12.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 208,
+      "quantized_zero": 174797411,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.3255851622670889
+    },
+    "model.layers.13.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 214,
+      "quantized_zero": 218150929,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.406337371096015
+    },
+    "model.layers.14.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 367,
+      "quantized_zero": 342856899,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.6386200562119484
+    },
+    "model.layers.15.mlp.down_proj": {
+      "elements": 536870912,
+      "original_zero": 1369,
+      "quantized_zero": 518136106,
+      "outside_fullrange": 0,
+      "new_zero_fraction": 0.9651011545211077
+    }
+  }
+}

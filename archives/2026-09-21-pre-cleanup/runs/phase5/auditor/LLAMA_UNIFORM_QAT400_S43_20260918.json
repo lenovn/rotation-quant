@@ -1,0 +1,354 @@
+{
+  "status": "PASS: Llama seed43 full Uniform-QAT400 and same-package validation/test/C4",
+  "timestamp": "2026-09-18T05:44:19.605745+00:00",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s43/static_w4a8.pt",
+  "reference": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s43/checkpoint-0100/state.pt",
+  "final_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s43/checkpoint-0400/static_w4a8.pt",
+  "prior_parent_audit": "LLAMA_SEEDS43_44_POSTPROCESS_20260918.md",
+  "training": {
+    "actual_updates": 400,
+    "global_batch": 8,
+    "sequence_length": 2048,
+    "input_token_visits": 6553600,
+    "predicted_token_visits": 6550400,
+    "no_resume": true,
+    "no_early_stop": true,
+    "all_training_windows_verified": true,
+    "legacy_group_counts": {
+      "W": 112,
+      "SA": 96,
+      "SW": 112,
+      "SP2": 16
+    },
+    "actual_activation_format": {
+      "int8": 112
+    },
+    "teacher": "original unrotated BF16; no norm fusion; frozen; no validation data",
+    "master_initialization": {
+      "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s43/checkpoint-0100/state.pt",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s43/static_w4a8.pt",
+      "diagonal_transform": null,
+      "method": "project current-R FP reference into parent INT4 cells; retain parent initial quantized forward"
+    },
+    "arguments": {
+      "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s43",
+      "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s43/static_w4a8.pt",
+      "resume": null,
+      "reference_state": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/joint100-s43/checkpoint-0100/state.pt",
+      "steps": 400,
+      "schedule_steps": 400,
+      "accumulation": 8,
+      "warmup": 10,
+      "weight_lr": 1e-05,
+      "weight_optimizer": "adam",
+      "offload_teacher_body": true,
+      "layer_devices": 1,
+      "momentum": 0.9,
+      "relative_scale_lr": 0.001,
+      "temperature": 1.0,
+      "ce_weight": 0.1,
+      "data_start": 800,
+      "resume_every": 25,
+      "checkpoints": [
+        100,
+        200,
+        400
+      ],
+      "validation_steps": [
+        400
+      ],
+      "target_ppl": null
+    },
+    "source_byte_equal_seed42": {
+      "distill.py": true,
+      "common.py": true,
+      "quantization.py": true,
+      "architecture.py": true,
+      "placement.py": true
+    }
+  },
+  "artifacts": {
+    "weight_records": 112,
+    "activation_formats": {
+      "int8": 112
+    },
+    "high_precision_tensors_bitwise_equal_parent": 74,
+    "changed_W4_matrices": 112,
+    "changed_SW": 112,
+    "changed_activation_scales": 112,
+    "test_C4_before_after_states_bitwise_equal": true,
+    "test_C4_states_bitwise_equal": true
+  },
+  "results": [
+    {
+      "split": "validation",
+      "ppl": 18.143936807329858,
+      "nll": 2.898336444698109,
+      "targets": 252728,
+      "tokens": 252852,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 18.136058807373047,
+          "nll": 2.897902155776782
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 20.364675521850586,
+          "nll": 3.0138018078455553
+        }
+      ],
+      "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s43/checkpoint-0400/validation.json",
+      "summary_row": {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "seed": "43",
+        "stage": "Uniform-QAT400",
+        "down_format": "INT8",
+        "qat_data": "WikiText-only",
+        "parent_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s43/static_w4a8.pt",
+        "evaluation_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s43/checkpoint-0400/static_w4a8.pt",
+        "dataset": "Salesforce/wikitext",
+        "split": "validation",
+        "subset": "wikitext-2-raw-v1",
+        "subset_identity": "full cached WikiText-2 validation",
+        "metric_protocol": "existing evaluator: BF16 logits CE, per-token loss to FP32; log(float32 PPL), weighted by predicted tokens",
+        "ppl": "18.143936807329858",
+        "nll": "2.898336444698109",
+        "targets": "252728",
+        "input_tokens": "252852",
+        "unscored_tail_tokens": "0",
+        "reuse_status": "new_phase5_measurement",
+        "completion": "COMPLETED",
+        "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s43/checkpoint-0400/validation.json"
+      },
+      "limit": "Validation has no separately saved input IDs or quantizer before/after snapshots; counts, metadata, source cold-load path and segments checked."
+    },
+    {
+      "split": "test",
+      "ppl": 17.575531211766275,
+      "nll": 2.866507662660506,
+      "targets": 288934,
+      "tokens": 289076,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 128,
+          "predicted_tokens": 262016,
+          "ppl": 17.47726821899414,
+          "nll": 2.860901077636429
+        },
+        {
+          "start_token": 262144,
+          "seqlen": 2048,
+          "windows": 13,
+          "predicted_tokens": 26611,
+          "ppl": 18.457765579223633,
+          "nll": 2.915485180536473
+        },
+        {
+          "start_token": 288768,
+          "seqlen": 308,
+          "windows": 1,
+          "predicted_tokens": 307,
+          "ppl": 30.14934539794922,
+          "nll": 3.4061632114266907
+        }
+      ],
+      "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-test-s43/result.json",
+      "summary_row": {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "seed": "43",
+        "stage": "Uniform-QAT400",
+        "down_format": "INT8",
+        "qat_data": "WikiText-only",
+        "parent_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s43/static_w4a8.pt",
+        "evaluation_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s43/checkpoint-0400/static_w4a8.pt",
+        "dataset": "Salesforce/wikitext",
+        "split": "test",
+        "subset": "wikitext-2-raw-v1",
+        "subset_identity": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-test-s43/input_tokens.pt",
+        "metric_protocol": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL",
+        "ppl": "17.575531211766275",
+        "nll": "2.866507662660506",
+        "targets": "288934",
+        "input_tokens": "289076",
+        "unscored_tail_tokens": "0",
+        "reuse_status": "new_phase5_measurement",
+        "completion": "COMPLETED",
+        "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-test-s43/result.json"
+      },
+      "historical_evidence": [
+        "/home/dongpeiyan/projects/rotation-quant/runs/phase3/wiki2-test-bf16-fixed-20260917a/result.json",
+        "/home/dongpeiyan/projects/rotation-quant/runs/phase3/wiki2-test-best-fixed-20260917a/result.json"
+      ],
+      "token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-test-s43/input_tokens.pt",
+      "input_metadata": {
+        "dataset": "Salesforce/wikitext",
+        "subset": "wikitext-2-raw-v1",
+        "split": "test",
+        "dataset_path": "/home/dongpeiyan/projects/rotation-quant/cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-test.arrow",
+        "rows": 4358,
+        "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+        "add_bos_token": false,
+        "add_eos_token": false,
+        "text_join": "double-newline",
+        "token_count": 289076,
+        "window_length": 2048,
+        "full_windows": 141,
+        "tail_tokens": 308,
+        "windows": 142,
+        "predicted_tokens": 288934,
+        "unscored_tail_tokens": 0,
+        "protocol": "all test rows in original order; disjoint 2048-token windows including partial tail"
+      },
+      "quantizer_tensors_before_after_equal": true,
+      "scales_exact_package": true
+    },
+    {
+      "split": "C4",
+      "ppl": 39.07188227779196,
+      "nll": 3.66540308496798,
+      "targets": 2096128,
+      "tokens": 2097152,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 128,
+          "predicted_tokens": 262016,
+          "ppl": 38.20887756347656,
+          "nll": 3.6430678855621896
+        },
+        {
+          "start_token": 262144,
+          "seqlen": 2048,
+          "windows": 128,
+          "predicted_tokens": 262016,
+          "ppl": 39.06190872192383,
+          "nll": 3.6651477906633088
+        },
+        {
+          "start_token": 524288,
+          "seqlen": 2048,
+          "windows": 128,
+          "predicted_tokens": 262016,
+          "ppl": 40.9369010925293,
+          "nll": 3.712031883487643
+        },
+        {
+          "start_token": 786432,
+          "seqlen": 2048,
+          "windows": 128,
+          "predicted_tokens": 262016,
+          "ppl": 36.70751190185547,
+          "nll": 3.6029814180898816
+        },
+        {
+          "start_token": 1048576,
+          "seqlen": 2048,
+          "windows": 128,
+          "predicted_tokens": 262016,
+          "ppl": 40.831790924072266,
+          "nll": 3.7094609673152172
+        },
+        {
+          "start_token": 1310720,
+          "seqlen": 2048,
+          "windows": 128,
+          "predicted_tokens": 262016,
+          "ppl": 36.73198699951172,
+          "nll": 3.6036479558230776
+        },
+        {
+          "start_token": 1572864,
+          "seqlen": 2048,
+          "windows": 128,
+          "predicted_tokens": 262016,
+          "ppl": 38.408870697021484,
+          "nll": 3.6482884406504374
+        },
+        {
+          "start_token": 1835008,
+          "seqlen": 2048,
+          "windows": 128,
+          "predicted_tokens": 262016,
+          "ppl": 42.039024353027344,
+          "nll": 3.738598338152089
+        }
+      ],
+      "evidence": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-c4-s43/result.json",
+      "summary_row": {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "seed": "43",
+        "stage": "Uniform-QAT400",
+        "down_format": "INT8",
+        "qat_data": "WikiText-only",
+        "parent_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-down-readapt-s43/static_w4a8.pt",
+        "evaluation_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-s43/checkpoint-0400/static_w4a8.pt",
+        "dataset": "allenai/c4",
+        "split": "validation",
+        "subset": "en",
+        "subset_identity": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt",
+        "metric_protocol": "BF16 logits CE; per-token loss to FP32; log(float32 segment PPL), target-weighted NLL",
+        "ppl": "39.07188227779196",
+        "nll": "3.66540308496798",
+        "targets": "2096128",
+        "input_tokens": "2097152",
+        "unscored_tail_tokens": "0",
+        "reuse_status": "new_phase5_measurement",
+        "completion": "COMPLETED",
+        "evidence_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/llama32-1b/uniform-qat400-c4-s43/result.json"
+      },
+      "historical_evidence": [
+        "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-bf16-fixed-20260915a/result.json",
+        "/home/dongpeiyan/projects/rotation-quant/runs/phase3/c4-best-fixed-20260915a/result.json"
+      ],
+      "token_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/input_tokens.pt",
+      "input_metadata": {
+        "dataset": "allenai/c4",
+        "subset": "en",
+        "split": "validation",
+        "source_files": [
+          "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00000-of-00008.json.gz",
+          "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00001-of-00008.json.gz",
+          "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00002-of-00008.json.gz",
+          "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00003-of-00008.json.gz",
+          "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00004-of-00008.json.gz",
+          "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00005-of-00008.json.gz",
+          "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00006-of-00008.json.gz",
+          "https://huggingface.co/datasets/allenai/c4/resolve/main/en/c4-validation.00007-of-00008.json.gz"
+        ],
+        "source_document_count": 364608,
+        "seed": 42,
+        "sampling": "Python Random(seed) permutation of all validation document rows; take document batches in that order, join with two newlines, retain token prefix",
+        "selected_document_count": 4480,
+        "concatenated_token_count": 2150947,
+        "discarded_suffix_tokens": 53795,
+        "token_count": 2097152,
+        "window_length": 2048,
+        "windows": 1024,
+        "predicted_tokens": 2096128,
+        "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct",
+        "tokenizer_class": "LlamaTokenizerFast",
+        "add_bos_token": false,
+        "add_eos_token": false,
+        "text_separator": "\n\n",
+        "purpose": "external evaluation only; no calibration or selection"
+      },
+      "quantizer_tensors_before_after_equal": true,
+      "scales_exact_package": true
+    }
+  ],
+  "limitations": [
+    "No GPU/PPL/tokenization/architecture suite rerun; no unrelated package or full optimizer read.",
+    "Validation lacks separate saved input IDs and before/after quantizer states; external test/C4 have direct tensor evidence.",
+    "Only Uniform seed43 audited here; no claim about unfinished SP2 counterpart or full three-seed statistics."
+  ]
+}

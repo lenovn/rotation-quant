@@ -1,0 +1,140 @@
+--- /home/dongpeiyan/projects/rotation-quant/runs/phase3/smoke-c-20260914a/source/run.py	2026-09-14 01:53:06.292537561 +0800
++++ /home/dongpeiyan/projects/rotation-quant/runs/phase3/route-c-adam-100-20260914a/source/run.py	2026-09-14 02:02:55.724774109 +0800
+@@ -31,6 +31,37 @@
+     return 0.5 * (1 + math.cos(math.pi * progress))
+ 
+ 
++def make_optimizers(groups, args):
++    learning_rates = dict(R=args.r_lr, SA=args.sa_lr, SW=args.sw_lr, SP2=args.sp2_lr)
++    if args.scale_optimizer == "sgd":
++        optimizer = SGDG([dict(params=[parameter for _, parameter in values],
++            lr=learning_rates[name], initial_lr=learning_rates[name], stiefel=name == "R", name=name)
++            for name, values in groups.items()], lr=args.r_lr)
++        return [optimizer]
++    rotation_optimizer = SGDG([dict(params=[parameter for _, parameter in groups["R"]],
++        lr=args.r_lr, initial_lr=args.r_lr, stiefel=True, name="R")], lr=args.r_lr)
++    scale_groups = []
++    for name in ("SA", "SW", "SP2"):
++        for parameter_name, parameter in groups[name]:
++            rate = args.relative_scale_lr * float(parameter.detach().mean())
++            scale_groups.append(dict(params=[parameter], lr=rate, initial_lr=rate,
++                                     name=name, parameter_name=parameter_name))
++    scale_optimizer = torch.optim.Adam(scale_groups, eps=1e-12, weight_decay=0.0)
++    return [rotation_optimizer, scale_optimizer]
++
++
++def save_resume(model, optimizers, output, step, route):
++    state = dict(parameters={name: parameter.detach().cpu().clone()
++        for values in learned_parameters(model).values() for name, parameter in values},
++        metadata=dict(route=route, update_step=step),
++        optimizers=[optimizer.state_dict() for optimizer in optimizers],
++        python_rng=random.getstate(), torch_rng=torch.get_rng_state(),
++        cuda_rng=torch.cuda.get_rng_state())
++    temporary = output / "resume.pt.tmp"
++    torch.save(state, temporary)
++    temporary.replace(output / "resume.pt")
++
++
+ def progress(output, stage, **details):
+     record = dict(stage=stage, pid=os.getpid(), time=time.time(),
+                   cuda_visible_devices=os.environ.get("CUDA_VISIBLE_DEVICES"),
+@@ -173,15 +204,26 @@
+ def train(args, train_windows, calibration, probe, validation):
+     model = build_training_model(args.initial).cuda()
+     groups = learned_parameters(model)
+-    learning_rates = dict(R=args.r_lr, SA=args.sa_lr, SW=args.sw_lr, SP2=args.sp2_lr)
+-    optimizer = SGDG([dict(params=[parameter for _, parameter in values],
+-                          lr=learning_rates[name], stiefel=name == "R", name=name)
+-                     for name, values in groups.items()], lr=args.r_lr)
++    optimizers = make_optimizers(groups, args)
+     start_step = 0
+     if args.resume is not None:
+-        state = load_state(model, args.resume / "resume_state.pt")
+-        saved_optimizer = torch.load(args.resume / "optimizer.pt", map_location="cpu", weights_only=False)
+-        optimizer.load_state_dict(saved_optimizer["optimizer"])
++        resume_path = args.resume / "resume.pt"
++        if resume_path.exists():
++            state = load_state(model, resume_path)
++            saved_optimizer = torch.load(resume_path, map_location="cpu", weights_only=False)
++        else:
++            state = load_state(model, args.resume / "resume_state.pt")
++            saved_optimizer = torch.load(args.resume / "optimizer.pt", map_location="cpu", weights_only=False)
++        if state["metadata"]["route"] != args.route:
++            raise ValueError("Resume route differs from checkpoint")
++        saved_states = saved_optimizer.get("optimizers", [saved_optimizer.get("optimizer")])
++        if len(saved_states) != len(optimizers):
++            raise ValueError("Cannot resume with a different optimizer method")
++        for optimizer, saved_state in zip(optimizers, saved_states):
++            optimizer.load_state_dict(saved_state)
++            for group in optimizer.param_groups:
++                if "initial_lr" not in group:
++                    group["initial_lr"] = dict(R=args.r_lr, SA=args.sa_lr, SW=args.sw_lr, SP2=args.sp2_lr)[group["name"]]
+         random.setstate(saved_optimizer["python_rng"])
+         torch.set_rng_state(saved_optimizer["torch_rng"])
+         torch.cuda.set_rng_state(saved_optimizer["cuda_rng"])
+@@ -200,11 +242,13 @@
+             progress(args.output, "A-switch-to-W4", step=step)
+         training_mode(model, args.route, step, args.switch_step)
+         factor = schedule(step, args.schedule_steps or args.steps, args.warmup)
+-        for group in optimizer.param_groups:
+-            group["lr"] = learning_rates[group["name"]] * factor
++        for optimizer in optimizers:
++            for group in optimizer.param_groups:
++                group["lr"] = group["initial_lr"] * factor
+         before = {name: parameter.detach().clone() for values in groups.values() for name, parameter in values}
+         model.train()
+-        optimizer.zero_grad(set_to_none=True)
++        for optimizer in optimizers:
++            optimizer.zero_grad(set_to_none=True)
+         losses = []
+         window_indices = []
+         for microstep in range(args.accumulation):
+@@ -223,23 +267,25 @@
+                     raise RuntimeError(f"Non-finite training gradient: {name}")
+         trainable = [parameter for values in groups.values() for _, parameter in values if parameter.requires_grad]
+         norm = float(torch.nn.utils.clip_grad_norm_(trainable, 1.0))
+-        optimizer.step()
++        for optimizer in optimizers:
++            optimizer.step()
+         with torch.no_grad():
+             for group_name in ("SA", "SW", "SP2"):
+                 for _, parameter in groups[group_name]:
+                     parameter.clamp_(min=1e-8)
+         changes = gradient_record(groups, before)
+         del before
+-        optimizer.zero_grad(set_to_none=True)
++        for optimizer in optimizers:
++            optimizer.zero_grad(set_to_none=True)
+         record = dict(step=step + 1, microbatch_losses=losses, minibatch_mean_nll=sum(losses) / len(losses),
+             effective_targets=args.accumulation * 2047, train_tokens=args.accumulation * 2048,
+             cumulative_train_tokens=(step + 1) * args.accumulation * 2048,
+-            window_indices=window_indices, learning_rates={group["name"]: group["lr"] for group in optimizer.param_groups},
++            window_indices=window_indices,
++            learning_rates={group.get("parameter_name", group["name"]): group["lr"]
++                            for optimizer in optimizers for group in optimizer.param_groups},
+             gradient_norm_before_clip=norm, updates=changes, elapsed_seconds=time.monotonic() - started)
+         append_json(args.output / "training.jsonl", record)
+-        save_state(model, args.output / "resume_state.pt", route=args.route, update_step=step + 1)
+-        torch.save(dict(optimizer=optimizer.state_dict(), python_rng=random.getstate(),
+-                        torch_rng=torch.get_rng_state(), cuda_rng=torch.cuda.get_rng_state()), args.output / "optimizer.pt")
++        save_resume(model, optimizers, args.output, step + 1, args.route)
+         progress(args.output, "training", step=step + 1, total=args.steps, loss=record["minibatch_mean_nll"],
+                  elapsed_seconds=time.monotonic() - started)
+         if step + 1 in args.checkpoints:
+@@ -269,6 +315,8 @@
+     parser.add_argument("--sa-lr", type=float, default=1.0)
+     parser.add_argument("--sw-lr", type=float, default=0.01)
+     parser.add_argument("--sp2-lr", type=float, default=1.0)
++    parser.add_argument("--scale-optimizer", choices=("sgd", "adam"), default="sgd")
++    parser.add_argument("--relative-scale-lr", type=float, default=0.001)
+     parser.add_argument("--checkpoints", type=int, nargs="+", default=[10, 25, 50, 100])
+     parser.add_argument("--validation-steps", type=int, nargs="*", default=[10, 100])
+     parser.add_argument("--scale-only-steps", action="store_true")
+@@ -288,6 +336,7 @@
+     write_json(args.output / "settings.json", dict(arguments={name: str(value) if isinstance(value, Path) else value
+         for name, value in vars(args).items()}, source=source_record(), pid=os.getpid()))
+     try:
++        progress(args.output, "loading-data")
+         train_windows, calibration, probe, validation, metadata = data_windows(args.output)
+         if args.initialize:
+             initialize(args.output, calibration, probe)

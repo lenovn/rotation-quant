@@ -1,0 +1,9 @@
+{
+  "task": "ifeval",
+  "path": "google/IFEval",
+  "name": null,
+  "splits": {
+    "train": 541
+  },
+  "status": "ready"
+}

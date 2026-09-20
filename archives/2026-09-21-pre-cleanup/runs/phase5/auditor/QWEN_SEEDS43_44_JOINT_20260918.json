@@ -1,0 +1,646 @@
+{
+  "status": "PASS: initial seed identities, Joint100 updates, matched SP2/INT8 initialization and validation summary only",
+  "timestamp": "2026-09-18T04:57:12.354974+00:00",
+  "seeds": [
+    {
+      "status": "PASS",
+      "scope": "Completed Joint100 and matched initial INT8 only; no postprocess/QAT acceptance",
+      "training": {
+        "steps": 100,
+        "global_microbatches_per_update": 8,
+        "input_token_visits": 1638400,
+        "prediction_targets": 1637600,
+        "seed": 43,
+        "rotation_tensors": 29,
+        "all_rotations_changed_from_initial": true,
+        "R_gradients_per_step": 29,
+        "SA_gradients_per_step": 168,
+        "SW_gradients_per_step": 196,
+        "SP2_gradients_per_step": 0,
+        "route": "B"
+      },
+      "matching": {
+        "weight_records_bitwise_equal": 196,
+        "high_precision_tensors_bitwise_equal": 154,
+        "qk_norm_tensors_bitwise_equal": 56,
+        "non_down_activation_scales_equal": 168,
+        "sp2_formats": {
+          "int8": 168,
+          "sp2": 28
+        },
+        "int8_formats": {
+          "int8": 196
+        },
+        "config_equal": true,
+        "common_joint_parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s43/checkpoint-0100/static_w4a8.pt",
+        "identical_nan_placeholder_buffers": [
+          "lm_head.quantizer.prefill_scale",
+          "lm_head.quantizer.prefill_zero",
+          "lm_head.quantizer.prefill_clip_min",
+          "lm_head.quantizer.prefill_clip_max",
+          "lm_head.quantizer.decode_scale",
+          "lm_head.quantizer.decode_zero",
+          "lm_head.quantizer.decode_clip_min",
+          "lm_head.quantizer.decode_clip_max",
+          "lm_head.out_quantizer.prefill_scale",
+          "lm_head.out_quantizer.prefill_zero",
+          "lm_head.out_quantizer.prefill_clip_min",
+          "lm_head.out_quantizer.prefill_clip_max",
+          "lm_head.out_quantizer.decode_scale",
+          "lm_head.out_quantizer.decode_zero",
+          "lm_head.out_quantizer.decode_clip_min",
+          "lm_head.out_quantizer.decode_clip_max"
+        ],
+        "rotation_equivalence": "R is fused into identical frozen W and high_precision tensors; no independent R tensors in frozen package."
+      },
+      "calibration": {
+        "indices": [
+          1015,
+          969,
+          533,
+          904,
+          1014,
+          63,
+          1086,
+          804,
+          894,
+          736,
+          810,
+          1081,
+          768,
+          731,
+          1194,
+          331,
+          762,
+          492,
+          450,
+          308,
+          235,
+          830,
+          799,
+          1200,
+          1096,
+          660,
+          1190,
+          822,
+          793,
+          329,
+          761,
+          51
+        ],
+        "window_length": 128,
+        "tokens": 4096,
+        "sampled_rows_per_layer": 512,
+        "layers": 28,
+        "candidates_per_layer": 50,
+        "coarse_log2_bounds": [
+          -16,
+          1
+        ],
+        "coarse_count": 33,
+        "refinement_count": 17,
+        "all_candidates_and_minima_checked": true,
+        "full_absmax_exactly_equal": true,
+        "parent_quantizer_states_unchanged": true,
+        "capture_evidence_limit": "Same source capture algorithm/layout, indices, rows, bounds; arrays not saved, no elementwise capture equality claim.",
+        "layers_alpha": [
+          {
+            "module": "model.layers.0.mlp.down_proj",
+            "absmax": 8.8125,
+            "sp2_alpha": 6.114385873877894,
+            "int8_alpha": 4.230879516499839
+          },
+          {
+            "module": "model.layers.1.mlp.down_proj",
+            "absmax": 139.0,
+            "sp2_alpha": 115.93901492657548,
+            "int8_alpha": 55.51179052732479
+          },
+          {
+            "module": "model.layers.2.mlp.down_proj",
+            "absmax": 16768.0,
+            "sp2_alpha": 25443.076402811665,
+            "int8_alpha": 21164.525171410798
+          },
+          {
+            "module": "model.layers.3.mlp.down_proj",
+            "absmax": 25.125,
+            "sp2_alpha": 14.501024658664587,
+            "int8_alpha": 8.739884360317411
+          },
+          {
+            "module": "model.layers.4.mlp.down_proj",
+            "absmax": 35.25,
+            "sp2_alpha": 18.55543737420654,
+            "int8_alpha": 12.2619273114901
+          },
+          {
+            "module": "model.layers.5.mlp.down_proj",
+            "absmax": 22.75,
+            "sp2_alpha": 14.39642197833392,
+            "int8_alpha": 8.676839482359561
+          },
+          {
+            "module": "model.layers.6.mlp.down_proj",
+            "absmax": 27.875,
+            "sp2_alpha": 12.780743852165106,
+            "int8_alpha": 8.445856001210208
+          },
+          {
+            "module": "model.layers.7.mlp.down_proj",
+            "absmax": 46.5,
+            "sp2_alpha": 25.6303950619073,
+            "int8_alpha": 14.089051266592815
+          },
+          {
+            "module": "model.layers.8.mlp.down_proj",
+            "absmax": 33.5,
+            "sp2_alpha": 17.634245447827492,
+            "int8_alpha": 11.128948940224868
+          },
+          {
+            "module": "model.layers.9.mlp.down_proj",
+            "absmax": 58.5,
+            "sp2_alpha": 25.61573653809122,
+            "int8_alpha": 15.438810733523148
+          },
+          {
+            "module": "model.layers.10.mlp.down_proj",
+            "absmax": 117.5,
+            "sp2_alpha": 35.601366103756035,
+            "int8_alpha": 14.179509246315387
+          },
+          {
+            "module": "model.layers.11.mlp.down_proj",
+            "absmax": 88.0,
+            "sp2_alpha": 58.31041229902862,
+            "int8_alpha": 17.619720312509628
+          },
+          {
+            "module": "model.layers.12.mlp.down_proj",
+            "absmax": 30.375,
+            "sp2_alpha": 20.12703151798857,
+            "int8_alpha": 12.130724009118637
+          },
+          {
+            "module": "model.layers.13.mlp.down_proj",
+            "absmax": 29.75,
+            "sp2_alpha": 17.17036750627946,
+            "int8_alpha": 11.346636246162504
+          },
+          {
+            "module": "model.layers.14.mlp.down_proj",
+            "absmax": 83.0,
+            "sp2_alpha": 31.65616162794917,
+            "int8_alpha": 15.870995094578102
+          },
+          {
+            "module": "model.layers.15.mlp.down_proj",
+            "absmax": 64.0,
+            "sp2_alpha": 26.763362874265546,
+            "int8_alpha": 19.39138238842882
+          },
+          {
+            "module": "model.layers.16.mlp.down_proj",
+            "absmax": 79.5,
+            "sp2_alpha": 50.30837570450755,
+            "int8_alpha": 33.245114820376735
+          },
+          {
+            "module": "model.layers.17.mlp.down_proj",
+            "absmax": 137.0,
+            "sp2_alpha": 75.5132069565871,
+            "int8_alpha": 49.90113873824945
+          },
+          {
+            "module": "model.layers.18.mlp.down_proj",
+            "absmax": 185.0,
+            "sp2_alpha": 111.8032999354588,
+            "int8_alpha": 64.35337737945159
+          },
+          {
+            "module": "model.layers.19.mlp.down_proj",
+            "absmax": 360.0,
+            "sp2_alpha": 198.42886499541137,
+            "int8_alpha": 109.07652593491211
+          },
+          {
+            "module": "model.layers.20.mlp.down_proj",
+            "absmax": 454.0,
+            "sp2_alpha": 378.6785091846422,
+            "int8_alpha": 217.9653106940059
+          },
+          {
+            "module": "model.layers.21.mlp.down_proj",
+            "absmax": 608.0,
+            "sp2_alpha": 484.31521400804917,
+            "int8_alpha": 305.65068993829203
+          },
+          {
+            "module": "model.layers.22.mlp.down_proj",
+            "absmax": 692.0,
+            "sp2_alpha": 693.8762023347401,
+            "int8_alpha": 332.2290638772072
+          },
+          {
+            "module": "model.layers.23.mlp.down_proj",
+            "absmax": 544.0,
+            "sp2_alpha": 453.74693611551845,
+            "int8_alpha": 286.3590902572584
+          },
+          {
+            "module": "model.layers.24.mlp.down_proj",
+            "absmax": 1032.0,
+            "sp2_alpha": 785.0800777569483,
+            "int8_alpha": 473.17408629361034
+          },
+          {
+            "module": "model.layers.25.mlp.down_proj",
+            "absmax": 848.0,
+            "sp2_alpha": 561.9003366997304,
+            "int8_alpha": 371.3187108427582
+          },
+          {
+            "module": "model.layers.26.mlp.down_proj",
+            "absmax": 752.0,
+            "sp2_alpha": 521.760927904247,
+            "int8_alpha": 273.90990022747144
+          },
+          {
+            "module": "model.layers.27.mlp.down_proj",
+            "absmax": 3872.0,
+            "sp2_alpha": 5875.214207519488,
+            "int8_alpha": 3541.038924799881
+          }
+        ]
+      },
+      "validation": {
+        "ppl": 16.04792947249727,
+        "nll": 2.7755798364253557,
+        "targets": 262208
+      },
+      "initialization": {
+        "initial_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/init-s43/initial.pt",
+        "checkpoint0": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s43/checkpoint-0000/state.pt",
+        "all_parameter_tensors_bitwise_equal": 421,
+        "seed_identity_prior_file_matches_actual": true
+      },
+      "environment": {
+        "python": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+        "transformers": "4.51.3",
+        "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+        "source_byte_equal_seed42": {
+          "run.py": true,
+          "common.py": true,
+          "architecture.py": true,
+          "quantization.py": true
+        }
+      },
+      "raw_paths": {
+        "training": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s43/training.jsonl",
+        "state": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s43/checkpoint-0100/state.pt",
+        "sp2_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s43/checkpoint-0100/static_w4a8.pt",
+        "int8_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-initial-s43/static_w4a8.pt",
+        "sp2_calibration": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s43/checkpoint-0100/sp2_calibration.json",
+        "int8_calibration": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-initial-s43/range_search.json",
+        "capture": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-initial-s43/capture_metadata.json"
+      }
+    },
+    {
+      "status": "PASS",
+      "scope": "Completed Joint100 and matched initial INT8 only; no postprocess/QAT acceptance",
+      "training": {
+        "steps": 100,
+        "global_microbatches_per_update": 8,
+        "input_token_visits": 1638400,
+        "prediction_targets": 1637600,
+        "seed": 44,
+        "rotation_tensors": 29,
+        "all_rotations_changed_from_initial": true,
+        "R_gradients_per_step": 29,
+        "SA_gradients_per_step": 168,
+        "SW_gradients_per_step": 196,
+        "SP2_gradients_per_step": 0,
+        "route": "B"
+      },
+      "matching": {
+        "weight_records_bitwise_equal": 196,
+        "high_precision_tensors_bitwise_equal": 154,
+        "qk_norm_tensors_bitwise_equal": 56,
+        "non_down_activation_scales_equal": 168,
+        "sp2_formats": {
+          "int8": 168,
+          "sp2": 28
+        },
+        "int8_formats": {
+          "int8": 196
+        },
+        "config_equal": true,
+        "common_joint_parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s44/checkpoint-0100/static_w4a8.pt",
+        "identical_nan_placeholder_buffers": [
+          "lm_head.quantizer.prefill_scale",
+          "lm_head.quantizer.prefill_zero",
+          "lm_head.quantizer.prefill_clip_min",
+          "lm_head.quantizer.prefill_clip_max",
+          "lm_head.quantizer.decode_scale",
+          "lm_head.quantizer.decode_zero",
+          "lm_head.quantizer.decode_clip_min",
+          "lm_head.quantizer.decode_clip_max",
+          "lm_head.out_quantizer.prefill_scale",
+          "lm_head.out_quantizer.prefill_zero",
+          "lm_head.out_quantizer.prefill_clip_min",
+          "lm_head.out_quantizer.prefill_clip_max",
+          "lm_head.out_quantizer.decode_scale",
+          "lm_head.out_quantizer.decode_zero",
+          "lm_head.out_quantizer.decode_clip_min",
+          "lm_head.out_quantizer.decode_clip_max"
+        ],
+        "rotation_equivalence": "R is fused into identical frozen W and high_precision tensors; no independent R tensors in frozen package."
+      },
+      "calibration": {
+        "indices": [
+          607,
+          1144,
+          832,
+          918,
+          1113,
+          648,
+          407,
+          411,
+          1179,
+          104,
+          370,
+          921,
+          207,
+          372,
+          856,
+          1180,
+          168,
+          872,
+          281,
+          488,
+          936,
+          914,
+          820,
+          1131,
+          705,
+          882,
+          712,
+          53,
+          626,
+          532,
+          232,
+          364
+        ],
+        "window_length": 128,
+        "tokens": 4096,
+        "sampled_rows_per_layer": 512,
+        "layers": 28,
+        "candidates_per_layer": 50,
+        "coarse_log2_bounds": [
+          -16,
+          1
+        ],
+        "coarse_count": 33,
+        "refinement_count": 17,
+        "all_candidates_and_minima_checked": true,
+        "full_absmax_exactly_equal": true,
+        "parent_quantizer_states_unchanged": true,
+        "capture_evidence_limit": "Same source capture algorithm/layout, indices, rows, bounds; arrays not saved, no elementwise capture equality claim.",
+        "layers_alpha": [
+          {
+            "module": "model.layers.0.mlp.down_proj",
+            "absmax": 8.8125,
+            "sp2_alpha": 6.114385873877894,
+            "int8_alpha": 4.430175501778287
+          },
+          {
+            "module": "model.layers.1.mlp.down_proj",
+            "absmax": 51.25,
+            "sp2_alpha": 56.34434238479887,
+            "int8_alpha": 28.24855369726342
+          },
+          {
+            "module": "model.layers.2.mlp.down_proj",
+            "absmax": 16000.0,
+            "sp2_alpha": 20195.15760630801,
+            "int8_alpha": 16799.105372810995
+          },
+          {
+            "module": "model.layers.3.mlp.down_proj",
+            "absmax": 26.125,
+            "sp2_alpha": 18.98017819577825,
+            "int8_alpha": 8.288489064158508
+          },
+          {
+            "module": "model.layers.4.mlp.down_proj",
+            "absmax": 29.625,
+            "sp2_alpha": 17.90363654371874,
+            "int8_alpha": 11.298961303951737
+          },
+          {
+            "module": "model.layers.5.mlp.down_proj",
+            "absmax": 20.875,
+            "sp2_alpha": 12.048115014910378,
+            "int8_alpha": 7.603549424532535
+          },
+          {
+            "module": "model.layers.6.mlp.down_proj",
+            "absmax": 25.75,
+            "sp2_alpha": 13.554681202434566,
+            "int8_alpha": 9.379228631459295
+          },
+          {
+            "module": "model.layers.7.mlp.down_proj",
+            "absmax": 40.5,
+            "sp2_alpha": 19.444042033275856,
+            "int8_alpha": 12.849140941566299
+          },
+          {
+            "module": "model.layers.8.mlp.down_proj",
+            "absmax": 47.0,
+            "sp2_alpha": 18.770173775426368,
+            "int8_alpha": 10.804010947308376
+          },
+          {
+            "module": "model.layers.9.mlp.down_proj",
+            "absmax": 46.25,
+            "sp2_alpha": 27.9508249838647,
+            "int8_alpha": 15.364593686131347
+          },
+          {
+            "module": "model.layers.10.mlp.down_proj",
+            "absmax": 74.0,
+            "sp2_alpha": 33.929149598572835,
+            "int8_alpha": 14.816582990064914
+          },
+          {
+            "module": "model.layers.11.mlp.down_proj",
+            "absmax": 89.5,
+            "sp2_alpha": 49.33162060302588,
+            "int8_alpha": 17.920056454200132
+          },
+          {
+            "module": "model.layers.12.mlp.down_proj",
+            "absmax": 34.0,
+            "sp2_alpha": 20.547633501651887,
+            "int8_alpha": 11.827107194061373
+          },
+          {
+            "module": "model.layers.13.mlp.down_proj",
+            "absmax": 35.0,
+            "sp2_alpha": 16.803493115176664,
+            "int8_alpha": 12.174963288004355
+          },
+          {
+            "module": "model.layers.14.mlp.down_proj",
+            "absmax": 35.75,
+            "sp2_alpha": 20.63329876805011,
+            "int8_alpha": 13.635033472279313
+          },
+          {
+            "module": "model.layers.15.mlp.down_proj",
+            "absmax": 52.0,
+            "sp2_alpha": 31.425792414291124,
+            "int8_alpha": 18.94057820721877
+          },
+          {
+            "module": "model.layers.16.mlp.down_proj",
+            "absmax": 86.0,
+            "sp2_alpha": 51.97342591594301,
+            "int8_alpha": 32.800360241007574
+          },
+          {
+            "module": "model.layers.17.mlp.down_proj",
+            "absmax": 146.0,
+            "sp2_alpha": 88.23395562474046,
+            "int8_alpha": 53.1793157356527
+          },
+          {
+            "module": "model.layers.18.mlp.down_proj",
+            "absmax": 180.0,
+            "sp2_alpha": 143.38279362080402,
+            "int8_alpha": 62.61409690973668
+          },
+          {
+            "module": "model.layers.19.mlp.down_proj",
+            "absmax": 354.0,
+            "sp2_alpha": 257.1859552652823,
+            "int8_alpha": 117.60143059222696
+          },
+          {
+            "module": "model.layers.20.mlp.down_proj",
+            "absmax": 482.0,
+            "sp2_alpha": 334.4265521939455,
+            "int8_alpha": 231.40810518614722
+          },
+          {
+            "module": "model.layers.21.mlp.down_proj",
+            "absmax": 616.0,
+            "sp2_alpha": 372.27477167698714,
+            "int8_alpha": 257.59736766480586
+          },
+          {
+            "module": "model.layers.22.mlp.down_proj",
+            "absmax": 740.0,
+            "sp2_alpha": 513.4349556504558,
+            "int8_alpha": 372.00906341173703
+          },
+          {
+            "module": "model.layers.23.mlp.down_proj",
+            "absmax": 784.0,
+            "sp2_alpha": 624.5117233261686,
+            "int8_alpha": 343.29465719424815
+          },
+          {
+            "module": "model.layers.24.mlp.down_proj",
+            "absmax": 616.0,
+            "sp2_alpha": 408.1728860932003,
+            "int8_alpha": 295.7414788271093
+          },
+          {
+            "module": "model.layers.25.mlp.down_proj",
+            "absmax": 672.0,
+            "sp2_alpha": 466.25444621230577,
+            "int8_alpha": 294.25256330935554
+          },
+          {
+            "module": "model.layers.26.mlp.down_proj",
+            "absmax": 700.0,
+            "sp2_alpha": 508.55979854716844,
+            "int8_alpha": 320.9514151216349
+          },
+          {
+            "module": "model.layers.27.mlp.down_proj",
+            "absmax": 4032.0,
+            "sp2_alpha": 7880.529199008976,
+            "int8_alpha": 3687.362847312273
+          }
+        ]
+      },
+      "validation": {
+        "ppl": 16.316429520957282,
+        "nll": 2.7921725462471594,
+        "targets": 262208
+      },
+      "initialization": {
+        "initial_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/init-s44/initial.pt",
+        "checkpoint0": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s44/checkpoint-0000/state.pt",
+        "all_parameter_tensors_bitwise_equal": 421,
+        "seed_identity_prior_file_matches_actual": true
+      },
+      "environment": {
+        "python": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+        "transformers": "4.51.3",
+        "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+        "source_byte_equal_seed42": {
+          "run.py": true,
+          "common.py": true,
+          "architecture.py": true,
+          "quantization.py": true
+        }
+      },
+      "raw_paths": {
+        "training": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s44/training.jsonl",
+        "state": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s44/checkpoint-0100/state.pt",
+        "sp2_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s44/checkpoint-0100/static_w4a8.pt",
+        "int8_package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-initial-s44/static_w4a8.pt",
+        "sp2_calibration": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/joint100-s44/checkpoint-0100/sp2_calibration.json",
+        "int8_calibration": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-initial-s44/range_search.json",
+        "capture": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-initial-s44/capture_metadata.json"
+      }
+    }
+  ],
+  "initial_rotation_pairwise": [
+    {
+      "seeds": [
+        42,
+        43
+      ],
+      "rotation_tensors": 29,
+      "changed": 29
+    },
+    {
+      "seeds": [
+        42,
+        44
+      ],
+      "rotation_tensors": 29,
+      "changed": 29
+    },
+    {
+      "seeds": [
+        43,
+        44
+      ],
+      "rotation_tensors": 29,
+      "changed": 29
+    }
+  ],
+  "limitations": [
+    "CPU mmap tensor-by-tensor comparison, no whole optimizer read or deep copy.",
+    "No GPU/PPL/tokenization/architecture rerun; no changes to running postprocess tasks.",
+    "Capture arrays were not retained: matched source, indices, counts, extrema and selection records do not prove elementwise captured-array equality.",
+    "Initial format comparison is not full Uniform-PTQ or Uniform-QAT400."
+  ]
+}

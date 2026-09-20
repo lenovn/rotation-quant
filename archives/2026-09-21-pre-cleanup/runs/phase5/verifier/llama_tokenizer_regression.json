@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "real Llama data_windows metadata equals historical Joint100 data.json",
+  "historical_path": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/data.json",
+  "application": "experiments.phase3.architecture.tokenizer",
+  "environment": "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/bin/python",
+  "assertion": "assert data_windows()[4] == json.load(open(historical_path))",
+  "output": "PASS: Llama train/calibration/validation metadata exactly matches historical Joint100",
+  "prior_failure": "AutoTokenizer yielded 252853 validation tokens; restored historical LlamaTokenizerFast gives 252852; guard rejected prior path before formal Llama work",
+  "qwen_path_unchanged": true
+}

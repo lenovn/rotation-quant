@@ -1,0 +1,8 @@
+{
+  "cases": [
+    "all16:down1",
+    "all16:down_except1",
+    "all16:mlp",
+    "static:down"
+  ]
+}

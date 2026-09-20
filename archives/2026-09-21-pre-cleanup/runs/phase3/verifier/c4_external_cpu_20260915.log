@@ -1,0 +1,59 @@
+.F..                                                                     [100%]
+=================================== FAILURES ===================================
+____ test_external_actual_acceptance_128_window_chunks_and_weighted_oracle _____
+
+saved_c4 = {'input_ids': tensor([[   40, 11112,  3021,  ...,   499,  3207, 20543]]), 'metadata': {'add_bos_token': False, 'add_eos_token': False, 'concatenated_token_count': 2150947, 'dataset': 'allenai/c4', ...}}
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f3ea46c54c0>
+
+    def test_external_actual_acceptance_128_window_chunks_and_weighted_oracle(saved_c4, monkeypatch):
+        ids = saved_c4["input_ids"]
+        model = SimpleNamespace(seqlen=2048)
+        calls = []
+        actual_evaluator = external_eval.evaluator
+        assert Path(inspect.getsourcefile(inspect.unwrap(actual_evaluator))) == common.SOURCE_ROOT / "utils/eval_utils.py"
+    
+        def segment_score(current, encoding, device, arguments):
+            assert current is model and device == "cuda" and current.seqlen == 2048
+            assert vars(arguments) == dict(eval_nsamples=None, bsz=1, capture_layer_io=False)
+            start = sum(value.numel() for value in calls)
+            assert torch.equal(encoding.input_ids, ids[:, start:start + encoding.input_ids.numel()])
+            calls.append(encoding.input_ids.clone())
+            return torch.exp(torch.tensor(1.0 + len(calls) / 10, dtype=torch.float32)).item()
+    
+        def reject_data(*args, **kwargs):
+            pytest.fail("External evaluation must not use WikiText or prepare tokens")
+    
+        monkeypatch.setattr(external_eval, "evaluator", segment_score)
+        monkeypatch.setattr(common, "data_windows", reject_data)
+        result = external_eval.evaluate_tokens(model, ids, 128)
+        assert len(calls) == 8 and all(value.shape == (1, 128 * 2048) for value in calls)
+        assert torch.equal(torch.cat(calls, dim=1), ids) and model.seqlen == 2048
+        assert result["token_count"] == 2097152 and result["predicted_tokens"] == 2096128
+        assert result["unscored_tail_tokens"] == 0
+        expected_nll = sum(math.log(torch.exp(torch.tensor(1 + index / 10)).item()) for index in range(1, 9)) / 8
+>       assert result["nll"] == expected_nll and result["ppl"] == math.exp(expected_nll)
+E       assert (1.4500000049562818 == 1.4500000049562816)
+
+tests/test_phase3_external.py:87: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Evaluation segment 1/8: start=0, windows=128, seqlen=2048
+Evaluation segment 2/8: start=262144, windows=128, seqlen=2048
+Evaluation segment 3/8: start=524288, windows=128, seqlen=2048
+Evaluation segment 4/8: start=786432, windows=128, seqlen=2048
+Evaluation segment 5/8: start=1048576, windows=128, seqlen=2048
+Evaluation segment 6/8: start=1310720, windows=128, seqlen=2048
+Evaluation segment 7/8: start=1572864, windows=128, seqlen=2048
+Evaluation segment 8/8: start=1835008, windows=128, seqlen=2048
+=============================== warnings summary ===============================
+tests/test_phase3_external.py::test_external_paired_driver_real_coldload_rope_and_immutable_scales
+  /home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_phase3_external.py::test_external_actual_acceptance_128_window_chunks_and_weighted_oracle
+1 failed, 3 passed, 1 warning in 7.33s
+
+=== Targeted rerun: chunk oracle only ===
+.                                                                        [100%]
+1 passed in 5.81s

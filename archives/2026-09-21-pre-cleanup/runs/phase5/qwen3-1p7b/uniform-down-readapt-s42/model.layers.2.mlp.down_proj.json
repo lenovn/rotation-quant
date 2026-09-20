@@ -1,0 +1,22 @@
+{
+  "module": "model.layers.2.mlp.down_proj",
+  "selected_step": 193,
+  "previous_train_nll": 2.9303037690963833,
+  "selected_train_nll": 2.9160587365820194,
+  "trials": [
+    {
+      "step": 0,
+      "fit_mse": 0.07333657890558243,
+      "heldout_mse": 0.07676444202661514,
+      "changed_codes": 0,
+      "train_nll": 2.9303037690963833
+    },
+    {
+      "step": 193,
+      "fit_mse": 0.017349710687994957,
+      "heldout_mse": 0.02123822085559368,
+      "changed_codes": 21978,
+      "train_nll": 2.9160587365820194
+    }
+  ]
+}

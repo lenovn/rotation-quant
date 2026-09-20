@@ -1,0 +1,13 @@
+AUDITOR_START {"mode": "c-adam10", "pid": 18746, "command": ["runs/phase3/auditor/first-validation-20260914/replicate.py", "c-adam10"], "cuda_visible_devices": "1", "torch": "2.4.1+cu121", "cuda": "12.1", "gpu": "NVIDIA GeForce RTX 4090", "started_at": 1789324941.1492872, "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/llama-3.2-1b-instruct", "model_revision": "Revision:master,CreatedAt:1740591574"}
+/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/transformers/modeling_utils.py:4713: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase3/auditor/first-validation-20260914/replicate.py", line 163, in <module>
+    main()
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase3/auditor/first-validation-20260914/replicate.py", line 110, in main
+    model, load_evidence = load_candidate(path)
+  File "/home/dongpeiyan/miniconda3/envs/rotation-quant-p0/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/dongpeiyan/projects/rotation-quant/runs/phase3/auditor/first-validation-20260914/replicate.py", line 65, in load_candidate
+    assert all(high_precision_matches.values())
+AssertionError

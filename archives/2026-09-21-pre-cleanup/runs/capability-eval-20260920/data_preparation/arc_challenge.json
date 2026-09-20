@@ -1,0 +1,11 @@
+{
+  "task": "arc_challenge",
+  "path": "allenai/ai2_arc",
+  "name": "ARC-Challenge",
+  "splits": {
+    "train": 1119,
+    "test": 1172,
+    "validation": 299
+  },
+  "status": "ready"
+}

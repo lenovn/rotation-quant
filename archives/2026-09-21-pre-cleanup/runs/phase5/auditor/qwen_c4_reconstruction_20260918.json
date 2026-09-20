@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "documents": 4480,
+  "ordered_row_indices_match": true,
+  "random42_order_match": true,
+  "tokenizer_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "model_revision": {
+    "repo": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+  },
+  "original_text_characters": 10098392,
+  "tokens_before_truncation": 2191766,
+  "retained_tokens": 2097152,
+  "discarded_suffix_tokens": 94614,
+  "targets": 2096128,
+  "token_ids_exactly_reconstructed": true,
+  "tail_tokens": 0,
+  "source_documents": "/home/dongpeiyan/projects/rotation-quant/runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/documents.jsonl",
+  "scope": "CPU-only read-only token reconstruction; no model/PPL/GPU execution"
+}

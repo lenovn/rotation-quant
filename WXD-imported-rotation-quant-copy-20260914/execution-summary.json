@@ -1,0 +1,25 @@
+{
+  "completed": "2026-09-14T09:08:04.068717+08:00",
+  "actions": {
+    "preserve": {
+      "files": 974,
+      "bytes": 597843129
+    },
+    "delete_duplicate": {
+      "files": 1570,
+      "bytes": 71127301942
+    }
+  },
+  "removed_empty_directories": 542,
+  "remaining_source_files": [],
+  "before_available_bytes": {
+    "/mnt/home1": 102688948224,
+    "/mnt/home2": 122538225664
+  },
+  "after_available_bytes": {
+    "/mnt/home1": 138611187712,
+    "/mnt/home2": 157733838848
+  },
+  "source_root_retained": true,
+  "existing_current_files_deleted_or_overwritten": 0
+}

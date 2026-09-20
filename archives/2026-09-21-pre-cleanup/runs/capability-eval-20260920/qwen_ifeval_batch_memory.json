@@ -1,0 +1,8 @@
+{
+  "samples": 541,
+  "max_prompt_tokens": 373,
+  "max_total_tokens": 1653,
+  "batch32_kv_gib": 5.64990234375,
+  "selected_batch_size": 64,
+  "batch64_kv_gib": 11.2998046875
+}

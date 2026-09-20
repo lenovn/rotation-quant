@@ -1,0 +1,27 @@
+{
+  "arguments": {
+    "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-ptq-c4-s42",
+    "mode": "quantized",
+    "package": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/uniform-down-readapt-s42/static_w4a8.pt",
+    "down_int8_scales": null,
+    "tokens": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/qwen3-1p7b/c4-data/input_tokens.pt",
+    "wikitext2_test": false,
+    "wikitext2_validation": false,
+    "chunk_windows": 128
+  },
+  "source": {
+    "source_root": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel",
+    "project_root": "/home/dongpeiyan/projects/rotation-quant",
+    "quant_linear": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/train_utils/quant_linear.py",
+    "quant_utils": "/home/dongpeiyan/projects/rotation-quant/worktrees/SpinQuant-multimodel/utils/quant_utils.py",
+    "head": "24918316ed594848d4de797c356b120f2a4ee0f3",
+    "branch": "phase5/multimodel",
+    "pytorch": "2.4.1+cu121",
+    "cuda": "12.1",
+    "device": "NVIDIA GeForce RTX 4090",
+    "model_path": "/home/dongpeiyan/projects/rotation-quant/cache/models/qwen3-1.7b",
+    "model_cache_revision": "{\n  \"repo\": \"Qwen/Qwen3-1.7B\",\n  \"revision\": \"70d244cc86ccca08cf5af4e1e306ecf908b1ad5e\"\n}",
+    "transformers": "4.51.3",
+    "seed": 42
+  }
+}

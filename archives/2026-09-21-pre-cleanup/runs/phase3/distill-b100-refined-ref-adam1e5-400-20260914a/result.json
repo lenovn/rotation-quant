@@ -1,0 +1,29 @@
+{
+  "completed_steps": 400,
+  "target_reached": true,
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/seq-b100-sp2-refine-down-20260914a/static_w4a8.pt",
+  "checkpoints": [
+    {
+      "step": 100,
+      "training_probe": 2.8314931392669678,
+      "validation_nll": 2.7380690524052587,
+      "validation_ppl": 15.457109393209688,
+      "changed_codes": 28841702
+    },
+    {
+      "step": 200,
+      "training_probe": 2.808753252029419,
+      "validation_nll": 2.7287978178580143,
+      "validation_ppl": 15.314465172373511,
+      "changed_codes": 42116939
+    },
+    {
+      "step": 400,
+      "training_probe": 2.765984535217285,
+      "validation_nll": 2.6797642095325815,
+      "validation_ppl": 14.581654675328117,
+      "changed_codes": 47471628
+    }
+  ],
+  "method": "quantization-aware distillation, not frozen-weight PTQ"
+}

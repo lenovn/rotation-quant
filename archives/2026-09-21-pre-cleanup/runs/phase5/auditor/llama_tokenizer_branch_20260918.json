@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "small Llama tokenizer regression; not full dataset rerun",
+  "class": "LlamaTokenizerFast",
+  "same_as_legacy_ids": true,
+  "default_equals_explicit_no_special_tokens": true,
+  "add_bos_token": false,
+  "add_eos_token": false,
+  "text": "A short independent tokenizer check.\n\nSecond paragraph.",
+  "token_ids": [
+    32,
+    2875,
+    9678,
+    47058,
+    1817,
+    382,
+    16041,
+    14646,
+    13
+  ]
+}

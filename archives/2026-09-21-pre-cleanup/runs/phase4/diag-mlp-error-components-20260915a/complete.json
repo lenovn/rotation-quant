@@ -1,0 +1,6 @@
+{
+  "cases": [
+    "all16:mlp:remove_clipping",
+    "all16:mlp:remove_grid"
+  ]
+}

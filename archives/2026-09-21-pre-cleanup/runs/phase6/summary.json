@@ -1,0 +1,112 @@
+{
+  "phase": 6,
+  "date": "2026-09-21",
+  "parent": "/home/dongpeiyan/projects/rotation-quant/runs/phase3/route-b-adam-100-20260914a/checkpoint-0100/static_w4a8.pt",
+  "dataset": "WikiText-2 validation",
+  "input_tokens": 252852,
+  "predicted_tokens": 252728,
+  "calibration_tokens": 4096,
+  "calibration": "historical train full_absmax reused, no range search",
+  "new_gpu_evaluations": 3,
+  "new_training_runs": 0,
+  "new_calibration_runs": 0,
+  "results": [
+    {
+      "arm": "float",
+      "ppl": 16.134196776282934,
+      "nll": 2.7809410428134664,
+      "delta_ppl_vs_float": 0.0,
+      "delta_nll_vs_float": 0.0,
+      "ppl_increase_percent": 0.0,
+      "source": "b100-down-precision-20260921/float/result.json",
+      "elapsed_seconds": 34.5313102749642,
+      "peak_allocated_gib": 4.337501049041748,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 16.13284683227539,
+          "nll": 2.7808573695755516
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 16.497146606445312,
+          "nll": 2.8031874330092013
+        }
+      ]
+    },
+    {
+      "arm": "int8",
+      "ppl": 1528.19612779757,
+      "nll": 7.3318433173780155,
+      "delta_ppl_vs_float": 1512.061931021287,
+      "delta_nll_vs_float": 4.5509022745645495,
+      "ppl_increase_percent": 9371.783126160943,
+      "source": "b100-down-precision-20260921/int8/result.json",
+      "elapsed_seconds": 37.552695066900924,
+      "peak_allocated_gib": 4.634395122528076,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 1528.28515625,
+          "nll": 7.331901572897472
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 1504.708984375,
+          "nll": 7.3163547926216
+        }
+      ],
+      "outside_range_fraction": 3.379416368073023e-08,
+      "changed_after_bf16_fraction": 0.9973721028000365,
+      "quantizer_calls_per_layer": [
+        124
+      ]
+    },
+    {
+      "arm": "int16",
+      "ppl": 16.276954599024368,
+      "nll": 2.7897502791337607,
+      "delta_ppl_vs_float": 0.14275782274143367,
+      "delta_nll_vs_float": 0.00880923632029429,
+      "ppl_increase_percent": 0.8848151830606499,
+      "source": "b100-down-precision-20260921/int16/result.json",
+      "elapsed_seconds": 36.38393607689068,
+      "peak_allocated_gib": 4.634395122528076,
+      "segments": [
+        {
+          "start_token": 0,
+          "seqlen": 2048,
+          "windows": 123,
+          "predicted_tokens": 251781,
+          "ppl": 16.27540397644043,
+          "nll": 2.789655009687676
+        },
+        {
+          "start_token": 251904,
+          "seqlen": 948,
+          "windows": 1,
+          "predicted_tokens": 947,
+          "ppl": 16.694507598876953,
+          "nll": 2.8150797790329576
+        }
+      ],
+      "outside_range_fraction": 2.5224929318830778e-08,
+      "changed_after_bf16_fraction": 0.5084686394559111,
+      "quantizer_calls_per_layer": [
+        124
+      ]
+    }
+  ]
+}

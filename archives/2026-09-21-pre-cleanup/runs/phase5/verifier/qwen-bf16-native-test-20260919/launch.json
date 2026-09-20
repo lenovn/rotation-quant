@@ -1,0 +1,21 @@
+{
+  "pid": 2237185,
+  "gpu": 0,
+  "started": 1789812219.1090698,
+  "command": [
+    "env",
+    "CUDA_VISIBLE_DEVICES=0",
+    "OMP_NUM_THREADS=4",
+    "MKL_NUM_THREADS=4",
+    "HF_HUB_OFFLINE=1",
+    "HF_DATASETS_OFFLINE=1",
+    "TOKENIZERS_PARALLELISM=false",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/env/bin/python",
+    "-u",
+    "/home/dongpeiyan/projects/rotation-quant/runs/phase5/verifier/qwen-bf16-native-test-20260919/run.py"
+  ],
+  "tmux_socket": "rotation-quant-phase5",
+  "tmux_session": "phase5-qwen-bf16-native-test-20260919",
+  "output": "/home/dongpeiyan/projects/rotation-quant/runs/phase5/verifier/qwen-bf16-native-test-20260919"
+}
