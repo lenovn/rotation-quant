@@ -1,0 +1,51 @@
+[
+  {
+    "run": "llama1b-fixed-down-s42",
+    "step": 286,
+    "arm": "fixed-down",
+    "optimizer_count": 2,
+    "embedded_parameters": true,
+    "rng_present": true
+  },
+  {
+    "run": "llama1b-joint512-s42-r1",
+    "step": 481,
+    "arm": "joint",
+    "optimizer_count": 2,
+    "embedded_parameters": false,
+    "rng_present": true,
+    "parameter_step": 481
+  },
+  {
+    "run": "llama1b-r-only-s42",
+    "step": 290,
+    "arm": "r-only",
+    "optimizer_count": 1,
+    "embedded_parameters": true,
+    "rng_present": true
+  },
+  {
+    "run": "llama3b-joint-s42",
+    "step": 101,
+    "arm": "joint",
+    "optimizer_count": 2,
+    "embedded_parameters": true,
+    "rng_present": true
+  },
+  {
+    "run": "qwen0p6b-joint-s42",
+    "step": 512,
+    "arm": "joint",
+    "optimizer_count": 2,
+    "embedded_parameters": true,
+    "rng_present": true
+  },
+  {
+    "run": "qwen1p7b-joint-s42",
+    "step": 247,
+    "arm": "joint",
+    "optimizer_count": 2,
+    "embedded_parameters": true,
+    "rng_present": true
+  }
+]
