@@ -1,5 +1,36 @@
 # Phase6 迁移交接
 
+## 当前能否恢复：不能，以下前置文件仍需补齐
+
+截至 2026-09-21 本次远端核查：master 为 `4d2fd04`；14 个续训/初始化文件已在 Git 仓库，Release 仍为 draft，压缩分片 000/001 为 `starter`（未完成）。附件列表出现文件名或预期大小不等于上传成功。以下是当前缺项，不是要求重新训练。
+
+### 继续五项中断训练前必须补齐
+
+|缺项|新服务器目标路径（相对项目根目录）|如何补齐|
+|---|---|---|
+|原始模型及 tokenizer/config|`cache/models/llama-3.2-1b-instruct/`、`cache/models/llama-3.2-3b-instruct/`、`cache/models/qwen3-1.7b/`|等待完整附件恢复，或从旧服务器复制这些完整目录；也可重新下载原始模型，但必须匹配下述来源/版本，不能换成 Base 或其他 Instruct 模型。|
+|WikiText-2 原始 Arrow 缓存|`cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/`|复制完整目录，包括 train/validation/test Arrow 和 dataset_info.json；代码使用这个具体缓存目录，只有在线下载记录或换一个缓存路径不够。|
+|Python/CUDA 与 FHT 环境|`runs/phase5/env/`，FHT 源码位于 `repos/fast-hadamard-transform/`|依本文安装命令在新服务器重建，不能把旧 venv 当作可移植环境。需要可用 NVIDIA 驱动、nvcc、编译器、tmux。|
+|代码快照与断点放回实际运行目录|`scripts/`、`worktrees/SpinQuant-multimodel/`、`runs/phase6/<运行名>/`|这部分已上传：解开 `phase6-code-results.tar.gz`，再 `cp -a phase6/state/. .`；直接留在 `phase6/state/` 不会被 launcher 找到。|
+|旧启动标记和新机 GPU 映射|`runs/phase6/*-resume-T.launch.json`、`scripts/phase6/schedule.py`|归档对应旧启动标记和日志，保留结果和断点；按新机改训练 JOBS 及评测候选 GPU。不要在前置文件不齐时启动 scheduler。|
+
+原始模型来源：Qwen3-1.7B 为 `Qwen/Qwen3-1.7B`，revision `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`。Llama3.2-1B/3B 都是 Instruct，来自 `LLM-Research/Llama-3.2-1B-Instruct` / `LLM-Research/Llama-3.2-3B-Instruct` 的 ModelScope 分发；现有记录未给出可保证重新下载完全一致的不可变版本，优先复制已有目录或等待附件。不能把 mirror 的 master 当作已锁定的 HF commit。
+
+仅继续训练时，不必等所有历史 `checkpoint-*/model.pt` 都齐全，但必须有对应原始模型、WikiText 缓存、已上传的 initial/resume 文件以及 results.json。pilot 还必须有 resume_parameters.pt。先恢复主线 481→512 等中断段；不要为缺少历史导出而重跑已经完成的训练。
+
+### 完成评测及复用历史结果还需补齐
+
+|缺项|必须恢复的位置|用途|
+|---|---|---|
+|Qwen0.6B 原始模型|`cache/models/qwen3-0.6b/`|已训练完成的模型评测；来源 `Qwen/Qwen3-0.6B`，revision `c1899de289a04d12100db370d81485cdf75e47ca`。不重训512步。|
+|各 checkpoint 的模型导出与参数|`runs/phase6/<运行名>/checkpoint-*/model.pt`、`parameters.pt`|最终选定 T 对应模型、no-opt 和已完成 Qwen0.6B 的评测。已有小文件包中的 validation.json 不是模型权重。|
+|固定 C4 文档及 token|`runs/phase2/c4-acceptance-c-20260912.FJXr6U/data/`、`runs/phase5/qwen3-1p7b/c4-data/`、`runs/phase6/data/`|保持旧固定子集和分词结果，不能随意换新抽样后比较。|
+|能力评测依赖及 NLTK 数据|`runs/capability-eval-20260920/deps/`、`nltk_data/`|既有 lm-evaluation-harness 0.4.8 及配套依赖；标准训练环境的 requirements 不等于所有评测依赖。|
+|八项评测数据缓存|`cache/huggingface/` 的其余数据缓存|BoolQ、PIQA、SIQA、HellaSwag、WinoGrande、ARC-E、ARC-C、OBQA；可以重新下载匹配版本，但完整附件已计划携带已有缓存。|
+|已有评测原始记录和 SP2 对照|`runs/capability-eval-20260920/`、已有 evidence_path 指向的 JSON、`runs/phase6/evaluation/`|多数小结果已在代码包，完整附件补齐全部原始产物；保留相同项目绝对路径以复用已有证据。|
+
+以上缺项均已纳入正在压缩上传的完整迁移包。最省事的方式是等待 Release 全部分片完成并发布，再运行 restore_files.py；若要提前在新机恢复，按上述表从旧服务器复制缺失目录，或者按明确版本获取可重新下载的部分。旧服务器不启动实验。
+
 ## 当前边界
 
 旧服务器检修，用户明确禁止开启实验。当前仅打包和上传。新服务器只有在用户允许恢复后才启动训练或评测；安装、下载、解包均不能启动调度器。
