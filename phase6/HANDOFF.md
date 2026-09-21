@@ -4,7 +4,7 @@
 
 旧服务器检修，用户明确禁止开启实验。当前仅打包和上传。新服务器只有在用户允许恢复后才启动训练或评测；安装、下载、解包均不能启动调度器。
 
-本目录仍在上传，不能把 clone 成功当作迁移完成。第一批代码结果、14 个续训/初始化文件及本交接文档已上传；完整数据包正在准备，尚未提供可用 Release 下载链接。
+本目录仍在上传，不能把 clone 成功当作迁移完成。第一批代码结果、14 个续训/初始化文件及本交接文档已上传；完整数据包正在准备并上传到 phase6 Release 草稿。发布前下载命令不可用；发布完成后链接为 https://github.com/lenovn/rotation-quant/releases/tag/phase6 。
 
 ## 目标与实验设置
 
@@ -12,12 +12,25 @@
 
 全部采用 warmup 10、cosine 终点 512，选 T 后截断，不能改成 cosine T。先完成 Llama1B pilot512，再按 scripts/phase6/schedule.py 的既定 validation 规则确定统一 T。test/C4 不用于选 T。四模型主实验、Llama1B fixed-down 与 R-only 消融、八项能力评测和 WT2 test / 固定 C4 validation 子集仍需完成。
 
+## 新服务器操作入口
+
+在新服务器将仓库克隆到 `/home/dongpeiyan/projects/rotation-quant`，然后执行以下命令。下载脚本仅使用 Python 标准库，不依赖 PyTorch，不启动实验。请在全新 clone 中恢复，已有同路径实验文件会被附件覆盖。
+
+```bash
+cd /home/dongpeiyan/projects
+git clone https://github.com/lenovn/rotation-quant.git
+cd rotation-quant
+python3 phase6/restore_files.py
+```
+
+需要下载全部分片，并为分片和解包后的文件分别预留空间，建议至少约 200 GiB 可用空间，另留环境编译空间。下载中断后重新运行同一命令，可续传 `.partial` 文件；已完成的分片按长度复用。不要在下载期间自行替换文件。若 Release 尚未发布，该命令会报下载错误；这不是训练失败。
+
 ## 文件与恢复
 
 - phase6-code-results.tar.gz：有效代码快照、已有结果、依赖版本清单。
 - state/runs/phase6/：续训及初始化文件，目录结构与原项目对应。resume-files.json 列出文件。
 - resume-status.json：CPU 读取断点得到的实际 step、优化器与 RNG 存在性。
-- 后续完整 phase6-data.tar.part-*：原始模型、数据缓存、所有 Phase6 checkpoint 导出、评测依赖及参考结果。未上传完成前不能进行完整恢复。
+- 后续完整 phase6-data.tar.gz.part-*：原始模型、数据缓存、所有 Phase6 checkpoint 导出、评测依赖及参考结果。未上传完成前不能进行完整恢复。
 
 不要仅复制仓库旧 scripts/ 运行。首先在仓库根目录解开最新有效快照，再恢复 state：
 
@@ -25,7 +38,7 @@
 tar -xzf phase6/phase6-code-results.tar.gz -C .
 cp -a phase6/state/. .
 # 等完整数据附件上传并下载后：
-cat phase6-data.tar.part-* | tar -xf - -C .
+cat phase6-data.tar.gz.part-* | tar -xzf - -C .
 ```
 
 目前应使用与旧服务器相同的项目绝对路径 `/home/dongpeiyan/projects/rotation-quant`。launch 和部分代码按目录定位，但历史 JSON/PT 中也有绝对路径。若新服务器无法使用该路径，必须先做路径迁移；不要只改一个环境变量便启动。
@@ -77,11 +90,15 @@ runs/phase5/env/bin/python scripts/phase6/launch.py \
 ## 尚未完成
 
 1. 已确认续训文件的远端上传成功（bbeeaf2）；交接文档首版提交为 0f015f1。
-2. 完整数据包上传 Release，并加入下载命令。
-3. 补齐环境安装说明/入口与新路径适配。
+2. 完整数据包正在上传 Release；下载命令已提供，发布前不可用。
+3. 环境安装命令已提供；本次要求同绝对路径恢复，不承诺不同路径自动适配。
 4. 在全新目录核对恢复所需文件与引用，不启动实验。
 5. 更新此文档为最终交接状态；当前为进行中交接，不是可运行验收。
 
 ## 文件检查补充
 
 必须先 clone 仓库，再解包附件；附件本身不包含 phase6/ 的安装与交接文件。嵌套源码的 .git 不随包迁移，本次均使用 --resume；新建运行的 Git 快照逻辑尚未适配，不能把本交接流程用于从零新建实验。FHT 源码已覆盖，无需额外子模块下载。scheduler 的训练 JOBS 和评测候选 GPU 列表均使用旧机编号，新机启动前必须同时调整，不能只修改 launch 命令的 --gpu。
+
+## 压缩传输更新
+
+本轮按用户要求改用 gzip 压缩。Release 分片统一为 `phase6-data.tar.gz.part-NNN`，restore_files.py 已对应使用 gzip 解包。之前未压缩上传已取消，不要混用 `phase6-data.tar.part-*`。完整打包及上传仍在进行，尚未完成发布。
