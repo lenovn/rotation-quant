@@ -1,0 +1,72 @@
+[
+  {
+    "source": "runs/phase6/llama1b-fixed-down-s42/initial.pt",
+    "repository_path": "phase6/state/runs/phase6/llama1b-fixed-down-s42/initial.pt",
+    "bytes": 18624592
+  },
+  {
+    "source": "runs/phase6/llama1b-fixed-down-s42/resume.pt",
+    "repository_path": "phase6/state/runs/phase6/llama1b-fixed-down-s42/resume.pt",
+    "bytes": 38888314
+  },
+  {
+    "source": "runs/phase6/llama1b-joint512-s42/initial.pt",
+    "repository_path": "phase6/state/runs/phase6/llama1b-joint512-s42/initial.pt",
+    "bytes": 18624592
+  },
+  {
+    "source": "runs/phase6/llama1b-joint512-s42-r1/initial.pt",
+    "repository_path": "phase6/state/runs/phase6/llama1b-joint512-s42-r1/initial.pt",
+    "bytes": 18624592
+  },
+  {
+    "source": "runs/phase6/llama1b-joint512-s42-r1/resume.pt",
+    "repository_path": "phase6/state/runs/phase6/llama1b-joint512-s42-r1/resume.pt",
+    "bytes": 20278010
+  },
+  {
+    "source": "runs/phase6/llama1b-joint512-s42-r1/resume_parameters.pt",
+    "repository_path": "phase6/state/runs/phase6/llama1b-joint512-s42-r1/resume_parameters.pt",
+    "bytes": 18627106
+  },
+  {
+    "source": "runs/phase6/llama1b-r-only-s42/initial.pt",
+    "repository_path": "phase6/state/runs/phase6/llama1b-r-only-s42/initial.pt",
+    "bytes": 18624592
+  },
+  {
+    "source": "runs/phase6/llama1b-r-only-s42/resume.pt",
+    "repository_path": "phase6/state/runs/phase6/llama1b-r-only-s42/resume.pt",
+    "bytes": 35679290
+  },
+  {
+    "source": "runs/phase6/llama3b-joint-s42/initial.pt",
+    "repository_path": "phase6/state/runs/phase6/llama3b-joint-s42/initial.pt",
+    "bytes": 42816488
+  },
+  {
+    "source": "runs/phase6/llama3b-joint-s42/resume.pt",
+    "repository_path": "phase6/state/runs/phase6/llama3b-joint-s42/resume.pt",
+    "bytes": 88989678
+  },
+  {
+    "source": "runs/phase6/qwen0p6b-joint-s42/initial.pt",
+    "repository_path": "phase6/state/runs/phase6/qwen0p6b-joint-s42/initial.pt",
+    "bytes": 7541736
+  },
+  {
+    "source": "runs/phase6/qwen0p6b-joint-s42/resume.pt",
+    "repository_path": "phase6/state/runs/phase6/qwen0p6b-joint-s42/resume.pt",
+    "bytes": 16721006
+  },
+  {
+    "source": "runs/phase6/qwen1p7b-joint-s42/initial.pt",
+    "repository_path": "phase6/state/runs/phase6/qwen1p7b-joint-s42/initial.pt",
+    "bytes": 21042152
+  },
+  {
+    "source": "runs/phase6/qwen1p7b-joint-s42/resume.pt",
+    "repository_path": "phase6/state/runs/phase6/qwen1p7b-joint-s42/resume.pt",
+    "bytes": 44639342
+  }
+]
