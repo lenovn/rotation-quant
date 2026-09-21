@@ -6,7 +6,7 @@ Migration is staged: phase6-code-results.tar.gz contains effective source (inclu
 
 First-stage extraction: `tar -xzf phase6-code-results.tar.gz -C /path/to/rotation-quant`. This first package alone is NOT sufficient to resume training.
 
-Reassemble: `cat phase6.tar.part-* | tar -xf - -C /path/to/rotation-quant`
+Reassemble: `cat phase6-data.tar.part-* | tar -xf - -C /path/to/rotation-quant`
 
 For initial migration, use the SAME absolute project path `/home/dongpeiyan/projects/rotation-quant` on the destination. Existing JSON/PT metadata contains absolute paths. A different root requires relocation of both JSON and torch metadata, not merely changing launcher arguments.
 
